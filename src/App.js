@@ -368,7 +368,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   return (
     <div>
       <header>
-        <a href={`/`}>&lsaquo;</a>
+        <a href={`?`}>&lsaquo;</a>
         <h1>{army?.name}</h1>
       </header>
       <div className="armyDetails">
