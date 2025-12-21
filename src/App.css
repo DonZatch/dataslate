@@ -314,6 +314,25 @@ header > h1 {
   margin: 0;
   padding: 8px;
   text-align: left;
+  color: white;
+}
+
+.weapons.unitWeaponSummary th {
+  padding: 0 2px;
+  font-weight: normal;
+  border: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+}
+
+.weapons.unitWeaponSummary th:first-child
+{
+  border-left: none;
+}
+
+.weapons.unitWeaponSummary th:last-child
+{
+  border-right: none;
 }
 
 .unitDetails h2 {
@@ -335,6 +354,19 @@ header > h1 {
   border: none;
   padding: 6px 8px;
   font-weight: bold;
+}
+
+.weapons.unitWeaponSummary td {
+  padding: 0 2px;
+  border: 1px solid #161622;
+  border-top: none;
+
+}
+.weapons.weapons.unitWeaponSummary td:first-child {
+  border-bottom: none;
+}
+.weapons.weapons.unitWeaponSummary td:nth-child(2) {
+  border-bottom: none;
 }
 
 .weaponProfile {
@@ -445,12 +477,15 @@ header > h1 {
 
 .infoModal {
   position: fixed;
-  top: 58px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 2%;
   width: 96%;
   background-color: white;
   border: 2px solid #0c3455;
   z-index: 100;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .infoModal > h2 {
