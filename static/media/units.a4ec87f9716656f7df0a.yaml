@@ -1,0 +1,2028 @@
+# Strike Force Octavius
+- # Captain Octavius
+  name: Captain Octavius
+  profiles:
+  -
+    name: Captain Octavius
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Imperium
+  - Terminator
+  - Captian
+  - Octavius
+  ranged:
+  -
+    name: Storm bolter
+    abilities:
+    - Rapid Fire 2
+    range: 24"
+    a: 2
+    bs: 2+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Relic weapon
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    core:
+    - Deep Strike
+    - Leader
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Unstoppable Valour:"
+      value: "You can re-roll Charge rolls made for this model's unit"
+    leader:
+    - Terminator Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "storm bolter, relic weapon"
+- # Librarian Tantus
+  name: Librarian Tantus
+  profiles:
+  -
+    name: Librarian Tantus
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 5
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Psyker
+  - Imperium
+  - Terminator
+  - Librarian Tantus
+  ranged:
+  -
+    name: Smite - witchfire
+    abilities:
+    - Psychic
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 5
+    ap: -1
+    d: D3
+  -
+    name: Smite - focused witchfire
+    abilities:
+    - Devastating Wounds
+    - Hazardous
+    - Psychic
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 6
+    ap: -2
+    d: D3
+  -
+    name: Storm bolter
+    abilities:
+    - Rapid Fire 2
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Force weapon
+    abilities:
+    - Phychic
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: d3
+  abilities:
+    core:
+    - Deep Strike
+    - Leader
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Veil of Time (Psychic):"
+      value: "While this model is leading a unit, weapons equipped by models in that unit have the [Sustained Hits 1] ability."
+    leader:
+    - Terminator Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "smite, storm bolter, force weapon"
+- # Infernus Squad (Patrol)
+  name: Infernus Squad (Patrol)
+  profiles:
+  -
+    name: Infernus Squad
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Tacticus
+  - Infernus Squad
+  ranged:
+  -
+    name: Bolt pistol
+    abilities:
+    - Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Pyreblaster
+    abilities:
+    - Ignores Cover
+    - Torrent
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+  factions:
+  - Adeptus Astartes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "bolt pistol, pyreblaster, close combat weapon"
+- # Terminator Squad (Patrol)
+  name: Terminator Squad (Patrol)
+  profiles:
+  -
+    name: Terminator Squad
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 3
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Terminator
+  - Terminator Squad
+  ranged:
+  -
+    name: Assault Cannon
+    num: 1
+    abilities:
+    - Devastating Wounds
+    range: 24"
+    a: 6
+    bs: 3+
+    s: 6
+    ap: 0
+    d: 1
+  -
+    name: Storm bolter
+    num: 4
+    abilities:
+    - Rapid Fire 2
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Power fist
+    num: 4
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 8
+    ap: -2
+    d: 2
+  -
+    name: Power weapon
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Fury of the First:"
+      value: "Each time a model in this unit makes an attack that targets your Oath of Moment target, add 1 to the Hit roll."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "The Terminator Sergeant is equipped with:"
+    value: "storm bolter, power weapon"
+  -
+    label: "1 Terminator is equipped with:"
+    value: "assault cannon, power fist"
+  -
+    label: "3 Terminators are equipped with:"
+    value: "storm bolter, power fist"
+# The Vardenghast Swarm
+- # Terror of Vardenghast
+  name: Terror of Vardenghast
+  profiles:
+  - 
+    name: Terror of Vardenghast
+    m: 12
+    t: 5
+    sv: 4+
+    w: 6
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Fly
+  - Great Devourer
+  - Synapse
+  - Vanguard Invader
+  - Winged Tyranid Prime
+  - Terror of Vardenghast
+  melee:
+  -
+    name: Prime talons
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Shadow in the Warp
+    - Synapse
+    other:
+    -
+      label: "Death Blow:"
+      value: "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+  factions: 
+  - Tyranids
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "prime talons"
+- # Psychophage (Patrol)
+  name: Psychophage (Patrol)
+  profiles:
+  -
+    name: Psychophage
+    m: 8
+    p: 2
+    t: 9
+    sv: 3+
+    w: 10
+    ld: 8+
+    oc: 3
+  keywords:
+  - Monster
+  - Great Devourer
+  - Harvester
+  - Phychophage
+  ranged:
+  -
+    name: Pyroclastic torrent
+    abilities:
+    - Ignores Cover
+    - Torrent
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 6
+    ap: -1
+    d: 1
+  melee:
+  -
+    name: Talons and betentacled maw
+    abilities:
+    - Anti-Psyker 4+
+    - Devastating Wounds
+    range: Melee
+    a: d6+1
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Deadly Demise 1
+    - Feel No Pain 5+
+    faction:
+    - Synapse
+    other:
+    -
+      label: "Feeding Frenzy:"
+      value: "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well."
+  factions: 
+  - Tyranids
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "pyroclastic torrent, talons and betentacled maw"
+- # Termagants (Patrol)
+  name: Termagants (Patrol)
+  profiles:
+  -
+    name: Termagants
+    m: 6
+    t: 3
+    sv: 5+
+    w: 1
+    ld: 8+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Great Devourer
+  - Endless Multitude
+  - Termagants
+  ranged:
+  -
+    name: Fleshborer
+    abilities:
+    - Assault
+    range: 18"
+    a: 1
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Chitinous claws and teeth
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Synapse
+    other:
+    -
+      label: "Skulking Horrors:"
+      value: "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\"."
+  factions: 
+  - Tyranids
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "fleshborer, chitinous claws and teeth"
+  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing ten models."
+- # Barbgaunts (Patrol)
+  name: Barbgaunts (Patrol)
+  profiles:
+  -
+    name: Barbgaunts
+    m: 6
+    t: 4
+    sv: 4+
+    w: 2
+    ld: 8+
+    oc: 1
+  keywords:
+  - Infantry
+  - Great Devourer
+  - Barbgaunts
+  ranged:
+  -
+    name: Barblauncher
+    abilities:
+    - Blast
+    - Heavy
+    range: 24"
+    a: d6
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Chitinous claws and teeth
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Synapse
+    other:
+    -
+      label: "Disruption Bombardment:"
+      value: "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+  factions: 
+  - Tyranids
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "barblauncher, chitinous claws and teeth"
+- # Von Ryan's Leapers (Patrol)
+  name: Von Ryan's Leapers (Patrol)
+  profiles:
+  -
+    name: Von Ryan's Leapers
+    m: 10
+    t: 5
+    sv: 4+
+    iv: 6+
+    w: 3
+    ld: 8+
+    oc: 1
+  keywords:
+  - Infantry
+  - Great Devourer
+  - Vanguard Invader
+  - Von Ryan's Leapers
+  melee:
+  -
+    name: Leaper's talons
+    range: Melee
+    a: 6
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 1
+  abilities:
+    core:
+    - Fights First
+    - Infiltrators
+    - Stealth
+    faction:
+    - Synapse
+    other:
+    -
+      label: "Pouncing Leap:"
+      value: "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase."
+  factions: 
+  - Tyranids
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "leaper's talons"
+# Amonhotekh's Guard
+- # Overlord Amonhotekh
+  name: Overlord Amonhotekh
+  profiles:
+  -
+    name: Overlord Amonhotekh
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 4+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Noble
+  - Overlord
+  - Amonhotekh
+  ranged:
+  -
+    name: Tachyon arrow
+    range: 72"
+    a: 1
+    bs: 2+
+    s: 16
+    ap: -5
+    d: d6+2
+    abilities:
+    - One Shot
+  melee:
+  -
+    name: Overlord's blade
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Devastating Wounds
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: "Implacable Resilience:"
+      value: "Each time an attack is allocated to this model, subtract 1 from that attack’s Damage characteristic."
+    leader:
+    - Necron Warriors
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "tachyon arrow, overlord's blade"
+- # Necron Warriors (Patrol)
+  name: Necron Warriors (Patrol)
+  profiles:
+  -
+    name: Necron Warriors
+    m: 5
+    t: 4
+    sv: 4+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Necron Warriors
+  ranged:
+  -
+    name: Gauss flayer
+    num: 5
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Lethal Hits
+    - Rapid Fire 1
+  -
+    name: Gauss reaper
+    num: 5
+    range: 12"
+    a: 2
+    bs: 4+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Lethal Hits
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "5 models are equipped with:"
+    value: "gauss flayer, close combat weapon"
+  -
+    label: "5 models are equipped with:"
+    value: "gauss reaper, close combat weapon"
+- # Skorpekh Destroyers (Patrol)
+  name: Skorpekh Destroyers (Patrol)
+  profiles:
+  -
+    name: Skorpekh Destroyers
+    m: 8
+    t: 6
+    sv: 3+
+    w: 3
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Skorpekh Destroyers
+  melee:
+  -
+    name: Skorpekh hyperphase weapons
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 7
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Reanimation Protocols
+    wargear:
+    -
+      label: Plasmacyte
+      value: "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "skorpekh hyperphase weapons"
+  -
+    label: "This unit is equipped with:"
+    value: "1 plasmacyte"
+- # Canoptek Scarab Swarms (Patrol)
+  name: Canoptek Scarab Swarms (Patrol)
+  profiles:
+  -
+    name: Canoptek Scarab Swarms
+    m: 10
+    t: 2
+    sv: 6+
+    w: 4
+    ld: 8+
+    oc: 0
+  keywords:
+  - Swarm
+  - Fly
+  - Canoptek
+  - Scarab Swarms
+  melee:
+  -
+    name: Feeder mandibles
+    abilities:
+    - Lethal Hits
+    range: Melee
+    a: 6
+    ws: 5+
+    s: 2
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "feeder mandibles"
+- # Canoptek Doomstalker (Patrol)
+  name: Canoptek Doomstalker (Patrol)
+  profiles:
+  -
+    name: Canoptek Doomstalker
+    m: 8
+    t: 8
+    sv: 3+
+    iv: 4+
+    w: 12
+    ld: 8+
+    oc: 4
+  keywords:
+  - Vehicle
+  - Walker
+  - Canoptek
+  - Doomstalker
+  ranged:
+  -
+    name: Doomsday blaster
+    abilities:
+    - Blast
+    - Heavy
+    range: 48"
+    a: D6+1
+    bs: 4+
+    s: 14
+    ap: -3
+    d: 3
+  -
+    name: Twin guass flayer
+    abilities:
+    - Lethal Hits
+    - Rapid Fire 1
+    - Twin-Linked
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Doomstalker limbs
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 6
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deadly Demise D3
+    faction:
+    - Reanimation Protocols
+  factions: 
+  - Necrons
+  damaged:
+    condition: 1-4 wounds remaining
+    text: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "doomsday blaster, twin gauss flayer, doomstalker limbs"
+# Morgim's Butchas
+- # Beastboss Morgrim
+  name: Beastboss Morgrim
+  profiles:
+  -
+    name: Beastboss Morgrim
+    m: 6
+    t: 5
+    sv: 4+
+    iv: 5+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Beast Snagga
+  - Warboss
+  - Beastboss
+  - Morgrim
+  ranged:
+  -
+    name: Shoota
+    range: 18"
+    a: 2
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 1
+  melee:
+  -
+    name: Beast Snagga klaw
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 10
+    ap: -2
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  -
+    name: Beastchoppa
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  abilities:
+    core:
+    - Leader
+    - Feel No Pain 6+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Beastboss:"
+      value: "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+    leader:
+    - Beast Snagga Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "shoota, beastchoppa, Beast Snagga klaw."
+- # Beast Snagga Boyz (Patrol)
+  name: Beast Snagga Boyz (Patrol)
+  profiles:
+  -
+    name: Beast Snagga Boy
+    m: 6
+    t: 5
+    sv: 5+
+    w: 1
+    ld: 7+
+    oc: 2
+  -
+    name: Beast Snagga Nob
+    m: 6
+    t: 5
+    sv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Mob
+  - Battleline
+  - Beast Snagga
+  - Beast Snagga Boyz
+  ranged:
+  -
+    name: Slugga
+    num: 9
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Thump gun
+    num: 1
+    range: 18"
+    a: D3
+    bs: 5+
+    s: 6
+    ap: 0
+    d: 2
+    abilities:
+    - Blast
+  melee:
+  -
+    name: Choppa
+    num: 8
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 1
+  -
+    name: Close combat weapon
+    num: 1
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 5
+    ap: 0
+    d: 1
+  -
+    name: Power snappa
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 7
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Feel No Pain 6+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Monster Hunters:"
+      value: "Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Hit roll."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Beast Snagga Nob is equipped with:"
+    value: "slugga, power snappa."
+  -
+    label: "1 Beast Snagga Boy is equipped with:"
+    value: "thump gun, close combat weapon."
+  -
+    label: "8 Beast Snagga Boyz are equipped with:"
+    value: "slugga, choppa."
+- # Squighog Boyz (Patrol)
+  name: Squighog Boyz (Patrol)
+  profiles:
+  -
+    name: Squighog Boy
+    m: 10
+    p: 1
+    t: 7
+    sv: 4+
+    w: 3
+    ld: 7+
+    oc: 2
+  -
+    name: Nob on Smasha Squig
+    m: 10
+    p: 1
+    t: 7
+    sv: 4+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Beast Snagga
+  - Squighog Boyz
+  ranged:
+  -
+    name: Saddlegit weapons
+    num: 3
+    range: 9"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+  -
+    name: Slugga
+    num: 1
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Stikka
+    num: 3
+    range: 9"
+    a: 1
+    bs: 5+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+    - Assault
+  melee:
+  -
+    name: Big Choppa
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  -
+    name: Squig Jaws
+    num: 4
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Extra attacks
+  -
+    name: Stikka
+    num: 3
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+    - Lance
+  abilities:
+    core:
+    - Feel No Pain 5+
+    faction:
+    - Waaagh!
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Nob on Smasha Squig is equipped with:"
+    value: "slugga, big choppa, squig jaws."
+  -
+    label: "3 Squighog Boyz are equipped with:"
+    value: "saddlegit weapons, stikka, squig jaws."
+# Sanctuary Guardians
+- # Canoness Adalya
+  name: Canoness Adalya
+  profiles:
+  -
+    name: Canoness Adalya
+    m: 6
+    t: 3
+    sv: 3+
+    iv: 4+
+    w: 4
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Imperium
+  - Canoness
+  - Canoness Adalya
+  ranged:
+  -
+    name: Condemnor boltgun
+    range: 24"
+    a: 1
+    bs: 2+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Anti-Psyker 2+
+    - Devastating Wounds
+    - Precision
+    - Rapid Fire 1
+  melee:
+  -
+    name: Hallowed chainsword
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 3
+    ap: -1
+    d: 1
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Acts of Faith
+    wargear:
+    -
+      label: Null Rod
+      value: "Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds and Psychic attacks."
+    other:
+    -
+      label: "Lead The Righteous:"
+      value: "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+    leader:
+    - Battle Sister Squad
+    - Celestian Sacresants
+  factions: 
+  - Adepta Sororitas
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "condemnor boltgun, hallowed chainsword, null rod"
+- # Battle Sisters Squad (Patrol)
+  name: Battle Sisters Squad (Patrol)
+  profiles:
+  -
+    name: Battle Sisters Squad
+    m: 6
+    t: 3
+    sv: 3+
+    iv: 6+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Imperium
+  - Battle Sisters Squad
+  ranged:
+  -
+    name: Bolt pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Boltgun
+    num: 7
+    range: 24"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 1
+  -
+    name: Combi-weapon
+    num: 1
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Anti-Infantry 4+
+    - Devastating Wounds
+    - Rapid Fire 1
+  -
+    name: Ministorum flamer
+    num: 1
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  -
+    name: Ministorum heavy flamer
+    num: 1
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  melee:
+  -
+    name: Close combat weapon
+    num: 9
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+  -
+    name: Power weapon
+    num: 1
+    range: Melee
+    a: 2
+    ws: 4+
+    s: 4
+    ap: -2
+    d: 1
+  abilities:
+    faction:
+    - Acts of Faith
+    wargear:
+    -
+      label: Simulacrum Imperialis
+      value: "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: On a 4+, you gain 1 Miracle dice with a value equal to that result."
+  factions: 
+  - Adepta Sororitas
+  composition:
+  -
+    label: "The Sister Superior is equipped with:"
+    value: "bolt pistol, combi-weapon, power weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, Ministorum flamer, close combat weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, Ministorum heavy flamer, close combat weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, boltgun, close combat weapon, simulacrum imperialis"
+  -
+    label: "6 Battle Sisters are equipped with:"
+    value: "bolt pistol, boltgun, close combat weapon"
+  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models."
+- # Celestian Sacresants (Patrol)
+  name: Celestian Sacresants (Patrol)
+  profiles:
+  -
+    name: Celestian Sacresants
+    m: 6
+    t: 3
+    sv: 3+
+    iv: 4+
+    w: 1
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Celestian Sacresants
+  ranged:
+  -
+    name: Bolt pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Hallowed mace
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 2
+  abilities:
+    faction:
+    - Acts of Faith
+    other:
+    - 
+      label: "Sworn Protectors:"
+      value: "While an ADEPTA SORORITAS CHARACTER is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll"
+  factions: 
+  - Adepta Sororitas
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "bolt pistol, hallowed mace"
+- # Arco-flagellants (Patrol)
+  name: Arco-flagellants (Patrol)
+  profiles:
+  -
+    name: Arco-flagellants
+    m: 7
+    t: 3
+    sv: 7+
+    w: 2
+    ld: 8+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Arco-flagellants
+  melee:
+  -
+    name: Arco-flails
+    range: Melee
+    a: 4
+    ws: 4+
+    s: 5
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Feel No Pain 5+
+    faction:
+    - Acts of Faith
+    other:
+    - 
+      label: "Extremis Trigger Word:"
+      value: "Each time this unit is selected to fight, you can choose to invoke its extremis trigger word. If you do, then until the end of the phase, arco-flails equipped by models in this unit have an Attacks characteristic of 6 and the [Hazardous] ability."
+  factions: 
+  - Adepta Sororitas
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "arco-flails"
+# Prism of Zadophon
+- # Zadophon the Soul Eater
+  name: Zadophon the Soul Eater
+  profiles:
+  -
+    name: Zadophon the Soul Eater
+    m: 9
+    t: 10
+    sv: 2+
+    iv: 4+
+    w: 10
+    ld: 6+
+    oc: 3
+  keywords:
+  - Monster
+  - Character
+  - Daemon
+  - Psyker
+  - Chaos
+  - Tzeentch
+  - Daemon Prince
+  - Zadophon the Soul Eater
+  ranged:
+  -
+    name: Infernal Cannon
+    range: 24"
+    a: 3
+    bs: 2+
+    s: 5
+    ap: -2
+    d: 2
+  melee:
+  -
+    name: Hellforged Weapons
+    range: Melee
+    a: 12
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Devastating Wounds
+    - Psychic
+  abilities:
+    faction:
+    - Cabal of Sorcerers
+    other:
+    -
+      label: "Spirit Snare:"
+      value: "Each time a friendly THOUSAND SONS PSYKER model with the Cabal of Sorcerers ability is destroyed while within 9\" of one or more models with this ability, select one of those models with this ability: until the end of the battle, each time the selected model attempts a Ritual, add 1 to the Psychic test result (to a maximum of +2)."
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "infernal cannon, hellforged weapons"
+- # Kaa'skrek
+  name: Kaa'skrek
+  profiles:
+  -
+    name: Kaa'skrek
+    m: 10
+    t: 4
+    sv: 5+
+    iv: 5+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Mounted
+  - Character
+  - Fly
+  - Psyker
+  - Chaos
+  - Tzeentch
+  - Mutant
+  - Tzaangor Shaman
+  - Kaa'skrek
+  ranged:
+  -
+    name: Baleful Devolution
+    range: 18"
+    a: D6
+    bs: 3+
+    s: 9
+    ap: 0
+    d: 1
+    abilities:
+    - Blast
+    - Devastating Wounds
+    - Psychic
+  melee:
+  -
+    name: Force stave
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: D3
+    abilities:
+    - Psychic
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Cabal of Sorcerers
+    other:
+    -
+      label: "Bestial Prophet:"
+      value: "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+    leader:
+    - Tzaangor Enlightened
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Baleful Devolution, force stave"
+- # Rubric Marines (Patrol)
+  name: Rubric Marines (Patrol)
+  profiles:
+  -
+    name: Aspiring Sorcerer
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 5+
+    w: 3
+    ld: 6+
+    oc: 2
+  -
+    name: Rubric Marine
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Chaos
+  - Tzeentch
+  - Rubricae
+  - Rubric Marines
+  - Psyker (Aspiring Sorcerer Only)
+  ranged:
+  -
+    name: Inferno bolt pistol
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Malefic Curse
+    num: 1
+    range: 24"
+    a: 3
+    bs: 3+
+    s: 4
+    ap: -3
+    d: 1
+    abilities:
+    - Anti-Infantry 4+
+    - Devastating Wounds
+    - Psychic
+  -
+    name: Inferno boltgun
+    num: 3
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -2
+    d: 1
+  -
+    name: Soulreaper Cannon
+    num: 1
+    range: 24"
+    a: 6
+    bs: 3+
+    s: 6
+    ap: -2
+    d: 1
+    abilities:
+    - Devastating Wounds
+  -
+    name: Warpflamer
+    num: 5
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  melee:
+  -
+    name: Close combat weapon
+    num: 9
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Force weapon
+    num: 1
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 6
+    ap: -1
+    d: D3
+    abilities:
+    - Psychic
+  abilities:
+    faction:
+    - Cabal of Sorcerers (Aspiring Sorcerer Only)
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "The Aspiring Sorcerer model is equipped with:"
+    value: "Inferno bolt pistol, Malefic Curse, force weapon"
+  -
+    label: "1 Rubric Marine model is equipped with:"
+    value: "Soulreaper cannon, close combat weapon"
+  -
+    label: "5 Rubric Marine models are equipped with:"
+    value: "warpflamer, close combat weapon"
+  -
+    label: "3 Rubric Marine models are equipped with:"
+    value: "Inferno boltgun, close combat weapon"
+- # Tzaangor Enlightened (Patrol)
+  name: Tzaangor Enlightened (Patrol)
+  profiles:
+  -
+    name: Tzaangor Enlightened
+    m: 10
+    t: 4
+    sv: 5+
+    iv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Fly
+  - Chaos
+  - Tzeentch
+  - Mutant
+  - Tzaangor Enlightened
+  melee:
+  -
+    name: Divining Spear
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Lance
+    - Precision
+  abilities:
+    other:
+    -
+      label: "Prophesied Doom:"
+      value: "Each time this unit ends a Charge mode, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Divining spear"
+# The Coven Temporus
+- # Ahrak the Time Weaver
+  name: Ahrak the Time Weaver
+  profiles:
+  -
+    name: Ahrak the Time Weaver
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 5+
+    w: 4
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Psyker
+  - Chaos
+  - Tzeentch
+  - Infernal Master
+  - Ahrak the Time Weaver
+  ranged:
+  -
+    name: Inferno bolt pistol
+    range: 12"
+    a: 1
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Screamer Invocation - witchfire
+    profile: true
+    range: 18"
+    a: 2D3
+    bs: N/A
+    s: 6
+    ap: -2
+    d: 1
+    abilities:
+    - Psychic
+    - Torrent
+  -
+    name: Screamer Invocation - focused witchfire
+    profile: true
+    range: 18"
+    a: 2D6
+    bs: N/A
+    s: 6
+    ap: -2
+    d: 1
+    abilities:
+    - Hazardous
+    - Psychic
+    - Torrent
+  melee:
+  -
+    name: Force weapon
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: D3
+    abilities:
+    - Psychic
+  abilities:
+    faction:
+    - Cabal of Sorcerers 2
+    other:
+    -
+      label: "Glimpse of Eternity (Psychic):"
+      value: "Once per turn, you can change the result of one Hit roll, one Wound roll, one Damage roll or one saving throw made for this model to an unmodified 6."
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "inferno bolt pistol, Screamer Invocation, force weapon."
+- # Scarab Occult Terminators (Patrol)
+  name: Scarab Occult Terminators (Patrol)
+  profiles:
+  -
+    name: Scarab Occult Terminators
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 3
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Terminator
+  - Chaos
+  - Tzeentch
+  - Scarab Occult
+  - Psyker (Scarab Occult Sorcerer Only)
+  ranged:
+  -
+    name: Hellfyre missile rack
+    num: 1
+    range: 36"
+    a: 2
+    bs: 3+
+    s: 10
+    ap: -2
+    d: 3
+  -
+    name: Inferno combi-bolter
+    num: 3
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  -
+    name: Soulreaper Cannon
+    num: 1
+    range: 24"
+    a: 6
+    bs: 3+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Devastating Wounds
+  -
+    name: Warpsmite
+    num: 1
+    range: 18"
+    a: 3
+    bs: 3+
+    s: 4
+    ap: -3
+    d: 1
+    abilities:
+    - Anti-Infantry 4+
+    - Devastating Wounds
+    - Pistol
+    - Psychic
+  melee:
+  -
+    name: Force weapon
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: D3
+    abilities:
+    - Psychic
+  -
+    name: Prosperine khopesh
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Cabal of Sorcerers 1 (Scarab Occult Sorcerer Only)
+    other:
+    -
+      label: Implacable Guardians
+      value: "While this unit contains one or mor PSYKER models, each time an attack is made against this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll."
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "1 Scarab Occult Sorcerer is equipped with:"
+    value: "Warpsmite, force weapon, Prosperine khopesh."
+  -
+    label: "2 Scarab Occult Terminators are equipped with:"
+    value: "Inferno combi-bolter, Prosperine khopesh."
+  -
+    label: "1 Scarab Occult Terminator is equipped with:"
+    value: "Soulreaper cannon, Prosperine khopesh"
+  -
+    label: "1 Scarab Occult Terminator is equipped with:"
+    value: "Hellfyre missile rack, interno combi-bolter, Prosperine khopesh"
+- # Tzaangors (Patrol)
+  name: Tzaangors (Patrol)
+  profiles:
+  -
+    name: Tzaangors
+    m: 6
+    t: 4
+    sv: 6+
+    iv: 6+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Chaos
+  - Tzeentch
+  - Tzaangors
+  ranged:
+  -
+    name: Autopistol
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Chainsword
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    other:
+    -
+      label: "Relic Hunters:"
+      value: "At the end of your Command phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it: for each 4+, you gain 1 Cabal point."
+  factions: 
+  - Thousand Sons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Autopistol, chainsword"
+# Purge Corps Deltic-9
+- # Manipulus Skand
+  name: Manipulus Skand
+  profiles:
+  -
+    name: Manipulus Skand
+    m: 6
+    t: 4
+    sv: 2+
+    iv: 5+
+    w: 4
+    ld: 7+
+    oc: 1
+  keywords:
+  - Imperium
+  - Infantry
+  - Character
+  - Cult Mechanicus
+  - Tech-Priest
+  - Manipulus
+  - Manipulus Skand
+  ranged:
+  -
+    name: Transonic cannon
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 4
+    ap: 0
+    d: 2
+    abilities:
+    - Devastating Wounds
+    - Torrent
+  melee:
+  -
+    name: Omnissian staff
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Leader
+    other:
+    -
+      label: "Galvanic Field:"
+      value: "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+    leader:
+    - Skitarii Vanguard
+  factions: 
+  - Adeptus Mechanicus
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "transonic cannon, Omnissian staff"
+- # Skitarii Vanguard (Patrol)
+  name: Skitarii Vanguard (Patrol)
+  profiles:
+  -
+    name: Skitarii Vanguard (Patrol)
+    m: 6
+    t: 3
+    sv: 4+
+    iv: 5+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Imperium
+  - Skitarii
+  - Vanguard
+  ranged:
+  -
+    name: Arc rifle
+    num: 1
+    range: 30"
+    a: 1
+    bs: 4+
+    s: 8
+    ap: -1
+    d: D3
+    abilities:
+    - Anti-Vehicle 4+
+    - Devastating Wounds
+    - Rapid Fire 1
+  -
+    name: Mechanicus pistol
+    num: 1
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Devastating Wounds
+    - Pistol
+  -
+    name: Plasma caliver - standard
+    profile: true
+    num: 1
+    range: 30"
+    a: 2
+    bs: 4+
+    s: 7
+    ap: -2
+    d: 1
+  -
+    name: Plasma caliver - supercharge
+    profile: true
+    num: 1
+    range: 30"
+    a: 2
+    bs: 4+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Hazardous
+  -
+    name: Radium carbine
+    num: 7
+    range: 18"
+    a: 3
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Anti-Infantry 4+
+  melee:
+  -
+    name: Alpha combat weapon
+    range: Melee
+    a: 2
+    ws: 4+
+    s: 5
+    ap: -1
+    d: 1
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Doctrina Imperatives
+    other:
+    -
+      label: "Rad-Saturation (Aura):"
+      value: "While an enemy unit (excluding VEHICLE units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+  factions: 
+  - Adeptus Mechanicus
+  composition:
+  -
+    label: "The Skitarii Vanguard Alpha model is equipped with:"
+    value: "Mechanicus pistol, Alpha combat weapon"
+  -
+    label: "1 Skitarii Vanguard model is equipped with:"
+    value: "Arc Rifle, close combat weapon"
+  -
+    label: "1 Skitarii Vanguard model is equipped with:"
+    value: "Plasma caliver, close combat weapon"
+  -
+    label: "7 Skitarii Vanguard model is equipped with:"
+    value: "Radium carbine, close combat weapon"

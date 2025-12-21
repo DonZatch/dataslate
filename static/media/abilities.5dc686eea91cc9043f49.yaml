@@ -1,0 +1,150 @@
+-
+  name: Deep Strike
+  text: "<p>During the Declare Battle Formations step, if every model in a unit has this ability, you can set it up in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases you can set up this unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. If a unit with the Deep Strike ability arrives from Strategic Reserves, the controlling player can choose for that unit to be set up either using the rules for Strategic Reserves or using the Deep Strike ability.</p>"
+  summary:
+    - "Unit can be set up in Reserves instead of on the battlefield."
+    - "Unit can be set up in your Reinforcements step, more than 9\" horizontally away from all enemy models."
+-
+  name: Infiltrators
+  text:
+    - "<p>During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9\" horizontally away from the enemy deployment zone and all enemy models.</p>"
+- 
+  name: Leader
+  text: "
+    <p>Some CHARACTER units have 'Leader' listed on their datasheets. Such CHARACTER units are known as Leaders, and the units they can lead - known as their Bodyguard units - are listed on their datasheet.</p>
+    <p>During the Declare Battle Formations step, for each Leader in your army, if your army also includes one or more of that Leader's Bodyguard units, you can select one of those Bodyguard units. That Leader will then attach to that Bodyguard unit for the duration of the battle and is said to be leading that unit. Each Bodyguard unit can only have one Leader attached to it.</p>
+    <p>While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed, it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack sucessfully wounds an Attached unit, that attack cannot be allocated to a CHARACTER model in that unit, even if that CHARACTER model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to CHARACTER models in that unit.</p>
+    <p>Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit is no longer part of an Attached unit. It becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks.</p>
+    <p>Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unitls Bodyguard unit is no longer part of an Attached unit. It becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks.</p>
+    <p>Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.</p>
+    "
+  example: "If you only destroy the Bodyguard unit that is part of an Attached unit, you have not destroyed a CHARACTER unit. If you only destroy the CHARACTER unit that is part of an Attached unit, or if you destroy the whole Attached unit, you have destroyed one CHARACTER unit."
+  summary:
+    - Before the battle, CHARACTER units with the Leader ability can be attached to one of their Bodyguard units to form an Attached unit.
+    - Attached units can only contain one Leader.
+    - Attacks cannot be allocated to CHARACTER models in Attached units.
+-
+  name: Deadly Demise
+  text: "<p>Some models have 'Deadly Demise x' listed in their abilities. When such a model is destroyed, roll one D6 before removing it from play (if such a model is a TRANSPORT, roll before any embarked models disembark). On a 6, each unit within 6\" of that model suffers a number of mortal wounds denoted by 'x' (if this is a random number, roll separately for each unit within 6\").</p>"
+  example: "A TRANSPORT model with the Deadly Demise D3 ability is destroyed. Before any models disembark and before removing it from play, its controlling player rolls one D6, getting a 6. There are three units within 6\" of that destroyed model, so its controlling player rolls one D3 for each of them, inflicting mortal wounds accordingly."
+  summary:
+  - "Deadly Demise x: When this model is destroyed, roll one D6. On a 6, each unit within 6\" suffers 'x' mortal wounds."
+-
+  name: Feel No Pain
+  text: "<p>Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x', that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound.</p>"
+  summary:
+  - "Feel No Pain x+: Each time this model would lose a wound, roll one D6: if the result equals or exceeds 'x', that wound is not lost."
+-
+  name: Fights First
+  text: "<p>Units with this ability that are eligible to fight do so in the Fights First step, provided every model in the unit has this ability.</p>"
+-
+  name: Stealth
+  text: "<p>If every model in a unit has this ability, then each time a ranged attack is made against it, subtract 1 from that attack's Hit roll.</p>"
+-
+  name: Lone Operative
+  text: "<p>Unless part of an Attached unit (see Leader), this unit can only be selected as the target of a ranged attack if the attacking model is within 12\".</p>"
+-
+  name: Assault
+  text: "<p>Weapons with [ASSAULT] in their profile are known as Assault weapons. If a unit that Advanced this turn contains any models equipped with Assault weapons, it is still eligible to shoot in this turn's Shooting phase. When such a unit is selected to shoot, you can only resolve attacks using Assault weapons its models are equipped with.</p>"
+  summary:
+  - "Can be shot even if the bearer's unit Advanced."
+-
+  name: Rapid Fire
+  text: "<p>Weapons with [RAPID FIRE X] in their profile are known as Rapid Fire weapons. Each time such a weapon targets a unit within half that weapon's range, the Attacks characteristic of that weapon is increased by the amount denoted by 'x'.</p>"
+  example: "A model targets a unit that is within half range of a weapon with an Attacks characteristic of 1 and the [RAPID FIRE 1] ability. That weapon therefore makes two attacks at the target, and you make two Hit rolls."
+  summary:
+  - "[RAPID FIRE X]: Increase the Attacks by 'x' when targeting units within half range."
+-
+  name: Ignores Cover
+  text: "<p>Weapons with [IGNORES COVER] in their profile are known as Ignores Cover weapons. Each time an attack is made with such a weapon, the target cannot have the Benefit of Cover against that attack.</p>"
+-
+  name: Twin-linked
+  text: "<p>Weapons with [TWIN-LINKED] in their profile are known as Twin-linked weapons. Each time an attack is made with such a weapon, you can re-roll that attack's Wound roll.</p>"
+-
+  name: Pistol
+  text: "<p>Weapons with [PISTOL] in their profile are known as Pistols. If a unit contains any models equipped with Pistols, that unit is eligible to shoot in its controlling player's Shooting phase even while it is within Engagement Range of one or more enemy units. When such a unit is selected to shoot, it can only resolve attacks using its Pistols and can only target one of the enemy units it is within Engagement Range of. In such circumstances, a Pistol can target an enemy unit even if other friendly units are within Engagement Range of the same enemy unit.</p>
+    <p>If a model is equipped with one or more Pistols, unless it is a MONSTER or VEHICLE model, it can either shoot with its Pistols or with all of its other ranged weapons. Declare whether such a model will shoot with its Pistols or its other ranged weapons before selecting targets.</p>"
+  summary:
+  - "Can be shot even if the bearer's unit is within Engagement Range of enemy units, but must target one of those enemy units."
+  - "Cannot be shot alongside any other non-Pistol weapon (except by a MONSTER or VEHICLE)."
+-
+  name: Torrent
+  text: "<p>Weapons with [TORRENT] in their profile are known as Torrent weapons. Each time an attack is made with such a weapon, that attack automatically hits the target.</p>"
+-
+  name: Lethal Hits
+  text: "<p>Weapons with [LETHAL HITS] in their profile are known as Lethal Hits weapons. Each time an attack is made with such a weapon, a Critical Hit automatically wounds the target.</p>"
+-
+  name: Lance
+  text: "<p>Weapons with [LANCE] in their profile are known as Lance weapons. Each time an attack is made with such a weapon, if the bearer made a Charge move this turn, add 1 to that attack's Wound roll.</p>"
+-
+  name: Indirect Fire
+  text: "<p>Weapons with [INDIRECT FIRE] in their profile are known as Indirect Fire weapons, and attacks can be made with them even if the target is not visible to the attacking model. These attacks can destroy enemy models in a target unit even though none may have been visible to the attacking unit when you selected that target.</p>
+    <p>If no models in a target unit are visible to the attacking unit when you select that target, then each time a model in the attacking unit makes an attack against that target using an Indirect Fire weapon, subtract 1 from that attack's Hit roll, an unmodified Hit roll of 1-3 always fails, and the target has the Benefit of Cover against that attack. Weapons with the [TORRENT] ability cannot be fired using the [INDIRECT FIRE] ability.</p>"
+  example: "An enemy unit is targeted by an attacking model equipped with a weapon with the [INDIRECT FIRE] ability. No models in the target unit are visible to the attacking model, so when resolving the attacks made with that weapon, subtract 1 from that attack's Hit roll an unmodified Hit roll of 1-3 always fails, and each time an attack is allocated to a model in the target unit, it has the Benefit of Cover against that attack."
+  summary:
+  - "Can target and make attacks against units that are not visible to the attacking unit."
+  - "If no models are visible in a target unit when it is selected, then when making an attack against that target with an Indirect Fire weapon, subtract 1 from that attack's Hit roll, an unmodified Hit roll of 1-3 always fails, and the target has the Benefit of Cover against that attack."
+-
+  name: Precision
+  text: "<p>Weapons with [PRECISION] in their profile are known as Precision weapons. Each time an attack made with such a weapon successfully wounds an Attached unit (see Leader ability), if a CHARACTER model in that unit is visible to the attacking model, the attacking model's player can choose to have that attack allocated to that CHARACTER model instead of following the normal attack sequence.</p>"
+  summary:
+  - "When targeting an Attached unit, the attacking model's player can have the attack allocated to a CHARACTER model in that unit visible to the bearer."
+-
+  name: Blast
+  text: "<p>Weapons with [BLAST] in their profile are known as Blast weapons, and they make a random number of attacks. Each time you determine how many attacks are made with a Blast weapon, add 1 to the result for every five models that were in the target unit when you selected it as the target (rounding down). Blast weapons can never be used to make attacks against a unit that is within Engagement Range of one or more units from the attacking model's army (including its own unit).</p>"
+  example: "If a weapon with the [BLAST] ability and an Attacks characteristic of 2D6 targets a unit that contains 11 models, and the roll to determine how many attacks are made is a 9, a total of 11 attacks would be made against that unit."
+  summary:
+  - "Add 1 to the Attacks characteristic for every five models in the target unit (rounding down)."
+  - "Can never be used against a target that is within Engagement Range of any units from the attacking model's army (including its own)."
+-
+  name: Melta
+  text: "<p>Weapons with [MELTA X] in their profile are known as Melta weapons. Each time an attack made with such a weapon targets a unit within half that weapon's range, that attack's Damage characteristic is increased by the amount denoted by 'x'.</p>"
+  example: "A model targets a unit that is within half range of a weapon with a Damage characteristic of D6 and the [MELTA 2] ability. If that attack inflicts damage on the target, it inflicts D6+2 damage."
+  summary:
+  - "[MELTA X]: Increase the Damage by 'x' when targeting units within half range."
+-
+  name: Heavy
+  text: "<p>Weapons with [HEAVY] in their profile are known as Heavy weapons. Each time an attack is made with such a weapon, if the attacking model's unit Remained Stationary this turn, add 1 to that attack's Hit roll.</p>"
+  summary:
+  - "Add 1 to Hit rolls if the bearer's unit Remained Stationary this turn."
+-
+  name: Hazardous
+  text: "
+    <p>Weapons with [HAZARDOUS] in their profile are known as Hazardous weapons. Each time a unit is selected to shoot or fight, after that unit has resolved all of its attacks, for each Hazardous weapon that targets were selected for when resolving those attacks, that unit must take one Hazardous test. To do so, roll one D6: on a 1, that test is failed. For each failed test you must resolve the following sequence (resolve each failed test one at a time):</p>
+    <ul>
+      <li>If possible, select one model in that unit that has lost one or more wounds and is equipped with one or more Hazardous weapons.</li>
+      <li>Otherwise, if possible, select one model in that unit (excluding CHARACTER models) equipped with one or more Hazardous weapons.</li>
+      <li>Otherwise, select one CHARACTER model in that unit equipped with one or more Hazardous weapons.</li>
+    </ul>
+    <p>If a model was selected, that unit suffers 3 mortal wounds and when allocating those mortal wounds, they must be allocated to the selected model.</p>
+    <p>If a unit from a player's army is selected as the target of the Fire Overwatch Stratagem in their opponent's Charge phase, any mortal wounds inflicted by Hazardous tests are allocated after the charging unit has ended its Charge move.</p>
+    "
+  example: "A unit of five models make five attacks with ranged weapons with the [HAZARDOUS] ability. After the unit has finished shooting, its controlling player rolls five D6. One of the results is a 1, and so one of those models suffers 3 mortal wounds."
+  summary: 
+  - "After a unit shoots or fights, roll one Hazardous test (one D6) for each Hazardous weapon used. For each 1, a model equipped with a hazardous weapon suffers 3 mortal wounds, that must be allocated to the selected model."
+-
+  name: Devastating Wounds
+  text: "<p>Weapons with [DEVASTATING WOUNDS] in their profile are known as Devastating Wounds weapons. Each time an attack is made with such a weapon, if that attack scores a Critical Wound, no saving throw of any kind can be made against that attack (including invulnerable saving throws). Such attacks are only allocated to models after all other attacks made by the attacking unit have been allocated and resolved. After that attack is allocated and after any modifiers are applied, it inflicts a number of mortal wounds on the target equal to the Damage characteristic of that attack, instead of inflicting damage normally.</p>"
+  example: "Example: An attack made with a Devastating Wounds weapon with a Damage characteristic of 2 scores a Critical Wound. Instead of allocating the attack and making saving throws normally, the target suffers 2 mortal wounds."
+  summary:
+  - "A Critical Wound inflicts mortal wounds equal to the weapon's Damage characteristic, instead of any normal damage."
+-
+  name: Sustained Hits
+  text: "<p>Weapons with [SUSTAINED HITS X] in their profile are known as Sustained Hits weapons. Each time an attack is made with such a weapon, if a Critical Hit is rolled, that attack scores a number of additional hits on the target as denoted by 'x'.</p>"
+  example: "A model makes an attack with a melee weapon with the [SUSTAINED HITS 2] ability. If the Hit roll is an unmodified 6 (a Critical Hit), then that attack scores a total of 3 hits on the target (1 from the successful Hit roll of 6, and 2 from the [SUSTAINED HITS 2] ability)."
+  summary:
+  - "[SUSTAINED HITS X]: Each Critical Hit scores 'x' additional hits on the target."
+-
+  name: Extra Attacks
+  text: "<p>Weapons with [EXTRA ATTACKS] in their profile are known as Extra Attacks weapons. Each time the bearer of one or more Extra Attacks weapons fights, it makes attacks with each of the Extra Attacks melee weapons it is equipped with and it makes attacks with one of the melee weapons it is equipped with that does not have the [EXTRA ATTACKS] ability (if any). The number of attacks made with an Extra Attacks weapon cannot be modified by other rules, unless that weapon's name is explicitly specified in that rule.</p>"
+  summary:
+  - "The bearer can attack with this weapon in addition to any other weapons it can make attacks with."
+-
+  name: Anti
+  text: "<p>Weapons with [ANTI-KEYWORD X+] in their profile are known as Anti weapons. Each time an attack is made with such a weapon against a target with the keyword after the word 'Anti-', an unmodified Wound roll of 'x+' scores a Critical Wound.</p>"
+  example: "An attack made with an [ANTI-VEHICLE 4+] weapon will score a Critical Wound against - and so successfully wound - a VEHICLE unit on an unmodified Wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon will score a Critical Wound against - and so successfully wound - a PSYKER unit on an unmodified Wound roll of 2+."
+  summary:
+  - "[ANTI-KEYWORD X+]: An unmodified Wound roll of 'x+' against a target with the matching keyword scores a Critical Wound."
+-
+  name: Psychic
+  text: "<p>If a Psychic weapon or ability causes any unit to suffer one or more wounds, each of those wounds is considered to have been inflicted by a Psychic attack</p>"
