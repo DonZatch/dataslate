@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dataslate/static/css/main.e820b95a.css",
+    "main.css": "/dataslate/static/css/main.44e9a06e.css",
     "main.js": "/dataslate/static/js/main.cd9bfdc9.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.a4ec87f9716656f7df0a.yaml",
@@ -10,12 +10,12 @@
     "static/media/armies.yaml": "/dataslate/static/media/armies.3ab4f17681d23cdcaa06.yaml",
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.ddd123752fa3cff3beea.yaml",
-    "main.e820b95a.css.map": "/dataslate/static/css/main.e820b95a.css.map",
+    "main.44e9a06e.css.map": "/dataslate/static/css/main.44e9a06e.css.map",
     "main.cd9bfdc9.js.map": "/dataslate/static/js/main.cd9bfdc9.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e820b95a.css",
+    "static/css/main.44e9a06e.css",
     "static/js/main.cd9bfdc9.js"
   ]
 }
