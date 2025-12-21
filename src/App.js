@@ -444,19 +444,13 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick })
 function AbilitySummary({ unit, appSettings, setShowInfo })
 {
   const abilities = getSummaryAbilties(unit, appSettings);
-  const rangedWeapons = getRangedWeapons(unit, appSettings);
-  const meleeWeapons = getMeleeWeapons(unit, appSettings);
   const keywordAbilities = getKeywordAbilitySummary(unit, appSettings);
-  if (abilities.length === 0 && rangedWeapons.length === 0 && meleeWeapons.length === 0 && keywordAbilities.length === 0)
-  {
-    return null;
-  }
   return (
     <ol className="abilitySummary">
       {abilities.map(ability => <li key={ability} onClick={e => setShowInfo(e, ability)}>{ability}</li>)}
       {keywordAbilities.map(keyword => <li key={keyword} onClick={e => setShowInfo(e, keyword)}>{keyword}</li>)}
-      {rangedWeapons.map(weapon => <RangedWeaponSummary key={weapon.name} weapon={weapon} setShowInfo={setShowInfo} />)}
-      {meleeWeapons.map(weapon => <MeleeWeaponSummary key={weapon.name} weapon={weapon} setShowInfo={setShowInfo} />)}
+      <RangedWeapons unit={unit} setShowInfo={setShowInfo} summary />
+      <MeleeWeapons unit={unit} setShowInfo={setShowInfo} summary />
     </ol>
   );
 }
@@ -668,8 +662,8 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
       <div className="unitDetails">
         <UnitProfile unit={unit} />
         <div>
-          <RangedWeapons unit={unit} setShowInfo={setShowInfo} />
-          <MeleeWeapons unit={unit} setShowInfo={setShowInfo} />
+          <RangedWeapons unit={unit} setShowInfo={setShowInfo} label="Ranged Weapons" />
+          <MeleeWeapons unit={unit} setShowInfo={setShowInfo} label="Melee Weapons" />
         </div>
         <Composition unit={unit} />
         <Damaged unit={unit} />
@@ -770,45 +764,53 @@ function PivotValue({ value })
   );
 }
 
-function RangedWeapons({ unit, setShowInfo })
+function RangedWeapons({ unit, setShowInfo, summary })
 {
   return (
     <WeaponTable 
       weapons={unit?.ranged} 
-      label="Ranged Weapons" 
+      label={summary ? "Ranged" : "Ranged Weapons"}
       skillLabel="BS" 
       icon="&#8982;" 
       setShowInfo={setShowInfo}
+      summary={summary}
     />
   );
 }
 
-function MeleeWeapons({ unit, setShowInfo })
+function MeleeWeapons({ unit, setShowInfo, summary })
 {
   return (
     <WeaponTable 
       weapons={unit?.melee}
-      label="Melee Weapons"
+      label={summary ? "Melee" : "Melee Weapons"}
       skillLabel="WS"
       icon="&#9876;"
       setShowInfo={setShowInfo}
+      summary={summary}
+      hideRange={summary}
     />
   );
 }
 
-function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo })
+function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, hideRange })
 {
   if (!weapons || weapons.length === 0)
   {
     return null;
   }
+  const classList = ["weapons"];
+  if (summary)
+  {
+    classList.push("unitWeaponSummary");
+  }
   return (
-    <table className="weapons">
+    <table className={classList.join(" ")}>
       <thead>
         <tr>
           <th>{icon}</th>
           <th>{label}</th>
-          <th>Range</th>
+          {hideRange ? null : <th>{summary ? "Rg" : "Range" }</th>}
           <th>A</th>
           <th>{skillLabel}</th>
           <th>S</th>
@@ -817,11 +819,11 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo })
         </tr>
       </thead>
       <tbody>
-        {weapons.map(weapon => <Weapon weapon={weapon} setShowInfo={setShowInfo} />)}
+        {weapons.map(weapon => <Weapon weapon={weapon} setShowInfo={setShowInfo} hideRange={hideRange} />)}
       </tbody>
-      {weapons.find(weapon => weapon.profile) ? 
+      {!summary && weapons.find(weapon => weapon.profile) ? 
         <tfoot>
-          <td>&#11166;</td>
+          <td>&#9654;</td>
           <td className="reminderText" colspan={7}>Before selecting targets with this weapon, select one of its profiles to make attacks with.</td>
         </tfoot>
       : null}
@@ -829,16 +831,16 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo })
   )
 }
 
-function Weapon({ weapon, setShowInfo })
+function Weapon({ weapon, setShowInfo, hideRange })
 {
   return (
     <>
       <tr className="weaponProfile">
-        <td>{weapon.profile ? <>&#11166;</> : null}</td>
+        <td>{weapon.num}{weapon.profile ? <>&#9654;</> : null}</td>
         <td>
           {weapon.name}&nbsp;
         </td>
-        <td>{weapon.range}</td>
+        {hideRange ? null : <td>{weapon.range}</td> }
         <td>{weapon.a}</td>
         <td>{weapon.bs ?? weapon.ws}</td>
         <td>{weapon.s}</td>
