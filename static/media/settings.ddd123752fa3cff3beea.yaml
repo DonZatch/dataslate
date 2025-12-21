@@ -1,0 +1,24 @@
+summaryIgnoreAbilities:
+- firing deck
+- leader
+rangedSummaryAbilities:
+- assault
+- rapid fire
+- heavy
+- indirect fire
+- ignores cover
+- pistol
+- lance
+- anti
+- precision
+meleeSummaryAbilities:
+- lance
+- anti
+- precision
+summaryKeywords:
+- fly
+- vehicle
+- monster
+- infantry
+- battleline
+- psyker

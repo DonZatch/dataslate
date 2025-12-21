@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dataslate/static/css/main.e820b95a.css",
+    "main.js": "/dataslate/static/js/main.5a7ef66f.js",
+    "static/js/453.42b3e134.chunk.js": "/dataslate/static/js/453.42b3e134.chunk.js",
+    "static/media/units.yaml": "/dataslate/static/media/units.a4ec87f9716656f7df0a.yaml",
+    "static/media/detachments.yaml": "/dataslate/static/media/detachments.109bed9322be866a1fe4.yaml",
+    "static/media/abilities.yaml": "/dataslate/static/media/abilities.5dc686eea91cc9043f49.yaml",
+    "static/media/strategems.yaml": "/dataslate/static/media/strategems.2ac0b01064f7ab118022.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.3ab4f17681d23cdcaa06.yaml",
+    "index.html": "/dataslate/index.html",
+    "static/media/settings.yaml": "/dataslate/static/media/settings.ddd123752fa3cff3beea.yaml",
+    "main.e820b95a.css.map": "/dataslate/static/css/main.e820b95a.css.map",
+    "main.5a7ef66f.js.map": "/dataslate/static/js/main.5a7ef66f.js.map",
+    "453.42b3e134.chunk.js.map": "/dataslate/static/js/453.42b3e134.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e820b95a.css",
+    "static/js/main.5a7ef66f.js"
+  ]
+}
