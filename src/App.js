@@ -151,20 +151,17 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
 
 function parseRoute()
 {
-  var route = window.location.pathname;
-  if (!route)
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  if (!urlParams)
   {
     return { page: "", id: "" };
   }
-  
-  var pathSplit = window.location.pathname.split("/");
-  if (pathSplit.length > 2 && pathSplit[1].toLowerCase() === "army")
+
+  var army = urlParams.get("army");
+  if (army)
   {
-    if (pathSplit.length > 4 && pathSplit[3].toLowerCase() === "unit")
-    {
-      return { page: "unit", army: pathSplit[2], unit: pathSplit[4] };
-    }
-    return { page: "army", army: pathSplit[2] };
+    return { page: "army", army: army };
   }
 
   return { page: "", id: "" };
@@ -210,7 +207,7 @@ function ArmyMenu({ armies })
         <button onClick={handler}>Clear Cache</button>
       </header>
       <ul className="armiesMenu">
-        {armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`/army/${army.id}`}>{army.faction}: {army.name}</a></li>)}
+        {armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
       </ul>
     </div>
   );
@@ -665,7 +662,7 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
   return (
     <div>
       <header>
-        <a href={`/army/${army}`} onClick={clickHandler}>&lsaquo;</a>
+        <a href={`?army=${army}`} onClick={clickHandler}>&lsaquo;</a>
         <h1>{unit?.name}</h1>
       </header>
       <div className="unitDetails">
