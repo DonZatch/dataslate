@@ -122,6 +122,22 @@
   - "grenade"
   - "tank shock"
   - "smokescreen"
+- # Zarkan's Daemonkin
+  id: CP9
+  category: Combat Patrol
+  name: Zarkan's Daemonkin
+  faction: Chaos Space Marines
+  detachment: Zarkan's Daemonkin
+  units:
+  - Aranis Zarkan
+  - Possessed (Patrol)
+  - Legionaries (Patrol)
+  - Cultist Mob (Patrol)
+  ignorestrats:
+  - "grenade"
+  - "tank shock"
+  - "smokescreen"
+  - "rapid ingress"
 # King of the Colloseum
 -
   id: KC1
