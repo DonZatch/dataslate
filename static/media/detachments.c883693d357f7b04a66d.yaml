@@ -447,7 +447,7 @@
     name: "Prescribed Excoriatian"
     text: "<p>From the second battle round onwards, at the end of your turn, you score 3VP if there are no enemy units within your deployment zone (excluding Battle-shocked units). If there are no enemy units within 6\" of your deployment zone (excluding Battle-shocked units),  you score 5VP instead.</p>"
 - # Zarkan's Daemonkin
-  name: Zarkan's Daemonkin-9
+  name: Zarkan's Daemonkin
   abilities:
   -
     name: Dark Pacts
