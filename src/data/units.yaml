@@ -1990,6 +1990,7 @@
   melee:
   -
     name: Alpha combat weapon
+    num: 1
     range: Melee
     a: 2
     ws: 4+
@@ -2026,3 +2027,192 @@
   -
     label: "7 Skitarii Vanguard model is equipped with:"
     value: "Radium carbine, close combat weapon"
+- # Serberys Sulphurhounds (Patrol)
+  name: Serberys Sulphurhounds (Patrol)
+  profiles:
+  -
+    name: Serberys Sulphurhounds (Patrol)
+    m: 12
+    t: 4
+    sv: 4+
+    iv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Imperium
+  - Skitarii
+  - Serberys Sulphurhounds
+  ranged:
+  -
+    name: Mechanicus pistol
+    num: 1
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Devastating Wounds
+    - Pistol
+  -
+    name: Phosphor blast carbine
+    num: 1
+    range: 18"
+    a: D6
+    bs: 4+
+    s: 6
+    ap: 0
+    d: 1
+    abilities:
+    - Blast
+    - Ignores Cover
+  -
+    name: Phosphor pistol
+    num: 3
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Pistol
+  -
+    name: Sulphur breath
+    num: 3
+    range: 9"
+    a: D6
+    bs: N/A
+    s: 3
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Pistol
+    - Torrent
+  melee:
+  -
+    name: Cavalry arc maul
+    num: 1
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 5
+    ap: -1
+    d: 1
+    abilities:
+    - Anti-Vehicle 4+
+    - Devastating Wounds
+    - Extra Attacks
+  -
+    name: Clawed Limbs
+    range: Melee
+    a: 4
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Doctrina Imperatives
+    other:
+    -
+      label: "Line-Breakers:"
+      value: "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units. For each 4+, that enemy unit suffers 1 mortal wound."
+  factions: 
+  - Adeptus Mechanicus
+  composition:
+  -
+    label: "The Serberys Sulphurhound Alpha model is equipped with:"
+    value: "Mechanicus pistol, sulphur breath, cavalry arc maul, clawed limbs"
+  -
+    label: "1 Serberys Sulphurhound model is equipped with:"
+    value: "Phosphor blast carbine, phosphor pistol, sulphur breath, clawed limbs"
+  -
+    label: "1 Serberys Sulphurhound model is equipped with:"
+    value: "2 phosphor pistols, sulphur breath, clawed limbs"
+- # Pteraxii Sterylizors (Patrol)
+  name: Pteraxii Sterylizors (Patrol)
+  profiles:
+  -
+    name: Pteraxii Sterylizors (Patrol)
+    m: 12
+    t: 4
+    sv: 4+
+    iv: 5+
+    w: 2
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Fly
+  - Jump Pack
+  - Imperium
+  - Skitarii
+  - Pteraxii
+  - Sterylizors
+  ranged:
+  -
+    name: Flechette blaster
+    num: 1
+    range: 12"
+    a: 5
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Phosphor torch
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  melee:
+  -
+    name: Pteraxii Talons
+    range: Melee
+    a: 2
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Taser goad
+    num: 1
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 6
+    ap: 0
+    d: 1
+    abilities:
+    - Sustained Hits 2
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Doctrina Imperatives
+    other:
+    -
+      label: "Searing Conflagration:"
+      value: "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, each time such an attack targets such a unit, you can re-roll the Wound roll instead."
+  factions: 
+  - Adeptus Mechanicus
+  composition:
+  -
+    label: "The Pteraxii Sterylizor Alpha model is equipped with:"
+    value: "Flechette blaster, taser goad"
+  -
+    label: "Every Pteraxii Sterylizor model is equipped with:"
+    value: "Phosphor torch, Pteraxii talons"
