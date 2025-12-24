@@ -122,6 +122,21 @@
   - "grenade"
   - "tank shock"
   - "smokescreen"
+- # Zarkan's Daemonkin
+  id: CP8
+  category: Combat Patrol
+  name: Zarkan's Daemonkin
+  faction: Heretic Astartes
+  detachment: Zarkan's Daemonkin
+  units:
+  - Aranis Zarkan
+  - Possessed (Patrol)
+  - Legionaries (Patrol)
+  - Cultist Mob (Patrol)
+  ignorestrats:
+  - "grenade"
+  - "tank shock"
+  - "smokescreen"
 # King of the Colloseum
 -
   id: KC1

@@ -2199,6 +2199,8 @@
     abilities:
     - Sustained Hits 2
   abilities:
+    core:
+    - Deep Strike
     faction:
     - Doctrina Imperatives
     other:
