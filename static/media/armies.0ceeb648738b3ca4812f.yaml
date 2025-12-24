@@ -123,10 +123,10 @@
   - "tank shock"
   - "smokescreen"
 - # Zarkan's Daemonkin
-  id: CP8
+  id: CP9
   category: Combat Patrol
   name: Zarkan's Daemonkin
-  faction: Heretic Astartes
+  faction: Chaos Space Marines
   detachment: Zarkan's Daemonkin
   units:
   - Aranis Zarkan
@@ -137,6 +137,7 @@
   - "grenade"
   - "tank shock"
   - "smokescreen"
+  - "rapid ingress"
 # King of the Colloseum
 -
   id: KC1

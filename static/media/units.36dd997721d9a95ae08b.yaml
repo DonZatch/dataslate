@@ -2216,3 +2216,315 @@
   -
     label: "Every Pteraxii Sterylizor model is equipped with:"
     value: "Phosphor torch, Pteraxii talons"
+# Zarkan's Daemonkin
+- # Aranis Zarkan
+  name: Aranis Zarkan
+  profiles:
+  -
+    name: Aranis Zarkan
+    m: 8
+    t: 4
+    sv: 3+
+    iv: 5+
+    w: 4
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Psyker
+  - Chaos
+  - Master of Possession
+  - Aranis Zarkan
+  ranged:
+  -
+    name: Bolt pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Rite of Possession - witchfire
+    profile: true
+    range: 18"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -3
+    d: 2
+    abilities:
+    - Anti-Psyker 2+
+    - Pistol
+    - Precision
+    - Psychic
+  -
+    name: Rite of Possession - focused witchfire
+    profile: true
+    range: 18"
+    a: 2
+    bs: 3+
+    s: 6
+    ap: -3
+    d: 3
+    abilities:
+    - Anti-Psyker 2+
+    - Hazardous
+    - Pistol
+    - Precision
+    - Psychic
+  melee:
+  -
+    name: Staff of possession
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: D3
+    abilities:
+    - Anti-Psyker 4+
+    - Psychic
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Dark Pacts
+    other:
+    -
+      label: "Sacrificial Dagger:"
+      value: "Once per phase, when this model is selected to shoot or fight, it can use this ability. If it does, this model's unit suffers 1 mortal wound and, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Hit roll and add 1 to the Wound roll."
+    leader:
+    - Legionaries
+    - Possessed
+  factions: 
+  - Heretic Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "bolt pistol, Rite of Possession, Aranis Zarkan"
+- # Possessed (Patrol)
+  name: Possessed (Patrol)
+  profiles:
+  -
+    name: Possessed (Patrol)
+    m: 9
+    t: 6
+    sv: 3+
+    iv: 5+
+    w: 3
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Chaos
+  - Daemon
+  - Possessed
+  melee:
+  -
+    name: Hideous mutations
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 2
+  abilities:
+    faction:
+    - Dark Pacts
+  factions: 
+  - Heretic Astartes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Hideous mutations"
+- # Legionaries (Patrol)
+  name: Legionaries (Patrol)
+  profiles:
+  -
+    name: Legionaries (Patrol)
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Chaos
+  - Legionaries
+  ranged:
+  -
+    name: Bolt pistol
+    num: 9
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Boltgun
+    num: 7
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Heavy bolter
+    num: 1
+    range: 36"
+    a: 3
+    bs: 4+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Heavy
+    - Sustained Hits 1
+  -
+    name: Meltagun
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 9
+    ap: -4
+    d: D6
+    abilities:
+    - Melta 2
+  -
+    name: Plasma pistol - standard
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 7
+    ap: -2
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Plasma pistol - supercharge
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Hazardous
+    - Pistol
+  melee:
+  -
+    name: Accursed weapon
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 1
+  -
+    name: Close combat weapon
+    num: 9
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Dark Pacts
+    other:
+    -
+      label: "Veterans of the Long War:"
+      value: "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+  factions: 
+  - Heretic Astartes
+  composition:
+  -
+    label: "The Aspiring Champion is equipped with:"
+    value: "Plasma pistol, accursed weapon"
+  -
+    label: "1 Legionary is equipped with:"
+    value: "Bolt pistol, meltagun, close combat weapon"
+  -
+    label: "1 Legionary is equipped with:"
+    value: "Bolt pistol, heavy bolter, close combat weapon"
+  -
+    label: "7 Legionaries are equipped with:"
+    value: "Bolt pistol, boltgun, close combat weapon"
+- # Cultist Mob (Patrol)
+  name: Cultist Mob (Patrol)
+  profiles:
+  -
+    name: Cultist Mob (Patrol)
+    m: 6
+    t: 3
+    sv: 6+
+    w: 1
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Battleline
+  - Chaos
+  - Damned
+  - Cultist Mob
+  ranged:
+  -
+    name: Autopistol
+    num: 9
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Bolt pistol
+    num: 1
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Brutal assault weapon
+    range: Melee
+    a: 2
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Dark Pacts
+  factions: 
+  - Heretic Astartes
+  composition:
+  -
+    label: "The Cultist Champion is equipped with:"
+    value: "Bolt pistol, brutal assault weapon"
+  -
+    label: "9 Chaos Cultists are equipped with:"
+    value: "Autopistol, brutal assault weapon"
