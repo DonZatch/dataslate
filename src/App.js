@@ -929,7 +929,7 @@ function BigGunsNeverTire({unit})
       <h2>Big Guns Never Tire</h2>
       <div className="unitLeader">
         MONSTER and VEHICLE units can shoot, and be shot at, even while they are within Engagement Range of enemy units. 
-        Each time a ranged attack is made by or against such a unit, subtract 1 from that attack's Hit roll (unless shooting with a Pistol)
+        Each time a MONSTER or VEHICLE unit makes a ranged attack, if that unit was within Engagement Range of one or more enemy units when it selected its targets, unless that attack is made with a Pistol, subtract 1 from that attack’s Hit roll.
       </div>
     </div>
   )
