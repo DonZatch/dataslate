@@ -339,9 +339,22 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
 {
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
-
+  const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
+  
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
   const detachment = useMemo(() => getDetachment(detachments, army), [detachments, army]);
+  
+  useEffect(() => {
+    if (!id)
+    {
+      return;
+    }
+    setSelectedEnhancement(localStorage.getItem(`${id}-enhancement`));
+  }, [id]);
+  const onChangeEnhancement = useCallback((enhancement) => {
+    localStorage.setItem(`${id}-enhancement`, enhancement);
+    setSelectedEnhancement(enhancement);
+  }, [id])
 
   const handler = useCallback((e, view) => {
     e.preventDefault();
@@ -358,6 +371,8 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
       <UnitDetails 
         id={unit} 
         army={army}
+        detachment={detachment}
+        enhancement={selectedEnhancement}
         units={units} 
         setShowInfo={setShowInfo}
         onGoBack={onGoBack}
@@ -373,9 +388,9 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
       </header>
       <div className="armyDetails">
         { view === "rules" ? <Rules detachment={detachment} /> : null }
-        { view === "units" ? <Units army={army} units={units} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
+        { view === "units" ? <Units army={army} units={units} detachment={detachment} enhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
-        { view === "enhancements" ? <Enhancements detachment={detachment} /> : null }
+        { view === "enhancements" ? <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onChangeEnhancement} /> : null }
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
@@ -412,9 +427,9 @@ function getDetachment(detachments, army)
   return detachments.find(detachment => detachment.name === army.detachment);
 }
 
-function Units({ army, units, appSettings, setShowInfo, onClick })
+function Units({ army, detachment, enhancement, units, appSettings, setShowInfo, onClick })
 {
-  const armyUnits = useMemo(() => getUnits(army, units), [army, units]);
+  const armyUnits = useMemo(() => getUnits(army, units, detachment, enhancement), [army, units, detachment, enhancement]);
 
   return (
     <ol className="unitSummaries">
@@ -437,6 +452,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick })
       <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} />
       <OtherAbilitySummary unit={unit} />
       <WargearAbilitySummary unit={unit} />
+      <EnhancementAbilitySummary unit={unit} />
       </a></li>
   )
 }
@@ -520,6 +536,20 @@ function WargearAbilitySummary({ unit })
   return (
     <ol className="otherAbilitySummary">
       {abilities.map(ability => <li key={ability.label}><label>{ability.label} (Wargear):</label>{ability.value}</li>)}
+    </ol>
+  );
+}
+
+function EnhancementAbilitySummary({ unit })
+{
+  const enhancement = unit?.enhancement;
+  if (!enhancement)
+  {
+    return null;
+  }
+  return (
+    <ol className="otherAbilitySummary">
+      <li key={enhancement.name}><label>{enhancement.name} (Enhancement):</label><span dangerouslySetInnerHTML={{ __html: enhancement.text }} /></li>
     </ol>
   );
 }
@@ -623,7 +653,7 @@ function getKeywordAbilitySummary(unit, appSettings)
   }) ?? [];
 }
 
-function getUnits(army, units)
+function getUnits(army, units, detachment, enhancement)
 {
   var result = [];
   if (!army || !units)
@@ -632,9 +662,14 @@ function getUnits(army, units)
   }
   for (var i = 0; i < units.length; i++)
   {
-    if (army.units.indexOf(units[i].name) !== -1)
+    var unit = units[i];
+    if (army.units.indexOf(unit.name) !== -1)
     {
-      result.push(units[i]);
+      if (army.warlord === unit.name)
+      {
+        unit.enhancement = enhancement ? detachment.enhancements?.find(e => e.name === enhancement) : null;
+      }
+      result.push(unit);
     }
   }
   return result;
@@ -1081,20 +1116,48 @@ function Strategem({ strategem })
   )
 }
 
-function Enhancements({ detachment })
+function Enhancements({ detachment, selectedEnhancement, army, onChange })
 {
   return (
     <ul className="strategems">
-      {detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} />)}
+      {detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} selectedEnhancement={selectedEnhancement} army={army} onChange={onChange} />)}
+      <li>
+        <h2>
+          <input 
+            type='radio'
+            id={`${army.id}-enhancement-none`}
+            name={`${army.id}-enhancement`} 
+            value="" 
+            defaultChecked={!selectedEnhancement || selectedEnhancement === ""} 
+            onChange={() => onChange("")}
+          />
+          <label htmlFor={`${army.id}-enhancement-none`}>None</label>
+        </h2>
+      </li>
     </ul>
   )
 }
 
-function Enhancement({ enhancement })
+function Enhancement({ enhancement, selectedEnhancement, army, onChange })
 {
+  const selectHandler = useCallback(() => {
+    onChange(enhancement.name);
+  }, [army, enhancement])
   return (
     <li>
-      <h2>{enhancement.name}</h2>
+      <h2>
+        <input 
+          type='radio' 
+          id={`${army.id}-enhancement-${enhancement.name}`}
+          name={`${army.id}-enhancement`} 
+          value={enhancement.name} 
+          defaultChecked={selectedEnhancement === enhancement.name} 
+          onChange={selectHandler}
+        />
+        <label htmlFor={`${army.id}-enhancement-${enhancement.name}`}>
+          {enhancement.name}
+        </label>
+      </h2>
       <div dangerouslySetInnerHTML={{ __html: enhancement.text}} />
     </li>
   )
