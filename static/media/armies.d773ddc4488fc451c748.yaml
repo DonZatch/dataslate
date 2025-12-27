@@ -10,6 +10,7 @@
   - Librarian Tantus
   - Infernus Squad (Patrol)
   - Terminator Squad (Patrol)
+  warlord: Captain Octavius
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -26,6 +27,7 @@
   - Termagants (Patrol)
   - Barbgaunts (Patrol)
   - Von Ryan's Leapers (Patrol)
+  warlord: Terror of Vardenghast
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -42,6 +44,7 @@
   - Skorpekh Destroyers (Patrol)
   - Canoptek Scarab Swarms (Patrol)
   - Canoptek Doomstalker (Patrol)
+  warlord: Overlord Amonhotekh
   ignorestrats:
   - "grenade"
   - "smokescreen"
@@ -56,6 +59,7 @@
   - Beastboss Morgrim
   - Beast Snagga Boyz (Patrol)
   - Squighog Boyz (Patrol)
+  warlord: Beastboss Morgrim
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -72,6 +76,7 @@
   - Battle Sisters Squad (Patrol)
   - Celestian Sacresants (Patrol)
   - Arco-flagellants (Patrol)
+  warlord: Canoness Adalya
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -88,6 +93,7 @@
   - Kaa'skrek
   - Tzaangor Enlightened (Patrol)
   - Rubric Marines (Patrol)
+  warlord: Zadophon the Soul Eater
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -103,6 +109,7 @@
   - Ahrak the Time Weaver
   - Scarab Occult Terminators (Patrol)
   - Tzaangors (Patrol)
+  warlord: Ahrak the Time Weaver
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -118,6 +125,7 @@
   - Skitarii Vanguard (Patrol)
   - Serberys Sulphurhounds (Patrol)
   - Pteraxii Sterylizors (Patrol)
+  warlord: Manipulus Skand
   ignorestrats:
   - "grenade"
   - "tank shock"
@@ -133,6 +141,7 @@
   - Possessed (Patrol)
   - Legionaries (Patrol)
   - Cultist Mob (Patrol)
+  warlord: Aranis Zarkan
   ignorestrats:
   - "grenade"
   - "tank shock"
