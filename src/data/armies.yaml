@@ -147,6 +147,21 @@
   - "tank shock"
   - "smokescreen"
   - "rapid ingress"
+- # Sudden Dawn Cadre
+  id: CP10
+  category: Combat Patrol
+  name: Sudden Dawn Cadre
+  faction: T'au Empire
+  detachment: Sudden Dawn Cadre
+  units:
+  - Commander Cloudspear
+  - Pathfinder Team (Patrol)
+  - Breacher Team (Patrol)
+  - Devilfish (Patrol)
+  warlord: Commander Cloudspear
+  ignorestrats:
+  - "grenade"
+  - "smokescreen"
 # King of the Colloseum
 -
   id: KC1

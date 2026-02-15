@@ -2528,3 +2528,267 @@
   -
     label: "9 Chaos Cultists are equipped with:"
     value: "Autopistol, brutal assault weapon"
+# Sudden Dawn Cadre
+- # Commander Cloudspear
+  name: Commander Cloudspear
+  profiles:
+  -
+    name: Commander Cloudspear
+    m: 8
+    t: 5
+    sv: 2+
+    w: 6
+    ld: 7+
+    oc: 2
+  keywords:
+  - Vehicle
+  - Walker
+  - Fly
+  - Character
+  - Battlesuit
+  - Commander in Enforcer Battlesuit
+  - Commander Cloudspear
+  ranged:
+  -
+    name: Airbursting fragmentation projector
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Blast
+    - Indirect Fire
+  -
+    name: Plasma rifle
+    range: 24"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -3
+    d: 3
+  melee:
+  -
+    name: Battlesuit fists
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 5
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - For the Greater Good
+    wargear:
+    -
+      label: Shield Drone
+      value: Add 1 to the bearer's Wounds characteristic.
+    -
+      label: Weapon Support System
+      value: Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.
+  factions: 
+  - T'au Empire
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Airbursting fragmentation projector, plasma rifle, battlesuit fists, 2 shield drones, weapon support systems."
+- # Pathfinder Team (Patrol)
+  name: Pathfinder Team (Patrol)
+  profiles:
+  -
+    name: Pathfinder Team (Patrol)
+    m: 7
+    t: 3
+    sv: 4+
+    w: 1
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Markerlight
+  - Pathfinder Team
+  ranged:
+  -
+    name: Pulse carbine
+    num: 7
+    range: 20"
+    a: 2
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+  -
+    name: Pulse pistol
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Rail rifle
+    num: 3
+    range: 30"
+    a: 1
+    bs: 5+
+    s: 10
+    ap: -4
+    d: 3
+    abilities:
+    - Devastating Wounds
+    - Heavy
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 1
+    ws: 5+
+    s: 3
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - "Scouts 7\""
+    faction:
+    - For the Greater Good
+    wargear:
+    -
+      label: Grav-inhibitor Drone
+      value: "Each time an enemey unit selects the bearer's unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative midifiers to that Charge roll)"
+  factions: 
+  - T'au Empire
+  composition:
+  -
+    label: "The Pathfinder Shas'ui model is equipped with:"
+    value: "Pulse carbine, pulse pistol, close combat weapon, grav-inhibitor drone."
+  -
+    label: "3 Pathfinder models are equipped with:"
+    value: "Pulse pistol, rail rifle, close combat weapon."
+  -
+    label: "6 Pathfinder models are equipped with:"
+    value: "Pulse carbine, pulse pistol, close combat weapon."
+  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfiner Shas'ui model and the other unit must contain the models equipped with rail rifles."
+- # Breacher Team (Patrol)
+  name: Breacher Team (Patrol)
+  profiles:
+  -
+    name: Breacher Team (Patrol)
+    m: 6
+    t: 3
+    sv: 4+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Battleline
+  - Markerlight
+  - Fire Warrior
+  - Breacher Team
+  ranged:
+  -
+    name: Pulse blaster
+    range: 10"
+    a: 2
+    bs: 3+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Assault
+  -
+    name: Pulse pistol
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 1
+    ws: 5+
+    s: 3
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - For the Greater Good
+    other:
+    - 
+      label: Breach and Clear
+      value: "Each time a model in this unit makes a ranged attack that targets an enemy unit within range of an objective marker, you can re-roll the Wound roll."
+  factions: 
+  - T'au Empire
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Pulse blaster, pulse pistol, close combat weapon"
+- # Devilfish (Patrol)
+  name: Devilfish (Patrol)
+  profiles:
+  -
+    name: Devilfish (Patrol)
+    m: 12
+    t: 9
+    sv: 3+
+    w: 13
+    ld: 7+
+    oc: 2
+  keywords:
+  - Vehicle
+  - Fly
+  - Transport
+  - Dedicated Transport
+  - Devilfish
+  ranged:
+  -
+    name: Accelerator burst cannon
+    range: 18"
+    a: 4
+    bs: 4+
+    s: 6
+    ap: -1
+    d: 1
+  -
+    name: Twin pulse carbine
+    num: 2
+    range: 20"
+    a: 2
+    bs: 4+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+    - Twin-linked
+  melee:
+  -
+    name: Armoured hull
+    range: Melee
+    a: 3
+    ws: 5+
+    s: 6
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deadly Demise D3
+    faction:
+    - For the Greater Good
+  transport: "This model has a transport capacity of 12\" T'AU EMPIRE INFANTRY models. It cannot transport BATTLESUIT, KROOT, or VESPID STINGWINGS models."
+  factions: 
+  - T'au Empire
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Accelerator burst cannon, 2 twin pulse carbines, armoured hull."

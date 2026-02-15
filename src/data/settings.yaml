@@ -1,5 +1,4 @@
 summaryIgnoreAbilities:
-- firing deck
 - leader
 rangedSummaryAbilities:
 - assault
@@ -22,3 +21,6 @@ summaryKeywords:
 - infantry
 - battleline
 - psyker
+- markerlight
+- transport
+- dedicated transport

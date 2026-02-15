@@ -706,6 +706,7 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
         <Wargear unit={unit} />
         <Abilities unit={unit} setShowInfo={setShowInfo} />
         <Leader unit={unit} />
+        <Transport unit={unit} />
         <Keywords unit={unit} />
         <PatrolSquads unit={unit} />
       </div>
@@ -965,6 +966,22 @@ function BigGunsNeverTire({unit})
       <div className="unitLeader">
         MONSTER and VEHICLE units can shoot, and be shot at, even while they are within Engagement Range of enemy units. 
         Each time a MONSTER or VEHICLE unit makes a ranged attack, if that unit was within Engagement Range of one or more enemy units when it selected its targets, unless that attack is made with a Pistol, subtract 1 from that attack’s Hit roll.
+      </div>
+    </div>
+  )
+}
+
+function Transport({unit})
+{
+  if (!unit?.transport)
+  {
+    return null;
+  }
+  return (
+    <div>
+      <h2>Transport</h2>
+      <div className="unitTransport">
+        {unit.transport}
       </div>
     </div>
   )

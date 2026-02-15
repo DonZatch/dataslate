@@ -493,6 +493,62 @@
   -
     name: "Sites of Power"
     text: "<p>From the second battle round onwards, at the end of your turn, you score 2VP if you control at least as many objective markers as your opponent does.</p>"
+- # Sudden Dawn Cadre
+  name: Sudden Dawn Cadre
+  abilities:
+  -
+    name: For the Greater Good
+    text: "<p>In your Shooting phase, units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy they are targeting is called their Spotted unit.</p>
+      <p>Each time you select this unit to shoot, if it is not an Observer unit, it can use this ability. If it does, select one other friendly unit with this ability that is also eligible to shoot (excluding Battle-shocked and Observer units). Until the end of the phase, this unit is considered a Guided unit, and that friendly unit is considered an Observer unit. Then select one enemy unit that is visible to both your units to be their Spotted unit. Until the end of the phase:</p>
+      <ul>
+        <li>Each time a model in a Guided unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if their Observer unit has the MARKERLIGHT keyword, that attack has the [IGNORES COVER] ability.</li>
+        <li>Each time a model in a Guided unit makes an attack that does not target their Spotted unit, worsen the Ballistic Skill characteristic of that attack by 1.</li>
+      </ul>
+      "
+  strategems:
+  -
+    name: "Fight by the Code"
+    cost: 1
+    turn: your
+    when: "Your Shooting phase."
+    target: "One T'AU EMPIRE unit from your army."
+    effect: "Until the end of the phase, your unit is eligible to shoot in a turn in which it Fell Back."
+  -
+    name: "Rampart of Fire"
+    cost: 1
+    turn: your
+    when: "Your Shooting phase."
+    target: "One T'AU EMPIRE unit from your army that has not been selected to shoot this phase."
+    effect: "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within 10\", improve the Armour Penetration characteristic of that attack by 1."
+  -
+    name: "Lives Before Territory"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Shooting phase, just after an enemy unit has selected its targets."
+    target: "One T'AU EMPIRE INFANTRY or T'AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit's attacks."
+    effect: "Your unit can make a Normal move of up to D6\" and, until the end of the phase, each time an attack targets your unit, it has Benefit of Cover against that attack."
+  enhancements:
+  -
+    name: "Electro-static Flares (Aura)"
+    text: "<ul>
+      <li>While a friendly T'AU EMPIRE unit (excluding DEVILFISH units) is within 6\" of the bearer, enemy units cannot use the Fire Overwatch Stratagem to fire at that unit and each time a ranged attack targets that unit, subtract 1 from the Hit roll.</li>
+      <li>The bearer has a 4+ invulnerable save.</li>
+      </ul>"
+  -
+    name: "Prototype Systems"
+    text: "<ul>
+      <li>Each time the bearer is selected to shoot, you can re-roll one Hit roll and you can re-roll one Wound toll when resolving those attacks.</li>
+      <li>Each time you roll to determine the number of attacks made by bearer's airbursting fragmentation projector, you can re-roll the result.</li>
+      <li>The bearer has a 4+ invulnerable save</li>
+      </ul>"
+  secondaries:
+  -
+    name: "Surprise Attack"
+    text: "<p><strong>In the first and second battle rounds:<strong><br />At the end of your turn, you score 4VP for each objective marker in No Man's Land you control.</p>
+      <p><strong>In the third, fourth, and fifth battle rounds:<strong><br />At the end of your turn, you score 2VP for each objective marker in No Man's Land you control.</p>"
+  -
+    name: "Ethereal Edict"
+    text: "<p>At the start of the first battle round, your opponent must select one unit from their army. At the end of the battle, you score 12VP if that unit is destroyed.</p>"
 # 40K
 # Necrons
 - # Canoptek Court

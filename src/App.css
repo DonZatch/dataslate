@@ -399,7 +399,8 @@ header > h1 {
 .keywords,
 .patrolSquads,
 .wargear,
-.unitDamaged {
+.unitDamaged,
+.unitTransport {
   background-color: white;
   color: black;
   padding-bottom: 6px;
@@ -432,7 +433,8 @@ header > h1 {
 .unitLeader,
 .patrolSquads,
 .wargear,
-.unitDamaged {
+.unitDamaged,
+.unitTransport {
   padding: 4px 8px 8px 8px;
 }
 

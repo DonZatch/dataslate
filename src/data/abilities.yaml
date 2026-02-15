@@ -148,3 +148,11 @@
 -
   name: Psychic
   text: "<p>If a Psychic weapon or ability causes any unit to suffer one or more wounds, each of those wounds is considered to have been inflicted by a Psychic attack</p>"
+-
+  name: Scouts
+  text: "<p>Some units have 'Scouts x\"' listed in their abilities. If every model in a unit has this ability, then at the start of the first battle round, before the first turn begins, it can make a Normal move of up to x\" as if it were your Movement phase - as can any DEDICATED TRANSPORT model such a unit starts the battle embarked within (provided only models with this ability are embarked within that DEDICATED TRANSPORT model). A unit that moves using this ability must end that move more than 9\" horizontally away from all enemy models. If both players have units that can do this, the player who is taking the first turn moves their units first.</p>"
+  example: "A unit has the Scouts 6\" ability. At the start of the first battle round, the controlling player can make a Normal move with that unit of up to 6\"."
+  summary:
+  - "[Scouts x\"]: Unit can make a Normal move of up to x\" before the first turn begins."
+  - "If embarked in a DEDICATED TRANSPORT, that DEDICATED TRANSPORT can make this move instead."
+  - "Must end this move more than 9\" horizontally away from all enemy models."
