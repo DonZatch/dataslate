@@ -162,6 +162,23 @@
   ignorestrats:
   - "grenade"
   - "smokescreen"
+- # Tristraen's Gilded Blades
+  id: CP11
+  category: Combat Patrol
+  name: Tristraen's Gilded Blades
+  faction: Adeptus Custodes
+  detachment: Tristraen's Gilded Blades
+  units:
+  - Tristraen
+  - Custodian Guard (Patrol)
+  - Custodian Wardens (Patrol)
+  - Allarus Custodians (Patrol)
+  warlord: Tristraen
+  ignorestrats:
+  - "grenade"
+  - "tank shock"
+  - "smokescreen"
+  - "rapid ingress"
 # King of the Colloseum
 -
   id: KC1
