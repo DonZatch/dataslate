@@ -99,21 +99,21 @@
   - "tank shock"
   - "smokescreen"
   - "rapid ingress"
-- # The Coven Temporus
-  id: CP7
-  category: Combat Patrol
-  name: The Coven Temporus
-  faction: Thousand Sons
-  detachment: The Coven Temporus
-  units:
-  - Ahrak the Time Weaver
-  - Scarab Occult Terminators (Patrol)
-  - Tzaangors (Patrol)
-  warlord: Ahrak the Time Weaver
-  ignorestrats:
-  - "grenade"
-  - "tank shock"
-  - "smokescreen"
+# - # The Coven Temporus
+#   id: CP7
+#   category: Combat Patrol
+#   name: The Coven Temporus
+#   faction: Thousand Sons
+#   detachment: The Coven Temporus
+#   units:
+#   - Ahrak the Time Weaver
+#   - Scarab Occult Terminators (Patrol)
+#   - Tzaangors (Patrol)
+#   warlord: Ahrak the Time Weaver
+#   ignorestrats:
+#   - "grenade"
+#   - "tank shock"
+#   - "smokescreen"
 - # Purge Corps Deltic-9
   id: CP8
   category: Combat Patrol
@@ -180,15 +180,15 @@
   - "smokescreen"
   - "rapid ingress"
 # King of the Colloseum
--
-  id: KC1
-  category: King of the Colloseum
-  name: Colloseum Canopteks
-  faction: Necrons
-  units:
-  - Plasmancer
-  - Technomancer
-  - Immortals
-  - Canoptek Scarab Swarms
-  - Canoptek Wraiths
-  detachment: Canoptek Court
+# -
+#   id: KC1
+#   category: King of the Colloseum
+#   name: Colloseum Canopteks
+#   faction: Necrons
+#   units:
+#   - Plasmancer
+#   - Technomancer
+#   - Immortals
+#   - Canoptek Scarab Swarms
+#   - Canoptek Wraiths
+#   detachment: Canoptek Court

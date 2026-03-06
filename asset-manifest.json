@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.05dc35ff.css",
-    "main.js": "/dataslate/static/js/main.f61cfb16.js",
+    "main.js": "/dataslate/static/js/main.93f8deb9.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.524081c845a63bc01308.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.62938186bf47b21b73bc.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.36cf432106dcf6ef791f.yaml",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.2ac0b01064f7ab118022.yaml",
-    "static/media/armies.yaml": "/dataslate/static/media/armies.c53f182889d2577be6be.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.f779ada02ca8570449ae.yaml",
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.fa11c5fa4c310ad6692e.yaml",
     "main.05dc35ff.css.map": "/dataslate/static/css/main.05dc35ff.css.map",
-    "main.f61cfb16.js.map": "/dataslate/static/js/main.f61cfb16.js.map",
+    "main.93f8deb9.js.map": "/dataslate/static/js/main.93f8deb9.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05dc35ff.css",
-    "static/js/main.f61cfb16.js"
+    "static/js/main.93f8deb9.js"
   ]
 }
