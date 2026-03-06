@@ -2792,3 +2792,241 @@
   -
     label: "This model is equipped with:"
     value: "Accelerator burst cannon, 2 twin pulse carbines, armoured hull."
+# Tristraen's Gilded Blades
+- # Tristraen
+  name: Tristraen
+  profiles:
+  -
+    name: Tristraen
+    m: 6
+    t: 6
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Character
+  - Imperium
+  - Blade Champion
+  - Tristraen
+  melee:
+  -
+    name: Vaultswords - Behemor
+    profile: true
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 7
+    ap: -2
+    d: 2
+    abilities:
+    - Precision
+  -
+    name: Vaultswords - Hurricanis
+    profile: true
+    range: Melee
+    a: 9
+    ws: 2+
+    s: 5
+    ap: -1
+    d: 1
+    abilities:
+    - Sustained Hits 1
+  -
+    name: Vaultswords - Victus
+    profile: true
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 6
+    ap: -3
+    d: 3
+    abilities:
+    - Devastating Wounds
+  abilities:
+    faction:
+    - Martial Ka'tah
+  factions: 
+  - Adeptus Custodes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Vaultswords."
+- # Custodian Guard (Patrol)
+  name: Custodian Guard (Patrol)
+  profiles:
+  -
+    name: Custodian Guard (Patrol)
+    m: 6
+    t: 6
+    sv: 2+
+    iv: 4+
+    w: 3
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Imperium
+  - Custodian Guard
+  ranged:
+  -
+    name: Sentinel blade
+    range: 12"
+    a: 2
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 2
+    abilities:
+    - Assault
+    - Pistol
+  melee:
+  -
+    name: Sentinel blade
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 6
+    ap: -2
+    d: 1
+  abilities:
+    faction:
+    - Martial Ka'tah
+    wargear:
+    -
+      label: Praesidium Shield
+      value: "Add 1 to the bearer's Wounds characteristic."
+  factions: 
+  - Adeptus Custodes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Sentinel bade, praesidium shield."
+- # Custodian Wardens (Patrol)
+  name: Custodian Wardens (Patrol)
+  profiles:
+  -
+    name: Custodian Wardens (Patrol)
+    m: 6
+    t: 6
+    sv: 2+
+    iv: 4+
+    w: 3
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Imperium
+  - Custodian Wardens
+  ranged:
+  -
+    name: Castellan axe
+    num: 1
+    range: 24"
+    a: 2
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 2
+    abilities:
+    - Assault
+  -
+    name: Castellan spear
+    num: 2
+    range: 24"
+    a: 2
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 2
+    abilities:
+    - Assault
+  melee:
+  -
+    name: Castellan axe
+    num: 1
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 9
+    ap: -1
+    d: 3
+  -
+    name: Castellan spear
+    num: 2
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 7
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Martial Ka'tah
+  factions: 
+  - Adeptus Custodes
+  composition:
+  -
+    label: "1 model is equipped with:"
+    value: "Castellan axe"
+  -
+    label: "2 models are equipped with:"
+    value: "Castellan spear"
+- # Allarus Custodians (Patrol)
+  name: Allarus Custodians (Patrol)
+  profiles:
+  -
+    name: Allarus Custodians (Patrol)
+    m: 5
+    t: 7
+    sv: 2+
+    iv: 4+
+    w: 4
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Terminator
+  - Imperium
+  - Allarus Custodians
+  ranged:
+  -
+    name: Balistus grenade launcher
+    range: 18"
+    a: D6
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Blast
+  -
+    name: Guardian spear
+    range: 24"
+    a: 2
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 2
+    abilities:
+    - Assault
+  melee:
+  -
+    name: Guardian spear
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 7
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Martial Ka'tah
+  factions: 
+  - Adeptus Custodes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Balistus grenade launcher, guardian spear."

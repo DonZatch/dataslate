@@ -549,6 +549,60 @@
   -
     name: "Ethereal Edict"
     text: "<p>At the start of the first battle round, your opponent must select one unit from their army. At the end of the battle, you score 12VP if that unit is destroyed.</p>"
+- # Tristraen's Gilded Blades
+  name: Tristraen's Gilded Blades
+  abilities:
+  -
+    name: Tristraen's Gilded Blades
+    text: "<p>Before the battle, you must select either the Custodian Wardens or the Allarus Custodians unit to include in your Combat Patrol for the battle.</p>
+      "
+  -
+    name: Martial Ka'tah
+    text: "<p>Each time a unit from your army with this ability is selected to fight, select one of the Ka'tah Stances below. Until that unit has finished making its attacks, the selected Stance is active for it and it gains the relevant ability:</p>
+      <h3>Dacatarai Stance</h3>
+      <p>Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.</p>
+      <h3>Rendax Stance</h3>
+      <p>Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.</p>
+      "
+  strategems:
+  -
+    name: "The Gilded Spear"
+    cost: 1
+    turn: either
+    when: "Fight phase."
+    target: "One ADEPTUS CUSTODES unit from your army that has not been selected to fight this phase."
+    effect: "Until the end of the phase, each time a model in your unit makes a Pile-in move, it can move up to 6\" instead of up to 3\"."
+  -
+    name: "Inescapable Vengeance"
+    cost: 1
+    turn: your
+    when: "Your Movement phase."
+    target: "One ADEPTUS CUSTODES unit from your army that has not been selected to move this phase."
+    effect: "Until the end of the phase, add 2 to Advance rolls made for your unit."
+  -
+    name: "Overawing Magnificence"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Charge phase, just after an enemy unit declares a charge."
+    target: "One ADEPTUS CUSTODES unit from your army that was selected as the target of one or more of the attacking unit's attacks."
+    effect: "That enemy unit must take a Leadership test. If that test is failed, until the end of the phase, subtract 2 from Charge rolls made for that enemy unit."
+  enhancements:
+  -
+    name: "Watchman of Terra"
+    text: "<p>While the bearer is within Engagement Range of one or more enemy units, it has an Objective Control characteristic of 4.</p>"
+  -
+    name: "Warrior Exemplar"
+    text: "<p>Each time the bearer destroys an enemy unit, roll one D6: on a 3+, you gain 1CP.</p>"
+  secondaries:
+  -
+    name: "Raise the Vexillas"
+    text: "<p>From the third battle round onwards, at the end of  your turn, you score 3VP if you control the objective marker closest to your opponent's battlefield edge and you also control the objective marker closest to your battlefield edge.</p>"
+  -
+    name: "Victory's Price"
+    text: "<ul>
+      <li>Each time an enemy unit is destroyed, you score 3VP.</li>
+      <li>Each time an ADEPTUS CUSTODES model from your army is destroyed, you lose 1VP (to a minimum of 0VP)</li>
+      </ul>"
 # 40K
 # Necrons
 - # Canoptek Court
