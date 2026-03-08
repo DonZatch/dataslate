@@ -295,9 +295,20 @@ header > h1 {
   padding: 0 12px;
 }
 
+.setup {
+  padding: 0 16px;
+}
+
 .enhancements,
 .secondaries {
   list-style: none;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.enhancements label,
+.secondaries label {
+  margin-left: 6px;
 }
 
 .armyRules > li {

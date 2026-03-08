@@ -340,6 +340,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
   const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
+  const [selectedSecondary, setSelectedSecondary] = useState(() => localStorage.getItem(`${id}-secondary`));
   
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
   const detachment = useMemo(() => getDetachment(detachments, army), [detachments, army]);
@@ -350,11 +351,16 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
       return;
     }
     setSelectedEnhancement(localStorage.getItem(`${id}-enhancement`));
+    setSelectedSecondary(localStorage.getItem(`${id}-secondary`));
   }, [id]);
   const onChangeEnhancement = useCallback((enhancement) => {
     localStorage.setItem(`${id}-enhancement`, enhancement);
     setSelectedEnhancement(enhancement);
-  }, [id])
+  }, [id]);
+  const onChangeSecondary = useCallback((secondary) => {
+    localStorage.setItem(`${id}-secondary`, secondary);
+    setSelectedSecondary(secondary);
+  }, [id]);
 
   const handler = useCallback((e, view) => {
     e.preventDefault();
@@ -388,17 +394,25 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
       </header>
       <div className="armyDetails">
         { view === "rules" ? <Rules detachment={detachment} /> : null }
+        { view === "setup" ? 
+          <Setup 
+            detachment={detachment} 
+            selectedEnhancement={selectedEnhancement}
+            selectedSecondary={selectedSecondary}
+            army={army} 
+            onEnhChange={onChangeEnhancement} 
+            onSecChange={onChangeSecondary}
+          /> 
+          : null 
+        }
         { view === "units" ? <Units army={army} units={units} detachment={detachment} enhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
-        { view === "enhancements" ? <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onChangeEnhancement} /> : null }
-        { view === "secondaries" ? <Secondaries detachment={detachment} army={army} /> : null }
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
+        <MenuItem view="setup" label="Setup" handler={handler} currentView={view} />
         <MenuItem view="units" label="Units" handler={handler} currentView={view} />
-        <MenuItem view="strategems" label="Strategems" handler={handler} currentView={view} />
-        <MenuItem view="enhancements" label="Enhancements" handler={handler} currentView={view} />
-        <MenuItem view="secondaries" label="Secondaries" handler={handler} currentView={view} />
+        <MenuItem view="strategems" label="Strats" handler={handler} currentView={view} />
       </menu>
     </div>
   );
@@ -1135,13 +1149,25 @@ function Strategem({ strategem })
   )
 }
 
+function Setup({ detachment, selectedEnhancement, selectedSecondary, army, onEnhChange, onSecChange })
+{
+  return (
+    <div className='setup'>
+      <h2>Secondaries</h2>
+      <Secondaries detachment={detachment} selectedSecondary={selectedSecondary} army={army} onChange={onSecChange} />
+      <h2>Enhancements</h2>
+      <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
+    </div>
+  )
+}
+
 function Enhancements({ detachment, selectedEnhancement, army, onChange })
 {
   return (
     <ul className="enhancements">
       {detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} selectedEnhancement={selectedEnhancement} army={army} onChange={onChange} />)}
       <li>
-        <h2>
+        <h3>
           <input 
             type='radio'
             id={`${army.id}-enhancement-none`}
@@ -1151,7 +1177,7 @@ function Enhancements({ detachment, selectedEnhancement, army, onChange })
             onChange={() => onChange("")}
           />
           <label htmlFor={`${army.id}-enhancement-none`}>None</label>
-        </h2>
+        </h3>
       </li>
     </ul>
   )
@@ -1164,7 +1190,7 @@ function Enhancement({ enhancement, selectedEnhancement, army, onChange })
   }, [army, enhancement])
   return (
     <li>
-      <h2>
+      <h3>
         <input 
           type='radio' 
           id={`${army.id}-enhancement-${enhancement.name}`}
@@ -1176,7 +1202,7 @@ function Enhancement({ enhancement, selectedEnhancement, army, onChange })
         <label htmlFor={`${army.id}-enhancement-${enhancement.name}`}>
           {enhancement.name}
         </label>
-      </h2>
+      </h3>
       <div dangerouslySetInnerHTML={{ __html: enhancement.text}} />
     </li>
   )
@@ -1226,30 +1252,35 @@ function getAbilityInfo(ability, abilities)
   return abilities?.find(a => ability.toLowerCase().startsWith(a.name.toLowerCase()));
 }
 
-function Secondaries({ detachment, army })
+function Secondaries({ detachment, selectedSecondary, army, onChange })
 {
   return (
     <ul className="secondaries">
-      {detachment.secondaries?.map(secondary => <Secondary secondary={secondary} army={army} />)}
+      {detachment.secondaries?.map(secondary => <Secondary secondary={secondary} selectedSecondary={selectedSecondary} army={army} onChange={onChange} />)}
     </ul>
   )
 }
 
-function Secondary({ secondary, army })
+function Secondary({ secondary, selectedSecondary, army, onChange })
 {
+  const selectHandler = useCallback(() => {
+    onChange(secondary.name);
+  }, [army, secondary]);
   return (
     <li>
-      <h2>
+      <h3>
           <input 
           type='radio' 
           id={`${army.id}-secondary-${secondary.name}`}
           name={`${army.id}-secondary`} 
           value={secondary.name} 
+          defaultChecked={selectedSecondary === secondary.name} 
+          onChange={selectHandler}
         />
         <label htmlFor={`${army.id}-secondary-${secondary.name}`}>
           {secondary.name}
         </label>
-      </h2>
+      </h3>
       <div dangerouslySetInnerHTML={{ __html: secondary.text}} />
     </li>
   )
