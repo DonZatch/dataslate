@@ -544,8 +544,8 @@
   secondaries:
   -
     name: "Surprise Attack"
-    text: "<p><strong>In the first and second battle rounds:<strong><br />At the end of your turn, you score 4VP for each objective marker in No Man's Land you control.</p>
-      <p><strong>In the third, fourth, and fifth battle rounds:<strong><br />At the end of your turn, you score 2VP for each objective marker in No Man's Land you control.</p>"
+    text: "<p><strong>In the first and second battle rounds:</strong><br />At the end of your turn, you score 4VP for each objective marker in No Man's Land you control.</p>
+      <p><strong>In the third, fourth, and fifth battle rounds:</strong><br />At the end of your turn, you score 2VP for each objective marker in No Man's Land you control.</p>"
   -
     name: "Ethereal Edict"
     text: "<p>At the start of the first battle round, your opponent must select one unit from their army. At the end of the battle, you score 12VP if that unit is destroyed.</p>"
