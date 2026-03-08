@@ -295,6 +295,11 @@ header > h1 {
   padding: 0 12px;
 }
 
+.enhancements,
+.secondaries {
+  list-style: none;
+}
+
 .armyRules > li {
   margin: 0 16px 16px 16px;
 }

@@ -391,12 +391,14 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
         { view === "units" ? <Units army={army} units={units} detachment={detachment} enhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
         { view === "enhancements" ? <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onChangeEnhancement} /> : null }
+        { view === "secondaries" ? <Secondaries detachment={detachment} army={army} /> : null }
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
         <MenuItem view="units" label="Units" handler={handler} currentView={view} />
         <MenuItem view="strategems" label="Strategems" handler={handler} currentView={view} />
         <MenuItem view="enhancements" label="Enhancements" handler={handler} currentView={view} />
+        <MenuItem view="secondaries" label="Secondaries" handler={handler} currentView={view} />
       </menu>
     </div>
   );
@@ -1136,7 +1138,7 @@ function Strategem({ strategem })
 function Enhancements({ detachment, selectedEnhancement, army, onChange })
 {
   return (
-    <ul className="strategems">
+    <ul className="enhancements">
       {detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} selectedEnhancement={selectedEnhancement} army={army} onChange={onChange} />)}
       <li>
         <h2>
@@ -1222,6 +1224,35 @@ function getAbilityInfo(ability, abilities)
     return null;
   }
   return abilities?.find(a => ability.toLowerCase().startsWith(a.name.toLowerCase()));
+}
+
+function Secondaries({ detachment, army })
+{
+  return (
+    <ul className="secondaries">
+      {detachment.secondaries?.map(secondary => <Secondary secondary={secondary} army={army} />)}
+    </ul>
+  )
+}
+
+function Secondary({ secondary, army })
+{
+  return (
+    <li>
+      <h2>
+          <input 
+          type='radio' 
+          id={`${army.id}-secondary-${secondary.name}`}
+          name={`${army.id}-secondary`} 
+          value={secondary.name} 
+        />
+        <label htmlFor={`${army.id}-secondary-${secondary.name}`}>
+          {secondary.name}
+        </label>
+      </h2>
+      <div dangerouslySetInnerHTML={{ __html: secondary.text}} />
+    </li>
+  )
 }
 
 export default App;
