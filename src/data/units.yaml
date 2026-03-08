@@ -2739,6 +2739,7 @@
   -
     name: Devilfish (Patrol)
     m: 12
+    p: 2
     t: 9
     sv: 3+
     w: 13
