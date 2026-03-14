@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.d77b8313.css",
-    "main.js": "/dataslate/static/js/main.3cf8caef.js",
+    "main.js": "/dataslate/static/js/main.9ee92f2a.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.a4a1ef433fa150b2abc9.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.47a830329d4f738c5a02.yaml",
@@ -11,11 +11,11 @@
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.fa11c5fa4c310ad6692e.yaml",
     "main.d77b8313.css.map": "/dataslate/static/css/main.d77b8313.css.map",
-    "main.3cf8caef.js.map": "/dataslate/static/js/main.3cf8caef.js.map",
+    "main.9ee92f2a.js.map": "/dataslate/static/js/main.9ee92f2a.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d77b8313.css",
-    "static/js/main.3cf8caef.js"
+    "static/js/main.9ee92f2a.js"
   ]
 }
