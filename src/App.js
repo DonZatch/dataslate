@@ -1145,6 +1145,9 @@ function Strategem({ strategem })
       <p><label>When:</label> {strategem.when}</p>
       <p><label>Target:</label> {strategem.target}</p>
       <p><label>Effect:</label> {strategem.effect}</p>
+      {strategem.restrictions && (
+        <p><label>Restrictions:</label> {strategem.restrictions}</p>
+      )}
     </li>
   )
 }
