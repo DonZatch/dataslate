@@ -179,11 +179,11 @@
   - "tank shock"
   - "smokescreen"
   - "rapid ingress"
-# King of the Colloseum
+# King of the Colosseum
 # -
 #   id: KC1
-#   category: King of the Colloseum
-#   name: Colloseum Canopteks
+#   category: King of the Colosseum
+#   name: Colosseum Canopteks
 #   faction: Necrons
 #   units:
 #   - Plasmancer
