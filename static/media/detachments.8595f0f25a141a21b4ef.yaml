@@ -32,7 +32,7 @@
     name: "Champion Duellist"
     text: "The bearer's melee weapons have the [PRECISION] and [LETHAL HITS] abilities."
   -
-    name: "Oathsword Determination"
+    name: "Oathsworn Determination"
     text: "Improve the Objective Control characteristic of models in the bearer's unit by 1."
   secondaries:
   -
@@ -56,7 +56,7 @@
     cost: 1
     turn: either
     when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One TYRANIDS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+    target: "One TYRANIDS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks."
     effect: "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
   -
     name: "Voracious Assault"
@@ -85,7 +85,7 @@
     text: "At the end of each phase, you score 4VP if your WINGED TYRANID PRIME model destroyed one or more enemy models that phase."
   -
     name: "Chitinous Tide"
-    text: "At the end of your turn, you score 5VP if you control one or more objective markers that are within 6\" of your opponent’s deployment zone."
+    text: "At the end of your turn, you score 5VP if you control one or more objective markers that are within 6\" of your opponent's deployment zone."
 - # Amonhotekh's Guard
   name: Amonhotekh's Guard
   abilities:
@@ -130,7 +130,7 @@
   secondaries:
   -
     name: "Reclaim and Dominate"
-    text: "At the end of your turn, you score 4VP if one or more NECRONS units from your army (excluding Battle-shocked units) are wholly within your opponent’s deployment zone."
+    text: "At the end of your turn, you score 4VP if one or more NECRONS units from your army (excluding Battle-shocked units) are wholly within your opponent's deployment zone."
   -
     name: "Treasures of Aeons"
     text: "At the start of the first battle round, select one objective marker in No Man's Land.\n\nYou score 3VP each time a NECRONS model from your army destroys an enemy unit that started the phase within range of that objective marker or within range of the objective marker within your deployment zone (if there is one)."
@@ -143,7 +143,7 @@
       <ul>
         <li>Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.</li>
         <li>Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.</li>
-        <li>Models from your army with this ability havea 5+ invulnerable save.</li>
+        <li>Models from your army with this ability have a 5+ invulnerable save.</li>
       </ul>"
   strategems:
   -
@@ -177,9 +177,9 @@
   secondaries:
   -
     name: "Bag The Big 'Un"
-    text: "At the start of the first battle roune, select one enemy MONSTER or VEHICLE model. If there are no such enemy models, select the enemy WARLORD model instead.
+    text: "At the start of the first battle round, select one enemy MONSTER or VEHICLE model. If there are no such enemy models, select the enemy WARLORD model instead.
     
-      At the end of the battle, you score 8VP if that enemey model is destroyed. If that enemy model was destroyed by your BEASTBOSS model, you score 12VP instead."
+      At the end of the battle, you score 8VP if that enemy model is destroyed. If that enemy model was destroyed by your BEASTBOSS model, you score 12VP instead."
   -
     name: "Krumpin' Spree"
     text: "At the end of your turn, you score 3VP if you control the objective marker closest to your opponent's battlefield edge and you score 1VP for each other objective you control that is not within your deployment zone."
@@ -263,7 +263,7 @@
   name: Prism of Zadophon
   abilities:
   -
-    name: Cabal of Sorcerors
+    name: Cabal of Sorcerers
     text: "<p>At the start of your Shooting phase, one model from your army with this ability can attempt one Ritual from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has manifested this turn, then take a Psychic test for that model by following the sequence below.</p>
       <h3>Psychic Test Sequence</h3>
       <h4>Roll 2D6</h4>
@@ -278,7 +278,7 @@
       </div>
       <p>Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.</p>
       <p>If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that ritual and you resolve its effects.</p>
-      <h4 class=\"psychicTest\">Desiny's Ruin (Psychic)</h4>
+      <h4 class=\"psychicTest\">Destiny's Ruin (Psychic)</h4>
       <p><strong>Warp Charge - 5</strong></p>
       <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1.</p>
       <h4 class=\"psychicTest\">Temporal Surge (Psychic)</h4>
@@ -306,7 +306,7 @@
     turn: your
     when: "Your Shooting phase."
     target: "One RUBRIC MARINES units from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, the Malefix Curse weapon equipped by your unit's Aspiring Sorceror model has the [PISTOL] ability and each time that model makes an attack with that weapon, add 1 to the Hit roll."
+    effect: "Until the end of the phase, the Malefic Curse weapon equipped by your unit's Aspiring Sorcerer model has the [PISTOL] ability and each time that model makes an attack with that weapon, add 1 to the Hit roll."
   enhancements:
   -
     name: "Perplexing Gibberhex"
@@ -345,7 +345,7 @@
   name: The Coven Temporus
   abilities:
   -
-    name: Cabal of Sorcerors
+    name: Cabal of Sorcerers
     text: "<p>At the end of your Command phase, each model from your army with this ability that is on the battlefield (excluding Battle-shocked models) generates you a number of Cabal points equal to the number shown in its ability (e.g. a model with the Cabal of Sorcerers 2 ability would generate you 2 Cabal points). The combined total of these is your Cabal points pool.</p>
       <p>During the battle round, you can use Rituals from the list below, deducting the Cabal points cost of each one from your Cabal points pool. If you do not have enough Cabal points for a Ritual, you cannot use it. Each Ritual can only be used once per phase. At the start of your next Command phase, your Cabal points pool resets to zero. Each time you use a Ritual, select one THOUSAND SONS PSYKER model from your army, then apply that Ritual's effect using the PSYKER.</p>
       <h4 class=\"psychicTest\">Weaver of Fates (Psychic)</h4>
@@ -368,7 +368,7 @@
     cost: 1
     turn: opponent
     when: "Your opponent's Shooting phase, just after an enemy unit has selected its targets."
-    target: "One TZAANGORS unit from your army that was selectd as the target of one or more of the attacking unit's attacks."
+    target: "One TZAANGORS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
     effect: "Your unit can make a Normal move of up to D6\" and, until the end of the phase, each time a ranged attack targets your unit, models in your unit have the Benefit of Cover against that attack."
   -
     name: "Malign Entanglement"
@@ -414,7 +414,7 @@
     name: "An Evaluation of Mettle"
     cost: 1
     turn: either
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selectd its targets."
+    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
     target: "One ADEPTUS MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
     effect: "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
   -
@@ -430,7 +430,7 @@
     turn: your
     when: "Your Shooting phase."
     target: "One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, improve the Armour Penetration characteristicof ranged weapons equipped by models in your unit by 1 and those weapons have the [HAZARDOUS] ability."
+    effect: "Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and those weapons have the [HAZARDOUS] ability."
   enhancements:
   -
     name: "Arpergilla of Tarentum"
@@ -451,7 +451,7 @@
   abilities:
   -
     name: Dark Pacts
-    text: "<p>If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test efore any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:</p>
+    text: "<p>If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:</p>
       <ul>
         <li>[LETHAL HITS]</li>
         <li>[SUSTAINED HITS]</li>
@@ -646,7 +646,7 @@
     turn: your
     when: Start of your Shooting phase
     target: One CRYPTEK model from your army
-    effect: Select one objective marker within 18" of your CRYPTEK model. Until the end of the phase, weapons equipped by friendly NECRONS models have the IGNORES COVER ability while targeting unils within range of that objective marker.
+    effect: Select one objective marker within 18" of your CRYPTEK model. Until the end of the phase, weapons equipped by friendly NECRONS models have the IGNORES COVER ability while targeting units within range of that objective marker.
   -
     name: Reactive Subroutines
     cost: 1

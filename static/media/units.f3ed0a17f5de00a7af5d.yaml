@@ -16,7 +16,7 @@
   - Character
   - Imperium
   - Terminator
-  - Captian
+  - Captain
   - Octavius
   ranged:
   -
@@ -114,7 +114,7 @@
   -
     name: Force weapon
     abilities:
-    - Phychic
+    - Psychic
     range: Melee
     a: 4
     ws: 3+
@@ -314,7 +314,7 @@
     other:
     -
       label: "Death Blow:"
-      value: "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+      value: "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
   factions: 
   - Tyranids
   composition:
@@ -337,7 +337,7 @@
   - Monster
   - Great Devourer
   - Harvester
-  - Phychophage
+  - Psychophage
   ranged:
   -
     name: Pyroclastic torrent
@@ -471,7 +471,7 @@
     other:
     -
       label: "Disruption Bombardment:"
-      value: "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+      value: "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent's next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
   factions: 
   - Tyranids
   composition:
@@ -570,7 +570,7 @@
     other:
     -
       label: "Implacable Resilience:"
-      value: "Each time an attack is allocated to this model, subtract 1 from that attack’s Damage characteristic."
+      value: "Each time an attack is allocated to this model, subtract 1 from that attack's Damage characteristic."
     leader:
     - Necron Warriors
   factions: 
@@ -744,7 +744,7 @@
     ap: -3
     d: 3
   -
-    name: Twin guass flayer
+    name: Twin gauss flayer
     abilities:
     - Lethal Hits
     - Rapid Fire 1
@@ -1803,7 +1803,7 @@
     value: "Soulreaper cannon, Prosperine khopesh"
   -
     label: "1 Scarab Occult Terminator is equipped with:"
-    value: "Hellfyre missile rack, interno combi-bolter, Prosperine khopesh"
+    value: "Hellfyre missile rack, inferno combi-bolter, Prosperine khopesh"
 - # Tzaangors (Patrol)
   name: Tzaangors (Patrol)
   profiles:
@@ -2659,7 +2659,7 @@
     wargear:
     -
       label: Grav-inhibitor Drone
-      value: "Each time an enemey unit selects the bearer's unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative midifiers to that Charge roll)"
+      value: "Each time an enemy unit selects the bearer's unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)"
   factions: 
   - T'au Empire
   composition:
@@ -2672,7 +2672,7 @@
   -
     label: "6 Pathfinder models are equipped with:"
     value: "Pulse carbine, pulse pistol, close combat weapon."
-  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfiner Shas'ui model and the other unit must contain the models equipped with rail rifles."
+  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfinder Shas'ui model and the other unit must contain the models equipped with rail rifles."
 - # Breacher Team (Patrol)
   name: Breacher Team (Patrol)
   profiles:
