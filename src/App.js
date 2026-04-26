@@ -200,15 +200,22 @@ function ArmyMenu({ armies })
     localStorage.clear();
     window.location.reload();
   }, []);
+  const sortedArmies = armies?.sort(sortArmies) ?? [];
+  const armiesByCategory = getArmiesByCategory(sortedArmies);
   return (
     <div>
       <header>
         <h1>Armies</h1>
         <button onClick={handler}>Clear Cache</button>
       </header>
-      <ul className="armiesMenu">
-        {armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
-      </ul>
+      {armiesByCategory.map(category =>
+        <>
+          <h2 className='armiesCategory'>{category.category}</h2>
+          <ul className="armiesMenu">
+            {category.armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
+          </ul>
+          </>
+      )}
     </div>
   );
 }
@@ -217,6 +224,26 @@ const categorySortOrder = {
   "Combat Patrol": 0,
   "King of the Colloseum": 1,
   "Incursion": 2
+}
+
+function getArmiesByCategory(armies) {
+  const armiesByCategory = {};
+  const categories = [];
+  var i;
+  for (i = 0; i < armies.length; i++)
+  {
+    const army = armies[i];
+    if (!armiesByCategory[army.category])
+    {
+      armiesByCategory[army.category] = [];
+      categories.push(army.category);
+    }
+    armiesByCategory[army.category].push(army);
+  }
+  categories.sort((a, b) => categorySortOrder[a] - categorySortOrder[b])
+  return categories.map((cat) => { 
+    return { category: cat, armies: armiesByCategory[cat]};
+  });
 }
 
 function sortArmies(a, b) {
@@ -709,6 +736,7 @@ function getUnits(army, units, detachment, selectedEnhancement)
       result.push(unit);
     }
   }
+  result.sort((a, b) => army.units.indexOf(a.name) - army.units.indexOf(b.name));
   return result;
 }
 

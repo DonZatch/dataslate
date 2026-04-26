@@ -3321,3 +3321,455 @@
   -
     label: "This model is equipped with:"
     value: "doomsday blaster, twin gauss flayer, doomstalker limbs"
+# Orks
+- # Beastboss
+  name: Beastboss
+  profiles:
+  -
+    name: Beastboss
+    m: 6
+    t: 5
+    sv: 4+
+    iv: 5+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Beast Snagga
+  - Warboss
+  - Beastboss
+  ranged:
+  -
+    name: Shoota
+    range: 18"
+    a: 2
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 1
+  melee:
+  -
+    name: Beast Snagga klaw
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 10
+    ap: -2
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  -
+    name: Beastchoppa
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  abilities:
+    core:
+    - Leader
+    - Feel No Pain 6+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Ferocious Rage:"
+      value: "Each time this model makes a Charge move, until the end of the turn, melee weapons it is equipped with have the DEVASTATING WOUNDS ability."
+    -
+      label: "Beastboss:"
+      value: "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+    leader:
+    - Beast Snagga Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "shoota, beastchoppa, Beast Snagga klaw."
+- # Beastboss on Squigosaur
+  name: Beastboss on Squigosaur
+  profiles:
+  -
+    name: Beastboss on Squigosaur
+    m: 10
+    t: 8
+    sv: 3+
+    iv: 5+
+    w: 8
+    ld: 6+
+    oc: 3
+  keywords:
+  - Mounted
+  - Character
+  - Beast Snagga
+  - Warboss
+  - Beastboss on Squigosaur
+  ranged:
+  -
+    name: Slugga
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Thump Gun
+    range: 18"
+    a: D3
+    bs: 5+
+    s: 6
+    ap: 0
+    d: 2
+    abilities:
+    - Blast
+  melee:
+  -
+    name: Beastchoppa
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  -
+    name: Squigosaur's Jaws
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 7
+    ap: -2
+    d: 3
+    abilities:
+    - Devastating Wounds
+    - Extra Attacks
+  abilities:
+    core:
+    - Leader
+    - Feel No Pain 5+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Thundering Stampede:"
+      value: "While this model is leading a unit, add 1 to Charge rolls made for that unit."
+    -
+      label: "Single-minded Predator:"
+      value: "You can target this model's unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+    leader:
+    - Squighog Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "slugga, beastchoppa, squigosaur's jaws."
+- # Beast Snagga Boyz
+  name: Beast Snagga Boyz
+  profiles:
+  -
+    name: Beast Snagga Boy
+    m: 6
+    t: 5
+    sv: 5+
+    w: 1
+    ld: 7+
+    oc: 2
+  -
+    name: Beast Snagga Nob
+    m: 6
+    t: 5
+    sv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Mob
+  - Battleline
+  - Beast Snagga
+  - Beast Snagga Boyz
+  ranged:
+  -
+    name: Slugga
+    num: 9
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Thump gun
+    num: 1
+    range: 18"
+    a: D3
+    bs: 5+
+    s: 6
+    ap: 0
+    d: 2
+    abilities:
+    - Blast
+  melee:
+  -
+    name: Choppa
+    num: 8
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 1
+  -
+    name: Close combat weapon
+    num: 1
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 5
+    ap: 0
+    d: 1
+  -
+    name: Power snappa
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 7
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Feel No Pain 6+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Monster Hunters:"
+      value: "Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Hit roll."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Beast Snagga Nob is equipped with:"
+    value: "slugga, power snappa."
+  -
+    label: "1 Beast Snagga Boy is equipped with:"
+    value: "thump gun, close combat weapon."
+  -
+    label: "8 Beast Snagga Boyz are equipped with:"
+    value: "slugga, choppa."
+- # Squighog Boyz
+  name: Squighog Boyz
+  profiles:
+  -
+    name: Squighog Boy
+    m: 10
+    p: 1
+    t: 7
+    sv: 4+
+    w: 3
+    ld: 7+
+    oc: 2
+  -
+    name: Nob on Smasha Squig
+    m: 10
+    p: 1
+    t: 7
+    sv: 4+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Beast Snagga
+  - Grenades
+  - Squighog Boyz
+  ranged:
+  -
+    name: Saddlegit weapons
+    num: 3
+    range: 9"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+  -
+    name: Slugga
+    num: 1
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Stikka
+    num: 3
+    range: 9"
+    a: 1
+    bs: 5+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+    - Assault
+  melee:
+  -
+    name: Big Choppa
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  -
+    name: Squig Jaws
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Extra attacks
+  -
+    name: Stikka
+    num: 3
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Anti-Monster/Vehicle 4+
+    - Lance
+  abilities:
+    core:
+    - Feel No Pain 5+
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Wild Ride:"
+      value: "You can ignore any or all modifiers to this unit's Move characteristic and to Advance and Charge rolls made for this unit."
+    wargear:
+    -
+      label: "Bomb Squig:"
+      value: "Once per battle, for each bomb squig this unit has, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Nob on Smasha Squig is equipped with:"
+    value: "slugga, big choppa, squig jaws."
+  -
+    label: "3 Squighog Boyz are equipped with:"
+    value: "saddlegit weapons, stikka, squig jaws."
+- # Gretchin
+  name: Gretchin
+  profiles:
+  -
+    name: Gretchin
+    m: 6
+    t: 2
+    sv: 7+
+    w: 1
+    ld: 8+
+    oc: 2
+  -
+    name: Runtherd
+    m: 6
+    t: 5
+    sv: 5+
+    w: 2
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Grots
+  - Gretchin
+  ranged:
+  -
+    name: Grot Blasta
+    num: 10
+    range: 12"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  -
+    name: Slugga
+    num: 1
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Close combat weapon
+    num: 10
+    range: Melee
+    a: 1
+    ws: 5+
+    s: 2
+    ap: 0
+    d: 1
+  -
+    name: Runtherd Tools
+    num: 1
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Runtherd:"
+      value: "Each time an attack targets this unit, if it contains one or more Gretchin models, until that attack is resolved, Runtherd models in this unit have a Toughness characteristic of 2."
+    -
+      label: "Thievin' Scavengers:"
+      value: "At the start of your Movement phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it (excluding Battle-shocked units). If one or more of those rolls is a 4+, you gain 1CP."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "Every Runtherd is equipped with:"
+    value: "slugga, runtherd tools."
+  -
+    label: "Every Gretchin is equipped with:"
+    value: "grot blasta, close combat weapon."

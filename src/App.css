@@ -33,6 +33,15 @@ header > h1 {
   text-overflow: ellipsis;
 }
 
+.armiesCategory {
+  margin: 0;
+  padding: 4px;
+  font-size: large;
+  background-color: #161622;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
 .armiesMenu {
   list-style: none;
   margin: 0;

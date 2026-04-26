@@ -180,7 +180,7 @@
   - "smokescreen"
   - "rapid ingress"
 # King of the Colosseum
--
+- # Colosseum Canopteks
   id: KC1
   category: King of the Colosseum
   name: Colosseum Canopteks
@@ -197,3 +197,20 @@
   -
     name: Metalodermal Tesla Weave
     unit: Technomancer
+- # Colosseum Beast Snaggas
+  id: KC2
+  category: King of the Colosseum
+  name: Colosseum Beast Snaggas
+  faction: Orks
+  units:
+  - Beastboss on Squigosaur
+  - Squighog Boyz
+  - Beastboss
+  - Beast Snagga Boyz
+  - Gretchin
+  detachment: Da Big Hunt
+  warlord: Beastboss on Squigosaur
+  enhancements:
+  -
+    name: Surly As A Squiggoth
+    unit: Beastboss on Squigosaur
