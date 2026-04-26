@@ -405,12 +405,12 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
           /> 
           : null 
         }
-        { view === "units" ? <Units army={army} units={units} detachment={detachment} enhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
+        { view === "units" ? <Units army={army} units={units} detachment={detachment} selectedEnhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
-        <MenuItem view="setup" label="Setup" handler={handler} currentView={view} />
+        {army?.category === "Combat Patrol" ? <MenuItem view="setup" label="Setup" handler={handler} currentView={view} /> : null }
         <MenuItem view="units" label="Units" handler={handler} currentView={view} />
         <MenuItem view="strategems" label="Strats" handler={handler} currentView={view} />
       </menu>
@@ -443,9 +443,9 @@ function getDetachment(detachments, army)
   return detachments.find(detachment => detachment.name === army.detachment);
 }
 
-function Units({ army, detachment, enhancement, units, appSettings, setShowInfo, onClick })
+function Units({ army, detachment, selectedEnhancement, units, appSettings, setShowInfo, onClick })
 {
-  const armyUnits = useMemo(() => getUnits(army, units, detachment, enhancement), [army, units, detachment, enhancement]);
+  const armyUnits = useMemo(() => getUnits(army, units, detachment, selectedEnhancement), [army, units, detachment, selectedEnhancement]);
 
   return (
     <ol className="unitSummaries">
@@ -558,14 +558,16 @@ function WargearAbilitySummary({ unit })
 
 function EnhancementAbilitySummary({ unit })
 {
-  const enhancement = unit?.enhancement;
-  if (!enhancement)
+  const enhancements = unit?.enhancements;
+  if (!enhancements)
   {
     return null;
   }
   return (
     <ol className="otherAbilitySummary">
-      <li key={enhancement.name}><label>{enhancement.name} (Enhancement):</label><span dangerouslySetInnerHTML={{ __html: enhancement.text }} /></li>
+      {enhancements.map(enhancement => 
+        <li key={enhancement.name}><label>{enhancement.name} (Enhancement):</label><span dangerouslySetInnerHTML={{ __html: enhancement.text }} /></li>
+      )}
     </ol>
   );
 }
@@ -669,21 +671,40 @@ function getKeywordAbilitySummary(unit, appSettings)
   }) ?? [];
 }
 
-function getUnits(army, units, detachment, enhancement)
+function getUnits(army, units, detachment, selectedEnhancement)
 {
   var result = [];
   if (!army || !units)
   {
     return result;
   }
-  for (var i = 0; i < units.length; i++)
+  var unitEnhancementNames = {};
+  var i;
+  if (army.enhancements)
+  {
+    for (i = 0; i < army.enhancements.length; i++)
+    {
+      var enhancement = army.enhancements[i];
+      if (!unitEnhancementNames[enhancement.unit])
+      {
+        unitEnhancementNames[enhancement.unit] = [];
+      }
+      unitEnhancementNames[enhancement.unit].push(enhancement.name);
+    }
+  }
+  for (i = 0; i < units.length; i++)
   {
     var unit = units[i];
     if (army.units.indexOf(unit.name) !== -1)
     {
-      if (army.warlord === unit.name)
+      if (army.category === "Combat Patrol" && army.warlord === unit.name)
       {
-        unit.enhancement = enhancement ? detachment.enhancements?.find(e => e.name === enhancement) : null;
+        unit.enhancements = selectedEnhancement ? detachment.enhancements?.filter(e => e.name === selectedEnhancement) : [];
+      }
+      else if (unitEnhancementNames[unit.name])
+      {
+        var enhancementNames = unitEnhancementNames[unit.name].slice();
+        unit.enhancements = detachment.enhancements?.filter(e => enhancementNames.indexOf(e.name) !== -1);
       }
       result.push(unit);
     }

@@ -625,6 +625,10 @@
         <li>At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Power Matrix</li>
       </ul>
       <p>Each time a model in a CRYPTEK or CANOPTEK unit from your army makes an attack, re-roll a Hit roll of 1. If such a unit is wholly within your army's Power Matrix, you can re-roll the Hit roll instead.</p>"
+  enhancements:
+  -
+    name: Metalodermal Tesla Weave
+    text: "<div>CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.</div>"
   strategems:
   - 
     name: Curse of the Cryptek

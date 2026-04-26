@@ -180,15 +180,20 @@
   - "smokescreen"
   - "rapid ingress"
 # King of the Colosseum
-# -
-#   id: KC1
-#   category: King of the Colosseum
-#   name: Colosseum Canopteks
-#   faction: Necrons
-#   units:
-#   - Plasmancer
-#   - Technomancer
-#   - Immortals
-#   - Canoptek Scarab Swarms
-#   - Canoptek Wraiths
-#   detachment: Canoptek Court
+-
+  id: KC1
+  category: King of the Colosseum
+  name: Colosseum Canopteks
+  faction: Necrons
+  units:
+  - Technomancer
+  - Canoptek Wraiths
+  - Immortals
+  - Necron Warriors
+  - Canoptek Doomstalker
+  detachment: Canoptek Court
+  warlord: Technomancer
+  enhancements:
+  -
+    name: Metalodermal Tesla Weave
+    unit: Technomancer
