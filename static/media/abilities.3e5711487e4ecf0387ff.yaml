@@ -156,3 +156,8 @@
   - "[Scouts x\"]: Unit can make a Normal move of up to x\" before the first turn begins."
   - "If embarked in a DEDICATED TRANSPORT, that DEDICATED TRANSPORT can make this move instead."
   - "Must end this move more than 9\" horizontally away from all enemy models."
+-
+  name: Firing Deck
+  text: "<p>Some TRANSPORT models have 'Firing Deck x' listed in their abilities. Each time such a model is selected to shoot in the Shooting phase, you can select up to 'x' models embarked within it whose units have not already shot this phase. Then, for each of those embarked models, you can select one ranged weapon that embarked model is equipped with (excluding weapons with the [ONE SHOT] ability). Until that TRANSPORT model has resolved all of its attacks, it counts as being equipped with all of the weapons you selected in this way, in addition to its other weapons. Until the end of the phase, those selected models' units are not eligible to shoot.</p>"
+  summary: 
+    - "[Firing Deck x]: Each time this TRANSPORT shoots, select one weapon (excluding weapons with the [ONE SHOT] ability) from up to 'x' models embarked within it whose units have not shot this phase; this TRANSPORT counts as being equipped with those weapons as well. Until the end of the phase, those selected models' units are not eligible to shoot."

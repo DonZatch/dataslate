@@ -197,10 +197,10 @@
   -
     name: Metalodermal Tesla Weave
     unit: Technomancer
-- # Colosseum Beast Snaggas
+- # Beast Snaggas
   id: KC2
   category: King of the Colosseum
-  name: Colosseum Beast Snaggas
+  name: Beast Snaggas
   faction: Orks
   units:
   - Beastboss on Squigosaur
@@ -214,3 +214,28 @@
   -
     name: Surly As A Squiggoth
     unit: Beastboss on Squigosaur
+# Incursion
+- # Kult of Speed
+  id: I1
+  category: Incursion
+  name: Kult of Speed
+  faction: Orks
+  units:
+  - Wazdakka Gutsmek
+  - Deffkilla Wartrike
+  - Warbikers
+  - Beastboss
+  - Beast Snagga Boyz
+  - Trukk
+  - Deffkoptas
+  - Gretchin
+  - Rukkatrukk Squigbuggy
+  detachment: Kult of Speed
+  warlord: Wazdakka Gutsmek
+  enhancements:
+  -
+    name: Fasta Than Yooz
+    unit: Beastboss
+  -
+    name: Wazblasta
+    unit: Deffkilla Wartrike

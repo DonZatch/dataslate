@@ -3773,3 +3773,456 @@
   -
     label: "Every Gretchin is equipped with:"
     value: "grot blasta, close combat weapon."
+- # Wazdakka Gutsmek
+  name: Wazdakka Gutsmek
+  profiles:
+  -
+    name: Wazdakka Gutsmek
+    m: 14
+    t: 8
+    sv: 3+
+    iv: 4+
+    w: 10
+    ld: 6+
+    oc: 3
+  keywords:
+  - Mounted
+  - Vehicle
+  - Speed Freeks
+  - Epic Heroic
+  - Smoke
+  - Character
+  - Wazdakka Gutsmek
+  ranged:
+  -
+    name: Grabba Dragga
+    range: 12"
+    a: 1
+    bs: 2+
+    s: 10
+    ap: -2
+    d: 3
+    abilities:
+    - Assault
+    - Precision
+  -
+    name: Psyko-gatler
+    range: 24"
+    a: 12
+    bs: 4+
+    s: 6
+    ap: -2
+    d: 2
+    abilities:
+    - Assault
+    - Sustained Hits 1
+  melee:
+  -
+    name: Fixit's wrench
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Extra Attacks
+  -
+    name: Grabba dragga
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 10
+    ap: -2
+    d: 3
+    abilities:
+    - Lance
+  -
+    name: Speeding bulk and flaming exhaust
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 5
+    ap: -1
+    d: 1
+    abilities:
+    - Extra Attacks
+  abilities:
+    core:
+    - Deadly Demise D3
+    - Deep Strike
+    - Lone Operative
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Fixit da Grot:"
+      value: "At the start of your Command phase, this model regains up to D3 lost wounds."
+    -
+      label: "Throttlerokkit Shokka Engine:"
+      value: "<div>In your Command phase, select one of the abilities in the Throttlerokkit Shokka Engine section (see below). Until the start of your next Command phase, this model has that ability.
+        <ul>
+          <li><strong>Turbo Engine:</strong> This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back.</li>
+          <li><strong>Shokk Attack Engine:</strong> In your Command phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.</li>
+          <li><strong>Pulse Jet:</strong> Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase:
+            <ul>
+              <li>Add 6\" to the Move characteristic of models in this unit.</li>
+              <li>Models in this unit can move through models and terrain features.</li>
+            </ul>
+          </li>
+        </ul>
+        </div>"
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 grabba dragga, 1 psyko-gatler, 1 Fixit's wrench, 1 speeding bulk and flaming exhaust."
+- # Deffkilla Wartrike
+  name: Deffkilla Wartrike
+  profiles:
+  -
+    name: Deffkilla Wartrike
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 5+
+    w: 9
+    ld: 6+
+    oc: 3
+  keywords:
+  - Mounted
+  - Character
+  - Warboss
+  - Speed Freeks
+  - Deffkilla Wartrike
+  ranged:
+  -
+    name: Boomstikks
+    range: 12"
+    a: 6
+    bs: 5+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+  -
+    profile: true
+    name: Killa jet - burna
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  -
+    profile: true
+    name: Killa jet - cutta
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 9
+    ap: -4
+    d: D6
+    abilities:
+    - Melta 2
+  melee:
+  -
+    name: Snagga klaw
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 10
+    ap: -2
+    d: 2
+  abilities:
+    core:
+    - Deadly Demise 1
+    - Leader
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Speedboss:"
+      value: "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+    -
+      label: "Fuel-mixa Grot"
+      value: "Each time this model's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this model's unit."
+    leader:
+    - Warbikers
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "defkilla boomsticks, killajet, snagga klaw."
+- # Trukk
+  name: Trukk
+  profiles:
+  -
+    name: Trukk
+    m: 12
+    t: 8
+    sv: 4+
+    iv: 6+
+    w: 10
+    ld: 7+
+    oc: 2
+  keywords:
+  - Vehicle
+  - Transport
+  - Dedicated Transport
+  - Trukk
+  ranged:
+  -
+    name: Big shoota
+    range: 36"
+    a: 3
+    bs: 5+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  melee:
+  -
+    name: Spiked wheels
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 6
+    ap: 0
+    d: 1
+  -
+    name: Wreckin' ball
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 10
+    ap: 0
+    d: D6
+    abilities:
+    - Extra Attacks
+  abilities:
+    core:
+    - Deadly Demise D3
+    - Firing Deck 12
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Grot Riggers:"
+      value: "At the start of your Command phase, this model regains 1 lost wound."
+  transport: "This model has a transport capacity of 12 ORKS INFANTRY models. Each MEGA ARMOUR model takes up the space of 2 models. It cannot transport JUMP PACK or GHAZGHKULL THRAKA models."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "big shoota, spiked wheels, wreckin' ball."
+- # Deffkoptas
+  name: Deffkoptas
+  profiles:
+  -
+    name: Deffkoptas
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 6+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Vehicle
+  - Fly
+  - Grenades
+  - Speed Freeks
+  - Deffkoptas
+  ranged:
+  -
+    name: Kopta rokkits
+    range: 24"
+    a: D3
+    bs: 5+
+    s: 9
+    ap: -2
+    d: 3
+    abilities:
+    - Blast
+    - Twin-Linked
+  -
+    name: Slugga
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Pistol
+  melee:
+  -
+    name: Spinnin' blades
+    range: Melee
+    a: 6
+    ws: 3+
+    s: 5
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Deff from Above:"
+      value: "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "kopta rokkits, slugga, spinnin' blades."
+- # Rukkatrukk Squigbuggy
+  name: Rukkatrukk Squigbuggy
+  profiles:
+  -
+    name: Rukkatrukk Squigbuggy
+    m: 12
+    t: 7
+    sv: 4+
+    iv: 6+
+    w: 9
+    ld: 7+
+    oc: 3
+  keywords:
+  - Vehicle
+  - Speed Freeks
+  - Rukkatrukk Squigbuggy
+  ranged:
+  -
+    name: Sawn-off shotgun
+    range: 12"
+    a: 2
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+  -
+    name: Squig launchas
+    range: 36"
+    a: D6+6
+    bs: 5+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Blast
+    - Ignores Cover
+    - Indirect Fire
+  melee:
+  -
+    name: Saw blades
+    range: Melee
+    a: 4
+    ws: 4+
+    s: 7
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Deadly Demise 1
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Buzzer Squigs:"
+      value: "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with squig-launchas and roll one D6: on a 4+, until the end of your opponent's next turn, that enemy unit is hindered. While a unit is hindered, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+    -
+      label: "Squig Mine:"
+      value: "Once per battle, at the start of any phase, select one enemy unit within 3\" of this model and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds. "
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "sawn-off shotgun, squig-launchas, saw blades."
+- # Warbikers
+  name: Warbikers
+  profiles:
+  -
+    name: Warbiker
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 6+
+    w: 3
+    ld: 7+
+    oc: 2
+  -
+    name: Boss Nob on Warbike
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 6+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Grenades
+  - Speed Freeks
+  - Warbikers
+  ranged:
+  -
+    name: Twin dakkagun
+    range: 18"
+    a: 3
+    bs: 5+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Assault
+    - Rapid Fire 2
+    - Twin-Linked
+  melee:
+  -
+    name: Choppa
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  -
+    name: Power klaw
+    range: Melee
+    a: 3
+    ws: 4+
+    s: 9
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Drive-by Dakka:"
+      value: "Each time a model in this unit makes a ranged attack that targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "Warbiker models are equipped with:"
+    value: "twin dakkagun, choppa."
+  -
+    label: "The Boss Nob on Warbike model is equipped with:"
+    value: "twin dakkagun, power klaw."
