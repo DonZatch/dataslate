@@ -222,7 +222,7 @@ function ArmyMenu({ armies })
 
 const categorySortOrder = {
   "Combat Patrol": 0,
-  "King of the Colloseum": 1,
+  "King of the Colosseum": 1,
   "Incursion": 2
 }
 
@@ -564,7 +564,7 @@ function OtherAbilitySummary({ unit })
   }
   return (
     <ol className="otherAbilitySummary">
-      {abilities.map(ability => <li key={ability.label}><label>{ability.label}</label>{ability.value}</li>)}
+      {abilities.map(ability => <li key={ability.label}><label>{ability.label}</label><span dangerouslySetInnerHTML={{ __html: ability.value}} /></li>)}
     </ol>
   );
 }
