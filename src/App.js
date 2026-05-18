@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useMemo, use } from 'react';
+import { useEffect, useState, useCallback, useMemo, use, useRef } from 'react';
 import { parse } from 'yaml';
 import settingsData from "./data/settings.yaml";
 import armyData from "./data/armies.yaml";
@@ -368,6 +368,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   const [unit, setUnit] = useState(null);
   const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
   const [selectedSecondary, setSelectedSecondary] = useState(() => localStorage.getItem(`${id}-secondary`));
+  const scrollRef = useRef({});
   
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
   const detachment = useMemo(() => getDetachment(detachments, army), [detachments, army]);
@@ -389,11 +390,24 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
     setSelectedSecondary(secondary);
   }, [id]);
 
-  const handler = useCallback((e, view) => {
+  const handler = useCallback((e, newView) => {
     e.preventDefault();
     e.stopPropagation();
-    setView(view);
-  }, []);
+    const scrollDict = scrollRef.current;
+    if (scrollDict)
+    {
+      scrollDict[view] = window.scrollY;
+    }
+    setView(newView);
+    if (scrollDict && scrollDict[newView])
+    {
+      window.scroll(0, scrollDict[newView]);
+      scrollDict[newView] = 0;
+    }
+    else {
+      window.scroll(0, 0);
+    }
+  }, [view]);
 
   const onOpenUnit = useCallback((unit) => setUnit(unit), []);
   const onGoBack = useCallback(() => setUnit(null), []);
