@@ -169,3 +169,10 @@
     - "GRENADES unit must not have Advanced, Fell Back, or shot this turn and is not Engaged"
     - "Target must be within 8\" and visible to the GRENADES unit"
     - "Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+-
+  name: Smoke
+  text: "<p>Select one SMOKE unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the end of the phase, all models in your unit have the Benefit of Cover and the Stealth ability</p>"
+  summary:
+    - "1 CP Strategem"
+    - "Selectable during Shooting phase when SMOKE unit is targeted."
+    - "Until the end of the phase, all models in your unit have the Benefit of Cover and the Stealth ability."
