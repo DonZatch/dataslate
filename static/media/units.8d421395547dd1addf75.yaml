@@ -3779,6 +3779,7 @@
   -
     name: Wazdakka Gutsmek
     m: 14
+    p: 2
     t: 8
     sv: 3+
     iv: 4+
@@ -3884,6 +3885,7 @@
   -
     name: Deffkilla Wartrike
     m: 12
+    p: 1
     t: 6
     sv: 4+
     iv: 5+
@@ -3966,6 +3968,7 @@
   -
     name: Trukk
     m: 12
+    p: 2
     t: 8
     sv: 4+
     iv: 6+
@@ -4030,6 +4033,7 @@
   -
     name: Deffkoptas
     m: 12
+    p: 2
     t: 6
     sv: 4+
     iv: 6+
@@ -4094,6 +4098,7 @@
   -
     name: Rukkatrukk Squigbuggy
     m: 12
+    p: 2
     t: 7
     sv: 4+
     iv: 6+
@@ -4160,6 +4165,7 @@
   -
     name: Warbiker
     m: 12
+    p: 1
     t: 6
     sv: 4+
     iv: 6+
