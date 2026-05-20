@@ -239,3 +239,27 @@
   -
     name: Wazblasta
     unit: Deffkilla Wartrike
+- # Canoptek Court
+  id: I2
+  category: Incursion
+  name: Canoptek Court
+  faction: Necrons
+  units:
+  - Technomancer
+  - Canoptek Wraiths
+  - Plasmancer
+  - Immortals
+  - Canoptek Doomstalker
+  - Canoptek Scarab Swarms
+  detachment: Canoptek Court
+  warlord: Plasmancer
+  enhancements:
+  -
+    name: Autodivinator
+    unit: Plasmancer
+  -
+    name: Dimensional Sanctum
+    unit: Technomancer
+  -
+    name: Metalodermal Tesla Weave
+    unit: Technomancer

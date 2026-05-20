@@ -627,8 +627,14 @@
       <p>Each time a model in a CRYPTEK or CANOPTEK unit from your army makes an attack, re-roll a Hit roll of 1. If such a unit is wholly within your army's Power Matrix, you can re-roll the Hit roll instead.</p>"
   enhancements:
   -
+    name: Dimensional Sanctum
+    text: "<div>CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability.</div>"
+  -
     name: Metalodermal Tesla Weave
     text: "<div>CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.</div>"
+  -
+    name: Autodivinator
+    text: "<div>CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP.</div>"
   strategems:
   - 
     name: Curse of the Cryptek
