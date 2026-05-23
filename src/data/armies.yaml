@@ -180,8 +180,22 @@
   - "smokescreen"
   - "rapid ingress"
 # King of the Colosseum
-- # Colosseum Canopteks
+- # Awakened Dynasty
   id: KC1
+  category: King of the Colosseum
+  name: Awakened Dynasty
+  faction: Necrons
+  units:
+  - Plasmancer
+  - Immortals
+  - Technomancer
+  - Canoptek Wraiths
+  - Skorpekh Lord
+  - Skorpekh Destroyers
+  detachment: Awakened Dynasty
+  warlord: Plasmancer
+- # Colosseum Canopteks
+  id: KC2
   category: King of the Colosseum
   name: Colosseum Canopteks
   faction: Necrons
@@ -198,7 +212,7 @@
     name: Metalodermal Tesla Weave
     unit: Technomancer
 - # Beast Snaggas
-  id: KC2
+  id: KC3
   category: King of the Colosseum
   name: Beast Snaggas
   faction: Orks
