@@ -696,8 +696,21 @@ header > h1 {
   padding: 8px 16px;
 }
 
+.armyDetails .scoreboardView {
+  height: auto;
+}
+
+.armyDetails .resetControls {
+  padding: 0;
+}
+
 .unitsMenuItem {
   display: flex;
+}
+
+.scoreboardBtn {
+  flex: 0 0 48px;
+  display: block;
 }
 
 .unitsMenuItem > a {

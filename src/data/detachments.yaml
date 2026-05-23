@@ -669,13 +669,13 @@
     cost: 1
     turn: opponent
     when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
-    target: One CANOPTEK unit from your army that was selected as the target of one or more of hte attacking unit's attacks.
+    target: One CANOPTEK unit from your army that was selected as the target of one or more of the attacking unit's attacks.
     effect: Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18".
   -
     name: Suboptimal Facade
     cost: 1
     turn: opponent
-    when: Your opponent's Charge phase, jut after an enemy unit has declared a charge.
+    when: Your opponent's Charge phase, just after an enemy unit has declared a charge.
     target: One CANOPTEK unit from your army that was selected as a target of that charge and is wholly within your army's Power Matrix.
     effect: Your unit's Reanimation Protocols activate.
 - # Awakened Dynasty

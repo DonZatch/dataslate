@@ -459,10 +459,11 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   }
 
   return (
-    <div>
+    <div className="armyDetails">
       <header>
         <a href={`?`}>&lsaquo;</a>
         <h1>{army?.name}</h1>
+        <a href="#" onClick={(e) => handler(e, "scoreboard")} className='scoreboardBtn'>{view === "scoreboard" ? <>&#9873;</> : <>&#9872;</>}</a>
       </header>
       <div className="armyDetails">
         { view === "rules" ? <Rules detachment={detachment} /> : null }
@@ -479,6 +480,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
         }
         { view === "units" ? <Units army={army} armyUnits={armyUnits} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} onToggleCollapse={handleToggleCollapseUnit} collapsedUnits={collapsedUnits} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
+        { view === "scoreboard" ? <Scoreboard /> : null}
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
