@@ -194,6 +194,16 @@ function MenuItem({ view, label, currentView, handler })
   return <li><a href="#" className={currentView === view ? "selected" : undefined} onClick={(e) => handler(e, view)}>{label}</a></li>
 }
 
+function UnitsMenuItem({ view, label, currentView, handler, buttonHandler })
+{
+  return (
+    <li className='unitsMenuItem'>
+      <a href="#" className={currentView === view ? "selected" : undefined} onClick={(e) => handler(e, view)}>{label}</a>
+      {currentView === view && (<a href="#" className='toggleCollapseBtn' onClick={buttonHandler}>&equiv;</a>)}
+    </li>
+  );
+}
+
 function ArmyMenu({ armies })
 {
   const handler = useCallback(() => {
@@ -412,6 +422,27 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   const onOpenUnit = useCallback((unit) => setUnit(unit), []);
   const onGoBack = useCallback(() => setUnit(null), []);
 
+  const armyUnits = useMemo(() => getUnits(army, units, detachment, selectedEnhancement), [army, units, detachment, selectedEnhancement]);
+  const [collapsedUnits, setCollapsedUnits] = useState([]);
+  const handleToggleCollapseUnit = (name, value) => setCollapsedUnits(oldVals => {
+    if (value)
+    {
+      return [...oldVals, name];
+    }
+    else {
+      const copy = oldVals.slice();
+      const index = copy.indexOf(name);
+      if (index !== -1)
+      {
+        copy.splice(index, 1);
+      }
+      return copy;
+    }
+  });
+  const handleCollapseAll = () => {
+    setCollapsedUnits(armyUnits?.map(unit => unit.name) ?? []);
+  };
+
   if (army != null && unit !== null)
   {
     return (
@@ -446,13 +477,13 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
           /> 
           : null 
         }
-        { view === "units" ? <Units army={army} units={units} detachment={detachment} selectedEnhancement={selectedEnhancement} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} /> : null }
+        { view === "units" ? <Units army={army} armyUnits={armyUnits} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} onToggleCollapse={handleToggleCollapseUnit} collapsedUnits={collapsedUnits} /> : null }
         { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
         {army?.category === "Combat Patrol" ? <MenuItem view="setup" label="Setup" handler={handler} currentView={view} /> : null }
-        <MenuItem view="units" label="Units" handler={handler} currentView={view} />
+        <UnitsMenuItem view="units" label="Units" handler={handler} buttonHandler={handleCollapseAll} currentView={view} />
         <MenuItem view="strategems" label="Strats" handler={handler} currentView={view} />
       </menu>
     </div>
@@ -484,18 +515,28 @@ function getDetachment(detachments, army)
   return detachments.find(detachment => detachment.name === army.detachment);
 }
 
-function Units({ army, detachment, selectedEnhancement, units, appSettings, setShowInfo, onClick })
+function Units({ army, armyUnits, appSettings, setShowInfo, onClick, onToggleCollapse, collapsedUnits })
 {
-  const armyUnits = useMemo(() => getUnits(army, units, detachment, selectedEnhancement), [army, units, detachment, selectedEnhancement]);
-
   return (
-    <ol className="unitSummaries">
-      {armyUnits?.map(unit => <UnitSummary key={unit.name} army={army.id} unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onClick} />)}
-    </ol>
+    <>
+      <ol className="unitSummaries">
+        {armyUnits?.map(unit => 
+          <UnitSummary 
+            key={unit.name} 
+            army={army.id} 
+            unit={unit} 
+            appSettings={appSettings} 
+            setShowInfo={setShowInfo}
+            onClick={onClick}
+            onToggleCollapsed={(value) => onToggleCollapse(unit.name, value)}
+            collapsed={collapsedUnits.indexOf(unit.name) !== -1}
+          />)}
+      </ol>
+    </>
   );
 }
 
-function UnitSummary({ army, unit, appSettings, setShowInfo, onClick })
+function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCollapsed, collapsed })
 {
   const handler = useCallback((e) => {
     e.preventDefault();
@@ -503,14 +544,21 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick })
     onClick(unit.name);
   }, [unit]);
   return (
-    <li><a href="#" onClick={handler}>
-      <span className="unitHeader">{unit?.name}</span>
-      <UnitProfile unit={unit} />
-      <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} />
-      <OtherAbilitySummary unit={unit} />
-      <WargearAbilitySummary unit={unit} />
-      <EnhancementAbilitySummary unit={unit} />
-      </a></li>
+    <li>
+      <div className="unitHeader" onClick={() => onToggleCollapsed(!collapsed)}>
+        <div className="unitName">{unit?.name}</div>
+        <div className="collapseBtn">{ collapsed ? <>&or;</> : <>&and;</> }</div>
+      </div>
+      {!collapsed && (
+        <a href="#" onClick={handler}>
+        <UnitProfile unit={unit} />
+        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} />
+        <OtherAbilitySummary unit={unit} />
+        <WargearAbilitySummary unit={unit} />
+        <EnhancementAbilitySummary unit={unit} />
+        </a>
+      )}
+    </li>
   )
 }
 

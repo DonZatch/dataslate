@@ -146,8 +146,16 @@ header > h1 {
   color: white;
   font-weight: bold;
   padding: 8px 16px;
-  display: block;
+  display: flex;
   border-bottom: 1px solid white;
+}
+
+.unitHeader > .unitName {
+  flex: 1;
+}
+
+.unitHeader > .collapseBtn {
+  flex: 0 16px 16px;
 }
 
 .unitProfileHeader {
@@ -686,4 +694,20 @@ header > h1 {
 
 .resetControls > button {
   padding: 8px 16px;
+}
+
+.unitsMenuItem {
+  display: flex;
+}
+
+.unitsMenuItem > a {
+  flex: 1;
+}
+
+.unitsMenuItem > a.toggleCollapseBtn {
+  flex: 0 24px 24px;
+  color: #0c3455;
+  background-color: white;
+  border-left: 2px solid #0c3455;
+  font-size: 24px;
 }
