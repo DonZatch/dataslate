@@ -696,11 +696,11 @@ header > h1 {
   padding: 8px 16px;
 }
 
-.armyDetails .scoreboardView {
+.armyDetailsView .scoreboardView {
   height: auto;
 }
 
-.armyDetails .resetControls {
+.armyDetailsView .resetControls {
   padding: 0;
 }
 
