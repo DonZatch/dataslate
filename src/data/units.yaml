@@ -3032,6 +3032,77 @@
     label: "Every model is equipped with:"
     value: "Balistus grenade launcher, guardian spear."
 # Necrons
+- # Imotekh The Stormlord
+  name: Imotekh The Stormlord
+  profiles:
+  -
+    name: Imotekh The Stormlord
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Epic Hero
+  - Noble
+  - Imotekh the Stormlord
+  ranged:
+  -
+    name: Gauntlet of Fire
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  -
+    name: Staff of the Destroyer
+    range: 18"
+    a: 3
+    bs: 2+
+    s: 6
+    ap: -3
+    d: 2
+  melee:
+  -
+    name: Staff of the Destroyer
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 6
+    ap: -3
+    d: 2
+    abilities:
+    - Devastating Wounds
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Leader
+    other:
+    -
+      label: Grand Strategist
+      value: At the start of your Command phase, if this model is on the battlefield, you gain 1CP.
+    -
+      label: Lord of the Storm
+      value: "Once per battle, at the end of your Command phase, this model can use this ability. If it does, roll one D6 for each enemy unit within 12\" of this model: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+    leader:
+    - Immortals
+    - Lychguard
+    - Necron Warriors
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Gauntlet of Fire, Staff of the Destroyer"
 - # Technomancer
   name: Technomancer
   profiles:
@@ -3144,6 +3215,69 @@
   -
     label: "This model is equipped with:"
     value: "plasmic lance"
+- # Skorpekh Lord
+  name: Skorpekh Lord
+  profiles:
+  -
+    name: Skorpekh Lord
+    m: 8
+    t: 7
+    sv: 3+
+    iv: 4+
+    w: 7
+    ld: 6+
+    oc: 2
+  keywords:
+  - Infantry
+  - Character
+  - Destroyer Cult
+  - Skorpekh Lord
+  ranged:
+  -
+    name: Enmitic annihilator
+    range: 18"
+    a: 2
+    bs: 2+
+    s: 6
+    ap: -1
+    d: 1
+  melee:
+  -
+    name: Flensing Claw
+    range: Melee
+    a: 8
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 1
+  -
+    name: Hyperphase harvester
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 10
+    ap: -3
+    d: 3
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Leader
+    other:
+    -
+      label: United In Destruction
+      value: While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.
+    -
+      label: Crimson Harvest
+      value: "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D3+3 mortal wounds."
+    leader:
+    - Skorpekh Destroyers
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "enmitic annihilator, flensing claw, hyperphase harvester"
 - # Canoptek Wraiths
   name: Canoptek Wraiths
   profiles:
@@ -3308,6 +3442,56 @@
   -
     label: "Every model is equipped with:"
     value: "gauss blaster, close combat weapon"
+- # Deathmarks
+  name: Deathmarks
+  profiles:
+  -
+    name: Deathmarks
+    m: 5
+    t: 5
+    sv: 3+
+    w: 1
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Deathmarks
+  ranged:
+  -
+    name: Synaptic disintegrator
+    range: 36"
+    a: 1
+    bs: 3+
+    s: 5
+    ap: -2
+    d: 2
+    abilities:
+    - Heavy
+    - Precision
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Deep Strike
+    other:
+    -
+      label: Hyperspace Hunters
+      value: Once per turn, in the Reinforcements step of your opponent's Movement phase, when an enemy unit is set up on the battlefield from Reserves within 18" of and visible to this unit, this unit can shoot as if it were your Shooting phase, but must only target that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "synaptic disintegrator, close combat weapon"
 - # Canoptek Doomstalker
   name: Canoptek Doomstalker
   profiles:
@@ -3419,6 +3603,101 @@
   -
     label: "Every model is equipped with:"
     value: "feeder mandibles"
+- # Skorpekh Destroyers
+  name: Skorpekh Destroyers
+  profiles:
+  -
+    name: Skorpekh Destroyers
+    m: 8
+    t: 6
+    sv: 3+
+    w: 3
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Destroyer Cult
+  - Skorpekh Destroyers
+  melee:
+  -
+    name: Skorpekh hyperphase weapons
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 7
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Whirling Onslaught
+      value: Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1. If this unit made a Charge move this turn, you can re-roll the Hit roll instead.
+    wargear:
+    -
+      label: Plasmacyte
+      value: "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "skorpekh hyperphase weapons"
+  -
+    label: "This unit is equipped with:"
+    value: "1 plasmacyte"
+- # Lokhust Heavy Destroyers
+  name: Lokhust Heavy Destroyers
+  profiles:
+  -
+    name: Lokhust Heavy Destroyers
+    m: 8
+    t: 6
+    sv: 3+
+    w: 4
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Fly
+  - Destroyer Cult
+  - Lokhust Heavy Destroyers
+  ranged:
+  -
+    name: Enmitic exterminator
+    range: 36"
+    a: 6
+    bs: 3+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Heavy
+    - Rapid Fire 6
+    - Sustained Hits 1
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Optimised for Slaughter
+      value: Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding MONSTERS and VEHICLES), re-roll a Wound roll of 1
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "enmitic exterminator, close combat weapon"
 # Orks
 - # Beastboss
   name: Beastboss

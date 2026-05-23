@@ -239,27 +239,21 @@
   -
     name: Wazblasta
     unit: Deffkilla Wartrike
-- # Canoptek Court
+- # Awakened Dynasty
   id: I2
   category: Incursion
-  name: Canoptek Court
+  name: Awakened Dynasty
   faction: Necrons
   units:
-  - Technomancer
-  - Canoptek Wraiths
+  - Imotekh The Stormlord
   - Plasmancer
   - Immortals
+  - Technomancer
+  - Canoptek Wraiths
+  - Deathmarks
   - Canoptek Doomstalker
-  - Canoptek Scarab Swarms
-  detachment: Canoptek Court
-  warlord: Plasmancer
-  enhancements:
-  -
-    name: Autodivinator
-    unit: Plasmancer
-  -
-    name: Dimensional Sanctum
-    unit: Technomancer
-  -
-    name: Metalodermal Tesla Weave
-    unit: Technomancer
+  - Skorpekh Lord
+  - Skorpekh Destroyers
+  - Lokhust Heavy Destroyers
+  detachment: Awakened Dynasty
+  warlord: Imotekh The Stormlord

@@ -209,12 +209,12 @@ function ArmyMenu({ armies })
         <button onClick={handler}>Clear Cache</button>
       </header>
       {armiesByCategory.map(category =>
-        <>
+        <div key={category.category}>
           <h2 className='armiesCategory'>{category.category}</h2>
           <ul className="armiesMenu">
             {category.armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
           </ul>
-          </>
+        </div>
       )}
     </div>
   );
@@ -934,12 +934,12 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, h
         </tr>
       </thead>
       <tbody>
-        {weapons.map(weapon => <Weapon weapon={weapon} setShowInfo={setShowInfo} hideRange={hideRange} />)}
+        {weapons.map(weapon => <Weapon key={weapon.name} weapon={weapon} setShowInfo={setShowInfo} hideRange={hideRange} />)}
       </tbody>
       {!summary && weapons.find(weapon => weapon.profile) ? 
         <tfoot>
           <td>&#9654;</td>
-          <td className="reminderText" colspan={7}>Before selecting targets with this weapon, select one of its profiles to make attacks with.</td>
+          <td className="reminderText" colSpan={7}>Before selecting targets with this weapon, select one of its profiles to make attacks with.</td>
         </tfoot>
       : null}
     </table>
@@ -963,9 +963,9 @@ function Weapon({ weapon, setShowInfo, hideRange })
         <td>{weapon.d}</td>
       </tr>
       {weapon.abilities? <tr>
-        <td colspan="8">
+        <td colSpan="8">
           <ol className="abilities">
-            {weapon.abilities.map(ability => <li onClick={e => setShowInfo(e, ability)}>{ability}</li>)}
+            {weapon.abilities.map(ability => <li key={weapon.name + "-" + ability} onClick={e => setShowInfo(e, ability)}>{ability}</li>)}
           </ol>
         </td>
       </tr> : null}
