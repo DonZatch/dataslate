@@ -179,8 +179,10 @@ function Home({ armies })
 
   return (
     <div>
-      { view === "armies" ? <ArmyMenu armies={armies} /> : null}
-      { view === "scoreboard" ? <Scoreboard /> : null}
+      <div className='homeView'>
+        { view === "armies" ? <ArmyMenu armies={armies} /> : null}
+        { view === "scoreboard" ? <Scoreboard /> : null}
+      </div>
       <menu className="homeViews">
         <MenuItem view="armies" label="Armies" handler={handler} currentView={view} />
         <MenuItem view="scoreboard" label="Scoreboard" handler={handler} currentView={view} />

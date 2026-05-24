@@ -58,6 +58,10 @@ header > h1 {
   font-weight: bold;
 }
 
+.homeView {
+  padding-bottom: 50px;
+}
+
 .homeViews,
 .armyViews,
 .submenu {
@@ -115,7 +119,6 @@ header > h1 {
 
 .armyDetails {
   padding-top: 4px;
-  padding-bottom: 42px;
 }
 
 .unitSummaries {
@@ -694,6 +697,10 @@ header > h1 {
 
 .resetControls > button {
   padding: 8px 16px;
+}
+
+.armyDetailsView {
+  padding-bottom: 50px;
 }
 
 .armyDetailsView .scoreboardView {
