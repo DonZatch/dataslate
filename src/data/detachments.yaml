@@ -306,7 +306,7 @@
     turn: your
     when: "Your Shooting phase."
     target: "One RUBRIC MARINES units from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, the Malefic Curse weapon equipped by your unit's Aspiring Sorcerer model has the [PISTOL] ability and each time that model makes an attack with that weapon, add 1 to the Hit roll."
+    effect: "Until the end of the phase, the Malefic Curse weapon equipped by your unit's Aspiring Sorcerer model has the [CLOSE-QUARTERS] ability and each time that model makes an attack with that weapon, add 1 to the Hit roll."
   enhancements:
   -
     name: "Perplexing Gibberhex"
@@ -383,7 +383,7 @@
     text: "The bearer has the Deep Strike and Lone Operative abilities. In addition, at the end of your Command phase, if the bearer is on the battlefield, you gain D3 Cabal points."
   -
     name: "Arch-Diabolist"
-    text: "The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the bearer's Screamer Invocation weapon profiles have the [PISTOL] ability."
+    text: "The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the bearer's Screamer Invocation weapon profiles have the [CLOSE-QUARTERS] ability."
   secondaries:
   -
     name: "Sorcerous Ritual"

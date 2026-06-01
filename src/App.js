@@ -1096,7 +1096,7 @@ function BigGunsNeverTire({unit})
       <h2>Big Guns Never Tire</h2>
       <div className="unitLeader">
         MONSTER and VEHICLE units can shoot, and be shot at, even while they are within Engagement Range of enemy units. 
-        Each time a MONSTER or VEHICLE unit makes a ranged attack, if that unit was within Engagement Range of one or more enemy units when it selected its targets, unless that attack is made with a Pistol, subtract 1 from that attack’s Hit roll.
+        Each time a MONSTER or VEHICLE unit makes a ranged attack, if that unit was within Engagement Range of one or more enemy units when it selected its targets, unless that attack is made with a Close-Quarters weapon, subtract 1 from that attack’s Hit roll.
       </div>
     </div>
   )
@@ -1258,8 +1258,8 @@ function Strategem({ strategem })
         <span className="cost">{strategem.cost}CP</span>
       </h2>
       <p><label>When:</label> {strategem.when}</p>
-      <p><label>Target:</label> {strategem.target}</p>
-      <p><label>Effect:</label> {strategem.effect}</p>
+      <p><label>Target:</label> <span dangerouslySetInnerHTML={{ __html: strategem.target}}></span></p>
+      <p><label>Effect:</label> <span dangerouslySetInnerHTML={{ __html: strategem.effect }}></span></p>
       {strategem.restrictions && (
         <p><label>Restrictions:</label> {strategem.restrictions}</p>
       )}

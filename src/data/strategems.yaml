@@ -28,20 +28,20 @@
   target: "That unit from your army."
   effect: "Your unit automatically passes that Battle-shock test."
   restrictions: "You cannot use this Stratagem more than once per battle."
-- # Grenade
-  name: Grenade
+- # Explosives
+  name: Explosives
   cost: 1
   turn: your
   when: "Your Shooting phase."
-  target: "One GRENADES unit from your army (excluding units that Advanced, Fell Back or have shot this turn) that is not within Engagement Range of one or more enemy units."
-  effect: "Select one GRENADES model in your unit and one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your GRENADES model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
-- # Tank Shock
-  name: Tank Shock
+  target: "One EXPLOSIVES unit from your army (excluding units that Advanced, Fell Back or have shot this turn) that is not within Engagement Range of one or more enemy units."
+  effect: "Select one EXPLOSIVES model in your unit and one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your EXPLOSIVES model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+- # Crushing Impact
+  name: Crushing Impact
   cost: 1
   turn: your
-  when: "Your Charge phase, just after a VEHICLE unit from your army ends a Charge move."
-  target: "That VEHICLE unit."
-  effect: "Select one enemy unit within Engagement Range of your unit, and select one VEHICLE model in your unit that is within Engagement Range of that enemy unit. Roll a number of D6 equal to the Toughness characteristic of the selected VEHICLE model. For each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+  when: "Your Charge phase, just after a VEHICLE or MONSTER unit from your army ends a Charge move."
+  target: "That VEHICLE/MONSTER unit."
+  effect: "Select one enemy unit within Engagement Range of your unit, and select one VEHICLE or MONSTER model in your unit that is within Engagement Range of that enemy unit. Roll a number of D6 equal to the Toughness characteristic of the selected VEHICLE/MONSTER model. For each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
 - # Rapid Ingress
   name: Rapid Ingress
   cost: 1
@@ -74,9 +74,16 @@
   effect: "Until the end of the phase, all models in your unit have the Benefit of Cover and the Stealth ability."
 - # Heroic Intervention
   name: Heroic Intervention
-  cost: 1
+  cost: 1-2
   turn: opponent
-  when: "Your opponent's Charge phase, just after an enemy unit ends a Charge move."
-  target: "One unit from your army that is within 6\" of that enemy unit and would be eligible to declare a charge against that enemy unit if it were your Charge phase."
-  effect: "Your unit now declares a charge that targets only that enemy unit, and you resolve that charge as if it were your Charge phase."
-  restrictions: "You can only select a VEHICLE unit from your army if it is a WALKER. Note that even if this charge is successful, your unit does not receive any Charge bonus this turn."
+  when: "End of your opponent's Charge phase."
+  target: "One friendly <strong>unengaged</strong> unit within 12\" of one or more enemy units. You can only select a <strong>VEHICLE</strong> unit if it is a <strong>CHARACTER/WALKER</strong> unit."
+  effect: "<strong>Resolve a charge</strong> with your unit. While doing so, before making the <strong>charge roll</strong>, you must select <u>one</u> of the following modes:
+    <ul>
+      <li><strong>(1 CP) Leap to Defend:</strong> When selecting <strong>charge targets</strong>, you can only select enemy units that made a <strong>charge move</strong> this phase and are within the <strong>maximum distance</strong>.</li>
+      <li><strong>(2 CP) Into the Fray:</strong>
+        <ul>
+          <li>When making the <strong>charge roll</strong>, if the result is greater than 6 (after modifiers), change it to 6.</li>
+          <li>When selecting <strong>charge targets</strong>, you can select <u>any</u> enemy units that are within 6\" of your unit and within the <strong>maximum distance</strong>.</li>
+        </ul>
+    </ul>"

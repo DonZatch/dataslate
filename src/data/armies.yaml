@@ -12,8 +12,8 @@
   - Terminator Squad (Patrol)
   warlord: Captain Octavius
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
 - # The Vardenghast Swarm
   id: CP2
@@ -29,8 +29,7 @@
   - Von Ryan's Leapers (Patrol)
   warlord: Terror of Vardenghast
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
   - "smokescreen"
 - # Amonhotekh's Guard
   id: CP3
@@ -46,7 +45,7 @@
   - Canoptek Doomstalker (Patrol)
   warlord: Overlord Amonhotekh
   ignorestrats:
-  - "grenade"
+  - explosives
   - "smokescreen"
   - "rapid ingress"
 - # Morgim's Butchas
@@ -61,8 +60,8 @@
   - Squighog Boyz (Patrol)
   warlord: Beastboss Morgrim
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
   - "rapid ingress"
 - # Sanctuary Guardians
@@ -78,8 +77,8 @@
   - Arco-flagellants (Patrol)
   warlord: Canoness Adalya
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
   - "rapid ingress"
 - # Prism of Zadophon
@@ -95,8 +94,7 @@
   - Rubric Marines (Patrol)
   warlord: Zadophon the Soul Eater
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
   - "smokescreen"
   - "rapid ingress"
 # - # The Coven Temporus
@@ -111,8 +109,8 @@
 #   - Tzaangors (Patrol)
 #   warlord: Ahrak the Time Weaver
 #   ignorestrats:
-#   - "grenade"
-#   - "tank shock"
+#   - explosives
+#   - crushing impact
 #   - "smokescreen"
 - # Purge Corps Deltic-9
   id: CP8
@@ -127,8 +125,8 @@
   - Pteraxii Sterylizors (Patrol)
   warlord: Manipulus Skand
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
 - # Zarkan's Daemonkin
   id: CP9
@@ -143,8 +141,8 @@
   - Cultist Mob (Patrol)
   warlord: Aranis Zarkan
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
   - "rapid ingress"
 - # Sudden Dawn Cadre
@@ -160,7 +158,7 @@
   - Devilfish (Patrol)
   warlord: Commander Cloudspear
   ignorestrats:
-  - "grenade"
+  - explosives
   - "smokescreen"
 - # Tristraen's Gilded Blades
   id: CP11
@@ -175,8 +173,8 @@
   - Allarus Custodians (Patrol)
   warlord: Tristraen
   ignorestrats:
-  - "grenade"
-  - "tank shock"
+  - explosives
+  - crushing impact
   - "smokescreen"
   - "rapid ingress"
 # King of the Colosseum
