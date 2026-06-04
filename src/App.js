@@ -1257,7 +1257,7 @@ function Strategem({ strategem })
         <span className="title">{strategem.name}</span>
         <span className="cost">{strategem.cost}CP</span>
       </h2>
-      <p><label>When:</label> {strategem.when}</p>
+      <p><label>When:</label> <span dangerouslySetInnerHTML={{ __html: strategem.when }}></span></p>
       <p><label>Target:</label> <span dangerouslySetInnerHTML={{ __html: strategem.target}}></span></p>
       <p><label>Effect:</label> <span dangerouslySetInnerHTML={{ __html: strategem.effect }}></span></p>
       {strategem.restrictions && (
