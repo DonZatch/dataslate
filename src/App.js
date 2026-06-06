@@ -560,6 +560,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />
+        <PatrolSquadSummary unit={unit} />
         </a>
       )}
     </li>
@@ -661,6 +662,20 @@ function EnhancementAbilitySummary({ unit })
       {enhancements.map(enhancement => 
         <li key={enhancement.name}><label>{enhancement.name} (Enhancement):</label><span dangerouslySetInnerHTML={{ __html: enhancement.text }} /></li>
       )}
+    </ol>
+  );
+}
+
+function PatrolSquadSummary({ unit })
+{
+  const summary = unit?.squadSummary;
+  if (!summary)
+  {
+    return null;
+  }
+  return (
+    <ol className="otherAbilitySummary">
+      <li><label>Patrol Squads (Declare Battle Formations Step):</label>{summary}</li>      
     </ol>
   );
 }
