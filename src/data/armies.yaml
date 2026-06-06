@@ -15,6 +15,7 @@
   - explosives
   - crushing impact
   - "smokescreen"
+  icon: brothers
 - # The Vardenghast Swarm
   id: CP2
   category: Combat Patrol
@@ -31,6 +32,7 @@
   ignorestrats:
   - explosives
   - "smokescreen"
+  icon: bugs
 - # Amonhotekh's Guard
   id: CP3
   category: Combat Patrol
@@ -48,6 +50,7 @@
   - explosives
   - "smokescreen"
   - "rapid ingress"
+  icon: robots
 - # Morgim's Butchas
   id: CP4
   category: Combat Patrol
@@ -64,6 +67,7 @@
   - crushing impact
   - "smokescreen"
   - "rapid ingress"
+  icon: orks
 - # Sanctuary Guardians
   id: CP5
   category: Combat Patrol
@@ -81,6 +85,7 @@
   - crushing impact
   - "smokescreen"
   - "rapid ingress"
+  icon: sisters
 - # Prism of Zadophon
   id: CP6
   category: Combat Patrol
@@ -97,6 +102,7 @@
   - explosives
   - "smokescreen"
   - "rapid ingress"
+  icon: sorcerors
 # - # The Coven Temporus
 #   id: CP7
 #   category: Combat Patrol
@@ -128,6 +134,7 @@
   - explosives
   - crushing impact
   - "smokescreen"
+  icon: mechs
 - # Zarkan's Daemonkin
   id: CP9
   category: Combat Patrol
@@ -145,6 +152,7 @@
   - crushing impact
   - "smokescreen"
   - "rapid ingress"
+  icon: heretics
 - # Sudden Dawn Cadre
   id: CP10
   category: Combat Patrol
@@ -160,6 +168,7 @@
   ignorestrats:
   - explosives
   - "smokescreen"
+  icon: fish
 - # Tristraen's Gilded Blades
   id: CP11
   category: Combat Patrol
@@ -177,6 +186,7 @@
   - crushing impact
   - "smokescreen"
   - "rapid ingress"
+  icon: goldenbois
 # King of the Colosseum
 - # Awakened Dynasty
   id: KC1
@@ -192,6 +202,7 @@
   - Lokhust Heavy Destroyers
   detachment: Awakened Dynasty
   warlord: Plasmancer
+  icon: robots
 - # Colosseum Canopteks
   id: KC2
   category: King of the Colosseum
@@ -209,6 +220,7 @@
   -
     name: Metalodermal Tesla Weave
     unit: Technomancer
+  icon: robots
 - # Beast Snaggas
   id: KC3
   category: King of the Colosseum
@@ -226,6 +238,7 @@
   -
     name: Surly As A Squiggoth
     unit: Beastboss on Squigosaur
+  icon: orks
 # Incursion
 - # Kult of Speed
   id: I1
@@ -251,6 +264,7 @@
   -
     name: Wazblasta
     unit: Deffkilla Wartrike
+  icon: orks
 - # Awakened Dynasty
   id: I2
   category: Incursion
@@ -269,3 +283,4 @@
   - Lokhust Heavy Destroyers
   detachment: Awakened Dynasty
   warlord: Imotekh The Stormlord
+  icon: robots

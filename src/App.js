@@ -7,6 +7,16 @@ import unitData from "./data/units.yaml";
 import strategemData from "./data/strategems.yaml";
 import abilityData from "./data/abilities.yaml";
 import './App.css';
+import { ReactComponent as BrothersIcon } from "./assets/brothers.svg";
+import { ReactComponent as BugsIcon } from "./assets/bugs.svg";
+import { ReactComponent as FishIcon } from "./assets/fish.svg";
+import { ReactComponent as GoldenIcon } from "./assets/goldenbois.svg";
+import { ReactComponent as HereticsIcon } from "./assets/heretics.svg";
+import { ReactComponent as MechsIcon } from "./assets/mechs.svg";
+import { ReactComponent as OrksIcon } from "./assets/orks.svg";
+import { ReactComponent as RobotsIcon } from "./assets/robots.svg";
+import { ReactComponent as SistersIcon } from "./assets/sisters.svg";
+import { ReactComponent as SorcerorsIcon } from "./assets/sorcerors.svg";
 
 function App() {
   const [armies, setArmies] = useState(null);
@@ -224,7 +234,7 @@ function ArmyMenu({ armies })
         <div key={category.category}>
           <h2 className='armiesCategory'>{category.category}</h2>
           <ul className="armiesMenu">
-            {category.armies?.sort(sortArmies).map(army => <li key={army.id}><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
+            {category.armies?.sort(sortArmies).map(army => <li key={army.id}><span className='icon'><ArmyIcon iconKey={army.icon} /></span><a href={`?army=${army.id}`}>{army.faction}: {army.name}</a></li>)}
           </ul>
         </div>
       )}
@@ -268,6 +278,35 @@ function sortArmies(a, b) {
     return a.faction.localeCompare(b.faction);
   }
   return a.name.localeCompare(b.name);
+}
+
+function ArmyIcon({iconKey})
+{
+  switch (iconKey)
+  {
+    case "brothers":
+      return <BrothersIcon />;
+    case "bugs":
+      return <BugsIcon />;
+    case "fish":
+      return <FishIcon />;
+    case "goldenbois":
+      return <GoldenIcon />;
+    case "heretics":
+      return <HereticsIcon />;
+    case "mechs":
+      return <MechsIcon />;
+    case "orks":
+      return <OrksIcon />;
+    case "robots":
+      return <RobotsIcon />;
+    case "sisters":
+      return <SistersIcon />;
+    case "sorcerors":
+      return <SorcerorsIcon />;
+    default:
+      return null;
+  }
 }
 
 function Scoreboard()
