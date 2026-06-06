@@ -327,7 +327,6 @@
   -
     name: Psychophage
     m: 8
-    p: 2
     t: 9
     sv: 3+
     w: 10
@@ -429,6 +428,7 @@
     label: "Every model is equipped with:"
     value: "fleshborer, chitinous claws and teeth"
   squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing ten models."
+  squadSummary: "Can be split into two units of ten."
 - # Barbgaunts (Patrol)
   name: Barbgaunts (Patrol)
   profiles:
@@ -951,7 +951,6 @@
   -
     name: Squighog Boy
     m: 10
-    p: 1
     t: 7
     sv: 4+
     w: 3
@@ -960,7 +959,6 @@
   -
     name: Nob on Smasha Squig
     m: 10
-    p: 1
     t: 7
     sv: 4+
     w: 4
@@ -1239,6 +1237,7 @@
     label: "6 Battle Sisters are equipped with:"
     value: "bolt pistol, boltgun, close combat weapon"
   squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models."
+  squadSummary: "Can be split into two units of five."
 - # Celestian Sacresants (Patrol)
   name: Celestian Sacresants (Patrol)
   profiles:
@@ -2673,6 +2672,7 @@
     label: "6 Pathfinder models are equipped with:"
     value: "Pulse carbine, pulse pistol, close combat weapon."
   squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfinder Shas'ui model and the other unit must contain the models equipped with rail rifles."
+  squadSummary: "Can be split into two units of five: The rail rifles must all be in the same unit and the Shas'ui must be in the other unit."
 - # Breacher Team (Patrol)
   name: Breacher Team (Patrol)
   profiles:
@@ -2739,7 +2739,6 @@
   -
     name: Devilfish (Patrol)
     m: 12
-    p: 2
     t: 9
     sv: 3+
     w: 13
@@ -3955,7 +3954,6 @@
   -
     name: Squighog Boy
     m: 10
-    p: 1
     t: 7
     sv: 4+
     w: 3
@@ -3964,7 +3962,6 @@
   -
     name: Nob on Smasha Squig
     m: 10
-    p: 1
     t: 7
     sv: 4+
     w: 4
@@ -4156,7 +4153,6 @@
   -
     name: Wazdakka Gutsmek
     m: 14
-    p: 2
     t: 8
     sv: 3+
     iv: 4+
@@ -4262,7 +4258,6 @@
   -
     name: Deffkilla Wartrike
     m: 12
-    p: 1
     t: 6
     sv: 4+
     iv: 5+
@@ -4345,7 +4340,6 @@
   -
     name: Trukk
     m: 12
-    p: 2
     t: 8
     sv: 4+
     iv: 6+
@@ -4410,7 +4404,6 @@
   -
     name: Deffkoptas
     m: 12
-    p: 2
     t: 6
     sv: 4+
     iv: 6+
@@ -4475,7 +4468,6 @@
   -
     name: Rukkatrukk Squigbuggy
     m: 12
-    p: 2
     t: 7
     sv: 4+
     iv: 6+
@@ -4542,7 +4534,6 @@
   -
     name: Warbiker
     m: 12
-    p: 1
     t: 6
     sv: 4+
     iv: 6+

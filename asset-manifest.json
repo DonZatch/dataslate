@@ -1,21 +1,31 @@
 {
   "files": {
-    "main.css": "/dataslate/static/css/main.7115d611.css",
-    "main.js": "/dataslate/static/js/main.7b351199.js",
+    "main.css": "/dataslate/static/css/main.b0c10ac3.css",
+    "main.js": "/dataslate/static/js/main.73987ebb.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
-    "static/media/units.yaml": "/dataslate/static/media/units.60aeacb8f8b1a9996d30.yaml",
+    "static/media/units.yaml": "/dataslate/static/media/units.ba2a12339bade3f059aa.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.c7d28b2bf7ea4f7e1d25.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.11148320b13394b5dc54.yaml",
+    "static/media/brothers.svg": "/dataslate/static/media/brothers.7413691c5e38c515c00e404db1de15f9.svg",
+    "static/media/bugs.svg": "/dataslate/static/media/bugs.ca3c7e49a12d04ca1c873015f7275b14.svg",
+    "static/media/sorcerors.svg": "/dataslate/static/media/sorcerors.17503cf5fe40b2cf595b45fb4edbca45.svg",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.6b6a1c9469b7db4901f4.yaml",
-    "static/media/armies.yaml": "/dataslate/static/media/armies.ec2d76f4dedb50e6ab06.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.7e1d6f3e19545b2a6b54.yaml",
+    "static/media/mechs.svg": "/dataslate/static/media/mechs.435a1b141eb18704a562042a68a38eb2.svg",
+    "static/media/sisters.svg": "/dataslate/static/media/sisters.00699146413e6e4f3159c6d6035e37f6.svg",
+    "static/media/goldenbois.svg": "/dataslate/static/media/goldenbois.8491624219223ad698e02cbd79bd2790.svg",
+    "static/media/orks.svg": "/dataslate/static/media/orks.30fe570306c237b2514f15af83568556.svg",
+    "static/media/heretics.svg": "/dataslate/static/media/heretics.b24b5b984ddc0908c477db53ff9c5007.svg",
+    "static/media/fish.svg": "/dataslate/static/media/fish.e2a04460db8ce0eafec1fb8cf7db5f56.svg",
+    "static/media/robots.svg": "/dataslate/static/media/robots.225cf74566b023c016bea3681a339f8e.svg",
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.6ba8e65c90db3b70fb71.yaml",
-    "main.7115d611.css.map": "/dataslate/static/css/main.7115d611.css.map",
-    "main.7b351199.js.map": "/dataslate/static/js/main.7b351199.js.map",
+    "main.b0c10ac3.css.map": "/dataslate/static/css/main.b0c10ac3.css.map",
+    "main.73987ebb.js.map": "/dataslate/static/js/main.73987ebb.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7115d611.css",
-    "static/js/main.7b351199.js"
+    "static/css/main.b0c10ac3.css",
+    "static/js/main.73987ebb.js"
   ]
 }
