@@ -4,7 +4,7 @@
   abilities:
   -
     name: Oath of Moment
-    text: "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target, you can re-roll the Hit roll."
+    text: " at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target, you can re-roll the Hit roll."
   strategems:
   -
     name: Gene-wrought Resilience
@@ -139,7 +139,7 @@
   abilities:
   -
     name: Waaagh!
-    text: "<p>If your Army Faction is ORKS, once per battle, at the start of the battle round, you can call a Waaagh!. If you do, until the start of the next battle round, the Waaagh! is active for your army and:</p>
+    text: "<p>If your Army Faction is ORKS, once per battle, at the start of your Command phase, you can call a Waaagh!. If you do, until the start of your next Command phase, the Waaagh! is active for your army and:</p>
       <ul>
         <li>Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.</li>
         <li>Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.</li>
@@ -498,12 +498,10 @@
   abilities:
   -
     name: For the Greater Good
-    text: "<p>In your Shooting phase, units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy they are targeting is called their Spotted unit.</p>
-      <p>Each time you select this unit to shoot, if it is not an Observer unit, it can use this ability. If it does, select one other friendly unit with this ability that is also eligible to shoot (excluding Battle-shocked and Observer units). Until the end of the phase, this unit is considered a Guided unit, and that friendly unit is considered an Observer unit. Then select one enemy unit that is visible to both your units to be their Spotted unit. Until the end of the phase:</p>
-      <ul>
-        <li>Each time a model in a Guided unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if their Observer unit has the MARKERLIGHT keyword, that attack has the [IGNORES COVER] ability.</li>
-        <li>Each time a model in a Guided unit makes an attack that does not target their Spotted unit, worsen the Ballistic Skill characteristic of that attack by 1.</li>
-      </ul>
+    text: "<p>At the start of your Shooting phase you can select units from your army with this ability to become Observer units.</p>
+      <p>During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.</p>
+      <p>Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.</p>
+      <p>Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.</p>
       "
   strategems:
   -
