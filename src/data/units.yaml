@@ -3333,6 +3333,7 @@
     - Waaagh!
     core:
     - Leader
+    - Deadly Demise D3
     other:
     -
       label: "Totem of Mork (Psychic):"
@@ -3783,6 +3784,8 @@
   abilities:
     faction:
     - Oath of Moment
+    core:
+    - Deep Strike
     other:
     -
       label: "Rapid Reactions (once per turn per unit):"
@@ -3941,6 +3944,8 @@
     ap: 0
     d: 1
   abilities:
+    core:
+    - Deep Strike
     faction:
     - Oath of Moment
   factions: 

@@ -43,51 +43,59 @@
     text: "At the end of each player's turn, you score 5VP if you control one or more objective markers that your opponent controlled at the start of that turn."
 - # The Vardenghast Swarm
   name: The Vardenghast Swarm
+  disposition: Disruption
   abilities:
   -
     name: Synapse
-    text: "While a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of those models and of your army. Each time a TYRANIDS unit from your army takes a Battle-shock test, if it is within Synapse Range of your army, take that test on 3D6 instead of 2D6."
+    text: "While a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of those models and of your army. While a <strong>TYRANIDS</strong> unit from your army is within Synapse Range of your army:
+      <ul>
+        <li>Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.</li>
+        <li>Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.</li>
+      </ul>"
   -
     name: Shadow in the Warp
-    text: "Once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test."
+    text: "Once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more <strong>SYNAPSE</strong> units from your army, subtract 1 from that test."
+  -
+    name: Skittering Hordes
+    text: "Enemy units' ranged attacks that target a friendly <strong>VARDENGHAST SWARM INFANTRY</strong> unit not within 12\" have -1 to <strong>hit rolls</strong>."
   strategems:
   -
-    name: "Hyper-Reactive"
-    cost: 1
-    turn: either
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One TYRANIDS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
-  -
-    name: "Voracious Assault"
-    cost: 1
-    turn: either
-    when: "Your Shooting phase or the Fight phase."
-    target: "One TYRANIDS unit from your army that has not been selected to shoot or fight this phase."
-    effect: "Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target, you can re-roll the Hit roll."
-  -
-    name: Teeming Broods
+    name: "Swarm-marked"
     cost: 1
     turn: your
-    when: "The Reinforcements step of your Movement phase."
-    target: "One TERMAGANTS unit from your army. You can use this Stratagem on that unit even if it is destroyed."
-    effect: "If your unit is not destroyed, return up to D6 destroyed models to it. Otherwise, add a new unit to your army identical to your destroyed unit, in Strategic Reserves, containing 2D6 models."
+    when: "End of your Movement phase."
+    target: "One friendly <strong>VARDENGHAST SWARM TERMAGANTS</strong> unit."
+    effect: "Select one <strong>objective</strong> your unit is controlling. That <strong>objective</strong> is <strong>secured</strong>"
+  -
+    name: "Skulking Hunters"
+    cost: 1
+    turn: opponent
+    when: "Start o your opponent's Shooting phase"
+    target: "One friendly <strong>VARDENGHAST SWARM INFANTRY</strong> unit."
+    effect: "Your unit has -6\" <strong>detection range</strong>."
+  -
+    name: Brute Speed
+    cost: 1
+    turn: your
+    when: "Your Movement phase, when a friendly <strong>VARDENGHAST SWARM</strong> unit is selected to make an <strong>advance move</strong>."
+    target: "That <strong>VARDENGHAST SWARM</strong> unit."
+    effect: "Your unit can change that <strong>advance roll</strong> to a 6."
   enhancements:
   -
-    name: "Psychostatic Veil"
-    text: "The bearer has the Lone Operative ability and a 4+ invulnerable save. In addition, each time a melee attack targets the bearer, subtract 1 from the Hit roll."
+    name: "Psychoclastic Overload"
+    target: Psychophage (Vardenghast Swarm)
+    text: "Upgrade: <strong>VARDENGHAST SWARM PSYCHOPHAGE</strong> unit only. This unit can re-roll rolls to determine the <strong>A</strong> of a weapon."
   -
-    name: "Secretion Goad"
-    text: "Once per turn, when a friendly TYRANIDS unit within 6\" of the bearer is selected to shoot or fight, the bearer can use this ability. If it does, until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in that friendly unit by 1."
-  secondaries:
-  -
-    name: "Alpha Xenoform"
-    text: "At the end of each phase, you score 4VP if your WINGED TYRANID PRIME model destroyed one or more enemy models that phase."
-  -
-    name: "Chitinous Tide"
-    text: "At the end of your turn, you score 5VP if you control one or more objective markers that are within 6\" of your opponent's deployment zone."
+    name: "Adapted Organism"
+    target: Terror of Vardenghast
+    text: "<strong>VARDENGHAST SWARM WINGED TYRANID PRIME</strong> model only.
+      <ul>
+        <li>This mode has 4+ <strong>InSv</strong>.</li>
+        <li>This model's melee attacks have +2 <strong>AP</strong></li>
+      </ul>"
 - # Amonhotekh's Guard
   name: Amonhotekh's Guard
+  disposition: Take and Hold
   abilities:
   -
     name: Reanimation Protocols
@@ -97,43 +105,51 @@
         <li>If all models in that unit have their starting number of wounds, but that unit is not at its Starting Strength, one destroyed model is returned to that unit with one wound remaining.</li>
       </ul>
       <p>Once such a unit is at its Starting Strength and all of its models have their starting number of wounds, nothing further happens.</p>"
+  -
+    name: Territorial Imperatives
+    text: "<ul>
+      <li>At the end of your Command phase, you can select one friendly <strong>AMONHOTEKH'S GUARD</strong> unit. That unit has +1 <strong>OC</strong> until the start of your next Command phase.</li>
+      <li>When playing a Combat Patrol battle, the following friendly units must start the battle in <strong>strategic reserves</strong> and cannot be set up on the battlefield before the battle round stated. When doing so, they must be set up wholly within your deployment zone.
+        <ul>
+          <li><strong>CANOPTEK DOOMSTALKER</strong>: Battle round 3.
+        </ul>
+        </li>
+      </ul>"
   strategems:
   -
-    name: "Mercurial Resilience"
-    cost: 1
-    turn: opponent
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One NECRONS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, models in your unit have a 5+ invulnerable save."
-  -
-    name: "Disruption Fields"
-    cost: 1
-    turn: either
-    when: "Fight phase."
-    target: "One NECRONS unit from your army that has not been selected to fight this phase."
-    effect: "Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit."
-  -
-    name: "Will of the Overlord"
+    name: "Guass Storm"
     cost: 1
     turn: your
-    when: "Your Command phase."
-    target: "One NECRONS unit from your army."
-    effect: "Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit."
-    restrictions: "You can only use this Stratagem if an OVERLORD model from your army is on the battlefield."
+    when: "Your Shooting phase, when a friendly <strong>AMONHOTEKH'S GUARD NECRON WARRIORS</strong> unit is <strong>selected to shoot</strong>."
+    target: "That <strong>AMONHOTEKH'S GUARD NECRON WARRIORS</strong> unit."
+    effect: "Your unit's attacks have +1 to <strong>hit rolls</strong>"
+  -
+    name: "Aggression Protocols"
+    cost: 1
+    turn: your
+    when: "Your Movement phase, when a friendly <strong>AMONHOTEKH'S GUARD</strong> unit (excluding <strong>MONSTER/VEHICLE</strong> units) is selected to make a <strong>fall-back move</strong>."
+    target: "That <strong>AMONHOTEKH'S GUARD</strong> unit."
+    effect: "That move does not prevent your unit from being <strong>eligible to shoot/declare a charge</strong>."
+  -
+    name: "Reinforced Resilience"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Shooting phase, when an enemy unit targets a friendly <strong>AMONHOTEKH'S GUARD</strong> unit (excluding <strong>MONSTER/VEHICLE</strong> units) with every model within a <strong>terrain area</strong>."
+    target: "That <strong>AMONHOTEKH'S GUARD</strong> unit."
+    effect: "Your unit has +1 <strong>Sv</strong>."
   enhancements:
   -
-    name: "Overriding Control"
-    text: "The bearer's unit is eligible to shoot in a turn in which it Fell Back."
+    name: "Unblemished Legions"
+    target: Necron Warriors (Amonhotekh's Guard)
+    text: "Upgrade: <strong>AMONHOTEKH'S GUARD NECRON WARRIORS</strong> unit only.
+      <ul>
+        <li>This unit has +1 <strong>M</strong></li>
+        <li>This unit's ranged attacks have <strong>[ASSAULT]</strong></li>
+      </ul>"
   -
-    name: "Protocol of Resonant Focus"
-    text: "In your Command phase, select one enemy unit within 12\" of and visible to the bearer. Until the end of the turn, each time a friendly NECRONS model makes an attack that targets that enemy unit, re-roll a Hit roll of 1."
-  secondaries:
-  -
-    name: "Reclaim and Dominate"
-    text: "At the end of your turn, you score 4VP if one or more NECRONS units from your army (excluding Battle-shocked units) are wholly within your opponent's deployment zone."
-  -
-    name: "Treasures of Aeons"
-    text: "At the start of the first battle round, select one objective marker in No Man's Land.\n\nYou score 3VP each time a NECRONS model from your army destroys an enemy unit that started the phase within range of that objective marker or within range of the objective marker within your deployment zone (if there is one)."
+    name: "Metalline Might"
+    target: Overlord Amonhotekh
+    text: "<strong>AMONHOTEKH'S GUARD OVERLORD</strong> model only. This model's melee attacks have +2 <strong>S</strong>."
 - # Morgim's Butchas
   name: Morgim's Butchas
   abilities:
@@ -185,6 +201,7 @@
     text: "At the end of your turn, you score 3VP if you control the objective marker closest to your opponent's battlefield edge and you score 1VP for each other objective you control that is not within your deployment zone."
 - # Sanctuary Guardians
   name: Sanctuary Guardians
+  disposition: Take and Hold
   abilities:
   -
     name: Acts of Faith
@@ -214,51 +231,49 @@
         <li>Wound roll</li>
       </ul>
       "
+    name: Blessed Believers
+    text: "<ul>
+        <li>Melee attacks that target a friendly <strong>SANCTUARY GUARDIANS</strong> unit have -1 to <strong>hit rolls</strong>.</li>
+        <li>When playing a Combat Patrol battle, in your Command phase, you can discard 1 Miracle dice. If you do, you gain 1 CP.</li>
+      </ul>"
   strategems:
   -
-    name: "Ascetic Discipline"
+    name: "Take Cover"
     cost: 1
     turn: either
-    when: "Your Shooting phase or the Fight phase."
-    target: "One ADEPTA SORORITAS unit from your army that has not been selected to shoot or fight this phase."
-    effect: "Until the end of the phase, each time a model in your unit makes an attack, on a Critical Wound, improve the Armor Penetration characteristic of that attack by 2"
+    when: "Your opponent's Shooting phase or the Fight phase, when an enemy unit targets a friendly <strong>SANCTUARY GUARDIANS</strong> unit (excluding <strong>ARCO-FLAGELLANTS</strong> units) within a <strong>terrain area</strong>."
+    target: "That <strong>SANCTUARY GUARDIANS</strong> unit."
+    effect: "Your unit has +1 <strong>Sv</strong>."
   -
-    name: "A Martyr's Death"
+    name: "Fervent Devotion"
+    cost: 1
+    turn: your
+    when: "Your Movement phase, when a friendly <strong>SANCTUARY GUARDIANS</strong> unit is selected to make an <strong>advance/fall-back move</strong>"
+    target: "That <strong>SANCTUARY GUARDIANS</strong> unit."
+    effect: "That move does not prevent your unit from being <strong>eligible to shoot/declare a charge</strong>."
+  -
+    name: "Fires of Damnation"
     cost: 1
     turn: either
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One ADEPTA SORORITAS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Each time you use this Strategem, you can discard 1 Miracle dice. Until the end of the phase, each time a model in your unit is destroyed, if that model has not shot or fought this phase, roll one D6, adding 1 to the result if you discarded a Miracle dice when using this Strategem.
-      On a 4+, do not remove the destroyed model from play; it can shoot or fight after the attacking unit has finished making its attacks, and is then removed from play."
-  -
-    name: "Holy Radiance"
-    cost: 1
-    turn: opponent
-    when: "Your opponent's Shooting phase, just after an enemy unit has selected its targets."
-    target: "One ADEPTA SORORITAS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and models in your unit have the Feel No Pain 5= ability against that attack."
+    when: "Your Shooting phase or the Fight phase, when a friendly <strong>SANCTUARY GUARDIANS</strong> unit is <strong>selected to attack</strong>."
+    target: "That <strong>SANCTUARY GUARDIANS</strong> unit."
+    effect: "<ul>
+        <li>Your unit's Torrent weapons have 6 <strong>A</strong>.</li>
+        <li>Your unit's attacks have +1 <strong>AP</strong></li>
+      </ul>"
   enhancements:
   -
-    name: "Defender of the Faith"
-    text: "
+    name: "Righteous Fervour"
+    target: Canoness Adalya
+    text: "<strong>SANCTUARY GUARDIANS CANONESS</strong> model only.
       <ul>
-        <li>Improve the Save characteristic of models in the bearer's unit by 1.</li>
-        <li>In your Command phase, you can discard 1 Miracle dice. If you do, until the start of your next Command phase, add 1 to the Objective Control characteristic of models in the bearer's unit</li>
+        <li>This model's melee attacks have +1 <strong>D</strong></li>
+        <li>This unit's melee attacks have +1 to <strong>wound rolls</strong></li>
       </ul>"
   -
-    name: "Righteous Fury"
-    text: "
-      <ul>
-        <li>The bearer's unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.</li>
-        <li>In your Command phase, you can discard 1 Miracle dice. If you do, until the end of the turn, you can re-roll Charge rolls make for the bearer's unit.</li>
-      </ul>"
-  secondaries:
-  -
-    name: "Hallowed Retribution"
-    text: "You score 3VP each time an ADEPTA SORORITAS unit from your army destroys an enemy unit. If that unit from your army performed an Act of Faith this phase, you score 4VP instead."
-  -
-    name: "Consecrated Ground"
-    text: "From the second battle round onwards, at the end of your turn, you score 3VP if one or more ADEPTA SORORITAS units from your army (excluding Battle-shocked units) are within 6\" of the centre of the battlefield. If one of those units is your WARLORD, you score 4VP instead."
+    name: "Divine Miracle"
+    target: Battle Sisters Squad (Sanctuary Guardians)
+    text: "Upgrade: <strong>SANCTUARY GUARDIANS BATTLE SISTERS SQUAD</strong> unit only. (Once per battle, per unit) At the start of any phase, you can use this ability. If you do, this unit <strong>heals</strong> D3+2 wounds."
 - # Prism of Zadophon
   name: Prism of Zadophon
   abilities:
