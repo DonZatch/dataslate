@@ -3201,6 +3201,754 @@
   -
     label: "Every model is equipped with:"
     value: "Balistus grenade launcher, guardian spear."
+# 'Ardmob
+- # Warboss ('Ardmob)
+  name: Warboss ('Ardmob)
+  profiles:
+  -
+    name: Warboss
+    m: 6
+    t: 5
+    sv: 4+
+    iv: 5+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - 'Ardmob
+  - Character
+  - Explosives
+  - Infantry
+  ranged:
+  -
+    name: Kustom Shoota
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  melee:
+  -
+    name: Kustom Choppa
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 8
+    ap: -2
+    d: 2
+    abilities:
+    - Cleave 1
+  abilities:
+    faction:
+    - Waaagh!
+    core:
+    - Leader
+    other:
+    -
+      label: Smash 'Em Up
+      value: "In the Fight phase, when this unit is <strong>selected to fight</strong>, this unit's melee attacks have:
+        <ul>
+          <li><strong>[LETHAL HITS]</strong></li>
+          <li><u>Or:</u> <strong>[SUSTAINED HITS 1]</strong></li>
+        </ul>"
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Kustom Choppa, 1 Kustom Shoota"
+- # Weirdboy ('Ardmob)
+  name: Weirdboy ('Ardmob)
+  profiles:
+  -
+    name: Weirdboy
+    m: 6
+    t: 5
+    sv: 5+
+    w: 4
+    ld: 7+
+    oc: 1
+  keywords:
+  - 'Ardmob
+  - Character
+  - Infantry
+  - Psyker
+  ranged:
+  -
+    name: Psychic Powers - Da Stomp
+    profile: true
+    range: 24"
+    a: D6+2
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Blast 1
+    - Psychic
+  -
+    name: Psychic Powers - 'Eadbanger
+    profile: true
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Precision
+    - Psychic
+  melee:
+  -
+    name: Waaagh! Staff - Bash
+    profile: true
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 8
+    ap: -1
+    d: 2
+    abilities:
+    - Psychic
+  -
+    name: Waaagh! Staff - Clobber
+    profile: true
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 8
+    ap: -2
+    d: 2
+    abilities:
+    - Devastating Wounds
+    - Hazardous
+    - Psychic
+  abilities:
+    faction:
+    - Waaagh!
+    core:
+    - Leader
+    other:
+    -
+      label: "Totem of Mork (Psychic):"
+      value: "At the end of your Command phase, if this unit is controlling an <strong>objective</strong>, that <strong>objective</strong> is <strong>secured</strong>."
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Psychic Powers, 1 Waaagh! Staff"
+- # Wartrakk ('Ardmob)
+  name: Wartrakk ('Ardmob)
+  profiles:
+  -
+    name: Wartrakk
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 6+
+    w: 7
+    ld: 7+
+    oc: 3
+  keywords:
+  - 'Ardmob
+  - Mounted
+  - Speed Freeks
+  ranged:
+  -
+    name: Kustom Shoota
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2 
+  -
+    name: Rokkit Launcha
+    range: 24"
+    a: D3+3
+    bs: 5+
+    s: 10
+    ap: -2
+    d: 3
+  melee:
+  -
+    name: Choppas
+    range: Melee
+    a: 6
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Indiscriminate Detonations:"
+      value: "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit is <strong>suppressed</strong> until the start of your next turn:
+        <ul>
+          <li>While a unit is <strong>suppressed</strong>, that unit's attacks have -1 to <strong>hit rolls</strong>.</li>
+        </ul>"
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Choppas, 1 Kustom Shoota, 1 Rokkit Launcha"
+- # Boyz ('Ardmob)
+  name: Boyz ('Ardmob)
+  profiles:
+  -
+    name: Boss Nob
+    m: 6
+    t: 5
+    sv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  -
+    name: Boyz
+    m: 6
+    t: 5
+    sv: 5+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - 'Ardmob
+  - Explosives
+  - Infantry
+  - Mob
+  ranged:
+  -
+    name: Kustom Shoota
+    num: 1
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  -
+    name: Shoota
+    num: 9
+    range: 18"
+    a: 2
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Slugga
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Big Choppa
+    num: 1
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 2
+  -
+    name: Choppa
+    num: 9
+    range: Melee
+    a: 1
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Grab Dat Scrap:"
+      value: "While this unit is <strong>engaged</strong>, this unit has +1 <strong>OC</strong>."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Boss Nob is equipped with:"
+    value: "1 Big Choppa, 1 Kustom Shoota, 1 Slugga"
+  -
+    label: "Every Boyz is equipped with:"
+    value: "1 Choppa, 1 Shoota, 1 Slugga"
+- # Gretchin ('Ardmob)
+  name: Gretchin ('Ardmob)
+  profiles:
+  -
+    name: Gretchin
+    m: 6
+    t: 2
+    sv: 7+
+    w: 1
+    ld: 8+
+    oc: 1
+  keywords:
+  - 'Ardmob
+  - Grots
+  - Infantry
+  ranged:
+  -
+    name: Blasta
+    range: 18"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Lobbin' Bombs
+    range: 6"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Hazardous
+  melee:
+  -
+    name: Scavenged Shivs
+    range: Melee
+    a: 1
+    ws: 5+
+    s: 2
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Grot Infestation:"
+      value: "When this unit is <strong>destroyed</strong>, you can use this ability. If you do:
+        <ul>
+          <li>Place this unit in <strong>strategic reserves</strong> with all of this unit's <strong>destroyed</strong> models returned to it. This unit is no longer <strong>destroyed</strong>.</li>
+        </ul>
+        This unit has <strong>Deep Strike</strong>."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "1 Blasta, 1 Lobbin' Bombs, 1 Scavenged Shivs"
+# Assault Force
+- # Intercessor Squad (Assault Force)
+  name: Intercessor Squad (Assault Force)
+  profiles:
+  -
+    name: Intercessor Squad
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 3
+  keywords:
+  - Assault Force
+  - Battleline
+  - Explosives
+  - Imperium
+  - Infantry
+  - Tacticus
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Bolt Rifle
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Assault
+    - Heavy
+  -
+    name: Grenade Launcher - Frag
+    num: 1
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Blast 1
+  -
+    name: Grenade Launcher - Krak
+    num: 1
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 5
+    ap: -2
+    d: 3
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  melee:
+  -
+    name: Chainsword
+    num: 1
+    range: Melee
+    a: 5
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  -
+    name: Knives and Fists
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Stalwart Defenders:"
+      value: "When an enemy unit targets this unit, if every model in this unit is within range of an <strong>objective</strong>, attacks that target this unit have -1 <strong>AP</strong>."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "the Intercessor Sergeant is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Chainsword, 1 Knives and Fists"
+  -
+    label: "the Intercessor with Grenade Launcher is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Grenade Launcher, 1 Knives and Fists"
+  -
+    label: "Every Intercessor is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Knives and Fists"
+- # Captain (Assault Force)
+  name: Captain (Assault Force)
+  profiles:
+  -
+    name: Captain
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Character
+  - Explosives
+  - Imperium
+  - Infantry
+  - Tacticus
+  ranged:
+  -
+    name: Heavy Bolt Pistol
+    range: 18"
+    a: 1
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Master-crafted Power Weapon
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Relic Shield:"
+      value: "This model has +1 <strong>W</strong> (included in profile)."
+    -
+      label: "Master of War:"
+      value: "At the end of your opponent's Charge phase, if this unit is <strong>unengaged</strong> and within 6\" of one or more enemy units, you can use this ability. If you do, <strong>resolve a charge</strong> with it. When making the <strong>charge roll</strong>, if the result is greater than 6 (after modifiers), change it to 6."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon, Relic Shield"
+- # Vanguard Veteran Squad with Jump Packs (Assault Force)
+  name: Vanguard Veteran Squad with Jump Packs (Assault Force)
+  profiles:
+  -
+    name: Vanguard Veteran Squad with Jump Packs
+    m: 12
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Explosives
+  - Fly
+  - Imperium
+  - Infantry
+  - Jump Pack
+  - Vanguard Veteran Squad
+  ranged:
+  -
+    name: Heavy Bolt Pistol
+    num: 4
+    range: 18"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Plasma Pistol - Standard
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 7
+    ap: -2
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Plasma Pistol - Supercharge
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Master-crafted Power Weapon
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Rapid Reactions (once per turn per unit):"
+      value: "In your opponent's Shooting phase, when an enemy unit has shot, if that unit targeted this unit, this unit can make a <strong>normal move</strong> of up to D6+1\"."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "The Vanguard Veteran Sergeant is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon"
+  -
+    label: "The Vanguard Veteran with Plasma Pistol is equipped with:"
+    value: "1 Plasma Pistol, 1 Master-crafter Power Weapon"
+  -
+    label: "Every Vanguard Veteran is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon"
+- # Librarian (Assault Force)
+  name: Librarian (Assault Force)
+  profiles:
+  -
+    name: Librarian
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 4+
+    w: 4
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Character
+  - Explosives
+  - Imperium
+  - Infantry
+  - Psyker
+  - Tacticus
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Fulmination - Electropulse
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 8
+    ap: -2
+    d: 3
+    abilities:
+    - Psychic
+  -
+    name: Fulmination - Electrosurge
+    profile: true
+    num: 1
+    range: 24"
+    a: 3
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Blast 2
+    - Psychic
+  melee:
+  -
+    name: Force Weapon
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Psychic
+  abilities:
+    faction:
+    - Oath of Moment
+    core:
+    - Leader
+    other:
+    -
+      label: "Empyric Insight:"
+      value: "This unit's ranged attacks can ignore modifiers to:
+        <ul>
+          <li><strong>BS</strong></li>
+          <li><strong>Hit rolls</strong> and <strong>wound rolls</strong></li>
+        </ul>"
+    leader:
+    - Intercessor Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Bolt Pistol, 1 Force Weapon, 1 Fulmination"
+- # Land Speeder (Assault Force)
+  name: Land Speeder (Assault Force)
+  profiles:
+  -
+    name: Land Speeder
+    m: 14
+    t: 8
+    sv: 3+
+    w: 9
+    ld: 6+
+    oc: 2
+  keywords:
+  - Assault Force
+  - Fly
+  - Imperium
+  - Vehicle
+  ranged:
+  -
+    name: Multi-melta
+    range: 18"
+    a: 2
+    bs: 3+
+    s: 10
+    ap: -4
+    d: D6
+    abilities:
+    - Melta 2
+  -
+    name: Onslaught Gatling Cannon
+    range: 24"
+    a: 8
+    bs: 3+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Sustained Hits 1
+  -
+    name: Stormfury Missile Launcher
+    range: 48"
+    a: 1
+    bs: 3+
+    s: 10
+    ap: -3
+    d: 4
+  melee:
+  -
+    name: Armoured Impact
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Armoured Impact, 1 Multi-melta, 1 Onslaught Gatling Cannon, 1 Stormfury Missile Launcher"
 # Necrons
 - # Imotekh The Stormlord
   name: Imotekh The Stormlord
