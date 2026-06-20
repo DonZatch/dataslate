@@ -313,18 +313,14 @@ function Scoreboard()
 {
   const [p1Primary, setP1Primary] = useScore(1, "Primary");
   const [p1Secondary, setP1Secondary] = useScore(1, "Secondary");
-  const [p1Challenger, setP1Challenger] = useScore(1, "Challenger");
   const [p2Primary, setP2Primary] = useScore(2, "Primary");
   const [p2Secondary, setP2Secondary] = useScore(2, "Secondary");
-  const [p2Challenger, setP2Challenger] = useScore(2, "Challenger");
   const resetHandler = useCallback((e) => {
     e.preventDefault();
     setP1Primary(0);
     setP1Secondary(0);
-    setP1Challenger(0);
     setP2Primary(0);
     setP2Secondary(0);
-    setP2Challenger(0);
   }, []);
   return (
     <div className='scoreboardView'>
@@ -335,8 +331,6 @@ function Scoreboard()
           setPrimary={setP1Primary} 
           secondary={p1Secondary}
           setSecondary={setP1Secondary}
-          challenger={p1Challenger}
-          setChallenger={setP1Challenger}
         />
         <PlayerScoreboard 
           num={2} 
@@ -344,8 +338,6 @@ function Scoreboard()
           setPrimary={setP2Primary} 
           secondary={p2Secondary}
           setSecondary={setP2Secondary}
-          challenger={p2Challenger}
-          setChallenger={setP2Challenger}
         />
       </div>
       <div className="resetControls">
@@ -376,7 +368,7 @@ function useScore(player, label)
   return [score, setScore];
 }
 
-function PlayerScoreboard({ num, primary, setPrimary, secondary, setSecondary, challenger, setChallenger })
+function PlayerScoreboard({ num, primary, setPrimary, secondary, setSecondary })
 {
   return (
     <div className='playerScoreboard'>
@@ -385,9 +377,8 @@ function PlayerScoreboard({ num, primary, setPrimary, secondary, setSecondary, c
       </div>
       <PlayerScore label="Primary" score={primary} setScore={setPrimary} />
       <PlayerScore label="Secondary" score={secondary} setScore={setSecondary} />
-      <PlayerScore label="Challenger" score={challenger} setScore={setChallenger} />
       <div className='scoreTotal'>
-        {Math.min(Math.min(primary, 50) + Math.min(secondary, 40) + Math.min(challenger, 12), 90)}
+        {Math.min(Math.min(primary, 45) + Math.min(secondary, 45), 90)}
       </div>
     </div>
   );
