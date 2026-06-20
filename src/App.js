@@ -138,7 +138,7 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
           id={route.army}
           key={route.army} 
           armies={armies}
-          detachments={detachments} 
+          allDetachments={detachments} 
           units={units} 
           coreStrategems={coreStrategems} 
           appSettings={appSettings} 
@@ -413,7 +413,7 @@ function PlayerScore({ label, score, setScore }) {
   )
 }
 
-function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettings, setShowInfo })
+function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSettings, setShowInfo })
 {
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
@@ -422,7 +422,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   const scrollRef = useRef({});
   
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
-  const detachment = useMemo(() => getDetachment(detachments, army), [detachments, army]);
+  const detachments = useMemo(() => getDetachments(allDetachments, army), [allDetachments, army]);
   
   useEffect(() => {
     if (!id)
@@ -463,7 +463,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
   const onOpenUnit = useCallback((unit) => setUnit(unit), []);
   const onGoBack = useCallback(() => setUnit(null), []);
 
-  const armyUnits = useMemo(() => getUnits(army, units, detachment, selectedEnhancement), [army, units, detachment, selectedEnhancement]);
+  const armyUnits = useMemo(() => getUnits(army, units, detachments, selectedEnhancement), [army, units, detachments, selectedEnhancement]);
   const [collapsedUnits, setCollapsedUnits] = useState([]);
   const handleToggleCollapseUnit = (name, value) => setCollapsedUnits(oldVals => {
     if (value)
@@ -490,8 +490,6 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
       <UnitDetails 
         id={unit} 
         army={army}
-        detachment={detachment}
-        enhancement={selectedEnhancement}
         units={units} 
         setShowInfo={setShowInfo}
         onGoBack={onGoBack}
@@ -507,10 +505,10 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
         <a href="#" onClick={(e) => handler(e, "scoreboard")} className='scoreboardBtn'>{view === "scoreboard" ? <>&#9873;</> : <>&#9872;</>}</a>
       </header>
       <div className="armyDetails">
-        { view === "rules" ? <Rules detachment={detachment} /> : null }
+        { view === "rules" ? <Rules detachments={detachments} /> : null }
         { view === "setup" ? 
           <Setup 
-            detachment={detachment} 
+            detachments={detachments} 
             selectedEnhancement={selectedEnhancement}
             selectedSecondary={selectedSecondary}
             army={army} 
@@ -520,7 +518,7 @@ function ArmyDetails({ id, armies, detachments, units, coreStrategems, appSettin
           : null 
         }
         { view === "units" ? <Units army={army} armyUnits={armyUnits} appSettings={appSettings} setShowInfo={setShowInfo} onClick={onOpenUnit} onToggleCollapse={handleToggleCollapseUnit} collapsedUnits={collapsedUnits} /> : null }
-        { view === "strategems" ? <Strategems army={army} detachment={detachment} coreStrategems={coreStrategems} /> : null }
+        { view === "strategems" ? <Strategems army={army} detachments={detachments} coreStrategems={coreStrategems} /> : null }
         { view === "scoreboard" ? <Scoreboard /> : null}
       </div>
       <menu className="armyViews">
@@ -549,13 +547,14 @@ function getArmy(armies, id)
   return null;
 }
 
-function getDetachment(detachments, army)
+function getDetachments(allDetachments, army)
 {
-  if (!army || !detachments)
+  if (!army || !allDetachments)
   {
     return null;
   }
-  return detachments.find(detachment => detachment.name === army.detachment);
+  const armyDetachments = army.detachments ?? [];
+  return allDetachments.filter(detachment => armyDetachments.indexOf(detachment.name) !== -1);
 }
 
 function Units({ army, armyUnits, appSettings, setShowInfo, onClick, onToggleCollapse, collapsedUnits })
@@ -822,7 +821,7 @@ function getKeywordAbilitySummary(unit, appSettings)
   }) ?? [];
 }
 
-function getUnits(army, units, detachment, selectedEnhancement)
+function getUnits(army, units, detachments, selectedEnhancement)
 {
   var result = [];
   if (!army || !units)
@@ -843,19 +842,21 @@ function getUnits(army, units, detachment, selectedEnhancement)
       unitEnhancementNames[enhancement.unit].push(enhancement.name);
     }
   }
+  const enhancements = [];
+  detachments?.forEach(detachment => enhancements.push(...(detachment.enhancements ?? [])));
   for (i = 0; i < units.length; i++)
   {
     var unit = units[i];
     if (army.units.indexOf(unit.name) !== -1)
     {
-      if (army.category === "Combat Patrol" && army.warlord === unit.name)
+      if (army.category === "Combat Patrol")
       {
-        unit.enhancements = selectedEnhancement ? detachment.enhancements?.filter(e => e.name === selectedEnhancement) : [];
+        unit.enhancements = selectedEnhancement ? enhancements?.filter(e => e.name === selectedEnhancement) : [];
       }
       else if (unitEnhancementNames[unit.name])
       {
         var enhancementNames = unitEnhancementNames[unit.name].slice();
-        unit.enhancements = detachment.enhancements?.filter(e => enhancementNames.indexOf(e.name) !== -1);
+        unit.enhancements = enhancements?.filter(e => enhancementNames.indexOf(e.name) !== -1);
       }
       result.push(unit);
     }
@@ -1243,12 +1244,25 @@ function Wargear({unit})
   )
 }
 
-function Rules({ detachment })
+function Rules({ detachments })
 {
+  const dispositions = new Set();
+  detachments?.forEach(detachment => dispositions.add(detachment.disposition));
+
   return (
-    <ol className="armyRules">
-      {detachment?.abilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)}
-    </ol>
+    <>
+      <div className='dispositions'>
+        <h2>Force Disposition(s):</h2>
+        <ul>
+          {[...dispositions].map(disposition => <li>{disposition}</li>)}
+        </ul>
+      </div>
+      <ol className="armyRules">
+        {detachments?.map(detachment => 
+          detachment?.abilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)
+        )}
+      </ol>
+    </>
   );
 }
 
@@ -1260,7 +1274,7 @@ function ArmyRule({ ability })
   </li>);
 }
 
-function Strategems({ army, detachment, coreStrategems })
+function Strategems({ army, detachments, coreStrategems })
 {
   const [filter, setFilter] = useState(null);
   const handler = useCallback((e, newFilter) => {
@@ -1273,7 +1287,7 @@ function Strategems({ army, detachment, coreStrategems })
     }
   }, [filter]);
 
-  const armyStrategems = useMemo(() => getArmyStrategems(army, detachment, coreStrategems, filter), [army, coreStrategems, filter]);
+  const armyStrategems = useMemo(() => getArmyStrategems(army, detachments, coreStrategems, filter), [army, coreStrategems, filter]);
 
   return (
     <>
@@ -1288,10 +1302,12 @@ function Strategems({ army, detachment, coreStrategems })
   )
 }
 
-function getArmyStrategems(army, detachment, coreStrategems, filter)
+function getArmyStrategems(army, detachments, coreStrategems, filter)
 {
+  const detachmentStrats = [];
+  detachments?.forEach(detachment => detachmentStrats.push(...(detachment.strategems ?? [])));
   const filteredStrats = army.ignorestrats ? (coreStrategems ?? []).filter(strat => !army.ignorestrats.map(strat => strat.toLowerCase()).includes(strat.name.toLowerCase())) : [...coreStrategems];
-  return [...(detachment.strategems ?? []), ...filteredStrats].filter(strat => filter == null || strat.turn === filter || strat.turn === "either");
+  return [...(detachmentStrats ?? []), ...filteredStrats].filter(strat => filter == null || strat.turn === filter || strat.turn === "either");
 }
 
 function Strategem({ strategem })
@@ -1325,21 +1341,21 @@ function Strategem({ strategem })
   )
 }
 
-function Setup({ detachment, selectedEnhancement, selectedSecondary, army, onEnhChange, onSecChange })
+function Setup({ detachments, selectedEnhancement, selectedSecondary, army, onEnhChange, onSecChange })
 {
   return (
     <div className='setup'>
       <h2>Enhancements</h2>
-      <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
+      <Enhancements detachments={detachments} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
     </div>
   )
 }
 
-function Enhancements({ detachment, selectedEnhancement, army, onChange })
+function Enhancements({ detachments, selectedEnhancement, army, onChange })
 {
   return (
     <ul className="enhancements">
-      {detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} selectedEnhancement={selectedEnhancement} army={army} onChange={onChange} />)}
+      {detachments.map(detachment => detachment.enhancements?.map(enhancement => <Enhancement enhancement={enhancement} selectedEnhancement={selectedEnhancement} army={army} onChange={onChange} />))}
       <li>
         <h3>
           <input 

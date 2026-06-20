@@ -273,8 +273,31 @@ header > h1 {
   margin-right: 4px;
 }
 
+.dispositions {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.dispositions > ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex: 1;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.dispositions > ul > li {
+  flex: 1;
+  font-size: 24px;
+  padding: 8px;
+}
+
 .armyRules {
   list-style: none;
+  margin-top: 0;
 }
 
 .strategems,

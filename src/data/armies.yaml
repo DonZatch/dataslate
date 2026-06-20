@@ -4,7 +4,8 @@
 #   category: Combat Patrol
 #   name: Strike Force Octavius
 #   faction: Space Marines
-#   detachment: Strike Force Octavius
+#   detachments: 
+#   - Strike Force Octavius
 #   units:
 #   - Captain Octavius
 #   - Librarian Tantus
@@ -19,7 +20,8 @@
   category: Combat Patrol
   name: The Vardenghast Swarm
   faction: Tyranids
-  detachment: The Vardenghast Swarm
+  detachments: 
+  - The Vardenghast Swarm
   units:
   - Terror of Vardenghast
   - Psychophage (Vardenghast Swarm)
@@ -36,7 +38,8 @@
   category: Combat Patrol
   name: Amonhotekh's Guard
   faction: Necrons
-  detachment: Amonhotekh's Guard
+  detachments: 
+  - Amonhotekh's Guard
   units:
   - Overlord Amonhotekh
   - Necron Warriors (Amonhotekh's Guard)
@@ -52,7 +55,8 @@
 #   category: Combat Patrol
 #   name: Morgim's Butchas
 #   faction: Orks
-#   detachment: Morgim's Butchas
+#   detachments: 
+#   - Morgim's Butchas
 #   units:
 #   - Beastboss Morgrim
 #   - Beast Snagga Boyz (Patrol)
@@ -69,7 +73,8 @@
   category: Combat Patrol
   name: Sanctuary Guardians
   faction: Adepta Sororitas
-  detachment: Sanctuary Guardians
+  detachments: 
+  - Sanctuary Guardians
   units:
   - Sanctuary Canoness Adalya
   - Battle Sisters Squad (Sanctuary Guardians)
@@ -87,7 +92,8 @@
   category: Combat Patrol
   name: Prism of Zadophon
   faction: Thousand Sons
-  detachment: Prism of Zadophon
+  detachments: 
+  - Prism of Zadophon
   units:
   - Zadophon the Soul Eater
   - Kaa'skrek
@@ -104,7 +110,8 @@
 #   category: Combat Patrol
 #   name: The Coven Temporus
 #   faction: Thousand Sons
-#   detachment: The Coven Temporus
+#   detachments: 
+#   - The Coven Temporus
 #   units:
 #   - Ahrak the Time Weaver
 #   - Scarab Occult Terminators (Patrol)
@@ -119,7 +126,8 @@
   category: Combat Patrol
   name: Purge Corps Deltic-9
   faction: Adeptus Mechanicus
-  detachment: Purge Corps Deltic-9
+  detachments: 
+  - Purge Corps Deltic-9
   units:
   - Manipulus Skand
   - Skitarii Vanguard (Purge Corps Deltic-9)
@@ -136,7 +144,8 @@
   category: Combat Patrol
   name: Zarkan's Daemonkin
   faction: Chaos Space Marines
-  detachment: Zarkan's Daemonkin
+  detachments: 
+  - Zarkan's Daemonkin
   units:
   - Aranis Zarkan
   - Possessed (Zarkan's Daemonkin)
@@ -154,7 +163,8 @@
   category: Combat Patrol
   name: Sudden Dawn Cadre
   faction: T'au Empire
-  detachment: Sudden Dawn Cadre
+  detachments: 
+  - Sudden Dawn Cadre
   units:
   - Commander Cloudspear
   - Pathfinder Team (Sudden Dawn Cadre)
@@ -170,7 +180,8 @@
   category: Combat Patrol
   name: Tristraen's Gilded Blades
   faction: Adeptus Custodes
-  detachment: Tristraen's Gilded Blades
+  detachments: 
+  - Tristraen's Gilded Blades
   units:
   - Tristraen of the Gilded Blades
   - Custodian Guard (Gilded Blades)
@@ -188,7 +199,8 @@
   category: Combat Patrol
   name: "'Ardmob"
   faction: Orks
-  detachment: "'Ardmob"
+  detachments: 
+  - "'Ardmob"
   units:
   - Warboss ('Ardmob)
   - Weirdboy ('Ardmob)
@@ -202,7 +214,8 @@
   category: Combat Patrol
   name: Assault Force
   faction: Space Marines
-  detachment: Assault Force
+  detachments: 
+  - Assault Force
   units:
   - Captain (Assault Force)
   - Librarian (Assault Force)
@@ -224,7 +237,8 @@
   - Skorpekh Destroyers
   - Canoptek Doomstalker
   - Lokhust Heavy Destroyers
-  detachment: Awakened Dynasty
+  detachments: 
+  - Awakened Dynasty
   warlord: Plasmancer
   icon: robots
 - # Colosseum Canopteks
@@ -238,7 +252,8 @@
   - Immortals
   - Necron Warriors
   - Canoptek Doomstalker
-  detachment: Canoptek Court
+  detachments: 
+  - Canoptek Court
   warlord: Technomancer
   enhancements:
   -
@@ -256,7 +271,8 @@
   - Beastboss
   - Beast Snagga Boyz
   - Gretchin
-  detachment: Da Big Hunt
+  detachments: 
+  - Da Big Hunt
   warlord: Beastboss on Squigosaur
   enhancements:
   -
@@ -279,7 +295,8 @@
   - Deffkoptas
   - Gretchin
   - Rukkatrukk Squigbuggy
-  detachment: Kult of Speed
+  detachments: 
+  - Kult of Speed
   warlord: Wazdakka Gutsmek
   enhancements:
   -
@@ -305,6 +322,7 @@
   - Skorpekh Lord
   - Skorpekh Destroyers
   - Lokhust Heavy Destroyers
-  detachment: Awakened Dynasty
+  detachments: 
+  - Awakened Dynasty
   warlord: Imotekh The Stormlord
   icon: robots
