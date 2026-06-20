@@ -1,19 +1,19 @@
 # Combat Patrols
-- # Strike Force Octavius
-  id: CP1
-  category: Combat Patrol
-  name: Strike Force Octavius
-  faction: Space Marines
-  detachment: Strike Force Octavius
-  units:
-  - Captain Octavius
-  - Librarian Tantus
-  - Infernus Squad (Patrol)
-  - Terminator Squad (Patrol)
-  warlord: Captain Octavius
-  ignorestrats:
-  - "smokescreen"
-  icon: brothers
+# - # Strike Force Octavius
+#   id: CP1
+#   category: Combat Patrol
+#   name: Strike Force Octavius
+#   faction: Space Marines
+#   detachment: Strike Force Octavius
+#   units:
+#   - Captain Octavius
+#   - Librarian Tantus
+#   - Infernus Squad (Patrol)
+#   - Terminator Squad (Patrol)
+#   warlord: Captain Octavius
+#   ignorestrats:
+#   - "smokescreen"
+#   icon: brothers
 - # The Vardenghast Swarm
   id: CP2
   category: Combat Patrol
@@ -47,23 +47,23 @@
   ignorestrats:
   - smokescreen
   icon: robots
-- # Morgim's Butchas
-  id: CP4
-  category: Combat Patrol
-  name: Morgim's Butchas
-  faction: Orks
-  detachment: Morgim's Butchas
-  units:
-  - Beastboss Morgrim
-  - Beast Snagga Boyz (Patrol)
-  - Squighog Boyz (Patrol)
-  warlord: Beastboss Morgrim
-  ignorestrats:
-  - explosives
-  - crushing impact
-  - "smokescreen"
-  - "rapid ingress"
-  icon: orks
+# - # Morgim's Butchas
+#   id: CP4
+#   category: Combat Patrol
+#   name: Morgim's Butchas
+#   faction: Orks
+#   detachment: Morgim's Butchas
+#   units:
+#   - Beastboss Morgrim
+#   - Beast Snagga Boyz (Patrol)
+#   - Squighog Boyz (Patrol)
+#   warlord: Beastboss Morgrim
+#   ignorestrats:
+#   - explosives
+#   - crushing impact
+#   - "smokescreen"
+#   - "rapid ingress"
+#   icon: orks
 - # Sanctuary Guardians
   id: CP5
   category: Combat Patrol
