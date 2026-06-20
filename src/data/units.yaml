@@ -689,7 +689,6 @@
     -
       label: Plasmacyte (once per battle per unit)
       value: "When this unit is <strong>selected to fight</strong>, you can use this ability. If you do, this unit's attacks have <strong>[DEVASTATING WOUNDS]</strong>"
-    other:
     -
       label: Whirling Onslaught
       value: "<ul>
@@ -1278,8 +1277,6 @@
   -
     label: "6 Battle Sisters are equipped with:"
     value: "bolt pistol, boltgun, close combat weapon"
-  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models."
-  squadSummary: "Can be split into two units of five."
 - # Celestian Sacresants (Sanctuary Guardians)
   name: Celestian Sacresants (Sanctuary Guardians)
   profiles:
@@ -3215,7 +3212,7 @@
     ld: 6+
     oc: 1
   keywords:
-  - 'Ardmob
+  - "'Ardmob"
   - Character
   - Explosives
   - Infantry
@@ -3274,7 +3271,7 @@
     ld: 7+
     oc: 1
   keywords:
-  - 'Ardmob
+  - "'Ardmob"
   - Character
   - Infantry
   - Psyker
@@ -3359,7 +3356,7 @@
     ld: 7+
     oc: 3
   keywords:
-  - 'Ardmob
+  - "'Ardmob"
   - Mounted
   - Speed Freeks
   ranged:
@@ -3428,7 +3425,7 @@
     ld: 7+
     oc: 2
   keywords:
-  - 'Ardmob
+  - "'Ardmob"
   - Explosives
   - Infantry
   - Mob
@@ -3510,7 +3507,7 @@
     ld: 8+
     oc: 1
   keywords:
-  - 'Ardmob
+  - "'Ardmob"
   - Grots
   - Infantry
   ranged:

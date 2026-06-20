@@ -41,6 +41,48 @@
   -
     name: Shock Tactics
     text: "At the end of each player's turn, you score 5VP if you control one or more objective markers that your opponent controlled at the start of that turn."
+- # Assault Force
+  name: Assault Force
+  disposition: Take and Hold
+  abilities:
+  -
+    name: Oath of Moment
+    text: "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:
+      <ul>
+        <li>You can re-roll the Hit roll.</li>
+      </ul>"
+  -
+    name: Indomitable Resolve
+    text: "Friendly <strong>ASSAULT FORCE</strong> units have +1 <strong>OC</strong>"
+  strategems:
+  -
+    name: Relentless Aggression
+    cost: 1
+    turn: either
+    when: "Fight phase, when a friendly <strong>ASSAULT FORCE</strong> unit is selected to make a <strong>consolidation move</strong>."
+    target: "That <strong>ASSAULT FORCE</strong> unit."
+    effect: "When making that <strong>consolidation move</strong>, your unit can move up to 6\""
+  -
+    name: Terrifying Charge
+    cost: 1
+    turn: your
+    when: "Your Charge phase, when a friendly <strong>ASSAULT FORCE</strong> unit ends a <strong>charge move</strong>."
+    target: "That <strong>ASSAULT FORCE</strong> unit."
+    effect: "Select one enemy unit <strong>engaged</strong> with your unit. That enemy unit makes a <strong>battle-shock roll</strong>, with -1 to that <strong>battle-shock roll</strong>."
+  -
+    name: Decapitating Strike
+    cost: 1
+    turn: either
+    when: "Fight phase, when a friendly <strong>ASSAULT FORCE</strong> unit is <strong>selected to fight</strong>"
+    target: "That <strong>ASSAULT FORCE</strong> unit."
+    effect: "Your unit's melee attacks have <strong>[PRECISION]</strong>"
+  enhancements:
+  -
+    name: "Battle-line Veterans"
+    text: "Upgrade: <strong>ASSAULT FORCE INTERCESSOR SQUAD</strong> unit only. This unit's bolt rifle weapons have <strong>[RAPID FIRE 1]</strong>."
+  -
+    name: "Blade Masters"
+    text: "Upgrade: <strong>ASSAULT FORCE VANGUARD VETERAN SQUAD WITH JUMP PACKS</strong> unit only. When an enemy unit ends a <strong>charge move</strong>, if that enemy unit is <strong>engaged</strong> with this unit, that unit's melee attacks have -1 to <strong>wound rolls</strong> until the end of that turn."
 - # The Vardenghast Swarm
   name: The Vardenghast Swarm
   disposition: Disruption
@@ -199,6 +241,55 @@
   -
     name: "Krumpin' Spree"
     text: "At the end of your turn, you score 3VP if you control the objective marker closest to your opponent's battlefield edge and you score 1VP for each other objective you control that is not within your deployment zone."
+- # 'Ardmob
+  name: "'Ardmob"
+  disposition: Purge the Foe
+  abilities:
+  -
+    name: Waaagh!
+    text: "<p>If your Army Faction is ORKS, once per battle, at the start of your Command phase, you can call a Waaagh!. If you do, until the start of your next Command phase, the Waaagh! is active for your army and:</p>
+      <ul>
+        <li>Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.</li>
+        <li>Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.</li>
+        <li>Models from your army with this ability have a 5+ invulnerable save.</li>
+      </ul>"
+  -
+    name: "'Ard as Nails"
+    text: "Attacks that target a friendly <strong>'ARDMOB</strong> unit with the Waaagh! active with <strong>S</strong> greater than the friendly unit's <strong>T</strong> have -1 to <strong>wound rolls</strong>."
+  strategems:
+  -
+    name: "Krump 'Em"
+    cost: 1
+    turn: either
+    when: "Fight phase, when a friendly <strong>'ARDMOB</strong> unit is <strong>selected to fight</strong>."
+    target: "That <strong>'ARDMOB</strong> unit."
+    effect: "Your unit's melee attacks have +1 <strong>S</strong>"
+  -
+    name: "Medi-Squigs"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Shooting phase, when an enemy unit targets a friendly <strong>'ARDMOB</strong> unit."
+    target: "That <strong>'ARDMOB</strong> unit."
+    effect: "Your unit has 5+ <strong>InSv</strong>."
+  -
+    name: "Get Stuck In"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Shooting phase, when an enemy unit that targeted a friendly <strong>unengaged 'ARDMOB</strong> unit has shot."
+    target: "That <strong>'ARDMOB</strong> unit."
+    effect: "Your unit can make a <strong>surge move</strong> of up to D6+1\""
+  enhancements:
+  -
+    name: "Rallying War Cry"
+    target: "Warboss ('Ardmob)"
+    text: "<strong>'ARDMOB WARBOSS</strong> model only. (Once per battle, per unit) In your Command phase, you can use this ability. If you do, return up to D3+2 <strong>destroyed bodyguard</strong> models to this unit."
+  -
+    name: "Extra Platin'"
+    text: "Upgrade: <strong>'ARDMOB WARTRAKK</strong> unit only. This unit has:
+      <ul>
+        <li>3+ <strong>Sv</strong></li>
+        <li>4+ <strong>InSv</strong></li>
+      </ul>"
 - # Sanctuary Guardians
   name: Sanctuary Guardians
   disposition: Take and Hold
@@ -570,9 +661,9 @@
     name: Martial Ka'tah
     text: "<p>Each time a unit from your army with this ability is selected to fight, select one of the Ka'tah Stances below. Until that unit has finished making its attacks, the selected Stance is active for it and it gains the relevant ability:</p>
       <h3>Dacatarai Stance</h3>
-      <p>Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.</p>
+      <p>Melee weapons equipped by models in this unit have the <strong>[SUSTAINED HITS 1]</strong> ability.</p>
       <h3>Rendax Stance</h3>
-      <p>Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.</p>
+      <p>Melee weapons equipped by models in this unit have the <strong>[LETHAL HITS]</strong> ability.</p>
       "
   -
     name: Fearless and Unrelenting

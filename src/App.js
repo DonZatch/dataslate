@@ -595,7 +595,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
       {!collapsed && (
         <a href="#" onClick={handler}>
         <UnitProfile unit={unit} />
-        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} />
+        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={army.category === "Combat Patrol"} />
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />
@@ -606,9 +606,9 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
   )
 }
 
-function AbilitySummary({ unit, appSettings, setShowInfo })
+function AbilitySummary({ unit, appSettings, setShowInfo, isCombatPatrol })
 {
-  const abilities = getSummaryAbilties(unit, appSettings);
+  const abilities = getSummaryAbilities(unit, appSettings. isCombatPatrol);
   const keywordAbilities = getKeywordAbilitySummary(unit, appSettings);
   return (
     <ol className="abilitySummary">
@@ -684,7 +684,7 @@ function WargearAbilitySummary({ unit })
   }
   return (
     <ol className="otherAbilitySummary">
-      {abilities.map(ability => <li key={ability.label}><label>{ability.label} (Wargear):</label>{ability.value}</li>)}
+      {abilities.map(ability => <li key={ability.label}><label>{ability.label} (Wargear):</label><span dangerouslySetInnerHTML={{ __html: ability.value}} /></li>)}
     </ol>
   );
 }
@@ -719,9 +719,13 @@ function PatrolSquadSummary({ unit })
   );
 }
 
-function getSummaryAbilties(unit, appSettings)
+function getSummaryAbilities(unit, appSettings, isCombatPatrol)
 {
-  const ignoreAbilities = appSettings.summaryIgnoreAbilities ?? [];
+  const ignoreAbilities = appSettings?.summaryIgnoreAbilities ?? [];
+  if (isCombatPatrol)
+  {
+    ignoreAbilities.push("crushing impact", "explosives", "rapid ingress");
+  }
   return unit?.abilities?.core?.filter(ability => {
     for (const quickAccess of ignoreAbilities)
     {
@@ -1325,8 +1329,6 @@ function Setup({ detachment, selectedEnhancement, selectedSecondary, army, onEnh
 {
   return (
     <div className='setup'>
-      <h2>Secondaries</h2>
-      <Secondaries detachment={detachment} selectedSecondary={selectedSecondary} army={army} onChange={onSecChange} />
       <h2>Enhancements</h2>
       <Enhancements detachment={detachment} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
     </div>
@@ -1422,40 +1424,6 @@ function getAbilityInfo(ability, abilities)
     return null;
   }
   return abilities?.find(a => ability.toLowerCase().startsWith(a.name.toLowerCase()));
-}
-
-function Secondaries({ detachment, selectedSecondary, army, onChange })
-{
-  return (
-    <ul className="secondaries">
-      {detachment.secondaries?.map(secondary => <Secondary secondary={secondary} selectedSecondary={selectedSecondary} army={army} onChange={onChange} />)}
-    </ul>
-  )
-}
-
-function Secondary({ secondary, selectedSecondary, army, onChange })
-{
-  const selectHandler = useCallback(() => {
-    onChange(secondary.name);
-  }, [army, secondary]);
-  return (
-    <li>
-      <h3>
-          <input 
-          type='radio' 
-          id={`${army.id}-secondary-${secondary.name}`}
-          name={`${army.id}-secondary`} 
-          value={secondary.name} 
-          defaultChecked={selectedSecondary === secondary.name} 
-          onChange={selectHandler}
-        />
-        <label htmlFor={`${army.id}-secondary-${secondary.name}`}>
-          {secondary.name}
-        </label>
-      </h3>
-      <div dangerouslySetInnerHTML={{ __html: secondary.text}} />
-    </li>
-  )
 }
 
 export default App;

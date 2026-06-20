@@ -12,8 +12,6 @@
   - Terminator Squad (Patrol)
   warlord: Captain Octavius
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
   icon: brothers
 - # The Vardenghast Swarm
@@ -24,10 +22,10 @@
   detachment: The Vardenghast Swarm
   units:
   - Terror of Vardenghast
-  - Psychophage (Patrol)
-  - Termagants (Patrol)
-  - Barbgaunts (Patrol)
-  - Von Ryan's Leapers (Patrol)
+  - Psychophage (Vardenghast Swarm)
+  - Termagants (Vardenghast Swarm)
+  - Barbgaunts (Vardenghast Swarm)
+  - Von Ryan's Leapers (Vardenghast Swarm)
   warlord: Terror of Vardenghast
   ignorestrats:
   - explosives
@@ -41,15 +39,13 @@
   detachment: Amonhotekh's Guard
   units:
   - Overlord Amonhotekh
-  - Necron Warriors (Patrol)
-  - Skorpekh Destroyers (Patrol)
-  - Canoptek Scarab Swarms (Patrol)
-  - Canoptek Doomstalker (Patrol)
+  - Necron Warriors (Amonhotekh's Guard)
+  - Skorpekh Destroyers (Amonhotekh's Guard)
+  - Canoptek Scarab Swarms (Amonhotekh's Guard)
+  - Canoptek Doomstalker (Amonhotekh's Guard)
   warlord: Overlord Amonhotekh
   ignorestrats:
-  - explosives
-  - "smokescreen"
-  - "rapid ingress"
+  - smokescreen
   icon: robots
 - # Morgim's Butchas
   id: CP4
@@ -75,10 +71,10 @@
   faction: Adepta Sororitas
   detachment: Sanctuary Guardians
   units:
-  - Canoness Adalya
-  - Battle Sisters Squad (Patrol)
-  - Celestian Sacresants (Patrol)
-  - Arco-flagellants (Patrol)
+  - Sanctuary Canoness Adalya
+  - Battle Sisters Squad (Sanctuary Guardians)
+  - Celestian Sacresants (Sanctuary Guardians)
+  - Arco-flagellants (Sanctuary Guardians)
   warlord: Canoness Adalya
   ignorestrats:
   - explosives
@@ -95,8 +91,8 @@
   units:
   - Zadophon the Soul Eater
   - Kaa'skrek
-  - Tzaangor Enlightened (Patrol)
-  - Rubric Marines (Patrol)
+  - Tzaangor Enlightened (Prism of Zadophon)
+  - Rubric Marines (Prism of Zadophon)
   warlord: Zadophon the Soul Eater
   ignorestrats:
   - explosives
@@ -126,9 +122,9 @@
   detachment: Purge Corps Deltic-9
   units:
   - Manipulus Skand
-  - Skitarii Vanguard (Patrol)
-  - Serberys Sulphurhounds (Patrol)
-  - Pteraxii Sterylizors (Patrol)
+  - Skitarii Vanguard (Purge Corps Deltic-9)
+  - Serberys Sulphurhounds (Purge Corps Deltic-9)
+  - Pteraxii Sterylizors (Purge Corps Deltic-9)
   warlord: Manipulus Skand
   ignorestrats:
   - explosives
@@ -143,9 +139,9 @@
   detachment: Zarkan's Daemonkin
   units:
   - Aranis Zarkan
-  - Possessed (Patrol)
-  - Legionaries (Patrol)
-  - Cultist Mob (Patrol)
+  - Possessed (Zarkan's Daemonkin)
+  - Legionaries (Zarkan's Daemonkin)
+  - Cultist Mob (Zarkan's Daemonkin)
   warlord: Aranis Zarkan
   ignorestrats:
   - explosives
@@ -161,9 +157,9 @@
   detachment: Sudden Dawn Cadre
   units:
   - Commander Cloudspear
-  - Pathfinder Team (Patrol)
-  - Breacher Team (Patrol)
-  - Devilfish (Patrol)
+  - Pathfinder Team (Sudden Dawn Cadre)
+  - Breacher Team (Sudden Dawn Cadre)
+  - Devilfish (Sudden Dawn Cadre)
   warlord: Commander Cloudspear
   ignorestrats:
   - explosives
@@ -176,10 +172,10 @@
   faction: Adeptus Custodes
   detachment: Tristraen's Gilded Blades
   units:
-  - Tristraen
-  - Custodian Guard (Patrol)
-  - Custodian Wardens (Patrol)
-  - Allarus Custodians (Patrol)
+  - Tristraen of the Gilded Blades
+  - Custodian Guard (Gilded Blades)
+  - Custodian Wardens (Gilded Blades)
+  - Allarus Custodians (Gilded Blades)
   warlord: Tristraen
   ignorestrats:
   - explosives
@@ -187,6 +183,34 @@
   - "smokescreen"
   - "rapid ingress"
   icon: goldenbois
+- # 'Ardmob
+  id: CP12
+  category: Combat Patrol
+  name: "'Ardmob"
+  faction: Orks
+  detachment: "'Ardmob"
+  units:
+  - Warboss ('Ardmob)
+  - Weirdboy ('Ardmob)
+  - Boyz ('Ardmob)
+  - Wartrakk ('Ardmob)
+  - Gretchin ('Ardmob)
+  warlord: Warboss ('Ardmob)
+  icon: orks
+- # Assault Force
+  id: CP13
+  category: Combat Patrol
+  name: Assault Force
+  faction: Space Marines
+  detachment: Assault Force
+  units:
+  - Captain (Assault Force)
+  - Librarian (Assault Force)
+  - Intercessor Squad (Assault Force)
+  - Vanguard Veteran Squad with Jump Packs (Assault Force)
+  - Land Speeder (Assault Force)
+  warlord: Captain (Assault Force)
+  icon: brothers
 # King of the Colosseum
 - # Awakened Dynasty
   id: KC1
