@@ -231,6 +231,7 @@
         <li>Wound roll</li>
       </ul>
       "
+  -
     name: Blessed Believers
     text: "<ul>
         <li>Melee attacks that target a friendly <strong>SANCTUARY GUARDIANS</strong> unit have -1 to <strong>hit rolls</strong>.</li>
@@ -276,86 +277,73 @@
     text: "Upgrade: <strong>SANCTUARY GUARDIANS BATTLE SISTERS SQUAD</strong> unit only. (Once per battle, per unit) At the start of any phase, you can use this ability. If you do, this unit <strong>heals</strong> D3+2 wounds."
 - # Prism of Zadophon
   name: Prism of Zadophon
+  disposition: Take and Hold
   abilities:
   -
     name: Cabal of Sorcerers
-    text: "<p>At the start of your Shooting phase, one model from your army with this ability can attempt one Ritual from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has manifested this turn, then take a Psychic test for that model by following the sequence below.</p>
+    text: "<p>At the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.</p>
       <h3>Psychic Test Sequence</h3>
-      <h4>Roll 2D6</h4>
-      <div class=\"center\">
-      <span class=\"dice\"><svg width=\"64\" height=\"64\"><rect fill=\"url(#d6)\" width=\"64\" height=\"64\" /></svg></span>
-      <span class=\"dice\"><svg width=\"64\" height=\"64\"><rect fill=\"url(#d6)\" width=\"64\" height=\"64\" /></svg></span>
-      </div>
-      <h4>Channel the Warp (Optional)</h4>
-      <div class=\"center\">
-      <span class=\"dice\"><svg width=\"64\" height=\"64\"><rect fill=\"url(#plus)\" width=\"64\" height=\"64\" /></svg></span>
-      <span class=\"dice\"><svg width=\"64\" height=\"64\"><rect fill=\"url(#d6)\" width=\"64\" height=\"64\" /></svg></span>
-      </div>
+      <p><strong>Roll 2D6</strong></p>
+      <p><strong>Channel the Warp</strong><br>(Optional)</p>
       <p>Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.</p>
       <p>If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that ritual and you resolve its effects.</p>
       <h4 class=\"psychicTest\">Destiny's Ruin (Psychic)</h4>
       <p><strong>Warp Charge - 5</strong></p>
-      <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1.</p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.</p>
       <h4 class=\"psychicTest\">Temporal Surge (Psychic)</h4>
       <p><strong>Warp Charge - 6</strong></p>
-      <p>Select one friendly THOUSAND SONS unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\", and until the end of the turn, that unit is not eligible to declare a charge.</p>
+      <p>Select one friendly THOUSAND SONS unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.</p>
+      <h4 class=\"psychicTest\">Doombolt (Psychic)</h4>
+      <p><strong>Warp Charge - 7</strong></p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.</p>
+      <h4 class=\"psychicTest\">Twist of Fate (Psychic)</h4>
+      <p><strong>Warp Charge - 9</strong></p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a <strong>THOUSAND SONS</strong> model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.</p>
       "
+  -
+    name: Committed to the Ritual
+    text: "<ul>
+        <li>Friendly <strong>PRISM OF ZADOPHON</strong> units have +1 <strong>Ld</strong> while within range of an <strong>objective</strong>.</li>
+        <li>When playing a Combat Patrol battle, the following friendly units must start the battle in <strong>strategic reserves</strong> and cannot be set up on the battlefield before the battle round stated. When doing so, they must be set up wholly within your deployment zone.
+          <ul>
+            <li><strong>DAEMON PRINCE</strong>: Battle round 3.</li>
+          </ul></li>
+      </ul>"
   strategems:
   -
-    name: "Mutable Illusion"
+    name: "Twist of Fate"
     cost: 1
     turn: either
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One TZAANGOR SHAMAN or TZAANGOR ENLIGHTENED unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit targets a friendly <strong>PRISM OF ZADOPHON MUTANT</strong> unit."
+    target: "That <strong>PRISM OF ZADOPHON MUTANT</strong> unit."
+    effect: "Your unit has 4+ <string>InSv</strong>."
   -
-    name: "Paradigm of Rivalry"
+    name: "Spell-warded Armour"
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Shoting phase, when an enemy unit targets a friendly <strong>PRISM OF ZADOPHON RUBRIC MARINES</strong> unit."
+    target: "That <strong>PRISM OF ZADOPHON RUBRIC MARINES</strong> unit."
+    effect: "Ranged attacks that target your unit with a <strong>S</strong> greater than your unit's <strong>T</strong> have -1 to <strong>wound rolls</strong>."
+  -
+    name: "Embroiling Energies"
     cost: 1
     turn: your
-    when: "Start of your Shooting phase, just after a THOUSAND SONS PSYKER model from your army has attempted a Ritual."
-    target: "One other THOUSAND SONS PSYKER model from your army."
-    effect: "Your model can attempt one Ritual no model from your army has manifested this turn."
-  -
-    name: "Curses Foretold"
-    cost: 1
-    turn: your
-    when: "Your Shooting phase."
-    target: "One RUBRIC MARINES units from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, the Malefic Curse weapon equipped by your unit's Aspiring Sorcerer model has the [CLOSE-QUARTERS] ability and each time that model makes an attack with that weapon, add 1 to the Hit roll."
+    when: "Your Shooting phase, when a friendly <strong>PRISM OF ZADOPHON RUBRIC MARINES</strong> unit is <strong>selected to shoot</strong>."
+    target: "That <strong>PRISM OF ZADOPHON RUBRIC MARINES</strong> unit."
+    effect: "That unit's malefic curse weapon has:
+      <ul>
+        <li><strong>[CLOSE-QUARTERS]</strong></li>
+        <li>+1 to <strong>hit rolls</strong></li>
+      </ul>"
   enhancements:
   -
-    name: "Perplexing Gibberhex"
-    text: "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks; until the start of you next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from Charge rolls made for that unit."
+    name: "Foresight of the Changer"
+    target: Tzaangor Shaman (Prism of Zadophon)
+    text: "<strong>PRISM OF ZADOPHON TZAANGOR SHAMAN</strong> model only. (Once per turn, per unit) In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is <strong>unengaged</strong>, this unit can make a <strong>normal move</strong> of up to D3+1\""
   -
-    name: "Key to the Eternity Cage"
-    text: "Once per battle, when the bearer is selected to fight, it can use this Enhancement. If it does, until the end of the phase, its hellforged weapons have an Attacks characteristic of 5, a Strength characteristic of 9, and a Damage characteristic of 3."
-  secondaries:
-  -
-    name: "Arcane Rite"
-    text: "<p>From the second battle round onwards, if your RUBRIC MARINES unit is within range of one or more Arcane objective markers you control, you score 3VP.</p>
-      <p>You cannot score more than 12VP from this secondary objective</p>
-      <table>
-        <tr>
-          <th>Battle Round</th>
-          <th>Arcane Objective Marker</th>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Closest to your battlefield edge</td>
-        </tr>
-        <tr>
-          <td>3-4</td>
-          <td>Wholly within No Man's Land</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Closest to your opponent's battlefield edge</td>
-        </tr>
-      </table>"
-  -
-    name: "Feast of Soul Secrets"
-    text: "<p>Each time an enemy unit is destroyed, if that unit was within 3\" of your WARLORD at the start of the phase, you score 3VP.</p>
-      <p>You cannot score more than 12VP from this secondary objective</p>"
+    name: "Warp-tainted Shells"
+    target: Daemon Prince (Prism of Zadophon)
+    text: "<strong>PRISM OF ZADOPHON DAEMON PRINCE</strong> model only. This model's infernal cannon weapon has <strong>[PSYCHIC]</strong>."
 - # The Coven Temporus
   name: The Coven Temporus
   abilities:
@@ -409,60 +397,68 @@
       <p>You cannot score more than 12VP from this secondary objective</p>"
 - # Purge Corps Deltic-9
   name: Purge Corps Deltic-9
+  disposition: Purge the Foe
   abilities:
   -
     name: Doctrina Imperatives
     text: "<p>At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperative ability gain the relevant abilities shown below.</p>
       <h3>Protector Imperative</h3>
       <ul>
-        <li>Ranged weapons equipped by models in this unit have the [HEAVY] ability.</li>
-        <li>Each time a ranged attack targets this unit, if this unit is within your deployment zone, worsen the Armour Penetration characteristic of that attack by 1.</li>
+        <li>Ranged weapons have <strong>[HEAVY]</strong>.</li>
+        <li>Ranged weapons have +1 <strong>BS</strong></li>
+        <li>Each time a melee attack targets this unit, if this unit has the <strong>BATTLELINE</strong> keyword and/or is within 6\" of one or more friendly <strong>ADEPTUS MECHANICUS BATTLELINE</strong> units, subtract 1 from the <strong>hit roll</strong>.</li>
       </ul>
       <h3>Conqueror Imperative</h3>
       <ul>
-        <li>Ranged weapons equipped by models in this unit have the [ASSAULT] ability.</li>
-        <li>Each time a model in this unit makes a ranged attack, if the target of that attack is within your opponent's deployment zone, improve the Armour Penetration characteristic of that attack by 1.</li>
+        <li>Ranged weapons have <strong>[ASSAULT]</strong>.</li>
+        <li>Melee weapons have +1 <strong>WS</strong></li>
+        <li>Each time a model in this unit makes an attack, if this unit has the <strong>BATTLELINE</strong> keyword and/or it is within 6\" of one or more friendly <strong>ADEPTUS MECHANICUS BATTLELINE</strong> units, improve the <strong>AP</strong> of that attack by 1.</li>
       </ul>
       "
+  -
+    name: Imperative Overload
+    text: "At the start of the battle round, you can select one friendly <strong>PURGE CORPS DELTIC-9</strong> unit. If you do, that unit has both Doctrina Imperative abilities until the end of the battle round."
   strategems:
   -
-    name: "An Evaluation of Mettle"
+    name: "Lockdown Protocols"
     cost: 1
     turn: either
-    when: "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    target: "One ADEPTUS MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+    when: "Your opponent's Shooting phase or the Fight phase, when an enemy unit targets a friendly <strong>PURGE CORPS DELTIC-9</strong> unit that is within range of an <strong>objective</strong>."
+    target: "That <strong>PURGE CORPS DELTIC-9</strong> unit."
+    effect: "Attacks that target your unit have -1 to <strong>wound rolls</strong>."
   -
-    name: "Optimised Efficiency"
+    name: "Preservation Imperatives"
     cost: 1
     turn: your
-    when: "Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back."
-    target: "That ADEPTUS MECHANICUS unit."
-    effect: "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    when: "Your Shooting phase, when a friendly <strong>unengaged PURGE CORPS DELTIC-9</strong> unit has shot."
+    target: "That <strong>PURGE CORPS DELTIC-9</strong> unit."
+    effect: "<ul>
+        <li>Your unit can make a <strong>normal move</strong> of up to D3+1\"</li>
+        <li>Your unit is <u>not</u> <strong>eligible to declare a charge</strong> until the end of the turn.</li>
+      </ul>"
   -
-    name: "Acceptable Risk Ratio"
+    name: "Optimised Targeting"
     cost: 1
     turn: your
-    when: "Your Shooting phase."
-    target: "One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and those weapons have the [HAZARDOUS] ability."
+    when: "Your Shooting phase, when a friendly <strong>PURGE CORPS DELTIC-9</strong> unit is <strong>selected to shoot</strong>."
+    target: "That <strong>PURGE CORPS DELTIC-9</strong> unit."
+    effect: "Your unit's ranged attacks can re-roll <strong>hit rolls</strong> of 1."
   enhancements:
   -
-    name: "Arpergilla of Tarentum"
-    text: "Each time an attack targets the bearer's unit, subtract 1 from the wound roll."
+    name: "Miniaturised Autosimulacra"
+    target: Manipulus Skand
+    text: "<strong>PURGE CORPS DELTIC-9 TECH-PRIEST MANIPULUS</strong> model only. (Once per battle, per unit) At the start of any phase, you can use this ability. If you do, select one friendly <strong>PURGE CORPS DELTIC-9</strong> unit. That unit <strong>heals</strong> D3+2 wounds."
   -
-    name: "Overcharged Electropositors"
-    text: "Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer's unit, and those weapons have the [IGNORES COVER] ability"
-  secondaries:
-  -
-    name: "Targeted Purge"
-    text: "<p>At the start of the first battle round, your opponent must select one unit from their army (excluding MONSTER and VEHICLE units).</p>
-      <p>At the end of the battle, you score 12VP if that unit is destroyed.</p>"
-  -
-    name: "Prescribed Excoriatian"
-    text: "<p>From the second battle round onwards, at the end of your turn, you score 3VP if there are no enemy units within your deployment zone (excluding Battle-shocked units). If there are no enemy units within 6\" of your deployment zone (excluding Battle-shocked units),  you score 5VP instead.</p>"
+    name: "Empowered Mechanisms"
+    target: Serberys Sulphurhounds (Purge Corps Deltic-9)
+    text: "Upgrade: <strong>PURGE CORPS SERBERYS SULPHURHOUNDS</strong> unit only.
+      <ul>
+        <li>This unit's ranged attacks have <strong>[ANTI-INFANTRY 4+]</strong>.</li>
+        <li>This unit can re-roll rolls to determine the <strong>A</strong> of a weapon.</li>
+      </ul>"
 - # Zarkan's Daemonkin
   name: Zarkan's Daemonkin
+  disposition: Disruption
   abilities:
   -
     name: Dark Pacts
@@ -472,44 +468,50 @@
         <li>[SUSTAINED HITS]</li>
       </ul>
       "
+  -
+    name: Abject Fear
+    text: "Friendly <strong>ZARKAN'S DAEMONKIN</strong> units have the following ability:
+      <ul>
+        <li><strong>Terrifying Presence (Aura)</strong>: While an enemy unit is within 3\" of this unit, that enemy unit has -1 <strong>Ld</strong>.</li>
+      </ul>"
   strategems:
   -
     name: "Vindictive Strategy"
     cost: 1
     turn: either
-    when: "Your Shooting phase or the Fight phase."
-    target: "One HERETIC ASTARTES unit from your army that has not been selected to shoot or fight this phase."
-    effect: "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that is below its Starting Strength, re-roll a Hit roll of 1. If that enemy unit is Below Half-strength, re-roll a Wound roll of 1 as well."
+    when: "Your Shooting phase or the Fight phase, when a friendly <strong>ZARKAN'S DAEMONKIN LEGIONARIES</strong> unit is <strong>selected to attack</strong>."
+    target: "That <strong>ZARKAN'S DAEMONKIN LEGIONARIES</strong> unit."
+    effect: "Your unit's attacks can:
+      <ul>
+        <li>Re-roll <strong>hit rolls</strong> of 1.</li>
+        <li>Re-roll <strong>wound rolls</strong> of 1.</li>
+      </ul>"
   -
-    name: "Violent Unbinding"
+    name: "Daemonic Frenzy"
     cost: 1
-    turn: either
-    when: "Your Opponent's Shooting phase or the Fight phase, just after an attack made by an enemy unit destroys your MASTER OF POSSESSION model, before removing it from play."
-    target: "Your MASTER OF POSSESSION model. You can use this Stratagem on that model even though it was just destroyed."
-    effect: "If that enemy unit is within 6\" of your MASTER OF POSSESSION model, roll one D6: on a 2-5 that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+    turn: opponent
+    when: "Your opponent's Movement phase, when an enemy unit is selected to make a <strong>fall-back move</strong>, if that unit is <strong>engaged</strong> with a friendly <strong>ZARKAN'S DAEMONKIN POSSESSED</strong> unit."
+    target: "That <strong>ZARKAN'S DAEMONKIN POSSESSED</strong> unit."
+    effect: "When an enemy unit <strong>engaged</strong> with your unit is selected to make a <strong>fall-back move</strong>, that enemy unit must use the <strong>desperate escape</strong> mode, with -1 to those <strong>hazard rolls</strong> if that enemy unit is <strong>battle-shocked</strong>."
   -
-    name: "Daemonic Fervour"
+    name: "Alert to Danger"
     cost: 1
-    turn: either
-    when: "Fight phase, just after an enemy unit has selected its targets."
-    target: "One POSSESSED unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+    turn: opponent
+    when: "Your opponent's Movement phase, when an enemy unit ends a move within 8\" of a friendly <strong>unengaged ZARKAN'S DAEMONKIN CULTIST MOB</strong> unit."
+    target: "That <strong>unengaged ZARKAN'S DAEMONKIN CULTIST MOB</strong> unit."
+    effect: "Your unit can make a <strong>normal move</strong> of up to D3+1\""
   enhancements:
   -
-    name: "Foul Zealotry"
-    text: "Each time the bearer's unit makes a Dark Pact, that unit's weapons gain the [LETHAL HITS] and [SUSTAINED HITS] abilities until the end of the phase, instead of just gaining one of those abilities."
-  -
     name: "Prey on the Weak"
-    text: "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks made with a Rite of Possession. That enemy unit must take a Battle-shock test and when doing so, subtract 1 from the result."
-  secondaries:
+    target: Possessed (Zarkan's Daemonkin)
+    text: "Upgrade: <strong>ZARKAN'S DAEMONKIN POSSESSED</strong> unit only. This unit has <strong>Scouts 6\"</strong>"
   -
-    name: "Marked for Execution"
-    text: "<p>When your opponent's WARLORD is destroyed, if you are in the first, second, or third battle round, you score 12VP. Otherwise, you score 6VP.</p>"
-  -
-    name: "Sites of Power"
-    text: "<p>From the second battle round onwards, at the end of your turn, you score 2VP if you control at least as many objective markers as your opponent does.</p>"
+    name: "Infernal Infusion"
+    target: Aranis Zarkan
+    text: "<strong>ZARKAN'S DAEMONKIN MASTER OF POSSESSION</strong> model only. This unit's attacks have +1 <strong>S</strong>"
 - # Sudden Dawn Cadre
   name: Sudden Dawn Cadre
+  disposition: Take and Hold
   abilities:
   -
     name: For the Greater Good
@@ -518,57 +520,52 @@
       <p>Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.</p>
       <p>Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.</p>
       "
+  -
+    name: Co-ordinated Eradication
+    text: "(Once per battle) When a friendly <strong>SUDDEN DAWN CADRE</strong> unit is <strong>selected to shoot</strong>, you can use this ability. If you do, select one enemy unit. Friendly <strong>SUDDEN DAWN CADRE</strong> units' attacks that target that enemy unit have +1 <strong>AP</strong> until the end of the battle."
   strategems:
   -
-    name: "Fight by the Code"
+    name: "Suppressing Fire"
     cost: 1
     turn: your
-    when: "Your Shooting phase."
-    target: "One T'AU EMPIRE unit from your army."
-    effect: "Until the end of the phase, your unit is eligible to shoot in a turn in which it Fell Back."
+    when: "Your Shooting phase, when a friendly <strong>SUDDEN DAWN CADRE INFANTRY</strong> unit has shot."
+    target: "That <strong>SUDDEN DAWN CADRE INFANTRY</strong> unit."
+    effect: "Select one enemy unit hit by those attacks. That enemy unit is <strong>pinned</strong> until the start of your next Command phase:
+      <ul>
+        <li>While a unit is <strong>pinned</strong>, that unit has -2\" <strong>M</strong>
+      </ul>"
   -
-    name: "Rampart of Fire"
+    name: "Rapid Acquisition"
     cost: 1
     turn: your
-    when: "Your Shooting phase."
-    target: "One T'AU EMPIRE unit from your army that has not been selected to shoot this phase."
-    effect: "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within 10\", improve the Armour Penetration characteristic of that attack by 1."
+    when: "End of your Movement phase."
+    target: "One friendly <strong>SUDDEN DAWN CADRE</strong> unit."
+    effect: "Select one <strong>objective</strong> your unit is controlling. That <strong>objective</strong> is <strong>secured</strong>."
   -
-    name: "Lives Before Territory"
+    name: "Swift Embarkation"
     cost: 1
     turn: opponent
-    when: "Your opponent's Shooting phase, just after an enemy unit has selected its targets."
-    target: "One T'AU EMPIRE INFANTRY or T'AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "Your unit can make a Normal move of up to D6\" and, until the end of the phase, each time an attack targets your unit, it has Benefit of Cover against that attack."
+    when: "End of your opponent's Fight phase."
+    target: "One friendly <strong>unengaged SUDDEN DAWN CADRE INFANTRY</strong> unit that was <strong>eligible to fight</strong> this phase, is wholly within 6\" of a friendly <strong>SUDDEN DAWN CADRE TRANSPORT</strong> unit, and is eligible to embark within that <strong>TRANSPORT</strong> unit."
+    effect: "Your unit embarks within that <strong>TRANSPORT</strong> unit."
   enhancements:
   -
-    name: "Electro-static Flares (Aura)"
-    text: "<ul>
-      <li>While a friendly T'AU EMPIRE unit (excluding DEVILFISH units) is within 6\" of the bearer, enemy units cannot use the Fire Overwatch Stratagem to fire at that unit and each time a ranged attack targets that unit, subtract 1 from the Hit roll.</li>
-      <li>The bearer has a 4+ invulnerable save.</li>
+    name: "Proximity Scanners"
+    text: "Upgrade: <strong>SUDDEN DAWN CADRE DEVILFISH</strong> unit only. When a friendly unit embarked within this unit disembarks, that friendly unit's pulse blaster and pulse carbine weapons have +1 <strong>A</strong>."
+  -
+    name: "Earth Caste Modifications"
+    text: "<strong>SUDDEN DAWN CADRE COMMANDER IN ENFORCER BATTLESUIT</strong> model only.
+      <ul>
+      <li>When this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit is <strong>suppressed</strong> until the start of your next turn:
+        <ul>
+          <li>While a unit is <strong>suppressed</strong>, that unit's attacks have -1 to <strong>hit rolls</strong>.</li>
+        </ul></li>
+      <li>When this unit makes an <strong>ingress move</strong>, i can be set up more than 6\" horizontally from all enemy units (instead of more than 8\"). If this unit does, it is <u>not</u> <strong>eligible to declare a charge</strong> until the end of the turn</li>
       </ul>"
-  -
-    name: "Prototype Systems"
-    text: "<ul>
-      <li>Each time the bearer is selected to shoot, you can re-roll one Hit roll and you can re-roll one Wound toll when resolving those attacks.</li>
-      <li>Each time you roll to determine the number of attacks made by bearer's airbursting fragmentation projector, you can re-roll the result.</li>
-      <li>The bearer has a 4+ invulnerable save</li>
-      </ul>"
-  secondaries:
-  -
-    name: "Surprise Attack"
-    text: "<p><strong>In the first and second battle rounds:</strong><br />At the end of your turn, you score 4VP for each objective marker in No Man's Land you control.</p>
-      <p><strong>In the third, fourth, and fifth battle rounds:</strong><br />At the end of your turn, you score 2VP for each objective marker in No Man's Land you control.</p>"
-  -
-    name: "Ethereal Edict"
-    text: "<p>At the start of the first battle round, your opponent must select one unit from their army. At the end of the battle, you score 12VP if that unit is destroyed.</p>"
 - # Tristraen's Gilded Blades
   name: Tristraen's Gilded Blades
+  disposition: Take and Hold
   abilities:
-  -
-    name: Tristraen's Gilded Blades
-    text: "<p>Before the battle, you must select either the Custodian Wardens or the Allarus Custodians unit to include in your Combat Patrol for the battle.</p>
-      "
   -
     name: Martial Ka'tah
     text: "<p>Each time a unit from your army with this ability is selected to fight, select one of the Ka'tah Stances below. Until that unit has finished making its attacks, the selected Stance is active for it and it gains the relevant ability:</p>
@@ -577,45 +574,48 @@
       <h3>Rendax Stance</h3>
       <p>Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.</p>
       "
+  -
+    name: Fearless and Unrelenting
+    text: "<ul>
+        <li>(Once per turn, per army) One friendly <strong>TRISTRAEN'S GILDED BLADES</strong> unit can re-roll a <strong>battle-shock roll</strong>.</li>
+        <li>When playing a Combat Patrol battle, the following friendly units must start the battle in <strong>strategic reserves</strong> and cannot be set up on the battlefield before the battle round stated. When doing so, they must be set up wholly within your deployment zone.
+          <ul>
+            <li><strong>GILDED BLADES CUSTODIAN WARDENS</strong>: Battle round 2.</li>
+            <li><strong>GILDED BLADES ALLARUS CUSTODIANS</strong>: Battle round 3.</li>
+          </ul>
+        </li>
+      </ul>"
   strategems:
   -
-    name: "The Gilded Spear"
+    name: "Gilded Spear"
     cost: 1
     turn: either
-    when: "Fight phase."
-    target: "One ADEPTUS CUSTODES unit from your army that has not been selected to fight this phase."
-    effect: "Until the end of the phase, each time a model in your unit makes a Pile-in move, it can move up to 6\" instead of up to 3\"."
+    when: "Fight phase, when a friendly <strong>TRISTRAEN'S GILDED BLADES</strong> unit is selected to make a <strong>consolidation move</strong>."
+    target: "That <strong>TRISTRAEN'S GILDED BLADES</strong> unit."
+    effect: "When making that <strong>consolidation move</strong>, your unit can move up to D3+3\"."
   -
-    name: "Inescapable Vengeance"
-    cost: 1
-    turn: your
-    when: "Your Movement phase."
-    target: "One ADEPTUS CUSTODES unit from your army that has not been selected to move this phase."
-    effect: "Until the end of the phase, add 2 to Advance rolls made for your unit."
-  -
-    name: "Overawing Magnificence"
+    name: "Inevitable Wrath"
     cost: 1
     turn: opponent
-    when: "Your opponent's Charge phase, just after an enemy unit declares a charge."
-    target: "One ADEPTUS CUSTODES unit from your army that was selected as the target of one or more of the attacking unit's attacks."
-    effect: "That enemy unit must take a Leadership test. If that test is failed, until the end of the phase, subtract 2 from Charge rolls made for that enemy unit."
+    when: "Your opponent's Shooting phase, when an enemy unit has shot."
+    target: "One friendly <strong>unengaged TRISTRAEN'S GILDED BLADES BLADE CHAMPION</strong> unit that lost a wound as a result of those attacks."
+    effect: "Your unit can make a <strong>surge move</strong> of up to D6+1\"."
+  -
+    name: "Never Outmatched"
+    cost: 1
+    turn: either
+    when: "Fight phase when a friendly <strong>TRISTRAEN'S GILDED BLADES</strong> unit that is below <strong>starting strength</strong> is <strong>selected to fight</strong>."
+    target: "That <strong>TRISTRAEN'S GILDED BLADES</strong> unit."
+    effect: "Your unit's melee attacks have +1 <strong>A</strong>."
   enhancements:
   -
-    name: "Watchman of Terra"
-    text: "<p>While the bearer is within Engagement Range of one or more enemy units, it has an Objective Control characteristic of 4.</p>"
+    name: "Comrades in Wrath"
+    target: Allarus Custodians (Gilded Blades)
+    text: "Upgrade: <strong>GILDED BLADES ALLARUS CUSTODIANS</strong> unit only. This unit has +1 to <strong>charge rolls</strong>."
   -
-    name: "Warrior Exemplar"
-    text: "<p>Each time the bearer destroys an enemy unit, roll one D6: on a 3+, you gain 1CP.</p>"
-  secondaries:
-  -
-    name: "Raise the Vexillas"
-    text: "<p>From the third battle round onwards, at the end of  your turn, you score 3VP if you control the objective marker closest to your opponent's battlefield edge and you also control the objective marker closest to your battlefield edge.</p>"
-  -
-    name: "Victory's Price"
-    text: "<ul>
-      <li>Each time an enemy unit is destroyed, you score 3VP.</li>
-      <li>Each time an ADEPTUS CUSTODES model from your army is destroyed, you lose 1VP (to a minimum of 0VP)</li>
-      </ul>"
+    name: "Shattering Charge"
+    target: Tristraen of the Gilded Blades
+    text: "<strong>TRISTRAEN'S GILDED BLADES BLADE CHAMPION</strong> model only. When this unit ends a <strong>charge move</strong>, you can select one enemy unit <strong>engaged</strong> with this unit. If you do, that enemy unit makes a <strong>battle-shock roll</strong>, with -1 to that <strong>battle-shock roll</strong>."
 # 40K
 # Necrons
 - # Canoptek Court
