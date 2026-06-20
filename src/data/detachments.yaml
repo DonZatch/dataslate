@@ -79,9 +79,11 @@
   enhancements:
   -
     name: "Battle-line Veterans"
+    target: Intercessor Squad (Assault Force)
     text: "Upgrade: <strong>ASSAULT FORCE INTERCESSOR SQUAD</strong> unit only. This unit's bolt rifle weapons have <strong>[RAPID FIRE 1]</strong>."
   -
     name: "Blade Masters"
+    target: Vanguard Veteran Squad with Jump Packs (Assault Force)
     text: "Upgrade: <strong>ASSAULT FORCE VANGUARD VETERAN SQUAD WITH JUMP PACKS</strong> unit only. When an enemy unit ends a <strong>charge move</strong>, if that enemy unit is <strong>engaged</strong> with this unit, that unit's melee attacks have -1 to <strong>wound rolls</strong> until the end of that turn."
 - # The Vardenghast Swarm
   name: The Vardenghast Swarm
@@ -285,6 +287,7 @@
     text: "<strong>'ARDMOB WARBOSS</strong> model only. (Once per battle, per unit) In your Command phase, you can use this ability. If you do, return up to D3+2 <strong>destroyed bodyguard</strong> models to this unit."
   -
     name: "Extra Platin'"
+    target: "Wartrakk ('Ardmob)"
     text: "Upgrade: <strong>'ARDMOB WARTRAKK</strong> unit only. This unit has:
       <ul>
         <li>3+ <strong>Sv</strong></li>
@@ -356,7 +359,7 @@
   enhancements:
   -
     name: "Righteous Fervour"
-    target: Canoness Adalya
+    target: Sanctuary Canoness Adalya
     text: "<strong>SANCTUARY GUARDIANS CANONESS</strong> model only.
       <ul>
         <li>This model's melee attacks have +1 <strong>D</strong></li>
@@ -429,11 +432,11 @@
   enhancements:
   -
     name: "Foresight of the Changer"
-    target: Tzaangor Shaman (Prism of Zadophon)
+    target: Kaa'skrek
     text: "<strong>PRISM OF ZADOPHON TZAANGOR SHAMAN</strong> model only. (Once per turn, per unit) In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is <strong>unengaged</strong>, this unit can make a <strong>normal move</strong> of up to D3+1\""
   -
     name: "Warp-tainted Shells"
-    target: Daemon Prince (Prism of Zadophon)
+    target: Zadophon the Soul Eater
     text: "<strong>PRISM OF ZADOPHON DAEMON PRINCE</strong> model only. This model's infernal cannon weapon has <strong>[PSYCHIC]</strong>."
 - # The Coven Temporus
   name: The Coven Temporus
@@ -642,9 +645,11 @@
   enhancements:
   -
     name: "Proximity Scanners"
+    target: Devilfish (Sudden Dawn Cadre)
     text: "Upgrade: <strong>SUDDEN DAWN CADRE DEVILFISH</strong> unit only. When a friendly unit embarked within this unit disembarks, that friendly unit's pulse blaster and pulse carbine weapons have +1 <strong>A</strong>."
   -
     name: "Earth Caste Modifications"
+    target: Commander Cloudspear
     text: "<strong>SUDDEN DAWN CADRE COMMANDER IN ENFORCER BATTLESUIT</strong> model only.
       <ul>
       <li>When this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit is <strong>suppressed</strong> until the start of your next turn:

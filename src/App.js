@@ -842,8 +842,8 @@ function getUnits(army, units, detachments, selectedEnhancement)
       unitEnhancementNames[enhancement.unit].push(enhancement.name);
     }
   }
-  const enhancements = [];
-  detachments?.forEach(detachment => enhancements.push(...(detachment.enhancements ?? [])));
+  const detachmentEnhancements = [];
+  detachments?.forEach(detachment => detachmentEnhancements.push(...(detachment.enhancements ?? [])));
   for (i = 0; i < units.length; i++)
   {
     var unit = units[i];
@@ -851,12 +851,12 @@ function getUnits(army, units, detachments, selectedEnhancement)
     {
       if (army.category === "Combat Patrol")
       {
-        unit.enhancements = selectedEnhancement ? enhancements?.filter(e => e.name === selectedEnhancement) : [];
+        unit.enhancements = selectedEnhancement ? detachmentEnhancements?.filter(e => e.target === unit.name && e.name === selectedEnhancement) : [];
       }
       else if (unitEnhancementNames[unit.name])
       {
         var enhancementNames = unitEnhancementNames[unit.name].slice();
-        unit.enhancements = enhancements?.filter(e => enhancementNames.indexOf(e.name) !== -1);
+        unit.enhancements = detachmentEnhancements?.filter(e => enhancementNames.indexOf(e.name) !== -1);
       }
       result.push(unit);
     }
