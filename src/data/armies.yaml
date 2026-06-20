@@ -29,9 +29,6 @@
   - Barbgaunts (Vardenghast Swarm)
   - Von Ryan's Leapers (Vardenghast Swarm)
   warlord: Terror of Vardenghast
-  ignorestrats:
-  - explosives
-  - "smokescreen"
   icon: bugs
 - # Amonhotekh's Guard
   id: CP3
@@ -82,10 +79,7 @@
   - Arco-flagellants (Sanctuary Guardians)
   warlord: Canoness Adalya
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: sisters
 - # Prism of Zadophon
   id: CP6
@@ -101,9 +95,7 @@
   - Rubric Marines (Prism of Zadophon)
   warlord: Zadophon the Soul Eater
   ignorestrats:
-  - explosives
   - "smokescreen"
-  - "rapid ingress"
   icon: sorcerors
 # - # The Coven Temporus
 #   id: CP7
@@ -135,8 +127,6 @@
   - Pteraxii Sterylizors (Purge Corps Deltic-9)
   warlord: Manipulus Skand
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
   icon: mechs
 - # Zarkan's Daemonkin
@@ -153,10 +143,7 @@
   - Cultist Mob (Zarkan's Daemonkin)
   warlord: Aranis Zarkan
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: heretics
 - # Sudden Dawn Cadre
   id: CP10
@@ -172,7 +159,6 @@
   - Devilfish (Sudden Dawn Cadre)
   warlord: Commander Cloudspear
   ignorestrats:
-  - explosives
   - "smokescreen"
   icon: fish
 - # Tristraen's Gilded Blades
@@ -189,10 +175,7 @@
   - Allarus Custodians (Gilded Blades)
   warlord: Tristraen
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: goldenbois
 - # 'Ardmob
   id: CP12
@@ -208,6 +191,8 @@
   - Wartrakk ('Ardmob)
   - Gretchin ('Ardmob)
   warlord: Warboss ('Ardmob)
+  ignorestrats:
+  - "smokescreen"
   icon: orks
 - # Assault Force
   id: CP13
@@ -223,6 +208,8 @@
   - Vanguard Veteran Squad with Jump Packs (Assault Force)
   - Land Speeder (Assault Force)
   warlord: Captain (Assault Force)
+  ignorestrats:
+  - "smokescreen"
   icon: brothers
 # King of the Colosseum
 - # Awakened Dynasty
