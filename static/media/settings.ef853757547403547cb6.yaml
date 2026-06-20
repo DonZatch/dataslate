@@ -1,5 +1,3 @@
-summaryIgnoreAbilities:
-- leader
 rangedSummaryAbilities:
 - assault
 - rapid fire
@@ -28,3 +26,4 @@ summaryKeywords:
 - character
 - explosives
 - smoke
+- synapse

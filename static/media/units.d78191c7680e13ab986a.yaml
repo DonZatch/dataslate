@@ -291,11 +291,10 @@
   - Infantry
   - Character
   - Fly
-  - Great Devourer
   - Synapse
   - Vanguard Invader
   - Winged Tyranid Prime
-  - Terror of Vardenghast
+  - Vardenghast Swarm
   melee:
   -
     name: Prime talons
@@ -306,49 +305,60 @@
     ap: -1
     d: 2
   abilities:
-    core:
-    - Deep Strike
     faction:
     - Shadow in the Warp
     - Synapse
+    core:
+    - Deep Strike
+    - Fly
     other:
     -
       label: "Death Blow:"
-      value: "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+      value: "In the fight phase, when this model is <strong>destroyed</strong>, if this unit has not been <strong>selected to fight</strong> this phase, roll one D6:
+        <ul>
+          <li>On a 4+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.</li>
+        </ul>"
+    -
+      label: "Bio-Reserves (once per battle per unit):"
+      value: "At the start or end of your Movement phase, you can use this ability. If you do:
+        <ul>
+          <li>Select on friendly <strong>unengaged VARDENGHAST SWARM TERMAGANTS</strong> unit. This unit <strong>heals</strong> 2D6 wounds.</li>
+          <li><u>Or:</u> Select one friendly <strong>destroyed VARDENGHAST SWARM TERMAGANTS</strong> unit. That unit <strong>heals</strong> 10 wounds and is placed in <strong>strategic reserves</strong>.</li>
+        </ul>"
   factions: 
   - Tyranids
   composition:
   -
     label: "This model is equipped with:"
     value: "prime talons"
-- # Psychophage (Patrol)
-  name: Psychophage (Patrol)
+- # Psychophage (Vardenghast Swarm)
+  name: Psychophage (Vardenghast Swarm)
   profiles:
   -
     name: Psychophage
-    m: 8
+    m: 12
     t: 9
     sv: 3+
     w: 10
     ld: 8+
     oc: 3
   keywords:
-  - Monster
-  - Great Devourer
   - Harvester
-  - Psychophage
+  - Monster
+  - Smoke
+  - Vardenghast Swarm
   ranged:
   -
     name: Pyroclastic torrent
-    abilities:
-    - Ignores Cover
-    - Torrent
     range: 12"
     a: D6
     bs: N/A
     s: 6
     ap: -1
     d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
   melee:
   -
     name: Talons and betentacled maw
@@ -356,29 +366,37 @@
     - Anti-Psyker 4+
     - Devastating Wounds
     range: Melee
-    a: d6+1
+    a: 6
     ws: 3+
     s: 6
-    ap: -1
+    ap: -2
     d: 2
   abilities:
-    core:
-    - Deadly Demise 1
-    - Feel No Pain 5+
     faction:
     - Synapse
+    - Shadow in the Warp
+    core:
+    - Feel No Pain 5+
+    - Deadly Demise 1
     other:
     -
       label: "Feeding Frenzy:"
-      value: "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well."
+      value: "This model's melee attacks that target:
+        <ul>
+          <li>A unit below <strong>starting strength</strong> have +1 to <strong>hit rolls</strong>.</li>
+          <li>A unit below <strong>half-strength</strong> have +1 to <strong>wound rolls</strong>.</li>
+        </ul>"
+    -
+      label: "Bio-Stimulus (Aura):"
+      value: "While a friendly <strong>TYRANIDS</strong> unit is within 6\" of this model, that unit has <strong>Feel No Pain 6+</strong>."
   factions: 
   - Tyranids
   composition:
   -
     label: "This model is equipped with:"
     value: "pyroclastic torrent, talons and betentacled maw"
-- # Termagants (Patrol)
-  name: Termagants (Patrol)
+- # Termagants (Vardenghast Swarm)
+  name: Termagants (Vardenghast Swarm)
   profiles:
   -
     name: Termagants
@@ -391,20 +409,19 @@
   keywords:
   - Infantry
   - Battleline
-  - Great Devourer
   - Endless Multitude
-  - Termagants
+  - Vardenghast Swarm
   ranged:
   -
     name: Fleshborer
-    abilities:
-    - Assault
     range: 18"
     a: 1
     bs: 4+
     s: 5
     ap: 0
     d: 1
+    abilities:
+    - Assault
   melee:
   -
     name: Chitinous claws and teeth
@@ -417,20 +434,19 @@
   abilities:
     faction:
     - Synapse
+    - Shadow in the Warp
     other:
     -
-      label: "Skulking Horrors:"
-      value: "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\"."
+      label: "Skulking Horrors (once per phase per unit):"
+      value: "In your opponent's movement phase, when an enemy unit ends a move within 9\" of this unit, if this unit is <strong>unengaged</strong>, this unit can make a <strong>normal move</strong> of up to D6\""
   factions: 
   - Tyranids
   composition:
   -
     label: "Every model is equipped with:"
     value: "fleshborer, chitinous claws and teeth"
-  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing ten models."
-  squadSummary: "Can be split into two units of ten."
-- # Barbgaunts (Patrol)
-  name: Barbgaunts (Patrol)
+- # Barbgaunts (Vardenghast Swarm)
+  name: Barbgaunts (Vardenghast Swarm)
   profiles:
   -
     name: Barbgaunts
@@ -442,20 +458,19 @@
     oc: 1
   keywords:
   - Infantry
-  - Great Devourer
-  - Barbgaunts
+  - Vardenghast Swarm
   ranged:
   -
     name: Barblauncher
-    abilities:
-    - Blast
-    - Heavy
     range: 24"
     a: d6
     bs: 4+
     s: 5
     ap: 0
     d: 1
+    abilities:
+    - Blast 1
+    - Heavy
   melee:
   -
     name: Chitinous claws and teeth
@@ -468,18 +483,23 @@
   abilities:
     faction:
     - Synapse
+    - Shadow in the Warp
     other:
     -
       label: "Disruption Bombardment:"
-      value: "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent's next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+      value: "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. If you do, that enemy unit is <strong>pinned</strong> until the start of your next turn.<br />While a unit is <strong>pinned</strong>, that unit:
+        <ul>
+          <li>Has -2 <strong>M</strong></li>
+          <li>Has -2 to <strong>advance rolls</strong> and <strong>charge rolls</strong></li>
+        </ul>"
   factions: 
   - Tyranids
   composition:
   -
     label: "Every model is equipped with:"
     value: "barblauncher, chitinous claws and teeth"
-- # Von Ryan's Leapers (Patrol)
-  name: Von Ryan's Leapers (Patrol)
+- # Von Ryan's Leapers (Vardenghast Swarm)
+  name: Von Ryan's Leapers (Vardenghast Swarm)
   profiles:
   -
     name: Von Ryan's Leapers
@@ -492,9 +512,8 @@
     oc: 1
   keywords:
   - Infantry
-  - Great Devourer
   - Vanguard Invader
-  - Von Ryan's Leapers
+  - Vardenghast Swarm
   melee:
   -
     name: Leaper's talons
@@ -532,14 +551,14 @@
     sv: 2+
     iv: 4+
     w: 6
-    ld: 4+
+    ld: 6+
     oc: 1
   keywords:
   - Infantry
   - Character
   - Noble
   - Overlord
-  - Amonhotekh
+  - Amonhotekh's Guard
   ranged:
   -
     name: Tachyon arrow
@@ -563,24 +582,20 @@
     abilities:
     - Devastating Wounds
   abilities:
-    core:
-    - Leader
     faction:
     - Reanimation Protocols
     other:
     -
-      label: "Implacable Resilience:"
-      value: "Each time an attack is allocated to this model, subtract 1 from that attack's Damage characteristic."
-    leader:
-    - Necron Warriors
+      label: "Iron Will:"
+      value: "In the Fight phase, when this model is <strong>destroyed</strong>, if this unit has not been <strong>selected to fight</strong> this phase, roll one D6: on a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
   factions: 
   - Necrons
   composition:
   -
     label: "This model is equipped with:"
     value: "tachyon arrow, overlord's blade"
-- # Necron Warriors (Patrol)
-  name: Necron Warriors (Patrol)
+- # Necron Warriors (Amonhotekh's Guard)
+  name: Necron Warriors (Amonhotekh's Guard)
   profiles:
   -
     name: Necron Warriors
@@ -593,7 +608,7 @@
   keywords:
   - Infantry
   - Battleline
-  - Necron Warriors
+  - Amonhotekh's Guard
   ranged:
   -
     name: Gauss flayer
@@ -620,7 +635,7 @@
     - Lethal Hits
   melee:
   -
-    name: Close combat weapon
+    name: Combat attachments
     range: Melee
     a: 1
     ws: 4+
@@ -630,17 +645,21 @@
   abilities:
     faction:
     - Reanimation Protocols
+    other:
+    -
+      label: "Their Number is Legion:"
+      value: "When this unit's Reanimation Protocols activate, it can re-roll the dice to determine the number of wounds reanimated."
   factions: 
   - Necrons
   composition:
   -
     label: "5 models are equipped with:"
-    value: "gauss flayer, close combat weapon"
+    value: "gauss flayer, combat attachments"
   -
     label: "5 models are equipped with:"
-    value: "gauss reaper, close combat weapon"
-- # Skorpekh Destroyers (Patrol)
-  name: Skorpekh Destroyers (Patrol)
+    value: "gauss reaper, combat attachments"
+- # Skorpekh Destroyers (Amonhotekh's Guard)
+  name: Skorpekh Destroyers (Amonhotekh's Guard)
   profiles:
   -
     name: Skorpekh Destroyers
@@ -652,10 +671,11 @@
     oc: 2
   keywords:
   - Infantry
-  - Skorpekh Destroyers
+  - Destroyer Cult
+  - Amonhotekh's Guard
   melee:
   -
-    name: Skorpekh hyperphase weapons
+    name: Hyperphase blades
     range: Melee
     a: 4
     ws: 3+
@@ -665,21 +685,27 @@
   abilities:
     faction:
     - Reanimation Protocols
-    wargear:
+    other:
     -
-      label: Plasmacyte
-      value: "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+      label: Plasmacyte (once per battle per unit)
+      value: "When this unit is <strong>selected to fight</strong>, you can use this ability. If you do, this unit's attacks have <strong>[DEVASTATING WOUNDS]</strong>"
+    -
+      label: Whirling Onslaught
+      value: "<ul>
+          <li>This unit's melee attacks can re-roll <strong>hit rolls</strong> of 1.</li>
+          <li>If this unit made a <strong>charge move</strong> this turn, this unit's melee attacks can re-roll <strong>hit rolls</strong></li>
+        </ul>"
   factions: 
   - Necrons
   composition:
   -
     label: "Every model is equipped with:"
-    value: "skorpekh hyperphase weapons"
+    value: "hyperphase blades"
   -
-    label: "This unit is equipped with:"
+    label: "1 model is equipped with:"
     value: "1 plasmacyte"
-- # Canoptek Scarab Swarms (Patrol)
-  name: Canoptek Scarab Swarms (Patrol)
+- # Canoptek Scarab Swarms (Amonhotekh's Guard)
+  name: Canoptek Scarab Swarms (Amonhotekh's Guard)
   profiles:
   -
     name: Canoptek Scarab Swarms
@@ -693,29 +719,33 @@
   - Swarm
   - Fly
   - Canoptek
-  - Scarab Swarms
+  - Amonhotekh's Guard
   melee:
   -
     name: Feeder mandibles
-    abilities:
-    - Lethal Hits
     range: Melee
     a: 6
     ws: 5+
     s: 2
     ap: 0
     d: 1
+    abilities:
+    - Lethal Hits
   abilities:
     faction:
     - Reanimation Protocols
+    other:
+    -
+      label: "Scarab Interference:"
+      value: "While an enemy unit is <strong>engaged</strong> with this unit, that enemy unit's attacks have -1 to </strong>hit rolls</strong>."
   factions: 
   - Necrons
   composition:
   -
     label: "Every model is equipped with:"
     value: "feeder mandibles"
-- # Canoptek Doomstalker (Patrol)
-  name: Canoptek Doomstalker (Patrol)
+- # Canoptek Doomstalker (Amonhotekh's Guard)
+  name: Canoptek Doomstalker (Amonhotekh's Guard)
   profiles:
   -
     name: Canoptek Doomstalker
@@ -730,31 +760,32 @@
   - Vehicle
   - Walker
   - Canoptek
-  - Doomstalker
+  - Canoptek Doomstalker
+  - Amonhotekh's Guard
   ranged:
   -
     name: Doomsday blaster
-    abilities:
-    - Blast
-    - Heavy
     range: 48"
     a: D6+1
     bs: 4+
     s: 14
     ap: -3
     d: 3
+    abilities:
+    - Blast 1
+    - Heavy
   -
     name: Twin gauss flayer
-    abilities:
-    - Lethal Hits
-    - Rapid Fire 1
-    - Twin-Linked
     range: 24"
     a: 1
     bs: 4+
     s: 4
     ap: 0
     d: 1
+    abilities:
+    - Lethal Hits
+    - Rapid Fire 1
+    - Twin-Linked
   melee:
   -
     name: Doomstalker limbs
@@ -848,8 +879,8 @@
   -
     label: "This model is equipped with:"
     value: "shoota, beastchoppa, Beast Snagga klaw."
-- # Beast Snagga Boyz (Patrol)
-  name: Beast Snagga Boyz (Patrol)
+- # Beast Snagga Boyz (Morgim's Butchas)
+  name: Beast Snagga Boyz (Morgim's Butchas)
   profiles:
   -
     name: Beast Snagga Boy
@@ -945,8 +976,8 @@
   -
     label: "8 Beast Snagga Boyz are equipped with:"
     value: "slugga, choppa."
-- # Squighog Boyz (Patrol)
-  name: Squighog Boyz (Patrol)
+- # Squighog Boyz (Morgim's Butchas)
+  name: Squighog Boyz (Morgim's Butchas)
   profiles:
   -
     name: Squighog Boy
@@ -1053,11 +1084,11 @@
     label: "3 Squighog Boyz are equipped with:"
     value: "saddlegit weapons, stikka, squig jaws."
 # Sanctuary Guardians
-- # Canoness Adalya
-  name: Canoness Adalya
+- # Sanctuary Canoness Adalya
+  name: Sanctuary Canoness Adalya
   profiles:
   -
-    name: Canoness Adalya
+    name: Sanctuary Canoness Adalya
     m: 6
     t: 3
     sv: 3+
@@ -1069,8 +1100,9 @@
   - Infantry
   - Character
   - Imperium
+  - Explosives
   - Canoness
-  - Canoness Adalya
+  - Sanctuary Guardians
   ranged:
   -
     name: Condemnor boltgun
@@ -1102,11 +1134,11 @@
     wargear:
     -
       label: Null Rod
-      value: "Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds and Psychic attacks."
+      value: "Models in the bearer's unit have the <strong>Feel No Pain 4+</strong> ability against <strong>mortal wounds</strong> and Psychic attacks."
     other:
     -
-      label: "Lead The Righteous:"
-      value: "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+      label: "Divine Guidance (once per turn per unit):"
+      value: "When a friendly <strong>SANCTUARY GUARDIANS</strong> unit is <strong>selected to attack</strong>, you can use this ability. If you do, that unit's attacks can re-roll <strong>hit rolls</strong>"
     leader:
     - Battle Sister Squad
     - Celestian Sacresants
@@ -1116,8 +1148,8 @@
   -
     label: "This model is equipped with:"
     value: "condemnor boltgun, hallowed chainsword, null rod"
-- # Battle Sisters Squad (Patrol)
-  name: Battle Sisters Squad (Patrol)
+- # Battle Sisters Squad (Sanctuary Guardians)
+  name: Battle Sisters Squad (Sanctuary Guardians)
   profiles:
   -
     name: Battle Sisters Squad
@@ -1130,9 +1162,10 @@
     oc: 2
   keywords:
   - Infantry
+  - Explosives
   - Battleline
   - Imperium
-  - Battle Sisters Squad
+  - Sanctuary Guardians
   ranged:
   -
     name: Bolt pistol
@@ -1194,7 +1227,7 @@
     - Torrent
   melee:
   -
-    name: Close combat weapon
+    name: Stocks and fists
     num: 9
     range: Melee
     a: 1
@@ -1217,7 +1250,15 @@
     wargear:
     -
       label: Simulacrum Imperialis
-      value: "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: On a 4+, you gain 1 Miracle dice with a value equal to that result."
+      value: "At the end of your Command phase, for each <strong>objective</strong> you control that has a friendly unit with this ability within range of it, roll one D6:
+        <ul><li>On a 4+, you gain 1 Miracle dice with a value equal to that result.</li></ul>"
+    other:
+    -
+      label: "Defenders of the Faith:"
+      value: "At the end of your Command phase, if this unit is controlling an <strong>objective</strong>, that <strong>objective</strong> is <strong>secured</strong>."
+    -
+      label: "Cherub (once per battle per unit):"
+      value: "When this unit has performed an Act of Faith, you can use this ability. If you do, you gain 1 Miracle dice."
   factions: 
   - Adepta Sororitas
   composition:
@@ -1236,10 +1277,8 @@
   -
     label: "6 Battle Sisters are equipped with:"
     value: "bolt pistol, boltgun, close combat weapon"
-  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models."
-  squadSummary: "Can be split into two units of five."
-- # Celestian Sacresants (Patrol)
-  name: Celestian Sacresants (Patrol)
+- # Celestian Sacresants (Sanctuary Guardians)
+  name: Celestian Sacresants (Sanctuary Guardians)
   profiles:
   -
     name: Celestian Sacresants
@@ -1253,7 +1292,8 @@
   keywords:
   - Infantry
   - Imperium
-  - Celestian Sacresants
+  - Explosives
+  - Sanctuary Guardians
   ranged:
   -
     name: Bolt pistol
@@ -1274,21 +1314,23 @@
     s: 4
     ap: -1
     d: 2
+    abilities:
+    - Lethal Hits
   abilities:
     faction:
     - Acts of Faith
     other:
     - 
       label: "Sworn Protectors:"
-      value: "While an ADEPTA SORORITAS CHARACTER is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll"
+      value: "When an enemy unit targets this unit, if this unit has <strong>ADEPTA SORORITAS CHARACTER</strong>, attacks that target this unit has -1 to <strong>wound rolls</strong>."
   factions: 
   - Adepta Sororitas
   composition:
   -
     label: "Every model is equipped with:"
     value: "bolt pistol, hallowed mace"
-- # Arco-flagellants (Patrol)
-  name: Arco-flagellants (Patrol)
+- # Arco-flagellants (Sanctuary Guardians)
+  name: Arco-flagellants (Sanctuary Guardians)
   profiles:
   -
     name: Arco-flagellants
@@ -1301,7 +1343,8 @@
   keywords:
   - Infantry
   - Imperium
-  - Arco-flagellants
+  - Penitent
+  - Sanctuary Guardians
   melee:
   -
     name: Arco-flails
@@ -1311,6 +1354,8 @@
     s: 5
     ap: 0
     d: 1
+    abilities:
+    - Sustained Hits 1
   abilities:
     core:
     - Feel No Pain 5+
@@ -1319,7 +1364,11 @@
     other:
     - 
       label: "Extremis Trigger Word:"
-      value: "Each time this unit is selected to fight, you can choose to invoke its extremis trigger word. If you do, then until the end of the phase, arco-flails equipped by models in this unit have an Attacks characteristic of 6 and the [Hazardous] ability."
+      value: "When this unit is selected to fight, you can use this ability. If you do:
+        <ul>
+          <li>This unit's arco-flails weapons have 6 <strong>A</strong>.</li>
+          <li>This unit's melee attacks have <strong>[HAZARDOUS]</strong></li>
+        </ul>"
   factions: 
   - Adepta Sororitas
   composition:
@@ -1340,14 +1389,14 @@
     ld: 6+
     oc: 3
   keywords:
-  - Monster
+  - Chaos
   - Character
   - Daemon
-  - Psyker
-  - Chaos
-  - Tzeentch
   - Daemon Prince
-  - Zadophon the Soul Eater
+  - Monster
+  - Psyker
+  - Tzeentch
+  - Prism of Zadophon
   ranged:
   -
     name: Infernal Cannon
@@ -1359,7 +1408,20 @@
     d: 2
   melee:
   -
-    name: Hellforged Weapons
+    name: Hellforged Weapons - Strike
+    profile: true
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 8
+    ap: -2
+    d: 3
+    abilities:
+    - Devastating Wounds
+    - Psychic
+  -
+    name: Hellforged Weapons - Sweep
+    profile: true
     range: Melee
     a: 12
     ws: 2+
@@ -1375,7 +1437,10 @@
     other:
     -
       label: "Spirit Snare:"
-      value: "Each time a friendly THOUSAND SONS PSYKER model with the Cabal of Sorcerers ability is destroyed while within 9\" of one or more models with this ability, select one of those models with this ability: until the end of the battle, each time the selected model attempts a Ritual, add 1 to the Psychic test result (to a maximum of +2)."
+      value: "When a friendly <strong>THOUSAND SONS PSYKER</strong> model with the Cabal of Sorcerers ability is <strong>destroyed</strong>, if that model is within 9\" of a model with this ability, you can select one of those models with this ability. When that selected model attempts a Ritual, it has +1 to the Psychic test result (to a maximum of +2)."
+    -
+      label: "Glamour of Tzeentch (Aura, Psychic):"
+      value: "When a friendly <strong>THOUSAND SONS INFANTRY</strong> unit is within 6\" of this model, that unit has <strong>Stealth</strong>."
   factions: 
   - Thousand Sons
   composition:
@@ -1404,7 +1469,7 @@
   - Tzeentch
   - Mutant
   - Tzaangor Shaman
-  - Kaa'skrek
+  - Prism of Zadophon
   ranged:
   -
     name: Baleful Devolution
@@ -1415,7 +1480,7 @@
     ap: 0
     d: 1
     abilities:
-    - Blast
+    - Blast 1
     - Devastating Wounds
     - Psychic
   melee:
@@ -1437,7 +1502,14 @@
     other:
     -
       label: "Bestial Prophet:"
-      value: "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+      value: "If this unit is an Attached unit, this unit's attacks have +1 to <strong>hit rolls</strong>."
+    -
+      label: "Sacrificial Blessing:"
+      value: "In your Shooting phase and the Fight phase, when this unit is <strong>selected to attack</strong>, if this unit has one or more Bodyguard models, you can use this ability. If you do:
+        <ul>
+          <li>One Bodyguard model in this unit is <strong>destroyed</strong>.</li>
+          <li>This model's attack's have +D3 <strong>A</strong> and <strong>S</strong></li>
+        </ul>"
     leader:
     - Tzaangor Enlightened
   factions: 
@@ -1446,15 +1518,14 @@
   -
     label: "This model is equipped with:"
     value: "Baleful Devolution, force stave"
-- # Rubric Marines (Patrol)
-  name: Rubric Marines (Patrol)
+- # Rubric Marines (Prism of Zadophon)
+  name: Rubric Marines (Prism of Zadophon)
   profiles:
   -
     name: Aspiring Sorcerer
     m: 6
     t: 4
     sv: 3+
-    iv: 5+
     w: 3
     ld: 6+
     oc: 2
@@ -1463,7 +1534,6 @@
     m: 6
     t: 4
     sv: 3+
-    iv: 5+
     w: 2
     ld: 7+
     oc: 2
@@ -1473,8 +1543,8 @@
   - Chaos
   - Tzeentch
   - Rubricae
-  - Rubric Marines
-  - Psyker (Aspiring Sorcerer Only)
+  - Psyker
+  - Prism of Zadophon
   ranged:
   -
     name: Inferno bolt pistol
@@ -1488,6 +1558,15 @@
     abilities:
     - Close-Quarters
   -
+    name: Inferno boltgun
+    num: 3
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -2
+    d: 1
+  -
     name: Malefic Curse
     num: 1
     range: 24"
@@ -1500,15 +1579,6 @@
     - Anti-Infantry 4+
     - Devastating Wounds
     - Psychic
-  -
-    name: Inferno boltgun
-    num: 3
-    range: 24"
-    a: 2
-    bs: 3+
-    s: 4
-    ap: -2
-    d: 1
   -
     name: Soulreaper Cannon
     num: 1
@@ -1534,15 +1604,6 @@
     - Torrent
   melee:
   -
-    name: Close combat weapon
-    num: 9
-    range: Melee
-    a: 2
-    ws: 3+
-    s: 4
-    ap: 0
-    d: 1
-  -
     name: Force weapon
     num: 1
     range: Melee
@@ -1553,9 +1614,29 @@
     d: D3
     abilities:
     - Psychic
+  -
+    name: Stocks and fists
+    num: 9
+    range: Melee
+    a: 2
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
   abilities:
     faction:
-    - Cabal of Sorcerers (Aspiring Sorcerer Only)
+    - Cabal of Sorcerers
+    other:
+    -
+      label: "Icon of Flame:"
+      value: "This unit's ranged attacks (excluding <strong>CHARACTER</strong> models' attacks) have <strong>[IGNORES COVER]</strong>."
+    -
+      label: "Bringers of Change:"
+      value: "This unit's ranged attacks:
+        <ul>
+          <li>Can re-roll <strong>wound rolls</strong> of 1.</li>
+          <li><u>Or:</u> That target a unit within the range of an <strong>objective</strong> can re-roll <strong>wound rolls</strong>.</li>
+        </ul>"
   factions: 
   - Thousand Sons
   composition:
@@ -1571,8 +1652,8 @@
   -
     label: "3 Rubric Marine models are equipped with:"
     value: "Inferno boltgun, close combat weapon"
-- # Tzaangor Enlightened (Patrol)
-  name: Tzaangor Enlightened (Patrol)
+- # Tzaangor Enlightened (Prism of Zadophon)
+  name: Tzaangor Enlightened (Prism of Zadophon)
   profiles:
   -
     name: Tzaangor Enlightened
@@ -1589,7 +1670,7 @@
   - Chaos
   - Tzeentch
   - Mutant
-  - Tzaangor Enlightened
+  - Prism of Zadophon
   melee:
   -
     name: Divining Spear
@@ -1606,7 +1687,10 @@
     other:
     -
       label: "Prophesied Doom:"
-      value: "Each time this unit ends a Charge mode, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
+      value: "When this unit ends a <strong>charge move</strong>, you can select one enemy unit <strong>engaged</strong> with this unit. For each model in this unit <strong>engaged</strong> with that enemy unit, roll one D6:
+        <ul>
+          <li>On a 4+, that unit suffers 1 mortal wound.</li>
+        </ul>"
   factions: 
   - Thousand Sons
   composition:
@@ -1871,8 +1955,8 @@
   - Character
   - Cult Mechanicus
   - Tech-Priest
-  - Manipulus
-  - Manipulus Skand
+  - Tech-Priest Manipulus
+  - Purge Corps Deltic-9
   ranged:
   -
     name: Transonic cannon
@@ -1899,8 +1983,11 @@
     - Leader
     other:
     -
-      label: "Galvanic Field:"
-      value: "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      label: "Defend the Divine Work (once per battle per unit):"
+      value: "At the start of a phase, you can use this ability. If you do, this unit has 4+ <strong>InSv</strong> until the end of the phase."
+    -
+      label: "Mechanical Guidance (once per turn per unit):"
+      value: "When a friendly <strong>PURGE CORPS DELTIC-9</strong> unit <strong>visible</strong> to or within 12\" of this model is <strong>selected to attack</strong>, you can use this ability. If you do, that unit's attacks can re-roll <strong>wound rolls</strong>."
     leader:
     - Skitarii Vanguard
   factions: 
@@ -1909,11 +1996,11 @@
   -
     label: "This model is equipped with:"
     value: "transonic cannon, Omnissian staff"
-- # Skitarii Vanguard (Patrol)
-  name: Skitarii Vanguard (Patrol)
+- # Skitarii Vanguard (Purge Corps Deltic-9)
+  name: Skitarii Vanguard (Purge Corps Deltic-9)
   profiles:
   -
-    name: Skitarii Vanguard (Patrol)
+    name: Skitarii Vanguard
     m: 6
     t: 3
     sv: 4+
@@ -1926,7 +2013,7 @@
   - Battleline
   - Imperium
   - Skitarii
-  - Vanguard
+  - Purge Corps Deltic-9
   ranged:
   -
     name: Arc rifle
@@ -1988,7 +2075,7 @@
     - Anti-Infantry 4+
   melee:
   -
-    name: Alpha combat weapon
+    name: Alpha's combat artifact
     num: 1
     range: Melee
     a: 2
@@ -1997,7 +2084,7 @@
     ap: -1
     d: 1
   -
-    name: Close combat weapon
+    name: Gun stocks
     range: Melee
     a: 1
     ws: 4+
@@ -2010,27 +2097,27 @@
     other:
     -
       label: "Rad-Saturation (Aura):"
-      value: "While an enemy unit (excluding VEHICLE units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit."
+      value: "While an enemy unit (excluding VEHICLE units) is within 3\" of this unit, that enemy unit has -1 <strong>OC</strong>"
   factions: 
   - Adeptus Mechanicus
   composition:
   -
     label: "The Skitarii Vanguard Alpha model is equipped with:"
-    value: "Mechanicus pistol, Alpha combat weapon"
+    value: "Mechanicus pistol, Alpha's combat artifact"
   -
     label: "1 Skitarii Vanguard model is equipped with:"
-    value: "Arc Rifle, close combat weapon"
+    value: "Arc Rifle, gun stocks"
   -
     label: "1 Skitarii Vanguard model is equipped with:"
-    value: "Plasma caliver, close combat weapon"
+    value: "Plasma caliver, gun stocks"
   -
     label: "7 Skitarii Vanguard model is equipped with:"
-    value: "Radium carbine, close combat weapon"
-- # Serberys Sulphurhounds (Patrol)
-  name: Serberys Sulphurhounds (Patrol)
+    value: "Radium carbine, gun stocks"
+- # Serberys Sulphurhounds (Purge Corps Deltic-9)
+  name: Serberys Sulphurhounds (Purge Corps Deltic-9)
   profiles:
   -
-    name: Serberys Sulphurhounds (Patrol)
+    name: Serberys Sulphurhounds
     m: 12
     t: 4
     sv: 4+
@@ -2042,7 +2129,7 @@
   - Mounted
   - Imperium
   - Skitarii
-  - Serberys Sulphurhounds
+  - Purge Corps Deltic-9
   ranged:
   -
     name: Mechanicus pistol
@@ -2066,7 +2153,7 @@
     ap: 0
     d: 1
     abilities:
-    - Blast
+    - Blast 1
     - Ignores Cover
   -
     name: Phosphor pistol
@@ -2120,8 +2207,12 @@
     - Doctrina Imperatives
     other:
     -
-      label: "Line-Breakers:"
-      value: "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units. For each 4+, that enemy unit suffers 1 mortal wound."
+      label: "Pinning Fire:"
+      value: "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. If you do, that enemy unit is <strong>pinned</strong> until the start of your next turn. While that unit is <strong>pinned</strong>, that unit:
+        <ul>
+          <li>Has -2 <strong>M</strong>.</li>
+          <li>Has -2 to <strong>charge rolls</strong>.</li>
+        </ul>"
   factions: 
   - Adeptus Mechanicus
   composition:
@@ -2134,11 +2225,11 @@
   -
     label: "1 Serberys Sulphurhound model is equipped with:"
     value: "2 phosphor pistols, sulphur breath, clawed limbs"
-- # Pteraxii Sterylizors (Patrol)
-  name: Pteraxii Sterylizors (Patrol)
+- # Pteraxii Sterylizors (Purge Corps Deltic-9)
+  name: Pteraxii Sterylizors (Purge Corps Deltic-9)
   profiles:
   -
-    name: Pteraxii Sterylizors (Patrol)
+    name: Pteraxii Sterylizors
     m: 12
     t: 4
     sv: 4+
@@ -2152,8 +2243,7 @@
   - Jump Pack
   - Imperium
   - Skitarii
-  - Pteraxii
-  - Sterylizors
+  - Purge Corps Deltic-9
   ranged:
   -
     name: Flechette blaster
@@ -2171,7 +2261,7 @@
     range: 12"
     a: D6
     bs: N/A
-    s: 3
+    s: 4
     ap: 0
     d: 1
     abilities:
@@ -2179,7 +2269,7 @@
     - Torrent
   melee:
   -
-    name: Pteraxii Talons
+    name: Talons
     range: Melee
     a: 2
     ws: 4+
@@ -2205,7 +2295,11 @@
     other:
     -
       label: "Searing Conflagration:"
-      value: "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, each time such an attack targets such a unit, you can re-roll the Wound roll instead."
+      value: "This unit's phosphor torch attacks that target a unit within range of an <strong>objective</strong>:
+        <ul>
+          <li>Can re-roll <strong>wound rolls</strong> of 1.</li>
+          <li><u>Or:</u> If this unit is within 6\" of a friendly <strong>ADEPTUS MECHANICUS BATTLELINE</strong> unit, can re-roll <strong>wound rolls</strong></li>
+        </ul>"
   factions: 
   - Adeptus Mechanicus
   composition:
@@ -2234,7 +2328,7 @@
   - Psyker
   - Chaos
   - Master of Possession
-  - Aranis Zarkan
+  - Zarkan's Daemonkin
   ranged:
   -
     name: Bolt pistol
@@ -2285,7 +2379,7 @@
     ap: -1
     d: D3
     abilities:
-    - Anti-Psyker 4+
+    - Anti-Psyker 2+
     - Psychic
   abilities:
     core:
@@ -2294,8 +2388,20 @@
     - Dark Pacts
     other:
     -
-      label: "Sacrificial Dagger:"
-      value: "Once per phase, when this model is selected to shoot or fight, it can use this ability. If it does, this model's unit suffers 1 mortal wound and, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Hit roll and add 1 to the Wound roll."
+      label: "Sacrificial Dagger (once per phase per unit):"
+      value: "When this model is <strong>selected to attack</strong>, you can use this ability. If you do:
+        <ul>
+          <li>This unit suffers 1 <strong>mortal wound</strong>.</li>
+          <li>This unit's Psychic attacks have:
+            <ul>
+              <li>+1 to <strong>hit rolls</strong></li>
+              <li>+1 to <strong>wound rolls</strong></li>
+            </ul>
+          </li>
+        </ul>"
+    -
+      label: "Daemonkin (Psychic):"
+      value: "While this unit has a Bodyguard model, this unit has +1 to <strong>advance rolls</strong> and <strong>charge rolls</strong>."
     leader:
     - Legionaries
     - Possessed
@@ -2305,11 +2411,11 @@
   -
     label: "This model is equipped with:"
     value: "bolt pistol, Rite of Possession, Aranis Zarkan"
-- # Possessed (Patrol)
-  name: Possessed (Patrol)
+- # Possessed (Zarkan's Daemonkin)
+  name: Possessed (Zarkan's Daemonkin)
   profiles:
   -
-    name: Possessed (Patrol)
+    name: Possessed
     m: 9
     t: 6
     sv: 3+
@@ -2321,7 +2427,7 @@
   - Infantry
   - Chaos
   - Daemon
-  - Possessed
+  - Zarkan's Daemonkin
   melee:
   -
     name: Hideous mutations
@@ -2334,17 +2440,24 @@
   abilities:
     faction:
     - Dark Pacts
+    other:
+    -
+      label: "Chaos Icon:"
+      value: "When this unit makes a Dark Pact, this unit can re-roll the <strong>leadership roll</strong>."
+    -
+      label: "Unholy Bloodshed (once per battle per unit):"
+      value: "When this unit makes a Dark Pact, you can use this ability. If you do, this unit's attacks have <strong>[DEVASTATING WOUNDS]</strong>"
   factions: 
   - Heretic Astartes
   composition:
   -
     label: "Every model is equipped with:"
     value: "Hideous mutations"
-- # Legionaries (Patrol)
-  name: Legionaries (Patrol)
+- # Legionaries (Zarkan's Daemonkin)
+  name: Legionaries (Zarkan's Daemonkin)
   profiles:
   -
-    name: Legionaries (Patrol)
+    name: Legionaries
     m: 6
     t: 4
     sv: 3+
@@ -2355,7 +2468,7 @@
   - Infantry
   - Battleline
   - Chaos
-  - Legionaries
+  - Zarkan's Daemonkin
   ranged:
   -
     name: Bolt pistol
@@ -2436,7 +2549,7 @@
     ap: -2
     d: 1
   -
-    name: Close combat weapon
+    name: Fists and knives
     num: 9
     range: Melee
     a: 3
@@ -2449,8 +2562,15 @@
     - Dark Pacts
     other:
     -
+      label: "Chaos Icon:"
+      value: "When this unit makes a Dark Pact, this unit can re-roll the <strong>leadership roll</strong>."
+    -
       label: "Veterans of the Long War:"
-      value: "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+      value: "this unit's melee attacks:
+        <ul>
+          <li>Can re-roll <strong>wound rolls</strong> of 1.</li>
+          <li><u>Or:</u> That target a unit within range of an <strong>objective</strong> can re-roll <strong>wound rolls</strong>.</li>
+        </ul>"
   factions: 
   - Heretic Astartes
   composition:
@@ -2459,18 +2579,20 @@
     value: "Plasma pistol, accursed weapon"
   -
     label: "1 Legionary is equipped with:"
-    value: "Bolt pistol, meltagun, close combat weapon"
+    value: "Bolt pistol, meltagun, fists and knives"
   -
     label: "1 Legionary is equipped with:"
-    value: "Bolt pistol, heavy bolter, close combat weapon"
+    value: "Bolt pistol, heavy bolter, fists and knives"
   -
     label: "7 Legionaries are equipped with:"
-    value: "Bolt pistol, boltgun, close combat weapon"
-- # Cultist Mob (Patrol)
-  name: Cultist Mob (Patrol)
+    value: "Bolt pistol, boltgun, fists and knives"
+  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfinder Shas'ui model and the other unit must contain the models equipped with rail rifles."
+  squadSummary: "Can be split into two units of five."
+- # Cultist Mob (Zarkan's Daemonkin)
+  name: Cultist Mob (Zarkan's Daemonkin)
   profiles:
   -
-    name: Cultist Mob (Patrol)
+    name: Cultist Mob
     m: 6
     t: 3
     sv: 6+
@@ -2482,7 +2604,8 @@
   - Battleline
   - Chaos
   - Damned
-  - Cultist Mob
+  - Explosives
+  - Zarkan's Daemonkin
   ranged:
   -
     name: Autopistol
@@ -2508,7 +2631,7 @@
     - Close-Quarters
   melee:
   -
-    name: Brutal assault weapon
+    name: Blades and cudgels
     range: Melee
     a: 2
     ws: 4+
@@ -2518,15 +2641,19 @@
   abilities:
     faction:
     - Dark Pacts
+    other:
+    -
+      label: "For the Dark Gods:"
+      value: "At the end of your Command phase, if this unit is controlling an <strong>objective</strong>, that <strong>objective</strong> is <strong>secured</strong>."
   factions: 
   - Heretic Astartes
   composition:
   -
     label: "The Cultist Champion is equipped with:"
-    value: "Bolt pistol, brutal assault weapon"
+    value: "Bolt pistol, blades and cudgels"
   -
     label: "9 Chaos Cultists are equipped with:"
-    value: "Autopistol, brutal assault weapon"
+    value: "Autopistol, blades and cudgels"
 # Sudden Dawn Cadre
 - # Commander Cloudspear
   name: Commander Cloudspear
@@ -2546,7 +2673,7 @@
   - Character
   - Battlesuit
   - Commander in Enforcer Battlesuit
-  - Commander Cloudspear
+  - Sudden Dawn Cadre
   ranged:
   -
     name: Airbursting fragmentation projector
@@ -2557,11 +2684,11 @@
     ap: 0
     d: 1
     abilities:
-    - Blast
+    - Blast 1
     - Indirect Fire
   -
     name: Plasma rifle
-    range: 24"
+    range: 18"
     a: 1
     bs: 3+
     s: 8
@@ -2583,22 +2710,26 @@
     - For the Greater Good
     wargear:
     -
-      label: Shield Drone
-      value: Add 1 to the bearer's Wounds characteristic.
+      label: "Shield Drone:"
+      value: This model has +1 <strong>W</strong>.
     -
-      label: Weapon Support System
-      value: Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.
+      label: "Superior Weapon Support System:"
+      value: "This model's ranged attacks can ignore modifiers to:
+        <ul>
+          <li><strong>BS</strong>.</li>
+          <li><strong>Hit rolls</strong>.</li>
+        </ul>"
   factions: 
   - T'au Empire
   composition:
   -
     label: "This model is equipped with:"
     value: "Airbursting fragmentation projector, plasma rifle, battlesuit fists, 2 shield drones, weapon support systems."
-- # Pathfinder Team (Patrol)
-  name: Pathfinder Team (Patrol)
+- # Pathfinder Team (Sudden Dawn Cadre)
+  name: Pathfinder Team (Sudden Dawn Cadre)
   profiles:
   -
-    name: Pathfinder Team (Patrol)
+    name: Pathfinder Team
     m: 7
     t: 3
     sv: 4+
@@ -2608,7 +2739,8 @@
   keywords:
   - Infantry
   - Markerlight
-  - Pathfinder Team
+  - Explosives
+  - Sudden Dawn Cadre
   ranged:
   -
     name: Pulse carbine
@@ -2643,7 +2775,7 @@
     - Heavy
   melee:
   -
-    name: Close combat weapon
+    name: Gun stocks
     range: Melee
     a: 1
     ws: 5+
@@ -2657,27 +2789,32 @@
     - For the Greater Good
     wargear:
     -
-      label: Grav-inhibitor Drone
-      value: "Each time an enemy unit selects the bearer's unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)"
+      label: "Grav-inhibitor Drone:"
+      value: "When an enemy unit selects this unit as a <strong>charge target</strong>, that <strong>charge roll</strong> has -2."
+    -
+      label: "Target Uploaded:"
+      value: "This unit's attacks that target its Spotted unit have:
+        <ul>
+          <li>+1 <strong>BS</strong>.</li>
+          <li><strong>[IGNORES COVER]</strong></li>
+        </ul>"
   factions: 
   - T'au Empire
   composition:
   -
     label: "The Pathfinder Shas'ui model is equipped with:"
-    value: "Pulse carbine, pulse pistol, close combat weapon, grav-inhibitor drone."
+    value: "Pulse carbine, pulse pistol, gun stocks, grav-inhibitor drone."
   -
     label: "3 Pathfinder models are equipped with:"
-    value: "Pulse pistol, rail rifle, close combat weapon."
+    value: "Pulse pistol, rail rifle, gun stocks."
   -
     label: "6 Pathfinder models are equipped with:"
-    value: "Pulse carbine, pulse pistol, close combat weapon."
-  squads: "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the Pathfinder Shas'ui model and the other unit must contain the models equipped with rail rifles."
-  squadSummary: "Can be split into two units of five: The rail rifles must all be in the same unit and the Shas'ui must be in the other unit."
-- # Breacher Team (Patrol)
-  name: Breacher Team (Patrol)
+    value: "Pulse carbine, pulse pistol, gun stocks."
+- # Breacher Team (Sudden Dawn Cadre)
+  name: Breacher Team (Sudden Dawn Cadre)
   profiles:
   -
-    name: Breacher Team (Patrol)
+    name: Breacher Team
     m: 6
     t: 3
     sv: 4+
@@ -2689,7 +2826,8 @@
   - Battleline
   - Markerlight
   - Fire Warrior
-  - Breacher Team
+  - Explosives
+  - Sudden Dawn Cadre
   ranged:
   -
     name: Pulse blaster
@@ -2713,7 +2851,7 @@
     - Close-Quarters
   melee:
   -
-    name: Close combat weapon
+    name: Gun stocks
     range: Melee
     a: 1
     ws: 5+
@@ -2726,18 +2864,18 @@
     other:
     - 
       label: Breach and Clear
-      value: "Each time a model in this unit makes a ranged attack that targets an enemy unit within range of an objective marker, you can re-roll the Wound roll."
+      value: "This unit's ranged attacks that target a unit within range of an <strong>objective</strong> can re-roll <strong>wound rolls</strong>."
   factions: 
   - T'au Empire
   composition:
   -
     label: "Every model is equipped with:"
-    value: "Pulse blaster, pulse pistol, close combat weapon"
-- # Devilfish (Patrol)
-  name: Devilfish (Patrol)
+    value: "Pulse blaster, pulse pistol, gun stocks"
+- # Devilfish (Sudden Dawn Cadre)
+  name: Devilfish (Sudden Dawn Cadre)
   profiles:
   -
-    name: Devilfish (Patrol)
+    name: Devilfish
     m: 12
     t: 9
     sv: 3+
@@ -2749,7 +2887,7 @@
   - Fly
   - Transport
   - Dedicated Transport
-  - Devilfish
+  - Sudden Dawn Cadre
   ranged:
   -
     name: Accelerator burst cannon
@@ -2785,7 +2923,11 @@
     - Deadly Demise D3
     faction:
     - For the Greater Good
-  transport: "This model has a transport capacity of 12\" T'AU EMPIRE INFANTRY models. It cannot transport BATTLESUIT, KROOT, or VESPID STINGWINGS models."
+    other:
+    -
+      label: "Rapid Disembark:"
+      value: "When a unit embarked within this model makes a <strong>disembark move</strong> using the <strong>rapid disembark</strong>/<strong>tactical disembark</strong> modes, the set-up distance is 6\""
+  transport: "This model has a transport capacity of 12\" Infantry models. It cannot transport Battlesuit, Kroot, or Vespid Stingwings models."
   factions: 
   - T'au Empire
   composition:
@@ -2793,11 +2935,11 @@
     label: "This model is equipped with:"
     value: "Accelerator burst cannon, 2 twin pulse carbines, armoured hull."
 # Tristraen's Gilded Blades
-- # Tristraen
-  name: Tristraen
+- # Tristraen of the Gilded Blades
+  name: Tristraen of the Gilded Blades
   profiles:
   -
-    name: Tristraen
+    name: Tristraen of the Gilded Blades
     m: 6
     t: 6
     sv: 2+
@@ -2810,7 +2952,7 @@
   - Character
   - Imperium
   - Blade Champion
-  - Tristraen
+  - Tristraen's Gilded Blades
   melee:
   -
     name: Vaultswords - Behemor
@@ -2848,28 +2990,32 @@
   abilities:
     faction:
     - Martial Ka'tah
+    other:
+    -
+      label: "Rapid Strike:"
+      value: "This unit can re-roll <strong>advance rolls</strong>."
   factions: 
   - Adeptus Custodes
   composition:
   -
     label: "This model is equipped with:"
     value: "Vaultswords."
-- # Custodian Guard (Patrol)
-  name: Custodian Guard (Patrol)
+- # Custodian Guard (Gilded Blades)
+  name: Custodian Guard (Gilded Blades)
   profiles:
   -
-    name: Custodian Guard (Patrol)
+    name: Custodian Guard
     m: 6
     t: 6
     sv: 2+
     iv: 4+
-    w: 3
+    w: 4
     ld: 6+
     oc: 2
   keywords:
   - Infantry
   - Imperium
-  - Custodian Guard
+  - Tristraen's Gilded Blades
   ranged:
   -
     name: Sentinel blade
@@ -2896,19 +3042,30 @@
     - Martial Ka'tah
     wargear:
     -
-      label: Praesidium Shield
-      value: "Add 1 to the bearer's Wounds characteristic."
+      label: "Praesidium Shield:"
+      value: "This model has +1 <strong>W</strong> (included in profile)."
+    other:
+    -
+      label: "Sentinel Storm (once per battle per unit):"
+      value: "In your Shooting phase, when this unit has shot, you can use this ability. If you do, this unit can shoot again."
+    -
+      label: "Stand Vigil"
+      value: "This unit's melee attacks:
+        <ul>
+          <li>Can re-roll <strong>wound rolls</strong> of 1.</li>
+          <li><u>Or:</u> That target a unit within range of an <strong>objective</strong> can re-roll <strong>wound rolls</strong>.</li>
+        </ul>"
   factions: 
   - Adeptus Custodes
   composition:
   -
     label: "Every model is equipped with:"
     value: "Sentinel bade, praesidium shield."
-- # Custodian Wardens (Patrol)
-  name: Custodian Wardens (Patrol)
+- # Custodian Wardens (Gilded Blades)
+  name: Custodian Wardens (Gilded Blades)
   profiles:
   -
-    name: Custodian Wardens (Patrol)
+    name: Custodian Wardens
     m: 6
     t: 6
     sv: 2+
@@ -2919,7 +3076,7 @@
   keywords:
   - Infantry
   - Imperium
-  - Custodian Wardens
+  - Tristraen's Gilded Blades
   ranged:
   -
     name: Castellan axe
@@ -2965,6 +3122,10 @@
   abilities:
     faction:
     - Martial Ka'tah
+    other:
+    -
+      label: "Divine Protection:"
+      value: "This unit has <strong>Feel No Pain 4+</strong> against <strong>mortal wounds</strong>."
   factions: 
   - Adeptus Custodes
   composition:
@@ -2974,11 +3135,11 @@
   -
     label: "2 models are equipped with:"
     value: "Castellan spear"
-- # Allarus Custodians (Patrol)
-  name: Allarus Custodians (Patrol)
+- # Allarus Custodians (Gilded Blades)
+  name: Allarus Custodians (Gilded Blades)
   profiles:
   -
-    name: Allarus Custodians (Patrol)
+    name: Allarus Custodians
     m: 5
     t: 7
     sv: 2+
@@ -2990,18 +3151,18 @@
   - Infantry
   - Terminator
   - Imperium
-  - Allarus Custodians
+  - Tristraen's Gilded Blades
   ranged:
   -
     name: Balistus grenade launcher
     range: 18"
     a: D6
     bs: 2+
-    s: 4
+    s: 5
     ap: -1
     d: 1
     abilities:
-    - Blast
+    - Blast 1
   -
     name: Guardian spear
     range: 24"
@@ -3024,12 +3185,772 @@
   abilities:
     faction:
     - Martial Ka'tah
+    other:
+    -
+      label: "Slayers of Tyrants:"
+      value: "This unit's attacks that target a <strong>CHARACTER/MONSTER/VEHICLE</strong> unit can re-roll <strong>wound rolls</strong>."
+    -
+      label: "From Golden Light (once per battle per unit):"
+      value: "At the end of your opponent's turn, if this unit is <strong>engaged</strong>, you can use this ability. If you do, place this unit is <strong>strategic reserves</strong>"
   factions: 
   - Adeptus Custodes
   composition:
   -
     label: "Every model is equipped with:"
     value: "Balistus grenade launcher, guardian spear."
+# 'Ardmob
+- # Warboss ('Ardmob)
+  name: Warboss ('Ardmob)
+  profiles:
+  -
+    name: Warboss
+    m: 6
+    t: 5
+    sv: 4+
+    iv: 5+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - "'Ardmob"
+  - Character
+  - Explosives
+  - Infantry
+  ranged:
+  -
+    name: Kustom Shoota
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  melee:
+  -
+    name: Kustom Choppa
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 8
+    ap: -2
+    d: 2
+    abilities:
+    - Cleave 1
+  abilities:
+    faction:
+    - Waaagh!
+    core:
+    - Leader
+    other:
+    -
+      label: Smash 'Em Up
+      value: "In the Fight phase, when this unit is <strong>selected to fight</strong>, this unit's melee attacks have:
+        <ul>
+          <li><strong>[LETHAL HITS]</strong></li>
+          <li><u>Or:</u> <strong>[SUSTAINED HITS 1]</strong></li>
+        </ul>"
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Kustom Choppa, 1 Kustom Shoota"
+- # Weirdboy ('Ardmob)
+  name: Weirdboy ('Ardmob)
+  profiles:
+  -
+    name: Weirdboy
+    m: 6
+    t: 5
+    sv: 5+
+    w: 4
+    ld: 7+
+    oc: 1
+  keywords:
+  - "'Ardmob"
+  - Character
+  - Infantry
+  - Psyker
+  ranged:
+  -
+    name: Psychic Powers - Da Stomp
+    profile: true
+    range: 24"
+    a: D6+2
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Blast 1
+    - Psychic
+  -
+    name: Psychic Powers - 'Eadbanger
+    profile: true
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Precision
+    - Psychic
+  melee:
+  -
+    name: Waaagh! Staff - Bash
+    profile: true
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 8
+    ap: -1
+    d: 2
+    abilities:
+    - Psychic
+  -
+    name: Waaagh! Staff - Clobber
+    profile: true
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 8
+    ap: -2
+    d: 2
+    abilities:
+    - Devastating Wounds
+    - Hazardous
+    - Psychic
+  abilities:
+    faction:
+    - Waaagh!
+    core:
+    - Leader
+    - Deadly Demise D3
+    other:
+    -
+      label: "Totem of Mork (Psychic):"
+      value: "At the end of your Command phase, if this unit is controlling an <strong>objective</strong>, that <strong>objective</strong> is <strong>secured</strong>."
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Psychic Powers, 1 Waaagh! Staff"
+- # Wartrakk ('Ardmob)
+  name: Wartrakk ('Ardmob)
+  profiles:
+  -
+    name: Wartrakk
+    m: 12
+    t: 6
+    sv: 4+
+    iv: 6+
+    w: 7
+    ld: 7+
+    oc: 3
+  keywords:
+  - "'Ardmob"
+  - Mounted
+  - Speed Freeks
+  ranged:
+  -
+    name: Kustom Shoota
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2 
+  -
+    name: Rokkit Launcha
+    range: 24"
+    a: D3+3
+    bs: 5+
+    s: 10
+    ap: -2
+    d: 3
+  melee:
+  -
+    name: Choppas
+    range: Melee
+    a: 6
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Indiscriminate Detonations:"
+      value: "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit is <strong>suppressed</strong> until the start of your next turn:
+        <ul>
+          <li>While a unit is <strong>suppressed</strong>, that unit's attacks have -1 to <strong>hit rolls</strong>.</li>
+        </ul>"
+    leader:
+    - Boyz
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Choppas, 1 Kustom Shoota, 1 Rokkit Launcha"
+- # Boyz ('Ardmob)
+  name: Boyz ('Ardmob)
+  profiles:
+  -
+    name: Boss Nob
+    m: 6
+    t: 5
+    sv: 5+
+    w: 2
+    ld: 7+
+    oc: 2
+  -
+    name: Boyz
+    m: 6
+    t: 5
+    sv: 5+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - "'Ardmob"
+  - Explosives
+  - Infantry
+  - Mob
+  ranged:
+  -
+    name: Kustom Shoota
+    num: 1
+    range: 18"
+    a: 4
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 2
+  -
+    name: Shoota
+    num: 9
+    range: 18"
+    a: 2
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+  -
+    name: Slugga
+    range: 12"
+    a: 1
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Big Choppa
+    num: 1
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 2
+  -
+    name: Choppa
+    num: 9
+    range: Melee
+    a: 1
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Grab Dat Scrap:"
+      value: "While this unit is <strong>engaged</strong>, this unit has +1 <strong>OC</strong>."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "The Boss Nob is equipped with:"
+    value: "1 Big Choppa, 1 Kustom Shoota, 1 Slugga"
+  -
+    label: "Every Boyz is equipped with:"
+    value: "1 Choppa, 1 Shoota, 1 Slugga"
+- # Gretchin ('Ardmob)
+  name: Gretchin ('Ardmob)
+  profiles:
+  -
+    name: Gretchin
+    m: 6
+    t: 2
+    sv: 7+
+    w: 1
+    ld: 8+
+    oc: 1
+  keywords:
+  - "'Ardmob"
+  - Grots
+  - Infantry
+  ranged:
+  -
+    name: Blasta
+    range: 18"
+    a: 1
+    bs: 4+
+    s: 3
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Lobbin' Bombs
+    range: 6"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Hazardous
+  melee:
+  -
+    name: Scavenged Shivs
+    range: Melee
+    a: 1
+    ws: 5+
+    s: 2
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Waaagh!
+    other:
+    -
+      label: "Grot Infestation:"
+      value: "When this unit is <strong>destroyed</strong>, you can use this ability. If you do:
+        <ul>
+          <li>Place this unit in <strong>strategic reserves</strong> with all of this unit's <strong>destroyed</strong> models returned to it. This unit is no longer <strong>destroyed</strong>.</li>
+        </ul>
+        This unit has <strong>Deep Strike</strong>."
+  factions: 
+  - Orks
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "1 Blasta, 1 Lobbin' Bombs, 1 Scavenged Shivs"
+# Assault Force
+- # Intercessor Squad (Assault Force)
+  name: Intercessor Squad (Assault Force)
+  profiles:
+  -
+    name: Intercessor Squad
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 3
+  keywords:
+  - Assault Force
+  - Battleline
+  - Explosives
+  - Imperium
+  - Infantry
+  - Tacticus
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Bolt Rifle
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Assault
+    - Heavy
+  -
+    name: Grenade Launcher - Frag
+    num: 1
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Blast 1
+  -
+    name: Grenade Launcher - Krak
+    num: 1
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 5
+    ap: -2
+    d: 3
+    abilities:
+    - Anti-Monster/Vehicle 4+
+  melee:
+  -
+    name: Chainsword
+    num: 1
+    range: Melee
+    a: 5
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  -
+    name: Knives and Fists
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Stalwart Defenders:"
+      value: "When an enemy unit targets this unit, if every model in this unit is within range of an <strong>objective</strong>, attacks that target this unit have -1 <strong>AP</strong>."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "the Intercessor Sergeant is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Chainsword, 1 Knives and Fists"
+  -
+    label: "the Intercessor with Grenade Launcher is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Grenade Launcher, 1 Knives and Fists"
+  -
+    label: "Every Intercessor is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Knives and Fists"
+- # Captain (Assault Force)
+  name: Captain (Assault Force)
+  profiles:
+  -
+    name: Captain
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Character
+  - Explosives
+  - Imperium
+  - Infantry
+  - Tacticus
+  ranged:
+  -
+    name: Heavy Bolt Pistol
+    range: 18"
+    a: 1
+    bs: 2+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Master-crafted Power Weapon
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Relic Shield:"
+      value: "This model has +1 <strong>W</strong> (included in profile)."
+    -
+      label: "Master of War:"
+      value: "At the end of your opponent's Charge phase, if this unit is <strong>unengaged</strong> and within 6\" of one or more enemy units, you can use this ability. If you do, <strong>resolve a charge</strong> with it. When making the <strong>charge roll</strong>, if the result is greater than 6 (after modifiers), change it to 6."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon, Relic Shield"
+- # Vanguard Veteran Squad with Jump Packs (Assault Force)
+  name: Vanguard Veteran Squad with Jump Packs (Assault Force)
+  profiles:
+  -
+    name: Vanguard Veteran Squad with Jump Packs
+    m: 12
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Explosives
+  - Fly
+  - Imperium
+  - Infantry
+  - Jump Pack
+  - Vanguard Veteran Squad
+  ranged:
+  -
+    name: Heavy Bolt Pistol
+    num: 4
+    range: 18"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Plasma Pistol - Standard
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 7
+    ap: -2
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Plasma Pistol - Supercharge
+    profile: true
+    num: 1
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Master-crafted Power Weapon
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Oath of Moment
+    core:
+    - Deep Strike
+    other:
+    -
+      label: "Rapid Reactions (once per turn per unit):"
+      value: "In your opponent's Shooting phase, when an enemy unit has shot, if that unit targeted this unit, this unit can make a <strong>normal move</strong> of up to D6+1\"."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "The Vanguard Veteran Sergeant is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon"
+  -
+    label: "The Vanguard Veteran with Plasma Pistol is equipped with:"
+    value: "1 Plasma Pistol, 1 Master-crafter Power Weapon"
+  -
+    label: "Every Vanguard Veteran is equipped with:"
+    value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon"
+- # Librarian (Assault Force)
+  name: Librarian (Assault Force)
+  profiles:
+  -
+    name: Librarian
+    m: 6
+    t: 4
+    sv: 3+
+    iv: 4+
+    w: 4
+    ld: 6+
+    oc: 1
+  keywords:
+  - Assault Force
+  - Character
+  - Explosives
+  - Imperium
+  - Infantry
+  - Psyker
+  - Tacticus
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Fulmination - Electropulse
+    profile: true
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 8
+    ap: -2
+    d: 3
+    abilities:
+    - Psychic
+  -
+    name: Fulmination - Electrosurge
+    profile: true
+    num: 1
+    range: 24"
+    a: 3
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Blast 2
+    - Psychic
+  melee:
+  -
+    name: Force Weapon
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 2
+    abilities:
+    - Psychic
+  abilities:
+    faction:
+    - Oath of Moment
+    core:
+    - Leader
+    other:
+    -
+      label: "Empyric Insight:"
+      value: "This unit's ranged attacks can ignore modifiers to:
+        <ul>
+          <li><strong>BS</strong></li>
+          <li><strong>Hit rolls</strong> and <strong>wound rolls</strong></li>
+        </ul>"
+    leader:
+    - Intercessor Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Bolt Pistol, 1 Force Weapon, 1 Fulmination"
+- # Land Speeder (Assault Force)
+  name: Land Speeder (Assault Force)
+  profiles:
+  -
+    name: Land Speeder
+    m: 14
+    t: 8
+    sv: 3+
+    w: 9
+    ld: 6+
+    oc: 2
+  keywords:
+  - Assault Force
+  - Fly
+  - Imperium
+  - Vehicle
+  ranged:
+  -
+    name: Multi-melta
+    range: 18"
+    a: 2
+    bs: 3+
+    s: 10
+    ap: -4
+    d: D6
+    abilities:
+    - Melta 2
+  -
+    name: Onslaught Gatling Cannon
+    range: 24"
+    a: 8
+    bs: 3+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Sustained Hits 1
+  -
+    name: Stormfury Missile Launcher
+    range: 48"
+    a: 1
+    bs: 3+
+    s: 10
+    ap: -3
+    d: 4
+  melee:
+  -
+    name: Armoured Impact
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Oath of Moment
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Armoured Impact, 1 Multi-melta, 1 Onslaught Gatling Cannon, 1 Stormfury Missile Launcher"
 # Necrons
 - # Imotekh The Stormlord
   name: Imotekh The Stormlord

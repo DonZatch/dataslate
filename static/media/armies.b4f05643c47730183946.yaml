@@ -1,114 +1,109 @@
 # Combat Patrols
-- # Strike Force Octavius
-  id: CP1
-  category: Combat Patrol
-  name: Strike Force Octavius
-  faction: Space Marines
-  detachment: Strike Force Octavius
-  units:
-  - Captain Octavius
-  - Librarian Tantus
-  - Infernus Squad (Patrol)
-  - Terminator Squad (Patrol)
-  warlord: Captain Octavius
-  ignorestrats:
-  - explosives
-  - crushing impact
-  - "smokescreen"
-  icon: brothers
+# - # Strike Force Octavius
+#   id: CP1
+#   category: Combat Patrol
+#   name: Strike Force Octavius
+#   faction: Space Marines
+#   detachments: 
+#   - Strike Force Octavius
+#   units:
+#   - Captain Octavius
+#   - Librarian Tantus
+#   - Infernus Squad (Patrol)
+#   - Terminator Squad (Patrol)
+#   warlord: Captain Octavius
+#   ignorestrats:
+#   - "smokescreen"
+#   icon: brothers
 - # The Vardenghast Swarm
   id: CP2
   category: Combat Patrol
   name: The Vardenghast Swarm
   faction: Tyranids
-  detachment: The Vardenghast Swarm
+  detachments: 
+  - The Vardenghast Swarm
   units:
   - Terror of Vardenghast
-  - Psychophage (Patrol)
-  - Termagants (Patrol)
-  - Barbgaunts (Patrol)
-  - Von Ryan's Leapers (Patrol)
+  - Psychophage (Vardenghast Swarm)
+  - Termagants (Vardenghast Swarm)
+  - Barbgaunts (Vardenghast Swarm)
+  - Von Ryan's Leapers (Vardenghast Swarm)
   warlord: Terror of Vardenghast
-  ignorestrats:
-  - explosives
-  - "smokescreen"
   icon: bugs
 - # Amonhotekh's Guard
   id: CP3
   category: Combat Patrol
   name: Amonhotekh's Guard
   faction: Necrons
-  detachment: Amonhotekh's Guard
+  detachments: 
+  - Amonhotekh's Guard
   units:
   - Overlord Amonhotekh
-  - Necron Warriors (Patrol)
-  - Skorpekh Destroyers (Patrol)
-  - Canoptek Scarab Swarms (Patrol)
-  - Canoptek Doomstalker (Patrol)
+  - Necron Warriors (Amonhotekh's Guard)
+  - Skorpekh Destroyers (Amonhotekh's Guard)
+  - Canoptek Scarab Swarms (Amonhotekh's Guard)
+  - Canoptek Doomstalker (Amonhotekh's Guard)
   warlord: Overlord Amonhotekh
   ignorestrats:
-  - explosives
-  - "smokescreen"
-  - "rapid ingress"
+  - smokescreen
   icon: robots
-- # Morgim's Butchas
-  id: CP4
-  category: Combat Patrol
-  name: Morgim's Butchas
-  faction: Orks
-  detachment: Morgim's Butchas
-  units:
-  - Beastboss Morgrim
-  - Beast Snagga Boyz (Patrol)
-  - Squighog Boyz (Patrol)
-  warlord: Beastboss Morgrim
-  ignorestrats:
-  - explosives
-  - crushing impact
-  - "smokescreen"
-  - "rapid ingress"
-  icon: orks
+# - # Morgim's Butchas
+#   id: CP4
+#   category: Combat Patrol
+#   name: Morgim's Butchas
+#   faction: Orks
+#   detachments: 
+#   - Morgim's Butchas
+#   units:
+#   - Beastboss Morgrim
+#   - Beast Snagga Boyz (Patrol)
+#   - Squighog Boyz (Patrol)
+#   warlord: Beastboss Morgrim
+#   ignorestrats:
+#   - explosives
+#   - crushing impact
+#   - "smokescreen"
+#   - "rapid ingress"
+#   icon: orks
 - # Sanctuary Guardians
   id: CP5
   category: Combat Patrol
   name: Sanctuary Guardians
   faction: Adepta Sororitas
-  detachment: Sanctuary Guardians
+  detachments: 
+  - Sanctuary Guardians
   units:
-  - Canoness Adalya
-  - Battle Sisters Squad (Patrol)
-  - Celestian Sacresants (Patrol)
-  - Arco-flagellants (Patrol)
+  - Sanctuary Canoness Adalya
+  - Battle Sisters Squad (Sanctuary Guardians)
+  - Celestian Sacresants (Sanctuary Guardians)
+  - Arco-flagellants (Sanctuary Guardians)
   warlord: Canoness Adalya
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: sisters
 - # Prism of Zadophon
   id: CP6
   category: Combat Patrol
   name: Prism of Zadophon
   faction: Thousand Sons
-  detachment: Prism of Zadophon
+  detachments: 
+  - Prism of Zadophon
   units:
   - Zadophon the Soul Eater
   - Kaa'skrek
-  - Tzaangor Enlightened (Patrol)
-  - Rubric Marines (Patrol)
+  - Tzaangor Enlightened (Prism of Zadophon)
+  - Rubric Marines (Prism of Zadophon)
   warlord: Zadophon the Soul Eater
   ignorestrats:
-  - explosives
   - "smokescreen"
-  - "rapid ingress"
   icon: sorcerors
 # - # The Coven Temporus
 #   id: CP7
 #   category: Combat Patrol
 #   name: The Coven Temporus
 #   faction: Thousand Sons
-#   detachment: The Coven Temporus
+#   detachments: 
+#   - The Coven Temporus
 #   units:
 #   - Ahrak the Time Weaver
 #   - Scarab Occult Terminators (Patrol)
@@ -123,16 +118,15 @@
   category: Combat Patrol
   name: Purge Corps Deltic-9
   faction: Adeptus Mechanicus
-  detachment: Purge Corps Deltic-9
+  detachments: 
+  - Purge Corps Deltic-9
   units:
   - Manipulus Skand
-  - Skitarii Vanguard (Patrol)
-  - Serberys Sulphurhounds (Patrol)
-  - Pteraxii Sterylizors (Patrol)
+  - Skitarii Vanguard (Purge Corps Deltic-9)
+  - Serberys Sulphurhounds (Purge Corps Deltic-9)
+  - Pteraxii Sterylizors (Purge Corps Deltic-9)
   warlord: Manipulus Skand
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
   icon: mechs
 - # Zarkan's Daemonkin
@@ -140,33 +134,31 @@
   category: Combat Patrol
   name: Zarkan's Daemonkin
   faction: Chaos Space Marines
-  detachment: Zarkan's Daemonkin
+  detachments: 
+  - Zarkan's Daemonkin
   units:
   - Aranis Zarkan
-  - Possessed (Patrol)
-  - Legionaries (Patrol)
-  - Cultist Mob (Patrol)
+  - Possessed (Zarkan's Daemonkin)
+  - Legionaries (Zarkan's Daemonkin)
+  - Cultist Mob (Zarkan's Daemonkin)
   warlord: Aranis Zarkan
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: heretics
 - # Sudden Dawn Cadre
   id: CP10
   category: Combat Patrol
   name: Sudden Dawn Cadre
   faction: T'au Empire
-  detachment: Sudden Dawn Cadre
+  detachments: 
+  - Sudden Dawn Cadre
   units:
   - Commander Cloudspear
-  - Pathfinder Team (Patrol)
-  - Breacher Team (Patrol)
-  - Devilfish (Patrol)
+  - Pathfinder Team (Sudden Dawn Cadre)
+  - Breacher Team (Sudden Dawn Cadre)
+  - Devilfish (Sudden Dawn Cadre)
   warlord: Commander Cloudspear
   ignorestrats:
-  - explosives
   - "smokescreen"
   icon: fish
 - # Tristraen's Gilded Blades
@@ -174,19 +166,51 @@
   category: Combat Patrol
   name: Tristraen's Gilded Blades
   faction: Adeptus Custodes
-  detachment: Tristraen's Gilded Blades
+  detachments: 
+  - Tristraen's Gilded Blades
   units:
-  - Tristraen
-  - Custodian Guard (Patrol)
-  - Custodian Wardens (Patrol)
-  - Allarus Custodians (Patrol)
+  - Tristraen of the Gilded Blades
+  - Custodian Guard (Gilded Blades)
+  - Custodian Wardens (Gilded Blades)
+  - Allarus Custodians (Gilded Blades)
   warlord: Tristraen
   ignorestrats:
-  - explosives
-  - crushing impact
   - "smokescreen"
-  - "rapid ingress"
   icon: goldenbois
+- # 'Ardmob
+  id: CP12
+  category: Combat Patrol
+  name: "'Ardmob"
+  faction: Orks
+  detachments: 
+  - "'Ardmob"
+  units:
+  - Warboss ('Ardmob)
+  - Weirdboy ('Ardmob)
+  - Boyz ('Ardmob)
+  - Wartrakk ('Ardmob)
+  - Gretchin ('Ardmob)
+  warlord: Warboss ('Ardmob)
+  ignorestrats:
+  - "smokescreen"
+  icon: orks
+- # Assault Force
+  id: CP13
+  category: Combat Patrol
+  name: Assault Force
+  faction: Space Marines
+  detachments: 
+  - Assault Force
+  units:
+  - Captain (Assault Force)
+  - Librarian (Assault Force)
+  - Intercessor Squad (Assault Force)
+  - Vanguard Veteran Squad with Jump Packs (Assault Force)
+  - Land Speeder (Assault Force)
+  warlord: Captain (Assault Force)
+  ignorestrats:
+  - "smokescreen"
+  icon: brothers
 # King of the Colosseum
 - # Awakened Dynasty
   id: KC1
@@ -200,7 +224,8 @@
   - Skorpekh Destroyers
   - Canoptek Doomstalker
   - Lokhust Heavy Destroyers
-  detachment: Awakened Dynasty
+  detachments: 
+  - Awakened Dynasty
   warlord: Plasmancer
   icon: robots
 - # Colosseum Canopteks
@@ -214,7 +239,8 @@
   - Immortals
   - Necron Warriors
   - Canoptek Doomstalker
-  detachment: Canoptek Court
+  detachments: 
+  - Canoptek Court
   warlord: Technomancer
   enhancements:
   -
@@ -232,7 +258,8 @@
   - Beastboss
   - Beast Snagga Boyz
   - Gretchin
-  detachment: Da Big Hunt
+  detachments: 
+  - Da Big Hunt
   warlord: Beastboss on Squigosaur
   enhancements:
   -
@@ -255,7 +282,8 @@
   - Deffkoptas
   - Gretchin
   - Rukkatrukk Squigbuggy
-  detachment: Kult of Speed
+  detachments: 
+  - Kult of Speed
   warlord: Wazdakka Gutsmek
   enhancements:
   -
@@ -281,6 +309,7 @@
   - Skorpekh Lord
   - Skorpekh Destroyers
   - Lokhust Heavy Destroyers
-  detachment: Awakened Dynasty
+  detachments: 
+  - Awakened Dynasty
   warlord: Imotekh The Stormlord
   icon: robots
