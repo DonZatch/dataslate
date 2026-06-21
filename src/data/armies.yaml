@@ -79,7 +79,7 @@
   - Arco-flagellants (Sanctuary Guardians)
   warlord: Canoness Adalya
   ignorestrats:
-  - "smokescreen"
+  - smokescreen
   icon: sisters
 - # Prism of Zadophon
   id: CP6

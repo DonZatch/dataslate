@@ -563,13 +563,14 @@ function Units({ army, armyUnits, appSettings, setShowInfo, onClick, onToggleCol
             onClick={onClick}
             onToggleCollapsed={(value) => onToggleCollapse(unit.name, value)}
             collapsed={collapsedUnits.indexOf(unit.name) !== -1}
+            isCombatPatrol={army.category === "Combat Patrol"}
           />)}
       </ol>
     </>
   );
 }
 
-function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCollapsed, collapsed })
+function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCollapsed, collapsed, isCombatPatrol })
 {
   const handler = useCallback((e) => {
     e.preventDefault();
@@ -585,7 +586,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
       {!collapsed && (
         <a href="#" onClick={handler}>
         <UnitProfile unit={unit} />
-        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={army.category === "Combat Patrol"} />
+        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={isCombatPatrol} />
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />
@@ -598,8 +599,8 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
 
 function AbilitySummary({ unit, appSettings, setShowInfo, isCombatPatrol })
 {
-  const abilities = getSummaryAbilities(unit, appSettings. isCombatPatrol);
-  const keywordAbilities = getKeywordAbilitySummary(unit, appSettings);
+  const abilities = getSummaryAbilities(unit, appSettings);
+  const keywordAbilities = getKeywordAbilitySummary(unit, appSettings, isCombatPatrol);
   return (
     <ol className="abilitySummary">
       {abilities.map(ability => <li key={ability} onClick={e => setShowInfo(e, ability)}>{ability}</li>)}
@@ -709,13 +710,9 @@ function PatrolSquadSummary({ unit })
   );
 }
 
-function getSummaryAbilities(unit, appSettings, isCombatPatrol)
+function getSummaryAbilities(unit, appSettings)
 {
   const ignoreAbilities = appSettings?.summaryIgnoreAbilities ?? [];
-  if (isCombatPatrol)
-  {
-    ignoreAbilities.push("crushing impact", "explosives", "rapid ingress");
-  }
   return unit?.abilities?.core?.filter(ability => {
     for (const quickAccess of ignoreAbilities)
     {
@@ -797,10 +794,14 @@ function getMeleeWeapons(unit, appSettings)
   return weapons;
 }
 
-function getKeywordAbilitySummary(unit, appSettings)
+function getKeywordAbilitySummary(unit, appSettings, isCombatPatrol)
 {
   const includeAbilities = appSettings.summaryKeywords ?? [];
   return unit?.keywords?.filter(ability => {
+    if (isCombatPatrol && ability.toLowerCase() === "explosives")
+    {
+      return false;
+    }
     for (const quickAccess of includeAbilities)
     {
       if (ability.toLowerCase().startsWith(quickAccess))
@@ -1297,7 +1298,12 @@ function getArmyStrategems(army, detachments, coreStrategems, filter)
 {
   const detachmentStrats = [];
   detachments?.forEach(detachment => detachmentStrats.push(...(detachment.strategems ?? [])));
-  const filteredStrats = army.ignorestrats ? (coreStrategems ?? []).filter(strat => !army.ignorestrats.map(strat => strat.toLowerCase()).includes(strat.name.toLowerCase())) : [...coreStrategems];
+  const ignoredStrats = army.ignorestrats ?? [];
+  if (army.category === "Combat Patrol")
+  {
+    ignoredStrats.push("crushing impact", "explosives", "rapid ingress");
+  }
+  const filteredStrats = (coreStrategems ?? []).filter(strat => !ignoredStrats.map(strat => strat.toLowerCase()).includes(strat.name.toLowerCase()));
   return [...(detachmentStrats ?? []), ...filteredStrats].filter(strat => filter == null || strat.turn === filter || strat.turn === "either");
 }
 
