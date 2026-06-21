@@ -308,9 +308,6 @@
     faction:
     - Shadow in the Warp
     - Synapse
-    core:
-    - Deep Strike
-    - Fly
     other:
     -
       label: "Death Blow:"
@@ -375,9 +372,6 @@
     faction:
     - Synapse
     - Shadow in the Warp
-    core:
-    - Feel No Pain 5+
-    - Deadly Demise 1
     other:
     -
       label: "Feeding Frenzy:"
@@ -524,10 +518,6 @@
     ap: -1
     d: 1
   abilities:
-    core:
-    - Fights First
-    - Infiltrators
-    - Stealth
     faction:
     - Synapse
     other:
@@ -796,8 +786,6 @@
     ap: 0
     d: 1
   abilities:
-    core:
-    - Deadly Demise D3
     faction:
     - Reanimation Protocols
   factions: 
@@ -1336,7 +1324,7 @@
     name: Arco-flagellants
     m: 7
     t: 3
-    sv: 7+
+    sv: 3+
     w: 2
     ld: 8+
     oc: 1
@@ -1357,8 +1345,6 @@
     abilities:
     - Sustained Hits 1
   abilities:
-    core:
-    - Feel No Pain 5+
     faction:
     - Acts of Faith
     other:
@@ -2288,8 +2274,6 @@
     abilities:
     - Sustained Hits 2
   abilities:
-    core:
-    - Deep Strike
     faction:
     - Doctrina Imperatives
     other:
@@ -2783,8 +2767,6 @@
     ap: 0
     d: 1
   abilities:
-    core:
-    - "Scouts 7\""
     faction:
     - For the Greater Good
     wargear:
@@ -2919,8 +2901,6 @@
     ap: 0
     d: 1
   abilities:
-    core:
-    - Deadly Demise D3
     faction:
     - For the Greater Good
     other:
@@ -3330,7 +3310,6 @@
     - Waaagh!
     core:
     - Leader
-    - Deadly Demise D3
     other:
     -
       label: "Totem of Mork (Psychic):"
@@ -3799,8 +3778,6 @@
   abilities:
     faction:
     - Oath of Moment
-    core:
-    - Deep Strike
     other:
     -
       label: "Rapid Reactions (once per turn per unit):"
@@ -3959,8 +3936,6 @@
     ap: 0
     d: 1
   abilities:
-    core:
-    - Deep Strike
     faction:
     - Oath of Moment
   factions: 
