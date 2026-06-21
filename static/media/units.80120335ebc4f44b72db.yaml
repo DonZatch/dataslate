@@ -3442,6 +3442,24 @@
     abilities:
     - Rapid Fire 2
   -
+    name: Kombi-rokkit
+    num: 1
+    range: 24"
+    a: 1
+    bs: 5+
+    s: 10
+    ap: -2
+    d: 3
+  -
+    name: Kombi-shoota
+    num: 1
+    range: 24"
+    a: 2
+    bs: 5+
+    s: 4
+    ap: 0
+    d: 1
+  -
     name: Shoota
     num: 9
     range: 18"
@@ -3491,7 +3509,7 @@
   composition:
   -
     label: "The Boss Nob is equipped with:"
-    value: "1 Big Choppa, 1 Kustom Shoota, 1 Slugga"
+    value: "1 Big Choppa, 1 Kustom Shoota OR 1 Kombi-rokkit + 1 Kombi-shoota, 1 Slugga"
   -
     label: "Every Boyz is equipped with:"
     value: "1 Choppa, 1 Shoota, 1 Slugga"

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.cfb5acb4.css",
-    "main.js": "/dataslate/static/js/main.9c21df37.js",
+    "main.js": "/dataslate/static/js/main.ff7c733f.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
-    "static/media/units.yaml": "/dataslate/static/media/units.d78191c7680e13ab986a.yaml",
+    "static/media/units.yaml": "/dataslate/static/media/units.80120335ebc4f44b72db.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.cbd48ee029cb11b00b21.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.11148320b13394b5dc54.yaml",
     "static/media/brothers.svg": "/dataslate/static/media/brothers.7413691c5e38c515c00e404db1de15f9.svg",
     "static/media/bugs.svg": "/dataslate/static/media/bugs.ca3c7e49a12d04ca1c873015f7275b14.svg",
     "static/media/sorcerors.svg": "/dataslate/static/media/sorcerors.17503cf5fe40b2cf595b45fb4edbca45.svg",
-    "static/media/armies.yaml": "/dataslate/static/media/armies.b4f05643c47730183946.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.774d48b93561ebe5042b.yaml",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.6b6a1c9469b7db4901f4.yaml",
     "static/media/mechs.svg": "/dataslate/static/media/mechs.435a1b141eb18704a562042a68a38eb2.svg",
     "static/media/sisters.svg": "/dataslate/static/media/sisters.00699146413e6e4f3159c6d6035e37f6.svg",
@@ -21,11 +21,11 @@
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.ef853757547403547cb6.yaml",
     "main.cfb5acb4.css.map": "/dataslate/static/css/main.cfb5acb4.css.map",
-    "main.9c21df37.js.map": "/dataslate/static/js/main.9c21df37.js.map",
+    "main.ff7c733f.js.map": "/dataslate/static/js/main.ff7c733f.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cfb5acb4.css",
-    "static/js/main.9c21df37.js"
+    "static/js/main.ff7c733f.js"
   ]
 }
