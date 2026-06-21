@@ -1114,7 +1114,7 @@ function Abilities({ unit, setShowInfo })
         {unit.abilities.faction ? <div><label>Faction:</label><ol className="abilities">
             {unit.abilities.faction.map(ability => <li>{ability}</li>)}
           </ol></div> : null }
-        {unit.abilities.other ? unit.abilities.other.map(ability => <div className="otherAbility"><label>{ability.label}</label>{ability.value}</div>) : null}
+        {unit.abilities.other ? unit.abilities.other.map(ability => <div className="otherAbility"><label>{ability.label}</label><span dangerouslySetInnerHTML={{ __html: ability.value }} /></div>) : null}
       </div>
     </div>
   )
