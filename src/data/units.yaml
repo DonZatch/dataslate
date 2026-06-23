@@ -4191,6 +4191,120 @@
   -
     label: "This model is equipped with:"
     value: "enmitic annihilator, flensing claw, hyperphase harvester"
+- # Overlord with Translocation Shroud
+  name: Overlord with Translocation Shroud
+  profiles:
+  -
+    name: Overlord with Translocation Shroud
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Noble
+  - Overlord
+  - Overload with Translocation Shroud
+  melee:
+  -
+    name: Overload's Blade
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 8
+    ap: -3
+    d: 2
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Leader
+    other:
+    -
+      label: My Will Be Done
+      value: Once per battle round, one unit from your army with this ability can use it when it is targeted with a Strategem. If it does, reduce the CP cost of that usage of that stratagem by 1CP.
+    -
+      label: Translocation Shroud
+      value: "Each time this model's unit Advances, do not make an Advance roll for it. Instead, until the end of that phase, add 6\" to the Move characteristic of models in that unit. In addition, each time a model in that unit makes a Normal, Advance, or Fall Back move, until that move is finished, it can move horizontally through models and terrain features (if cannot finish a move on top of another model or its base)."
+    wargear:
+    -
+      label: Resurrection Orb
+      value: Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.
+    leader:
+    - Immortals
+    - Lychguard
+    - Necron Warriors
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Overlord's Blade"
+- # Lokhust Lord
+  name: Lokhust Lord
+  profiles:
+  -
+    name: Lokhust Lord
+    m: 8
+    t: 6
+    sv: 3+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 2
+  keywords:
+  - Mounted
+  - Character
+  - Fly
+  - Destroyer Cult
+  - Lokhust Lord
+  ranged:
+  -
+    name: Staff of Light
+    range: 18"
+    a: 3
+    bs: 2+
+    s: 5
+    ap: -2
+    d: 1
+  melee:
+  -
+    name: Staff of Light
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 5
+    ap: -2
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Leader
+    other:
+    -
+      label: Destroyer Cult
+      value: While this model is leading a unit, each time a model in that unit makes a ranged attack, a successful unmodifed hit roll of 5+ scores a Critical Hit.
+    -
+      label: Driven by Hatred
+      value: "Each time this model makes an attack that targets an enemy unit that is Below Half-Strength, you can re-roll the Hit roll and you can re-roll the Wound roll."
+    wargear:
+    -
+      label: Resurrection Orb
+      value: Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.
+    leader:
+    - Lokhust Destroyers
+    - Lokhust Heavy Destroyers
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Staff of Light"
 - # Canoptek Wraiths
   name: Canoptek Wraiths
   profiles:
@@ -4589,6 +4703,17 @@
     - Heavy
     - Rapid Fire 6
     - Sustained Hits 1
+  -
+    name: Gauss Destructor
+    range: 48"
+    a: 1
+    bs: 3+
+    s: 14
+    ap: -4
+    d: 6
+    abilities:
+    - Heavy
+    - Lethal Hits
   melee:
   -
     name: Close combat weapon
@@ -4604,13 +4729,68 @@
     other:
     -
       label: Optimised for Slaughter
-      value: Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding MONSTERS and VEHICLES), re-roll a Wound roll of 1
+      value: Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding MONSTERS and VEHICLES), re-roll a Wound roll of 1. Each time a model in this unit makes an attack with a gauss destructor that targets a MONSTER or VEHICLE, re-roll a Wound roll of 1.
   factions: 
   - Necrons
   composition:
   -
     label: "Every model is equipped with:"
-    value: "enmitic exterminator, close combat weapon"
+    value: "enmitic exterminator OR gauss destructor, close combat weapon"
+- # Tomb Blades
+  name: Tomb Blades
+  profiles:
+  -
+    name: Tomb Blades
+    m: 12
+    t: 5
+    sv: 4+
+    w: 2
+    ld: 7+
+    oc: 2
+  keywords:
+  - Mounted
+  - Fly
+  - Tomb Blades
+  ranged:
+  -
+    name: Particle beamer
+    range: 18"
+    a: D6
+    bs: 3+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Blast
+    - Devastating Wounds
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - "Scouts 9\""
+    other:
+    -
+      label: Evasion Engrams
+      value: "In your Shooting phase, after this unit has shot, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+    wargear:
+    -
+      label: Shadowloom
+      value: Ths bearer has the Stealth ability
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "Particle beamer, close combat weapon"
 # Orks
 - # Beastboss
   name: Beastboss
