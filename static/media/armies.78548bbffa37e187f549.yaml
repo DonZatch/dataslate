@@ -293,23 +293,45 @@
     name: Wazblasta
     unit: Deffkilla Wartrike
   icon: orks
-- # Awakened Dynasty
-  id: I2
+#- # Awakened Dynasty
+  # id: I2
+  # category: Incursion
+  # name: Awakened Dynasty
+  # faction: Necrons
+  # units:
+  # - Imotekh The Stormlord
+  # - Plasmancer
+  # - Immortals
+  # - Technomancer
+  # - Canoptek Wraiths
+  # - Deathmarks
+  # - Canoptek Doomstalker
+  # - Skorpekh Lord
+  # - Skorpekh Destroyers
+  # - Lokhust Heavy Destroyers
+  # detachments: 
+  # - Awakened Dynasty
+  # warlord: Imotekh The Stormlord
+  # icon: robots
+- # Skyshroud Dynasty
+  id: I3
   category: Incursion
-  name: Awakened Dynasty
+  name: Skyshroud Dynasty
   faction: Necrons
   units:
-  - Imotekh The Stormlord
+  - Overlord with Translocation Shroud
   - Plasmancer
   - Immortals
   - Technomancer
   - Canoptek Wraiths
-  - Deathmarks
-  - Canoptek Doomstalker
   - Skorpekh Lord
   - Skorpekh Destroyers
+  - Lokhust Lord
   - Lokhust Heavy Destroyers
+  - Tomb Blades
+  - Canoptek Scarab Swarms
   detachments: 
-  - Awakened Dynasty
-  warlord: Imotekh The Stormlord
+  - Hand of the Dynasty
+  - Skyshroud Spearhead
+  warlord: Overload with Translocation Shroud
   icon: robots
