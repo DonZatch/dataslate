@@ -3542,7 +3542,7 @@
     - Waaagh!
     other:
     -
-      label: "Grot Infestation:"
+      label: "Grot Infestation (Once per battle):"
       value: "When this unit is <strong>destroyed</strong>, you can use this ability. If you do:
         <ul>
           <li>Place this unit in <strong>strategic reserves</strong> with all of this unit's <strong>destroyed</strong> models returned to it. This unit is no longer <strong>destroyed</strong>.</li>
