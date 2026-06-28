@@ -112,7 +112,7 @@ function SVGPatterns() {
   );
 }
 
-function MainContent({ armies, detachments, units, coreStrategems, appSettings, factionData, setShowInfo }) {
+function MainContent({ armies, detachments, units, coreStrategems, appSettings, factionAbilities, setShowInfo }) {
   var route = parseRoute();
   var [wakeLock, setWakeLock] = useState(null);
 
@@ -145,7 +145,7 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
           units={units} 
           coreStrategems={coreStrategems} 
           appSettings={appSettings} 
-          factionData={factionData}
+          factionData={factionAbilities}
           setShowInfo={setShowInfo}
         />
       );
