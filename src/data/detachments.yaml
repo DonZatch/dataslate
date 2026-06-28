@@ -845,6 +845,80 @@
     when: Your opponent's Shooting phase, just after an enemy unit destroys a NECRONS unit from your army.
     target: One NECRONS CHARACTER unit from your army that was within 6" of that NECRONS unit when it was destroyed.
     effect: After the attacking unit has resolved its attacks, your unit can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.
+- # Hand of the Dynasty
+  name: Hand of the Dynasty
+  disposition: Take and Hold
+  abilities:
+  -
+    name: Hypermotility Protocols
+    text: "<ul>
+        <li>Friendly IMMORTALS/NECRON WARRIORS units' ranged attacks have <strong>[ASSAULT]</strong>.</li>
+        <li>When a friendly IMMORTALS/NECRON WARRIORS unit is selected to make an advance move, that move does not prevent that unit from being eligible to start an action.</li>
+      </ul>
+      <p>This detachment has the DYNASTY tag and cannot be taken with another DYNASTY detachment.</p>"
+  enhancements:
+  -
+    name: Tools of Dominion
+    target: Immortals
+    text: "<strong>IMMORTALS</strong> unit only. This unit's ranged attacks have <strong>[RAPID FIRE 1]</strong>"
+  strategems:
+  - 
+    name: Dominance Protocols
+    cost: 1
+    turn: your
+    when: Command phase
+    target: One friendly <strong>IMMORTALS</strong> unit.
+    effect: Your unit has +1 <strong>OC</strong> until the end of the turn.
+  - 
+    name: Will of the Conqueror
+    cost: 1
+    turn: either
+    when: End of your Movement phase.
+    target: One friendly <strong>IMMORTALS/NECRON WARRIORS</strong> unit.
+    effect: Select one <strong>objective</strong> your unit is controlling. That <strong>objective</strong> is <strong>secured</strong>.
+  - 
+    name: Nanosaturation
+    cost: 1
+    turn: opponent
+    when: Your opponent's Shooting phase, when an enemy unit that targeted a friendly <strong>IMMORTALS/NECRON WARRIORS</strong> unit has shot.
+    target: That <strong>IMMORTALS/NECRON WARRIORS</strong> unit.
+    effect: Your unit shoots using <strong>snap shooting</strong>, but while doing so your unit can only target that enemy unit.
+- # Skyshroud Spearhead
+  name: Skyshroud Spearhead
+  disposition: Reconnaissance
+  abilities:
+  -
+    name: Transdimensional Deployment
+    text: "<ul>
+        <li>Friendly <strong>TOMB BLADES</strong> units have <strong>Deep Strike</strong>.</li>
+        <li>When a friendly <strong>TOMB BLADES</strong> unit is selected to shoot, if that unit made an ingress move this turn, that unit's ranged attacks have +1 to <strong>hit rolls</strong>.</li>
+      </ul>"
+  enhancements:
+  -
+    name: Deepening Madness
+    text: "<strong>DESTROYER CULT MOUNTED</strong> unit only. This unit's ranged attacks have <strong>[ASSAULT]</strong>"
+  strategems:
+  - 
+    name: Omnilocked Strafing
+    cost: 1
+    turn: your
+    when: Your Movement phase, when a friendly <strong>NECRONS MOUNTED</strong> unit is selected to make a <strong>fall-back move</strong>.
+    target: That <strong>NECRONS MOUNTED</strong> unit.
+    effect: That move does not prevent your unit from being <strong>eligible to shoot</strong>.
+  - 
+    name: Swift as Death
+    cost: 1
+    turn: opponent
+    when: Your opponent's Movement phase, when an enemy unit ends a move within 8" of a friendly <strong>unengaged NECRONS MOUNTED</strong> unit.
+    target: That <strong>NECRONS MOUNTED</strong> unit.
+    effect: "Your unit can make a <strong>normal move</strong> of up to D3+3\"."
+  - 
+    name: Evasive Protocols
+    cost: 1
+    turn: opponent
+    when: Your opponent's Shooting phase, when an enemy unit that targeted a friendly <strong>NECRONS MOUNTED</strong> unit has shot.
+    target: That <strong>NECRONS MOUNTED</strong> unit.
+    effect: Ranged attacks that target your unit with a <strong>S</strong> greater than your unit's <strong>T</strong> have -1 to <strong>wound rolls</strong>.
 # Orks
 - # Da Big Hunt
   name: Da Big Hunt

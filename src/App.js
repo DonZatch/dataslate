@@ -6,6 +6,7 @@ import detachmentData from "./data/detachments.yaml";
 import unitData from "./data/units.yaml";
 import strategemData from "./data/strategems.yaml";
 import abilityData from "./data/abilities.yaml";
+import factionData from "./data/factions.yaml";
 import './App.css';
 import { ReactComponent as BrothersIcon } from "./assets/brothers.svg";
 import { ReactComponent as BugsIcon } from "./assets/bugs.svg";
@@ -25,6 +26,7 @@ function App() {
   const [coreStrategems, setCoreStrategems] = useState(null);
   const [appSettings, setAppSettings] = useState({});
   const [abilities, setAbilities] = useState([]);
+  const [factionAbilities, setFactionAbilities] = useState([]);
   const [showInfo, setShowInfo] = useState(null);
 
   const showInfoModal = function (e, ability) {
@@ -42,12 +44,13 @@ function App() {
     loadData("units", unitData, setUnits);
     loadData("strategems", strategemData, setCoreStrategems);
     loadData("abilities", abilityData, setAbilities);
+    loadData("factions", factionData, setFactionAbilities);
   }, []);
 
   return (
     <>
       <SVGPatterns />
-      <MainContent units={units} armies={armies} detachments={detachments} coreStrategems={coreStrategems} appSettings={appSettings} setShowInfo={showInfoModal} />
+      <MainContent units={units} armies={armies} detachments={detachments} coreStrategems={coreStrategems} appSettings={appSettings} factionAbilities={factionAbilities} setShowInfo={showInfoModal} />
       <InfoModal ability={showInfo} abilities={abilities} setShowInfo={showInfoModal} />
     </>
   );
@@ -109,7 +112,7 @@ function SVGPatterns() {
   );
 }
 
-function MainContent({ armies, detachments, units, coreStrategems, appSettings, setShowInfo }) {
+function MainContent({ armies, detachments, units, coreStrategems, appSettings, factionData, setShowInfo }) {
   var route = parseRoute();
   var [wakeLock, setWakeLock] = useState(null);
 
@@ -142,6 +145,7 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
           units={units} 
           coreStrategems={coreStrategems} 
           appSettings={appSettings} 
+          factionData={factionData}
           setShowInfo={setShowInfo}
         />
       );
@@ -404,7 +408,7 @@ function PlayerScore({ label, score, setScore }) {
   )
 }
 
-function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSettings, setShowInfo })
+function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSettings, factionData, setShowInfo })
 {
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
@@ -414,6 +418,7 @@ function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSet
   
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
   const detachments = useMemo(() => getDetachments(allDetachments, army), [allDetachments, army]);
+  const factionAbilities = useMemo(() => getFactionAbilities(factionData, army), [factionData, army]);
   
   useEffect(() => {
     if (!id)
@@ -496,7 +501,7 @@ function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSet
         <a href="#" onClick={(e) => handler(e, "scoreboard")} className='scoreboardBtn'>{view === "scoreboard" ? <>&#9873;</> : <>&#9872;</>}</a>
       </header>
       <div className="armyDetails">
-        { view === "rules" ? <Rules detachments={detachments} /> : null }
+        { view === "rules" ? <Rules detachments={detachments} factionAbilities={factionAbilities} /> : null }
         { view === "setup" ? 
           <Setup 
             detachments={detachments} 
@@ -536,6 +541,16 @@ function getArmy(armies, id)
     }
   }
   return null;
+}
+
+function getFactionAbilities(allFactions, army)
+{
+    if (!army || !allFactions)
+    {
+      return [];
+    }
+    const faction = allFactions.find((f) => f.faction === army.faction);
+    return faction?.abilities ?? [];
 }
 
 function getDetachments(allDetachments, army)
@@ -1236,7 +1251,7 @@ function Wargear({unit})
   )
 }
 
-function Rules({ detachments })
+function Rules({ detachments, factionAbilities })
 {
   const dispositions = new Set();
   detachments?.forEach(detachment => dispositions.add(detachment.disposition));
@@ -1250,6 +1265,7 @@ function Rules({ detachments })
         </ul>
       </div>
       <ol className="armyRules">
+        {factionAbilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)}
         {detachments?.map(detachment => 
           detachment?.abilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)
         )}
