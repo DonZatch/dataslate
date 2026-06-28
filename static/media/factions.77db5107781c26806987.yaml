@@ -1,0 +1,150 @@
+-
+  faction: Adepta Sororitas
+  abilities:
+  -
+    name: Acts of Faith
+    text: "<p>Each unit from your army can perform one Act of Faith per phase. This is done using Miracle dice.</p>
+      <h3>Gaining Miracle Dice</h3>
+      <p>You gain 1 Miracle dice:</p>
+      <ul>
+        <li>At the start of each turn.</li>
+        <li>Each time an ADEPTA SORORITAS unit from your army is destroyed.</li>
+      </ul>
+      <p>Each time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re-rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side - this is your Miracle dice pool.</p>
+      <h3>Performing an Act of Faith</h3>
+      <p>
+      Before making a dice roll for a model or unit from your army with the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit can perform an Act of Faith.
+      If it does, select one of the dice from your Miracle dice pool to substitute that dice roll (if a roll involves more than one dice, e.g. a Charge roll or Battle-shock test, only a single dice can be substituted).
+      The dice that is being substituted is not rolled; instead, the value of the selected Miracle dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes).
+      Each miracle dice can only by selected for substitution once. Once all Miracle dice substitutions have been made, remove the chosen Miracle dice from your Miracle dice pool, and roll all remaining, unsubstituted dice that are part of the dice roll.
+      You can use Miracle dice when a unit performs an Act of Faith for any of the following types of dice roll:
+      </p>
+      <ul>
+        <li>Advance roll</li>
+        <li>Battle-shock test</li>
+        <li>Charge roll</li>
+        <li>Damage roll</li>
+        <li>Hit roll</li>
+        <li>Saving throw</li>
+        <li>Wound roll</li>
+      </ul>
+      "
+-
+  faction: Adeptus Custodes
+  abilities:
+  -
+    name: Martial Ka'tah
+    text: "<p>Each time a unit from your army with this ability is selected to fight, select one of the Ka'tah Stances below. Until that unit has finished making its attacks, the selected Stance is active for it and it gains the relevant ability:</p>
+      <h3>Dacatarai Stance</h3>
+      <p>Melee weapons equipped by models in this unit have the <strong>[SUSTAINED HITS 1]</strong> ability.</p>
+      <h3>Rendax Stance</h3>
+      <p>Melee weapons equipped by models in this unit have the <strong>[LETHAL HITS]</strong> ability.</p>
+      "
+-
+  faction: Adeptus Mechanicus
+  abilities:
+  -
+    name: Doctrina Imperatives
+    text: "<p>At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperative ability gain the relevant abilities shown below.</p>
+      <h3>Protector Imperative</h3>
+      <ul>
+        <li>Ranged weapons have <strong>[HEAVY]</strong>.</li>
+        <li>Ranged weapons have +1 <strong>BS</strong></li>
+        <li>Each time a melee attack targets this unit, if this unit has the <strong>BATTLELINE</strong> keyword and/or is within 6\" of one or more friendly <strong>ADEPTUS MECHANICUS BATTLELINE</strong> units, subtract 1 from the <strong>hit roll</strong>.</li>
+      </ul>
+      <h3>Conqueror Imperative</h3>
+      <ul>
+        <li>Ranged weapons have <strong>[ASSAULT]</strong>.</li>
+        <li>Melee weapons have +1 <strong>WS</strong></li>
+        <li>Each time a model in this unit makes an attack, if this unit has the <strong>BATTLELINE</strong> keyword and/or it is within 6\" of one or more friendly <strong>ADEPTUS MECHANICUS BATTLELINE</strong> units, improve the <strong>AP</strong> of that attack by 1.</li>
+      </ul>
+      "
+-
+  faction: Chaos Space Marines
+  abilities:
+  -
+    name: Dark Pacts
+    text: "<p>If your Army Faction is HERETIC ASTARTES, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:</p>
+      <ul>
+        <li>[LETHAL HITS]</li>
+        <li>[SUSTAINED HITS]</li>
+      </ul>
+      "
+-
+  faction: Necrons
+  abilities:
+  -
+    name: Reanimation Protocols
+    text: "<p>At the end of your Command phase, each unit from your army activates its Reanimation Protocols and reanimates D3 wounds. Each time such a unit reanimates a wound:</p>
+      <ul>
+        <li>If that unit contains one or more models with fewer than their starting number of wounds remaining, select one of those models; that model regains one lost wound.</li>
+        <li>If all models in that unit have their starting number of wounds, but that unit is not at its Starting Strength, one destroyed model is returned to that unit with one wound remaining.</li>
+      </ul>
+      <p>Once such a unit is at its Starting Strength and all of its models have their starting number of wounds, nothing further happens.</p>"
+-
+  faction: Orks
+  abilities:
+  -
+    name: Waaagh!
+    text: "<p>If your Army Faction is ORKS, once per battle, at the start of the battle round, you can call a Waaagh!. If you do, until the start of the next battle round, the Waaagh! is active for your army and:</p>
+      <ul>
+        <li>Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.</li>
+        <li>Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.</li>
+        <li>Models from your army with this ability have a 5+ invulnerable save.</li>
+      </ul>"
+-
+  faction: Space Marines
+  abilities:
+  -
+    name: Oath of Moment
+    text: "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:
+      <ul>
+        <li>You can re-roll the Hit roll.</li>
+      </ul>"
+-
+  faction: T'au Empire
+  abilities:
+  -
+    name: For the Greater Good
+    text: "<p>At the start of your Shooting phase you can select units from your army with this ability to become Observer units.</p>
+      <p>During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.</p>
+      <p>Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.</p>
+      <p>Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.</p>
+      "
+-
+  faction: Thousand Sons
+  abilities:
+  -
+    name: Cabal of Sorcerers
+    text: "<p>At the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.</p>
+      <h3>Psychic Test Sequence</h3>
+      <p><strong>Roll 2D6</strong></p>
+      <p><strong>Channel the Warp</strong><br>(Optional)</p>
+      <p>Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.</p>
+      <p>If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that ritual and you resolve its effects.</p>
+      <h4 class=\"psychicTest\">Destiny's Ruin (Psychic)</h4>
+      <p><strong>Warp Charge - 5</strong></p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.</p>
+      <h4 class=\"psychicTest\">Temporal Surge (Psychic)</h4>
+      <p><strong>Warp Charge - 6</strong></p>
+      <p>Select one friendly THOUSAND SONS unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.</p>
+      <h4 class=\"psychicTest\">Doombolt (Psychic)</h4>
+      <p><strong>Warp Charge - 7</strong></p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.</p>
+      <h4 class=\"psychicTest\">Twist of Fate (Psychic)</h4>
+      <p><strong>Warp Charge - 9</strong></p>
+      <p>Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a <strong>THOUSAND SONS</strong> model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.</p>
+      "
+-
+  faction: Tyranids
+  abilities:
+  -
+    name: Synapse
+    text: "While a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of those models and of your army. While a <strong>TYRANIDS</strong> unit from your army is within Synapse Range of your army:
+      <ul>
+        <li>Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.</li>
+        <li>Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.</li>
+      </ul>"
+  -
+    name: Shadow in the Warp
+    text: "Once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more <strong>SYNAPSE</strong> units from your army, subtract 1 from that test."

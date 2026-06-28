@@ -1,0 +1,33 @@
+rangedSummaryAbilities:
+- assault
+- rapid fire
+- heavy
+- indirect fire
+- ignores cover
+- pistol
+- lance
+- anti
+- precision
+meleeSummaryAbilities:
+- lance
+- anti
+- precision
+summaryKeywords:
+- fly
+- vehicle
+- monster
+- infantry
+- mounted
+- battleline
+- psyker
+- markerlight
+- transport
+- dedicated transport
+- character
+- explosives
+- smoke
+- synapse
+- swarm
+- walker
+- mutant
+- beast

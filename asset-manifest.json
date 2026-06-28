@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.cfb5acb4.css",
-    "main.js": "/dataslate/static/js/main.7d6abde6.js",
+    "main.js": "/dataslate/static/js/main.70143f7d.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.ce13476fbeb56771e080.yaml",
-    "static/media/detachments.yaml": "/dataslate/static/media/detachments.5ad95374cad2695252fd.yaml",
+    "static/media/detachments.yaml": "/dataslate/static/media/detachments.6a3ad6de0841d4f22c98.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.11148320b13394b5dc54.yaml",
     "static/media/brothers.svg": "/dataslate/static/media/brothers.7413691c5e38c515c00e404db1de15f9.svg",
     "static/media/bugs.svg": "/dataslate/static/media/bugs.ca3c7e49a12d04ca1c873015f7275b14.svg",
+    "static/media/factions.yaml": "/dataslate/static/media/factions.77db5107781c26806987.yaml",
     "static/media/sorcerors.svg": "/dataslate/static/media/sorcerors.17503cf5fe40b2cf595b45fb4edbca45.svg",
     "static/media/armies.yaml": "/dataslate/static/media/armies.78548bbffa37e187f549.yaml",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.6b6a1c9469b7db4901f4.yaml",
@@ -15,18 +16,17 @@
     "static/media/sisters.svg": "/dataslate/static/media/sisters.00699146413e6e4f3159c6d6035e37f6.svg",
     "static/media/goldenbois.svg": "/dataslate/static/media/goldenbois.8491624219223ad698e02cbd79bd2790.svg",
     "static/media/orks.svg": "/dataslate/static/media/orks.30fe570306c237b2514f15af83568556.svg",
-    "static/media/factions.yaml": "/dataslate/static/media/factions.63b9872d36b0f27b21bc.yaml",
     "static/media/heretics.svg": "/dataslate/static/media/heretics.b24b5b984ddc0908c477db53ff9c5007.svg",
     "static/media/fish.svg": "/dataslate/static/media/fish.e2a04460db8ce0eafec1fb8cf7db5f56.svg",
     "static/media/robots.svg": "/dataslate/static/media/robots.225cf74566b023c016bea3681a339f8e.svg",
     "index.html": "/dataslate/index.html",
-    "static/media/settings.yaml": "/dataslate/static/media/settings.24e1ca514662a5ea41e4.yaml",
+    "static/media/settings.yaml": "/dataslate/static/media/settings.70fdb7f572f141971dfb.yaml",
     "main.cfb5acb4.css.map": "/dataslate/static/css/main.cfb5acb4.css.map",
-    "main.7d6abde6.js.map": "/dataslate/static/js/main.7d6abde6.js.map",
+    "main.70143f7d.js.map": "/dataslate/static/js/main.70143f7d.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cfb5acb4.css",
-    "static/js/main.7d6abde6.js"
+    "static/js/main.70143f7d.js"
   ]
 }
