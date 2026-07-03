@@ -333,5 +333,12 @@
   detachments: 
   - Hand of the Dynasty
   - Skyshroud Spearhead
+  enhancements:
+  -
+    name: Tools of Dominion
+    unit: Immortals
+  -
+    name: Deepening Madness
+    unit: Lokhust Heavy Destroyers
   warlord: Overload with Translocation Shroud
   icon: robots
