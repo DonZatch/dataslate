@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.cfb5acb4.css",
-    "main.js": "/dataslate/static/js/main.ab22a9b3.js",
+    "main.js": "/dataslate/static/js/main.2bcd8b6d.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.ce13476fbeb56771e080.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.6a3ad6de0841d4f22c98.yaml",
@@ -22,11 +22,11 @@
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.70fdb7f572f141971dfb.yaml",
     "main.cfb5acb4.css.map": "/dataslate/static/css/main.cfb5acb4.css.map",
-    "main.ab22a9b3.js.map": "/dataslate/static/js/main.ab22a9b3.js.map",
+    "main.2bcd8b6d.js.map": "/dataslate/static/js/main.2bcd8b6d.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cfb5acb4.css",
-    "static/js/main.ab22a9b3.js"
+    "static/js/main.2bcd8b6d.js"
   ]
 }
