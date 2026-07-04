@@ -1348,7 +1348,7 @@ function Strategem({ strategem })
       <p><label>Target:</label> <span dangerouslySetInnerHTML={{ __html: strategem.target}}></span></p>
       <p><label>Effect:</label> <span dangerouslySetInnerHTML={{ __html: strategem.effect }}></span></p>
       {strategem.restrictions && (
-        <p><label>Restrictions:</label> {strategem.restrictions}</p>
+        <p><label>Restrictions:</label> <span dangerouslySetInnerHTML={{ __html: strategem.restrictions }}></span></p>
       )}
     </li>
   )
