@@ -342,3 +342,28 @@
     unit: Lokhust Heavy Destroyers
   warlord: Overload with Translocation Shroud
   icon: robots
+- # Librarius Speeders Incursion
+  id: I4
+  category: Incursion
+  name: Librarius Speeders
+  faction: Space Marines
+  units:
+  - Librarian
+  - Intercessor Squad
+  - Librarian in Terminator Armor
+  - Terminator Squad
+  - Chaplain with Jump Pack
+  - Vanguard Veteran Squad with Jump Packs
+  - Eradicator Squad with Heavy Bolters
+  - Infernus Squad
+  - Land Speeder
+  - Sisters of Battle Squad
+  detachments: 
+  - Fulguris Task Force
+  - Librarius Conclave
+  enhancements:
+  -
+    name: Temporal Corridor
+    unit: Librarian in Terminator Armor
+  warlord: Overload with Translocation Shroud
+  icon: brothers

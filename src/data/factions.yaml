@@ -97,9 +97,10 @@
   abilities:
   -
     name: Oath of Moment
-    text: "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:
+    text: "If your Army Faction is <strong>ADEPTUS ASTARTES</strong>, at the start of your <strong>Command phase</strong>, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:
       <ul>
-        <li>You can re-roll the Hit roll.</li>
+        <li>You can re-roll the <strong>Hit roll</strong>.</li>
+        <li>If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the <strong>BLACK TEMPLARS</strong>, <strong>BLOOD ANGELS</strong>, <strong>DARK ANGELS</strong>, <strong>DEATHWATCH</strong> or <strong>SPACE WOLVES</strong> keywords, add 1 to the <strong>Wound roll</strong> as well.</li>
       </ul>"
 -
   faction: T'au Empire
