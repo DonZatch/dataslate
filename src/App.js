@@ -1261,7 +1261,7 @@ function Rules({ detachments, factionAbilities })
       <div className='dispositions'>
         <h2>Force Disposition(s):</h2>
         <ul>
-          {[...dispositions].map(disposition => <li>{disposition}</li>)}
+          {[...dispositions].map(disposition => <li><DispositionIcon disposition={disposition} /> {disposition}</li>)}
         </ul>
       </div>
       <ol className="armyRules">
@@ -1272,6 +1272,23 @@ function Rules({ detachments, factionAbilities })
       </ol>
     </>
   );
+}
+
+function DispositionIcon({ disposition })
+{
+  switch (disposition.toLowerCase())
+  {
+    case "take and hold":
+      return <>&#11202;</>;
+    case "disruption":
+      return <>&#11203;</>;
+    case "purge the foe":
+      return <>&#11206;</>;
+    case "priority assets":
+      return <>&#11201;</>;
+    case "reconnaissance":
+      return <>&#11044;</>;
+  }
 }
 
 function ArmyRule({ ability })
