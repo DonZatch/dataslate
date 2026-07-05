@@ -5694,3 +5694,791 @@
   -
     label: "The Boss Nob on Warbike model is equipped with:"
     value: "twin dakkagun, power klaw."
+# Space Marines
+- # Librarian
+  name: Librarian
+  profiles:
+  -
+    name: Librarian
+    m: 6
+    t: 4
+    sv: 3+
+    w: 4
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Grenades
+  - Psyker
+  - Imperium
+  - Tacticus
+  - Librarian
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Smite - Witchfire
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 5
+    ap: -1
+    d: D3
+    abilities:
+    - Psychic
+  -
+    name: Smite - Focused Witchfire
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 6
+    ap: -2
+    d: D3
+    abilities:
+    - Devastating Wounds
+    - Hazardous
+    - Psychic
+  melee:
+  -
+    name: Force Weapon
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: D3
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Psychic Hood
+      value: "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+    -
+      label: Mental Fortress (Psychic)
+      value: "While this model is leading a unit, models in that unit have a 4+ invulnerable save."
+    leader:
+    - Infernus Squad
+    - Intercessor Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "bolt pistol, smite, force weapon."
+- # Chaplain with Jump Pack
+  name: Chaplain with Jump Pack
+  profiles:
+  -
+    name: Chaplain with Jump Pack
+    m: 12
+    t: 4
+    sv: 3+
+    iv: 3+
+    w: 4
+    ld: 5+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Jump Pack
+  - Fly
+  - Imperium
+  - Chaplain
+  ranged:
+  -
+    name: Inferno Pistol
+    range: 16"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -4
+    d: D3
+    abilities:
+    - Melta 2
+    - Close-Quarters
+  melee:
+  -
+    name: Crozius Arcanum
+    range: Melee
+    a: 5
+    ws: 2+
+    s: 6
+    ap: -1
+    d: 2
+  abilities:
+    core:
+    - Leader
+    - Deep Strike
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Litany of Hate
+      value: "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+    -
+      label: Exhortation of Rage
+      value: "Each time this model's unit is selected to fight, you can select one enemy unit within Engagement Range of this model's unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+    leader:
+    - Vanguard Veteran Squad with Jump Packs
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "inferno pistol, crozius arcanum."
+- # Librarian in Terminator Armor
+  name: Librarian in Terminator Armor
+  profiles:
+  -
+    name: Librarian in Terminator Armor
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 5
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Psyker
+  - Imperium
+  - Terminator
+  - Librarian
+  ranged:
+  -
+    name: Smite - witchfire
+    abilities:
+    - Psychic
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 5
+    ap: -1
+    d: D3
+  -
+    name: Smite - focused witchfire
+    abilities:
+    - Devastating Wounds
+    - Hazardous
+    - Psychic
+    profile: true
+    range: 24"
+    a: D6
+    bs: 3+
+    s: 6
+    ap: -2
+    d: D3
+  -
+    name: Storm bolter
+    abilities:
+    - Rapid Fire 2
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Force weapon
+    abilities:
+    - Psychic
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: d3
+  abilities:
+    core:
+    - Deep Strike
+    - Leader
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Psychic Hood
+      value: "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+    -
+      label: Veil of Time (Psychic)
+      value: "While this model is leading a unit, weapons equipped by models in that unit have the [Sustained Hits 1] ability."
+    leader:
+    - Terminator Squad
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "smite, storm bolter, force weapon"
+- # Intercessor Squad
+  name: Intercessor Squad
+  profiles:
+  -
+    name: Intercessor Squad
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 2
+  keywords:
+  - Battleline
+  - Explosives
+  - Imperium
+  - Infantry
+  - Tacticus
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Bolt Rifle
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Assault
+    - Heavy
+  -
+    name: Grenade Launcher - Frag
+    num: 1
+    profile: true
+    range: 24"
+    a: D3
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Blast 1
+  -
+    name: Grenade Launcher - Krak
+    num: 1
+    profile: true
+    range: 24"
+    a: 1
+    bs: 3+
+    s: 9
+    ap: -2
+    d: D3
+  melee:
+  -
+    name: Chainsword
+    num: 1
+    range: Melee
+    a: 5
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+  -
+    name: Knives and Fists
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Objective Secured"
+      value: "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase."
+    -
+      label: "Target Elimination"
+      value: "Each time this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, add 2 to the Attacks characteristic of bolt rifles equipped by models in this unit and you can only select one enemy unit as the target of all of this unit's attacks."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "the Intercessor Sergeant is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Chainsword, 1 Knives and Fists"
+  -
+    label: "the Intercessor with Grenade Launcher is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Grenade Launcher, 1 Knives and Fists"
+  -
+    label: "Every Intercessor is equipped with:"
+    value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Knives and Fists"
+- # Eradicator Squad with Heavy Bolters
+  name: Eradicator Squad with Heavy Bolters
+  profiles:
+  -
+    name: Eradicator Squad with Heavy Bolters
+    m: 5
+    t: 6
+    sv: 3+
+    w: 3
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Gravis
+  - Eradicator Squad
+  - Eradicator Squad with Heavy Bolters
+  ranged:
+  -
+    name: Bolt Pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Heavy Bolter
+    range: 36"
+    a: 3
+    bs: 3+
+    s: 5
+    ap: -1
+    d: 2
+    abilities:
+    - Sustained Hits 1
+    - Heavy
+  melee:
+  -
+    name: Close-Combat Weapon
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Overlapping Detonations"
+      value: "In your Shooting phase, when this unit is selected to shoot you can select one non-MONSTER/VEHICLE enemy unit visible to it. While making attacks, this unit's heavy bolters that targeted that selected unit have BLAST 1."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "1 Bolt Pistol, 1 Heavy Bolter, 1 Close-Combat Weapon"
+- # Infernus Squad
+  name: Infernus Squad
+  profiles:
+  -
+    name: Infernus Squad
+    m: 6
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Grenades
+  - Imperium
+  - Tacticus
+  - Infernus Squad
+  ranged:
+  -
+    name: Bolt pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Pyreblaster
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  melee:
+  -
+    name: Close combat weapon
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Incendiary Terror
+      value: In your Shooting phase, after this unit has shot, you can select one enemy INFANTRY unit hit by one or more of those attacks made with a pyreblaster. That enemy unit must take a Battle-shock test, subtracting 1 from that test.
+  factions:
+  - Adeptus Astartes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "bolt pistol, pyreblaster, close combat weapon"
+- # Land Speeder
+  name: Land Speeder
+  profiles:
+  -
+    name: Land Speeder
+    m: 14
+    t: 8
+    sv: 3+
+    w: 9
+    ld: 6+
+    oc: 2
+  keywords:
+  - Fly
+  - Imperium
+  - Vehicle
+  - Land Speeder
+  - Frame
+  ranged:
+  -
+    name: Multi-melta
+    range: 18"
+    a: 2
+    bs: 3+
+    s: 9
+    ap: -4
+    d: D6
+    abilities:
+    - Melta 2
+  -
+    name: Onslaught Gatling Cannon
+    range: 24"
+    a: 8
+    bs: 3+
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Devastating Wounds
+  -
+    name: Stormfury Missile Launcher
+    range: 48"
+    a: 1
+    bs: 3+
+    s: 12
+    ap: -3
+    d: D6+1
+  melee:
+  -
+    name: Armoured Impact
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 4
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Purgation Run
+      value: "In your Shooting phase, after this unit has shot, it can make a normal move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "1 Armoured Impact, 1 Multi-melta, 1 Onslaught Gatling Cannon, 1 Stormfury Missile Launcher"
+- # Terminator Squad
+  name: Terminator Squad
+  profiles:
+  -
+    name: Terminator Squad
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 3
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Imperium
+  - Terminator
+  - Terminator Squad
+  ranged:
+  -
+    name: Assault Cannon
+    num: 1
+    range: 24"
+    a: 6
+    bs: 3+
+    s: 6
+    ap: 0
+    d: 1
+    abilities:
+    - Devastating Wounds
+  -
+    name: Storm bolter
+    num: 4
+    abilities:
+    - Rapid Fire 2
+    range: 24"
+    a: 2
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+  melee:
+  -
+    name: Power fist
+    num: 4
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 8
+    ap: -2
+    d: 2
+  -
+    name: Power weapon
+    num: 1
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 5
+    ap: -2
+    d: 1
+  abilities:
+    core:
+    - Deep Strike
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: Teleport Homer
+      value: At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent's deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3" horizontally of that token and not within 8" horizontally of any enemy models. That token is then removed.
+    -
+      label: Fury of the First
+      value: "Each time a model in this unit makes an attack that targets your Oath of Moment target, add 1 to the Hit roll."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "The Terminator Sergeant is equipped with:"
+    value: "storm bolter, power weapon"
+  -
+    label: "1 Terminator is equipped with:"
+    value: "assault cannon, power fist"
+  -
+    label: "3 Terminators are equipped with:"
+    value: "storm bolter, power fist"
+- # Vanguard Veteran Squad with Jump Packs
+  name: Vanguard Veteran Squad with Jump Packs
+  profiles:
+  -
+    name: Vanguard Veteran Squad with Jump Packs
+    m: 12
+    t: 4
+    sv: 3+
+    w: 2
+    ld: 6+
+    oc: 1
+  keywords:
+  - Explosives
+  - Fly
+  - Imperium
+  - Infantry
+  - Jump Pack
+  - Vanguard Veteran Squad
+  ranged:
+  -
+    name: Inferno Pistol
+    range: 6"
+    a: 1
+    bs: 3+
+    s: 8
+    ap: -4
+    d: D3
+    abilities:
+    - Close-Quarters
+  melee:
+  -
+    name: Vanguard Veteran Weapon
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 5
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Oath of Moment
+    other:
+    -
+      label: "Vanguard Assault"
+      value: "Each time this unit ends a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the LETHAL HITS ability."
+  factions: 
+  - Adeptus Astartes
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "1 Inferno Pistol, 1 Vanguard Veteran Weapon"
+- # Sisters of Battle Squad
+  name: Sisters of Battle Squad
+  profiles:
+  -
+    name: Sisters of Battle Squad
+    m: 6
+    t: 3
+    sv: 3+
+    iv: 6+
+    w: 1
+    ld: 7+
+    oc: 2
+  keywords:
+  - Infantry
+  - Explosives
+  - Battleline
+  - Ordo Hereticus
+  - Requisitioned
+  - Sisters of Battle Squad
+  ranged:
+  -
+    name: Bolt pistol
+    range: 12"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Close-Quarters
+  -
+    name: Boltgun
+    num: 7
+    range: 24"
+    a: 1
+    bs: 3+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Rapid Fire 1
+  -
+    name: Combi-weapon
+    num: 1
+    range: 24"
+    a: 1
+    bs: 4+
+    s: 4
+    ap: 0
+    d: 1
+    abilities:
+    - Anti-Infantry 4+
+    - Devastating Wounds
+    - Rapid Fire 1
+  -
+    name: Ministorum flamer
+    num: 1
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 5
+    ap: 0
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  -
+    name: Ministorum heavy flamer
+    num: 1
+    range: 12"
+    a: D6
+    bs: N/A
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Ignores Cover
+    - Torrent
+  melee:
+  -
+    name: Stocks and fists
+    num: 9
+    range: Melee
+    a: 1
+    ws: 4+
+    s: 3
+    ap: 0
+    d: 1
+  -
+    name: Power weapon
+    num: 1
+    range: Melee
+    a: 2
+    ws: 4+
+    s: 4
+    ap: -2
+    d: 1
+  abilities:
+    faction:
+    - Acts of Faith
+    wargear:
+    -
+      label: Simulacrum Imperialis
+      value: "Improve the Leadership characteristic of models in the bearer's unit by 1."
+    other:
+    -
+      label: Incensor Cherub
+      value: "Once per battle, you can target this unit with the Command Re-roll Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+    -
+      label: "Defenders of the Faith"
+      value: "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase."
+  factions: 
+  - Adepta Sororitas
+  composition:
+  -
+    label: "The Sister Superior is equipped with:"
+    value: "bolt pistol, combi-weapon, power weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, Ministorum flamer, close combat weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, Ministorum heavy flamer, close combat weapon"
+  -
+    label: "1 Battle Sister is equipped with:"
+    value: "bolt pistol, boltgun, close combat weapon, simulacrum imperialis"
+  -
+    label: "6 Battle Sisters are equipped with:"
+    value: "bolt pistol, boltgun, close combat weapon"

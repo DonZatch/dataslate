@@ -874,3 +874,100 @@
     when: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
     target: One SPEED FREEKS unit from your army that is within 9" of that enemy unit and is not within Engagement Range of one or more enemy units.
     effect: Your unit can make a Normal move of up to 6".
+# Space Marines
+- # Fulguris Task Force
+  name: Fulguris Task Force
+  disposition: Disruption
+  abilities:
+  -
+    name: Skystrike
+    text: "Friendly <strong>Land Speeder/Storm Speeder Hailstrike/Storm Speeder Hammerstrike/Storm Speeder Thunderstrike</strong> units have <strong>Speeder</strong>. In your first Movement phase, friendly <strong>Speeder</strong> units can make an <strong>ingress move</strong>."
+  enhancements:
+  -
+    name: Raptorial Cogitator Core
+    text: "<strong>Speeder</strong> unit only. This unit's ranged attacks have <strong>[Ignores Cover]</strong>."
+  -
+    name: Bellicose Weapon Spirits
+    text: "<strong>Speeder</strong> unit only. This unit can re-roll:
+      <ul>
+        <li><strong>Damage rolls</strong></il>
+        <li>Rolls to determine the <strong>A</strong> of a weapon.</li>
+      </ul>"
+  strategems:
+  - 
+    name: Anti-grav Surge
+    cost: 1
+    turn: opponent
+    when: End of your opponent's Fight phase.
+    target: One friendly <strong>unengaged Speeder</strong> unit.
+    effect: Place your unit in <strong>strategic reserves</strong>.
+  - 
+    name: Data-link Augury
+    cost: 1
+    turn: your
+    when: Your Shooting phase, when a friendly <strong>Speeder</strong> unit is <strong>selected to shoot</strong>.
+    target: That Speeder unit.
+    effect: "Select one enemy unit within 24\" of your unit. That enemy unit has +6\" <strong>detection range</strong> until your unit has shot."
+  - 
+    name: Reactive Evasion
+    cost: 1
+    turn: opponent
+    when: "Your opponent's Movement phase, when an enemy unit ends a move within 8\" of a friendly <strong>unengaged Speeder</strong> unit."
+    target: That <strong>Speeder</strong> unit.
+    effect: "Your unit can make a <strong>normal move</strong> of up to D3+3\"."
+- # Librarius Conclave
+  name: Librarius Conclave
+  disposition: Disruption
+  abilities:
+  -
+    name: Psychic Disciplines
+    text: "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly Adeptus Astartes Psyker units have that ability until the end of the battle round.
+      <ul>
+        <li>Biomancy Discipline: This unit has +2\" M.</li>
+        <li>Divination Discipline: This unit's attacks can:</li>
+        <li>Re-roll hit rolls of 1.</li>
+        <li>Re-roll wound rolls of 1.</li>
+        <li>Pyromancy Discipline: This unit's ranged attacks that target an enemy unit within 12\" of this unit have +1 AP.</li>
+        <li>Telekinesis Discipline: Ranged attacks that target this unit have -1 S.</li>
+        <li>Telepathy Discipline: This unit's attacks can ignore modifiers to BS, WS and hit rolls.</li>
+      </ul>"
+  enhancements:
+  -
+    name: Prescience
+    text: "Adeptus Astartes Psyker model only (excluding Terminator models). (Once per turn per unit) In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of:
+      <ul>
+        <li>Up to D6\".</li>
+        <li>Or: If this unit has the Divination Discipline ability, up to 6\".</li>
+      </ul>"
+  -
+    name: Fusillade
+    text: "Adeptus Astartes Psyker model only. This unit's ranged attacks have: 
+      <ul>
+        <li>[Anti-Monster/Vehicle 5+].</li>
+        <li>If this unit has the Pyromancy Discipline ability, [Sustained Hits 1].</li>
+      </ul>
+      "
+  -
+    name: Obfuscation
+    text: "Adeptus Astartes Psyker model only.
+      <ul>
+        <li>Enemy units cannot target this unit with snap shooting attacks.</li>
+        <li>If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.</li>
+      </ul>
+      "
+  -
+    name: Temporal Corridor
+    text: "Adeptus Astartes Psyker model only.
+      <ul>
+        <lli>At the end of your opponent's Fight phase, you can place this unit into strategic reserves.</lli>
+        <li>If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.</li>
+      </ul>
+      "
+  -
+    name: Celerity
+    text: "Adeptus Astartes Psyker model only.
+      <ul>
+        <li>When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge.</li>
+        <li>When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.</li>
+      </ul>
+      "
