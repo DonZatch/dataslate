@@ -367,3 +367,28 @@
     unit: Librarian in Terminator Armor
   warlord: Overload with Translocation Shroud
   icon: brothers
+- # Cryptek Conclave
+  id: I5
+  category: Incursion
+  name: Cryptek Conclave
+  faction: Necrons
+  units:
+  - Overlord with Translocation Shroud
+  - Plasmancer
+  - Immortals
+  - Technomancer
+  - Canoptek Wraiths
+  - Skorpekh Lord
+  - Skorpekh Destroyers
+  - Lokhust Heavy Destroyers
+  - Tomb Blades
+  - Canoptek Doomstalker
+  - Canoptek Scarab Swarms
+  detachments: 
+  - Cryptek Conclave
+  enhancements:
+  -
+    name: Quantum Abacus
+    unit: Plasmancer
+  warlord: Overload with Translocation Shroud
+  icon: robots

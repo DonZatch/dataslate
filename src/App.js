@@ -605,6 +605,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />
+        <DamagedSummary unit={unit} />
         <PatrolSquadSummary unit={unit} />
         </a>
       )}
@@ -707,6 +708,20 @@ function EnhancementAbilitySummary({ unit })
       {enhancements.map(enhancement => 
         <li key={enhancement.name}><label>{enhancement.name} (Enhancement):</label><span dangerouslySetInnerHTML={{ __html: enhancement.text }} /></li>
       )}
+    </ol>
+  );
+}
+
+function DamagedSummary({ unit })
+{
+  const damaged = unit?.damaged;
+  if (!damaged)
+  {
+    return null;
+  }
+  return (
+    <ol className="otherAbilitySummary">
+        <li><label>Damaged ({damaged.condition}):</label>{damaged.text}</li>      
     </ol>
   );
 }
