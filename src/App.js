@@ -1291,18 +1291,18 @@ function Rules({ detachments, factionAbilities })
 
 function DispositionIcon({ disposition })
 {
-  switch (disposition.toLowerCase())
+  switch (disposition?.toLowerCase())
   {
     case "take and hold":
-      return <>&#11202;</>;
+      return <svg width={16} height={16} viewBox='0 0 16 16'><polygon fill="black" points='2,1 14,1 14,10 8,15 2,10' /></svg>;
     case "disruption":
-      return <>&#11203;</>;
+      return <svg width={16} height={16} viewBox='0 0 16 16'><polygon fill="black" points='4,1 12,1 15,8 12,15 4,15 1,8' /></svg>;
     case "purge the foe":
-      return <>&#11206;</>;
+      return <svg width={16} height={16} viewBox='0 0 16 16'><polygon fill="black" points='2,2 14,2 8,14' /></svg>;
     case "priority assets":
-      return <>&#11201;</>;
+      return <svg width={16} height={16} viewBox='0 0 16 16'><polygon fill="black" points='8,2 14,8 8,14 2,8' /></svg>;
     case "reconnaissance":
-      return <>&#11044;</>;
+      return <svg width={16} height={16} viewBox='0 0 16 16'><circle cx={8} cy={8} r={8} /></svg>;
   }
 }
 
