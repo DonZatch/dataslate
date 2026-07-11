@@ -392,3 +392,38 @@
     unit: Plasmancer
   warlord: Overload with Translocation Shroud
   icon: robots
+# Strike Force
+- # Cryptek Dynasty
+  id: SF1
+  category: Strike Force
+  name: Cryptek Dynasty
+  faction: Necrons
+  units:
+  - C'tan Shard of the Nightbringer
+  - Imotekh The Stormlord
+  - Lychguard
+  - Overlord
+  - Overlord with Translocation Shroud
+  - Plasmancer
+  - Cryptothralls
+  - Immortals
+  - Technomancer
+  - Canoptek Wraiths
+  - Skorpekh Lord
+  - Skorpekh Destroyers
+  - Lokhust Lord
+  - Lokhust Heavy Destroyers
+  - Canoptek Doomstalker
+  - Canoptek Reanimator
+  detachments: 
+  - Cryptek Conclave
+  - Hand of the Dynasty
+  enhancements:
+  -
+    name: Tools of Dominion
+    unit: Immortals
+  -
+    name: Guantlet of Compression
+    unit: Lokhust Lord
+  warlord: Imotekh the Stormlord
+  icon: robots

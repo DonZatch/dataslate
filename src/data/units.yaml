@@ -4191,6 +4191,67 @@
   -
     label: "This model is equipped with:"
     value: "enmitic annihilator, flensing claw, hyperphase harvester"
+- # Overlord
+  name: Overlord
+  profiles:
+  -
+    name: Overlord
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Noble
+  - Overlord
+  ranged:
+  -
+    name: Tachyon arrow
+    range: 72"
+    a: 1
+    bs: 2+
+    s: 16
+    ap: -5
+    d: d6+2
+    abilities:
+    - One Shot
+  melee:
+  -
+    name: Overlord's blade
+    range: Melee
+    a: 4
+    ws: 2+
+    s: 8
+    ap: -3
+    d: 2
+    abilities:
+    - Devastating Wounds
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: My Will Be Done
+      value: "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+    -
+      label: Implacable Resilience
+      value: "Each time an attack is allocated to this model, subtract 1 from that attack's Damage characteristic."
+    leader:
+    - Immortals
+    - Lychguard
+    - Necron Warriors
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "tachyon arrow, overlord's blade"
 - # Overlord with Translocation Shroud
   name: Overlord with Translocation Shroud
   profiles:
@@ -4519,6 +4580,47 @@
   -
     label: "Every model is equipped with:"
     value: "synaptic disintegrator, close combat weapon"
+- # Lychguard
+  name: Lychguard
+  profiles:
+  -
+    name: Lychguard
+    m: 5
+    t: 5
+    sv: 3+
+    iv: 4+
+    w: 2
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Lychguard
+  melee:
+  -
+    name: Hyperphase Sword
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 6
+    ap: -2
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Guardian Protocols
+      value: While a NOBLE model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll.
+    wargear:
+    -
+      label: Dispersion Shield
+      value: The bearer has a 4+ invulnerable save.
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Hyperphase sword, Dispersion shield"
 - # Canoptek Doomstalker
   name: Canoptek Doomstalker
   profiles:
@@ -4587,6 +4689,108 @@
   -
     label: "This model is equipped with:"
     value: "doomsday blaster, twin gauss flayer, doomstalker limbs"
+- # Canoptek Reanimator
+  name: Canoptek Reanimator
+  profiles:
+  -
+    name: Canoptek Reanimator
+    m: 8
+    t: 6
+    sv: 3+
+    w: 6
+    ld: 8+
+    oc: 3
+  keywords:
+  - Vehicle
+  - Walker
+  - Canoptek
+  - Reanimator
+  ranged:
+  -
+    name: Atomiser Beam
+    num: 2
+    range: 12"
+    a: 3
+    bs: 4+
+    s: 6
+    ap: -2
+    d: 1
+  melee:
+  -
+    name: Reanimator's Claws
+    range: Melee
+    a: 4
+    ws: 4+
+    s: 5
+    ap: 0
+    d: 1
+  abilities:
+    core:
+    - Feel No Pain 4+
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Nanoscarab Reanimation Bean (Aura)
+      value: "While a friendly NECRONS unit is within 3\" of this model, each time that unit's Reanimation Protocols activate, that unit reanimates an additional D3 wounds."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "2 atomiser beams, Reanimator's claws"
+- # Cryptothralls
+  name: Cryptothralls
+  profiles:
+  -
+    name: Cryptothralls
+    m: 5
+    t: 4
+    sv: 3+
+    w: 3
+    ld: 8+
+    oc: 1
+  keywords:
+  - Infantry
+  - Cryptothralls
+  ranged:
+  -
+    name: Scouring Eye
+    range: 6"
+    a: 2
+    bs: 4+
+    s: 5
+    ap: -1
+    d: 1
+  melee:
+  -
+    name: Scythed Limbs
+    range: Melee
+    a: 4
+    ws: 4+
+    s: 5
+    ap: -1
+    d: 1
+  abilities:
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Bound Creation
+      value: "While this unit is in the same unit as a CRYPTEK model, that CRYPTEK model has the Feel No Pain 4+ ability."
+    -
+      label: Systematic Vigour
+      value: "Each time a CRYPTOTHRALL model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and it is then removed from play."
+  rules:
+    -
+      label: Cryptek Retinue
+      value: "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a CRYPTEK INFANTRY model (a unit cannot have more than one CRYPTOTHRALLS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit's Starting Strength is increased accordingly."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "scouring eye, scythed limbs"
 - # Canoptek Scarab Swarms
   name: Canoptek Scarab Swarms
   profiles:
@@ -4791,6 +4995,74 @@
   -
     label: "Every model is equipped with:"
     value: "Particle beamer, close combat weapon"
+- # C'tan Shard of the Nightbringer
+  name: C'tan Shard of the Nightbringer
+  profiles:
+  -
+    name: C'tan Shard of the Nightbringer
+    m: 10
+    t: 11
+    sv: 3+
+    iv: 4+
+    w: 16
+    ld: 6+
+    oc: 4
+  keywords:
+  - Monster
+  - Character
+  - Epic Hero
+  - Fly
+  - C'tan Shard of the Nightbringer
+  ranged:
+  -
+    name: Gaze of Death
+    range: 18"
+    a: D3
+    bs: 2+
+    s: 12
+    ap: -3
+    d: D6+3
+  melee:
+  -
+    name: Scythe of the Nightbringer - Strike
+    profile: true
+    range: Melee
+    a: 6
+    ws: 2+
+    s: 14
+    ap: -4
+    d: D6+2
+    abilities:
+    - Devastating Wounds
+  -
+    name: Scythe of the Nightbringer - Sweep
+    profile: true
+    range: Melee
+    a: 14
+    ws: 2+
+    s: 8
+    ap: -2
+    d: 2
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Feel No Pain 5+
+    - Deep Strike
+    - Deadly Demise D6
+    other:
+    -
+      label: Drain Life
+      value: "At the end of the Fight phase, roll one D6 for each enemy unit within 6\" of this model: on a 4+, that enemy unit suffers D3 mortal wounds."
+    -
+      label: Necrodermis
+      value: "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Gaze of death, Scythe of the Nightbringer"
 # Orks
 - # Beastboss
   name: Beastboss
