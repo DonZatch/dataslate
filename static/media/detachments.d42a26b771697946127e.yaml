@@ -571,6 +571,7 @@
 # Necrons
 - # Canoptek Court
   name: Canoptek Court
+  disposition: Take and Hold
   abilities:
   -
     name: Power Matrix

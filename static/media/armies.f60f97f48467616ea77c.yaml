@@ -427,3 +427,29 @@
     unit: Lokhust Lord
   warlord: Imotekh the Stormlord
   icon: robots
+- # Canoptek Court
+  id: SF2
+  category: Strike Force
+  name: Canoptek Court
+  faction: Necrons
+  units:
+  - C'tan Shard of the Nightbringer
+  - Illuminor Szeras
+  - Imotekh The Stormlord
+  - Plasmancer
+  - Immortals
+  - Necron Warriors
+  - Technomancer
+  - Canoptek Wraiths
+  - Canoptek Doomstalker
+  - Canoptek Reanimator
+  - Deathmarks
+  - Flayed Ones
+  detachments: 
+  - Canoptek Court
+  enhancements:
+  -
+    name: Dimensional Sanctum
+    unit: Technomancer
+  warlord: Illuminor Szeras
+  icon: robots

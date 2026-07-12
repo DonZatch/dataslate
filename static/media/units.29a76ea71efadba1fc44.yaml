@@ -4016,6 +4016,73 @@
   -
     label: "This model is equipped with:"
     value: "Gauntlet of Fire, Staff of the Destroyer"
+- # Illuminor Szeras
+  name: Illuminor Szeras
+  profiles:
+  -
+    name: Illuminor Szeras
+    m: 8
+    t: 8
+    sv: 2+
+    iv: 4+
+    w: 9
+    ld: 6+
+    oc: 3
+  keywords:
+  - Infantry
+  - Character
+  - Epic Hero
+  - Cryptek
+  - Illuminor Szeras
+  ranged:
+  -
+    name: Eldritch Lance
+    range: 36"
+    a: 3
+    bs: 3+
+    s: 9
+    ap: -3
+    d: 3
+  melee:
+  -
+    name: Eldritch Lance
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 9
+    ap: -3
+    d: 3
+  -
+    name: Impaling Legs
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 6
+    ap: -1
+    d: 1
+    abilities:
+    - Extra Attacks
+  abilities:
+    faction:
+    - Reanimation Protocols
+    core:
+    - Feel No Pain 4+
+    other:
+    -
+      label: Mechanical Augmentation (Aura)
+      value: "While a friendly NECRONS BATTLELINE unit is within 3\" of this model, each time a model in that unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and each time an attack targets that unit, worsen the Armour Penetration characteristic of that attack by 1."
+    -
+      label: Illuminor
+      value: "While this model is within 3\" of one or more other friendly NECRONS units, this model has the Lone Operative ability."
+    -
+      label: Atomic Energy Manipulator
+      value: "At the end of the Fight phase, if this model destroyed one or more models this phase, until the end of the battle, add 3\" to the range of its Mechanical Augmentation ability (to a maximum of 12\")."
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "Eldritch Lance, impaling legs"
 - # Technomancer
   name: Technomancer
   profiles:
@@ -4940,6 +5007,48 @@
   -
     label: "Every model is equipped with:"
     value: "enmitic exterminator OR gauss destructor, close combat weapon"
+- # Flayed Ones
+  name: Flayed Ones
+  profiles:
+  -
+    name: Flayed Ones
+    m: 5
+    t: 4
+    sv: 4+
+    w: 1
+    ld: 7+
+    oc: 1
+  keywords:
+  - Infantry
+  - Flayed Ones
+  melee:
+  -
+    name: Flayer Claws
+    range: Melee
+    a: 4
+    ws: 3+
+    s: 4
+    ap: -1
+    d: 1
+    abilities:
+    - Sustained Hits 1
+    - Twin-Linked
+  abilities:
+    core:
+    - Infiltrators
+    - Stealth
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: Flesh Hunger
+      value: Each time a model in this unit makes a melee attack, if the target of that attack is Below Half-strength, a successful Hit roll scores a Critical Hit.
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "Every model is equipped with:"
+    value: "flayer claws"
 - # Tomb Blades
   name: Tomb Blades
   profiles:
