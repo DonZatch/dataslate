@@ -6180,7 +6180,7 @@
   ranged:
   -
     name: Inferno Pistol
-    range: 16"
+    range: 6"
     a: 1
     bs: 3+
     s: 8
