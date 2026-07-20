@@ -1,0 +1,261 @@
+-
+  name: Anti
+  text: "<p>This ability always takes the form <strong>[ANTI-X Y+]</strong>. Each time an attack is made with an <strong>[ANTI]</strong> weapon, if the target unit has the keyword denoted by <strong>X</strong>, an unmodified <strong>wound roll</strong> of <strong>Y+</strong> is a <strong>critical wound</strong>.</p>"
+  example: "An attack made with an <strong>[ANTI-VEHICLE 4+]</strong> weapon against a VEHICLE unit will result in a <strong>critical wound</strong> on an unmodified <strong>wound roll</strong> of 4+, while an attack made with an <strong>[ANTI-PSYKER 2+]</strong> weapon against a PSYKER unit will result in a <strong>critical wound</strong> on an unmodified <strong>wound roll</strong> of 2+."
+-
+  name: Assault
+  text: "<p>Units containing one or more models with an <strong>[ASSAULT]</strong> weapon can shoot using <strong>assault shooting</strong> (10.05).</p>"
+-
+  name: Blast
+  text: "<p>Each time you gather <strong>attack dice</strong> for a <strong>[BLAST]</strong> weapon, add one additional <strong>attack dice</strong> for every five models that were in the target unit in the Select Targets step (rounding down).</p>
+    <p>If this ability takes the form <strong>[BLAST X]</strong>, each time you gather <strong>attack dice</strong> for such a weapon, add <strong>X</strong> additional <strong>attack dice</strong> for every five models that were in the target unit in the Select Targets step (rounding down) instead.</p>"
+  example: "If a <strong>[BLAST 2]</strong> weapon with an <strong>A</strong> characteristic of 3 targets a unit containing 12 models, you would gather four additional <strong>attack dice</strong> for that weapon (for a total of seven for that weapon)."
+-
+  name: Cleave
+  text: "<p>This ability always takes the form <strong>[CLEAVE X]</strong>. Each time you gather <strong>attack dice</strong> for a <strong>[CLEAVE]</strong> weapon, if you only selected one target for all of that weapon's attacks, add <strong>X</strong> additional <strong>attack dice</strong> for every five models that were in the target unit in the Select Targets step (rounding down).</p>"
+  example: "If a <strong>[CLEAVE 1]</strong> weapon with an <strong>A</strong> characteristic of 3 targets one unit containing 16 models, you would gather three additional <strong>attack dice</strong> for that weapon (for a total of six for that weapon)."
+-
+  name: Close-Quarters
+  text: "<p>Units containing one or more models with a <strong>[CLOSE-QUARTERS]</strong> weapon can shoot during <strong>close-quarters shooting</strong> (10.6).</p>
+    <p>When using another <strong>shooting type</strong>, for each model in that unit (excluding <strong>MONSTER/VEHICLE</strong> models), you can only select <u>one</u> of the following to make attacks with:</p>
+    <ul>
+      <li>One or more of its <strong>[CLOSE-QUARTERS]</strong> weapons.</li>
+      <li>One or more of its other ranged weapons.</li>
+    </ul>"
+-
+  name: Deadly Demise
+  text: "<p>This ability always takes the form <strong>Deadly Demise X</strong>. Each time a model in this unit is <strong>destroyed</strong>, after the units embarked within it (if any) have made their <strong>emergency disembark moves</strong>, roll one D6. On a 6, that model suffers a <strong>deadly demise</strong>; each unit within 6\" of that model suffers a number of <strong>mortal wounds</strong> denoted by <strong>X</strong> (if this is a random number, roll separately for each unit within 6\").</p>"
+  example: "An Impulsor with a unit of Intercessors embarked within it is <strong>destroyed</strong> by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an <strong>emergency disembark move</strong>. Then the roll is made for the <strong>Deadly Demise</strong> ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield."
+-
+  name: Deep Strike
+  text: "<p>Each time this unit makes an <strong>ingress move</strong> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.</p>"
+-
+  name: Devastating Wounds
+  text: "<p>Each time an attack made with a <strong>[DEVASTATING WOUNDS]</strong> weapon results in a <strong>critical wound</strong>, the attack sequence for that attack ends and the target unit suffers a number of <strong>mortal wounds</strong> equal to the <strong>D</strong> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.</p>
+    <p><strong>Mortal wounds</strong> inflicted by <strong>[DEVASTATING WOUNDS]</strong> weapons can damage a maximum of one model for each <strong>critical wound</strong>; any remaining <strong>mortal wounds</strong> inflicted by that attack are lost.</p>"
+  example: "An attack made with a <strong>[DEVASTATING WOUNDS]</strong> weapon with a <strong>D</strong> characteristic of 3 results in a <strong>critical wound</strong> against an Intercessor Squad, so inflicts 3 <strong>mortal wounds</strong>. The first 2 <strong>mortal wounds</strong> are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost."
+-
+  name: Extra Attacks
+  text: "<p>Each time a unit containing one or more models with an <strong>[EXTRA ATTACKS]</strong> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:</p>
+    <ul>
+      <li>All of that model's <strong>[EXTRA ATTACKS]</strong> weapons.</li>
+      <li>One of that model's other melee weapons, if possible.</li>
+    </ul>"
+-
+  name: Feel No Pain
+  text: "<p>This ability always takes the form <strong>Feel No Pain X+</strong>. Each time a model with this ability would lose a wound, roll one D6: on an <strong>X+</strong>, that wound is not lost.</p>"
+-
+  name: Fights First
+  text: "<p>While every model in a unit has this ability, that unit is a <strong>Fights First</strong> unit.</p>"
+-
+  name: Firing Deck
+  text: "<p>This ability always takes the form <strong>Firing Deck X</strong>. In your Shooting phase, each time this <strong>TRANSPORT</strong> is <strong>selected to shoot</strong>, if one or more units are embarked within it, resolve the following sequence:</p>
+    <ol>
+      <li>Select up to <strong>X</strong> models embarked within this <strong>TRANSPORT</strong> (excluding models whose units have already been <strong>selected to shoot</strong> this phase).</li>
+      <li>For each selected model, select one of its ranged weapons (excluding <strong>[ONE SHOT]</strong> weapons).</li>
+      <li>Until this <strong>TRANSPORT</strong> has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.</li>
+      <li>Until the end of the turn, units embarked within this <strong>TRANSPORT</strong> are <u>not</u> eligible to shoot.</li>
+    </ol>"
+-
+  name: Hazardous
+  text: "
+    <p>Each time a unit is <strong>selected to shoot</strong> or <strong>selected to fight</strong>, after that unit has resolved all of its attacks, make a number of <strong>hazard rolls</strong> (06.03) for that unit equal to the number of <strong>[HAZARDOUS]</strong> weapons you selected in the Select Weapons step.</p>"
+-
+  name: Heavy
+  text: "<p>In your Shooting phase, each time an attack is made with a <strong>[HEAVY]</strong> weapon, add 1 to the <strong>hit roll</strong> if <u>all</u> of the following apply to the attacking unit:</p>
+    <ul>
+      <li>That unit is <strong>unengaged</strong>.</li>
+      <li>That unit was not set up on the battlefield this turn.</li>
+      <li>No model in that unit has moved more than 3\" this turn.</li>
+    </ul>"
+-
+  name: Hover
+  text: "<p>Each time this unit <strong>takes to the skies</strong> (21.03), do not subtract 2\" from the <strong>maximum distance</strong>.</p>"
+-
+  name: Ignores Cover
+  text: "<p>Each time an attack is made with an <strong>[IGNORES COVER]</strong> weapon, the target cannot have the <strong>benefit of cover</strong> against that attack (13.08), including from rules that give a model or unit the <strong>benefit of cover</strong> (e.g. <strong>Stealth</strong>).</p>"
+-
+  name: Indirect Fire
+  text: "<p>Units containing one or more models with an <strong>[INDIRECT FIRE]</strong> weapon can shoot using <strong>indirect shooting</strong> (10.07).</p>"
+  summary:
+  - "Eligible if unengaged and did not make an advance move this turn."
+  - "Can target units that are not visible to the attacking model."
+  - "The target has the <strong>benefit of cover</strong> against that attack"
+  - "You cannot re-roll hit rolls"
+  - "An unmodified hit roll of 1-5 fails, unless your unit remained stationary this turn and the target is visible to one or more friendly units, in which case an unmodified hit roll of 1-3 fails instead."
+-
+  name: Infiltrators
+  text:
+    - "<p>During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent's deployment zone and all enemy units.</p>"
+-
+  name: Lance
+  text: "<p>Each time an attack is made with a <strong>[LANCE]</strong> weapon, if the attacking model's unit made a <strong>charge move</strong> this turn, add 1 to the <strong>wound roll</strong>.</p>"
+- 
+  name: Leader
+  text: "
+    <p>Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.</p>
+    <p>Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.</p>
+    <p>Each time an attack targets an attached unit, if that unit contains one or more bodyguard models, use the highest T characteristic of the bodyguard models in that unit while resolving that attack, even if a leader/support unit in that attached unit has a different T characteristic. If that unit only contains leader/support models, use the highest T characteristic of those models while resolving that attack instead.</p>
+    <p>Rules that are triggered when a unit is destroyed are only triggered when the last model that started the battle in an attached unit is destroyed.</p>
+    "
+-
+  name: Lethal Hits
+  text: "<p>Each time an attack made with a <strong>[LETHAL HITS]</strong> weapon results in a <strong>critical hit</strong>, you can choose for that attack to automatically wound the target.</p>
+    <p>Note: Choosing to automatically wound the target means that no <strong>wound roll</strong> is made for that attack. You may decide against this, as it means that attack cannot result in a <strong>critical wound</strong> and so cannot trigger other abilities such as <strong>[DEVASTATING WOUNDS]</strong>.</p>"
+-
+  name: Lone Operative
+  text: "<p>Unless part of an <strong>attached</strong> unit, this unit is <u>not</u> <strong>visible</strong> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <strong>[INDIRECT FIRE]</strong> weapons unless the attacking models is within 12\" of this unit.</p>
+    <p>If this ability takes the form <strong>Lone Operative X\"</strong>, unless part of an <strong>attached</strong> unit, this unit is <u>not</u> <strong>visible</strong> to enemy models unless they are within <strong>X\"</strong> of this unit, and it cannot be targeted by <strong>[INDIRECT FIRE]</strong> weapons unless the attacking model is within <strong>X\"</strong> of this unit.</p>"
+-
+  name: Melta
+  text: "<p>This ability always takes the form <strong>[MELTA X]</strong>. Each time a model makes an attack with a <strong>[MELTA]</strong> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit's attacks have been resolved, add <strong>X</strong> to that weapon's <strong>D</strong> characteristic.</p>"
+  example: "A model targets a unit that is within half range of a <strong>[MELTA 2]</strong> weapon with a <strong>D</strong> characteristic of D6. While resolving those attacks, that weapon has a <strong>D</strong> characteristic of D6+2."
+  summary:
+  - "Add 1 to Hit rolls if the bearer's unit Remained Stationary this turn."
+-
+  name: One Shot
+  text: "<p>Each weapon with this ability can only be selected to make attacks with once per battle.</p>
+    <p>If a <strong>destroyed</strong> model is returned to a unit, all of its <strong>[ONE SHOT]</strong> weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again.</p>
+    <p>If a new unit is added to an army, all <strong>[ONE SHOT]</strong> weapons in that unit can be selected to make attacks with once per battle.</p>"
+-
+  name: Precision
+  text: "<p>While resolving attacks made with one or more <strong>[PRECISION]</strong> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <strong>CHARACTER</strong> models <strong>visible</strong> to one or more of the attacking models, the active player can select one allocation group that contains one of those <strong>visible CHARACTER</strong> models. If they do, until those attacks are resolved, or until that <strong>CHARACTER</strong> group is <strong>destroyed</strong> (whichever happens first), that <strong>CHARACTER</strong> group is the current allocation group.</p>"
+-
+  name: Psychic
+  text: "<p>Each time an attack is made with a <strong>[PSYCHIC]</strong> weapon, you can ignore any or all modifiers to that attack's <strong>BS</strong> or <strong>WS</strong> characteristic and any or all modifiers to the <strong>hit roll</strong>. Attacks made with <strong>[PSYCHIC]</strong> weapons are known as <strong>psychic attacks</strong> (this can be important for the triggering of other rules)</p>"
+-
+  name: Rapid Fire
+  text: "<p>This ability always takes the form <strong>[RAPID FIRE X]</strong>. Each time you gather <strong>attack dice</strong> for a <strong>[RAPID FIRE]</strong> weapon, add <strong>X</strong> additional <strong>attack dice</strong> if the target unit was within half range of that weapon in the Select Targets step.</p>"
+  example: "If a <strong>[RAPID FIRE 1]</strong> weapon with an <strong>A</strong> characteristic of 1 targets a unit that is within half range, you would gather one additional <strong>attack dice</strong> for that weapon (for a total of two for that weapon)."
+-
+  name: Scouts
+  text: "<p>This ability always takes the form <strong>Scouts X\"</strong>. In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:</p>
+    <ul>
+      <li>If that unit is in <strong>strategic reserves</strong>, you can set up that unit anywhere that is wholly within your deployment zone.</li>
+      <li>If that unit is wholly within your deployment zone, it can make a <strong>scout move</strong> (see below).</li>
+      <li>If that unit is embarked within a <strong>DEDICATED TRANSPORT</strong> that is wholly within your deployment zone, and if every model embarked within that <strong>DEDICATED TRANSPORT</strong> has the <strong>Scouts</strong> ability, that <strong>DEDICATED TRANSPORT</strong> can make a <strong>scout move</strong>.</li>
+    </ul>
+    <p><strong>Scout Move</strong>: Make a move of max X\". After moving, your unit must be more than 8\" horizontally from all enemy units."
+-
+  name: Stealth
+  text: "<p>If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <strong>benefit of cover</strong> against that attack (13.08).</p>"
+- 
+  name: Support
+  text: "
+    <p>Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.</p>
+    <p>Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.</p>
+    <p>Each time an attack targets an attached unit, if that unit contains one or more bodyguard models, use the highest T characteristic of the bodyguard models in that unit while resolving that attack, even if a leader/support unit in that attached unit has a different T characteristic. If that unit only contains leader/support models, use the highest T characteristic of those models while resolving that attack instead.</p>
+    <p>Rules that are triggered when a unit is destroyed are only triggered when the last model that started the battle in an attached unit is destroyed.</p>
+    "
+-
+  name: Sustained Hits
+  text: "<p>This ability always takes the form <strong>[SUSTAINED HITS X]</strong>. Each time an attack made with a <strong>[SUSTAINED HITS]</strong> weapon results in a <strong>critical hit</strong>, that attack results in a number of additional hits on the target as denoted by <strong>X</strong>.</p>"
+  example: "An attack made with a <strong>[SUSTAINED HITS 2]</strong> weapon results in a <strong>critical hit</strong>. That attack therefore hits the target three times (once from the <strong>critical hit</strong>, and twice more from the <strong>[SUSTAINED HITS 2]</strong> ability)."
+-
+  name: Torrent
+  text: "<p>Each time an attack is made with a <strong>[TORRENT]</strong> weapon, that attack automatically hits the target.</p>"
+-
+  name: Twin-linked
+  text: "<p>Each time an attack is made with a <strong>[TWIN-LINKED]</strong> weapon, you can re-roll the <strong>wound roll</strong>.</p>"
+-
+  name: Explosives
+  text: "<p>Select one EXPLOSIVES model in your unit and one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your EXPLOSIVES model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.</p>"
+  summary:
+    - "1 CP Strategem"
+    - "Your shooting phase"
+    - "EXPLOSIVES unit must not have Advanced, Fell Back, or shot this turn and is not Engaged"
+    - "Target must be within 8\" and visible to the EXPLOSIVES unit"
+    - "Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
+-
+  name: Smoke
+  text: "<p>Select one friendly SMOKE unit. Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the <strong>benefit of cover</strong> against that attack (13.08).</p>"
+  summary:
+    - "1 CP Strategem"
+    - "Start of your opponent's Shooting phase"
+-
+  name: Fly
+  text: "<p>Models with the <strong>FLY</strong> keyword, and units such models are part of, are said to be able to <strong>FLY</strong>. Some rules also refer to such models/units as <strong>FLYING</strong> models/units.</p>
+    <p>Each time a <strong>FLYING</strong> unit is selected to make a <strong>normal</strong>, <strong>advance</strong>, <strong>fall-back</strong>, or <strong>charge move</strong>, before moving any models in that unit, the active player can declare that it will <strong>take to the skies</strong>. If it does, while resolving that move:</p>
+    <ul>
+      <li>Subtract 2\" from the <strong>maximum distance</strong></li>
+      <li>Each time a <strong>FLYING</strong> model moves:
+        <ul>
+          <li>Ignore all vertical distance for the purposes of how far it has moved.</li>
+          <li>It can move through all types of model (including enemy models and <strong>MONSTER/VEHICLE</strong> models).</li>
+          <li>It can move horizontally and vertically through all categories of <strong>terrain feature</strong></li>
+        </ul>
+      </li>
+    </ul>"
+  summary:
+  - "-2\" to normal, advance, and charge moves to move over terrain and models"
+-
+  name: M
+  text: "<p><strong>Move (M):</strong> The speed at which a model traverses the battlefield. If a model has an <strong>M</strong> characteristic of '-', it can be set up on the battlefield but otherwise cannot be moved.</p>"
+-
+  name: T
+  text: "<p><strong>Toughness (T):</strong> The model's resilience against harm.</p>
+    <p>When making <strong>wound rolls</strong>, roll one D6 for each hit and check if it fails or is a wound by matching the first condition below that applies:    
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>FAILS</td></tr>
+        <tr><td>Unmodifed 6</td><td>CRITICAL WOUND</td></tr>
+        <tr><td>Equal to or greater than the required result below</td><td>WOUND</td></tr>
+        <tr><td>Any other result</td><td>FAILS</td></tr>
+      </tbody>
+    </table>
+    </p>
+    <p>
+    <table class='decisionTable'>
+      <thead>
+        <tr><th>ATTACK'S STRENGTH VS TARGET'S TOUGHNESS</th><th>REQUIRED RESULT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Strength is <strong>TWICE (or more than twice)</strong> the Toughness</td><td>2+</td></tr>
+        <tr><td>Strength is <strong>GREATER</strong> than the Toughness</td><td>3+</td></tr>
+        <tr><td>Strength is <strong>EQUAL</strong> to the Toughness</td><td>4+</td></tr>
+        <tr><td>Strength is <strong>LESS</strong> than the Toughness</td><td>5+</td></tr>
+        <tr><td>Strength is <strong>HALF (or less than half)</strong> the Toughness</td><td>6+</td></tr>
+      </tbody>
+    </table>
+    </p>
+    <p>When resolving attacks that target a uni in which the models have two or more different <strong>T</strong> characteristics, follow the first instruction that applies from below:
+    <ul>
+      <li>If the target unit is an <strong>attached unit</strong> use the highest <strong>T</strong> characteristic amongst <strong>bodyguard</strong> models in that unit that are on the battlefield.</li>
+      <li>Use the highest <strong>T</strong> characteristic amongst models in that unit that are on the battlefield.</li>
+    </ul>
+    </p>"
+-
+  name: Sv
+  text: "<p><strong>Save (Sv):</strong> Presented as a dice result (e.g. 4+), this indicates the protection a model's armour gives it. For each save result, check if that attacks inflicts damage or fails by matching the first condition below tha applies:
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>INFLICTS DAMAGE</strong></tr>
+        <tr><td><strong>Invulnerable Save:</strong> The models in the current allocation group have an <strong>InSv</strong> characteristic, and the result is equal to or greater than the characteristic.</td><td>FAILS</strong></tr>
+        <tr><td><strong>Save and AP:</strong> After modifying the result by the attacking weapon's <strong>AP</strong> characteristic, it is equal to or greater than the <strong>Sv</strong> characteristic of models in the current allocation group.</td><td>FAILS</strong></tr>
+        <tr><td>Any other result</td><td>INFLICTS DAMAGE</strong></tr>
+      </tbody>
+    </table>
+    </p>"
+-
+  name: InSv
+  text: "<p><strong>Invulnerable Save (InSv):</strong> Presented as a dice result (e.g. 4+). Some models are protected by esoteric means in addition to physical armour, such as force fields or preternatural reflexes. Not all models have an <strong>InSv</strong> characteristic, but if they do, it will be listed here.
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>INFLICTS DAMAGE</strong></tr>
+        <tr><td><strong>Invulnerable Save:</strong> The models in the current allocation group have an <strong>InSv</strong> characteristic, and the result is equal to or greater than the characteristic.</td><td>FAILS</strong></tr>
+        <tr><td><strong>Save and AP:</strong> After modifying the result by the attacking weapon's <strong>AP</strong> characteristic, it is equal to or greater than the <strong>Sv</strong> characteristic of models in the current allocation group.</td><td>FAILS</strong></tr>
+        <tr><td>Any other result</td><td>INFLICTS DAMAGE</strong></tr>
+      </tbody>
+    </table>
+    </p>"
+-
+  name: W
+  text: "<p><strong>Wounds (W):</strong> Wounds represent how much damage a model can sustain before it is <strong>destroyed</strong>. If a model's wounds are reduced to 0 or fewer, that model is <strong>destroyed</strong>.</p>"
+-
+  name: Ld
+  text: "<p><strong>Leadership (Ld):</strong> Presented as a dice result (e.g. 7+), this reveals how courageous, determined, or self-controlled a model is.</p>
+    <p>To make a <strong>leadership roll</strong> for a unit, its controller player rolls 2D6: if the result is equal to or greater than one or more of the <strong>Ld</strong> characteristics in that unit, that roll succeeds. Otherwise, that roll fails.</p>
+    <p>To make a <strong>battle-shock roll</strong> for a unit, its controlling player makes a <strong>leadership roll</strong> for it. Units must make a battle-shock roll during the Command phase if that unit is currently <strong>battle-shocked</strong> or is at or below <strong>half-strength</strong></p>"
+-
+  name: OC
+  text: "<p><strong>Objective Control (OC):</strong> How effectively a model can control an <strong>Objective</strong> on the battlefield. If a model has an <strong>OC</strong> characteristic of '-' it is unable to control <strong>objectives</strong> at all.</p>"
