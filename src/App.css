@@ -459,6 +459,16 @@ header > h1 {
   border-top: none;
 }
 
+.decisionTable {
+  border-collapse: collapse;
+}
+
+.decisionTable th,
+.decisionTable td {
+  border: 1px solid black;
+  padding: 2px 4px;
+}
+
 .abilities {
   list-style: none;
   margin: 0;

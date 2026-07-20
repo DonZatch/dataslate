@@ -188,3 +188,74 @@
     </ul>"
   summary:
   - "-2\" to normal, advance, and charge moves to move over terrain and models"
+-
+  name: M
+  text: "<p><strong>Move (M):</strong> The speed at which a model traverses the battlefield. If a model has an <strong>M</strong> characteristic of '-', it can be set up on the battlefield but otherwise cannot be moved.</p>"
+-
+  name: T
+  text: "<p><strong>Toughness (T):</strong> The model's resilience against harm.</p>
+    <p>When making <strong>wound rolls</strong>, roll one D6 for each hit and check if it fails or is a wound by matching the first condition below that applies:    
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>FAILS</td></tr>
+        <tr><td>Unmodifed 6</td><td>CRITICAL WOUND</td></tr>
+        <tr><td>Equal to or greater than the required result below</td><td>WOUND</td></tr>
+        <tr><td>Any other result</td><td>FAILS</td></tr>
+      </tbody>
+    </table>
+    </p>
+    <p>
+    <table class='decisionTable'>
+      <thead>
+        <tr><th>ATTACK'S STRENGTH VS TARGET'S TOUGHNESS</th><th>REQUIRED RESULT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Strength is <strong>TWICE (or more than twice)</strong> the Toughness</td><td>2+</td></tr>
+        <tr><td>Strength is <strong>GREATER</strong> than the Toughness</td><td>3+</td></tr>
+        <tr><td>Strength is <strong>EQUAL</strong> to the Toughness</td><td>4+</td></tr>
+        <tr><td>Strength is <strong>LESS</strong> than the Toughness</td><td>5+</td></tr>
+        <tr><td>Strength is <strong>HALF (or less than half)</strong> the Toughness</td><td>6+</td></tr>
+      </tbody>
+    </table>
+    </p>
+    <p>When resolving attacks that target a uni in which the models have two or more different <strong>T</strong> characteristics, follow the first instruction that applies from below:
+    <ul>
+      <li>If the target unit is an <strong>attached unit</strong> use the highest <strong>T</strong> characteristic amongst <strong>bodyguard</strong> models in that unit that are on the battlefield.</li>
+      <li>Use the highest <strong>T</strong> characteristic amongst models in that unit that are on the battlefield.</li>
+    </ul>
+    </p>"
+-
+  name: Sv
+  text: "<p><strong>Save (Sv):</strong> Presented as a dice result (e.g. 4+), this indicates the protection a model's armour gives it. For each save result, check if that attacks inflicts damage or fails by matching the first condition below tha applies:
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>INFLICTS DAMAGE</strong></tr>
+        <tr><td><strong>Invulnerable Save:</strong> The models in the current allocation group have an <strong>InSv</strong> characteristic, and the result is equal to or greater than the characteristic.</td><td>FAILS</strong></tr>
+        <tr><td><strong>Save and AP:</strong> After modifying the result by the attacking weapon's <strong>AP</strong> characteristic, it is equal to or greater than the <strong>Sv</strong> characteristic of models in the current allocation group.</td><td>FAILS</strong></tr>
+        <tr><td>Any other result</td><td>INFLICTS DAMAGE</strong></tr>
+      </tbody>
+    </table>
+    </p>"
+-
+  name: InSv
+  text: "<p><strong>Invulnerable Save (InSv):</strong> Presented as a dice result (e.g. 4+). Some models are protected by esoteric means in addition to physical armour, such as force fields or preternatural reflexes. Not all models have an <strong>InSv</strong> characteristic, but if they do, it will be listed here.
+    <table class='decisionTable'>
+      <tbody>
+        <tr><td>Unmodifed 1</td><td>INFLICTS DAMAGE</strong></tr>
+        <tr><td><strong>Invulnerable Save:</strong> The models in the current allocation group have an <strong>InSv</strong> characteristic, and the result is equal to or greater than the characteristic.</td><td>FAILS</strong></tr>
+        <tr><td><strong>Save and AP:</strong> After modifying the result by the attacking weapon's <strong>AP</strong> characteristic, it is equal to or greater than the <strong>Sv</strong> characteristic of models in the current allocation group.</td><td>FAILS</strong></tr>
+        <tr><td>Any other result</td><td>INFLICTS DAMAGE</strong></tr>
+      </tbody>
+    </table>
+    </p>"
+-
+  name: W
+  text: "<p><strong>Wounds (W):</strong> Wounds represent how much damage a model can sustain before it is <strong>destroyed</strong>. If a model's wounds are reduced to 0 or fewer, that model is <strong>destroyed</strong>.</p>"
+-
+  name: Ld
+  text: "<p><strong>Leadership (Ld):</strong> Presented as a dice result (e.g. 7+), this reveals how courageous, determined, or self-controlled a model is.</p>
+    <p>To make a <strong>leadership roll</strong> for a unit, its controller player rolls 2D6: if the result is equal to or greater than one or more of the <strong>Ld</strong> characteristics in that unit, that roll succeeds. Otherwise, that roll fails.</p>
+    <p>To make a <strong>battle-shock roll</strong> for a unit, its controlling player makes a <strong>leadership roll</strong> for it. Units must make a battle-shock roll during the Command phase if that unit is currently <strong>battle-shocked</strong> or is at or below <strong>half-strength</strong></p>"
+-
+  name: OC
+  text: "<p><strong>Objective Control (OC):</strong> How effectively a model can control an <strong>Objective</strong> on the battlefield. If a model has an <strong>OC</strong> characteristic of '-' it is unable to control <strong>objectives</strong> at all.</p>"

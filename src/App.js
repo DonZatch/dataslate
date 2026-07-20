@@ -600,7 +600,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
       </div>
       {!collapsed && (
         <a href="#" onClick={handler}>
-        <UnitProfile unit={unit} />
+        <UnitProfile unit={unit} setShowInfo={setShowInfo} />
         <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={isCombatPatrol} />
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
@@ -907,7 +907,7 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
         <h1>{unit?.name}</h1>
       </header>
       <div className="unitDetails">
-        <UnitProfile unit={unit} />
+        <UnitProfile unit={unit} setShowInfo={setShowInfo} />
         <div>
           <RangedWeapons unit={unit} setShowInfo={setShowInfo} label="Ranged Weapons" />
           <MeleeWeapons unit={unit} setShowInfo={setShowInfo} label="Melee Weapons" />
@@ -926,7 +926,7 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
   )
 }
 
-function UnitProfile({ unit })
+function UnitProfile({ unit, setShowInfo })
 {
   return (
     <>
@@ -936,17 +936,17 @@ function UnitProfile({ unit })
           <div className="unitStats">
             <ul>
               <li>
-                <UnitProfileItem label="M" value={`${profile?.m}"`} />
+                <UnitProfileItem label="M" value={`${profile?.m}"`} setShowInfo={e => setShowInfo(e, "M")} />
                 <PivotValue value={profile?.p} />
               </li>
-              <li><UnitProfileItem label="T" value={profile?.t} /></li>
+              <li><UnitProfileItem label="T" value={profile?.t} setShowInfo={e => setShowInfo(e, "T")} /></li>
               <li>
-                <UnitProfileItem label="Sv" value={profile?.sv} />
-                <InvulnerableSave value={profile?.iv} />
+                <UnitProfileItem label="Sv" value={profile?.sv} setShowInfo={e => setShowInfo(e, "Sv")} />
+                <InvulnerableSave value={profile?.iv} setShowInfo={e => setShowInfo(e, "InSv")} />
               </li>
-              <li><UnitProfileItem label="W" value={profile?.w} /></li>
-              <li><UnitProfileItem label="Ld" value={profile?.ld} /></li>
-              <li><UnitProfileItem label="OC" value={profile?.oc} /></li>
+              <li><UnitProfileItem label="W" value={profile?.w} setShowInfo={e => setShowInfo(e, "W")} /></li>
+              <li><UnitProfileItem label="Ld" value={profile?.ld} setShowInfo={e => setShowInfo(e, "Ld")} /></li>
+              <li><UnitProfileItem label="OC" value={profile?.oc} setShowInfo={e => setShowInfo(e, "OC")} /></li>
             </ul>
           </div>
         </div>
@@ -972,17 +972,17 @@ function getUnit(units, id)
   return null;
 }
 
-function UnitProfileItem({ label, value })
+function UnitProfileItem({ label, value, setShowInfo })
 {
   return (
     <>
       <label className="profileItemLabel">{label}</label>
-      <div className="profileItemValue">{value}</div>
+      <div className="profileItemValue" onClick={setShowInfo}>{value}</div>
     </>
   );
 }
 
-function InvulnerableSave({ value })
+function InvulnerableSave({ value, setShowInfo })
 {
   if (!value)
   {
@@ -991,7 +991,7 @@ function InvulnerableSave({ value })
   return (
     <div className="invulnerableSave">
       <label className="profileItemLabel"></label>
-      <div className="profileItemValue">{value}</div>
+      <div className="profileItemValue" onClick={setShowInfo}>{value}</div>
     </div>
   );
 }

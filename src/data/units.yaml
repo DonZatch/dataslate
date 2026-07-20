@@ -2688,8 +2688,6 @@
     ap: 0
     d: 1
   abilities:
-    core:
-    - Deep Strike
     faction:
     - For the Greater Good
     wargear:
