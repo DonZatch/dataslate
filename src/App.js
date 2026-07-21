@@ -929,29 +929,32 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
 function UnitProfile({ unit, setShowInfo })
 {
   return (
-    <>
-      {unit?.profiles?.map(profile => 
-        <div key={profile.name}>
-          {unit.profiles.length > 1 ? <div className="unitProfileHeader">{profile.name}</div> : null }
-          <div className="unitStats">
-            <ul>
-              <li>
-                <UnitProfileItem label="M" value={`${profile?.m}"`} setShowInfo={e => setShowInfo(e, "M")} />
-                <PivotValue value={profile?.p} />
-              </li>
-              <li><UnitProfileItem label="T" value={profile?.t} setShowInfo={e => setShowInfo(e, "T")} /></li>
-              <li>
-                <UnitProfileItem label="Sv" value={profile?.sv} setShowInfo={e => setShowInfo(e, "Sv")} />
-                <InvulnerableSave value={profile?.iv} setShowInfo={e => setShowInfo(e, "InSv")} />
-              </li>
-              <li><UnitProfileItem label="W" value={profile?.w} setShowInfo={e => setShowInfo(e, "W")} /></li>
-              <li><UnitProfileItem label="Ld" value={profile?.ld} setShowInfo={e => setShowInfo(e, "Ld")} /></li>
-              <li><UnitProfileItem label="OC" value={profile?.oc} setShowInfo={e => setShowInfo(e, "OC")} /></li>
-            </ul>
+    <div className='unitProfileWrapper'>
+      {unit?.pic && <div className='unitPic'><img src={`${process.env.PUBLIC_URL}/assets/pics/${unit?.pic}`} /></div>}
+      <div className='unitProfiles'>
+        {unit?.profiles?.map(profile => 
+          <div key={profile.name}>
+            {unit.profiles.length > 1 ? <div className="unitProfileHeader">{profile.name}</div> : null }
+            <div className="unitStats">
+              <ul>
+                <li>
+                  <UnitProfileItem label="M" value={`${profile?.m}"`} setShowInfo={e => setShowInfo(e, "M")} />
+                  <PivotValue value={profile?.p} />
+                </li>
+                <li><UnitProfileItem label="T" value={profile?.t} setShowInfo={e => setShowInfo(e, "T")} /></li>
+                <li>
+                  <UnitProfileItem label="Sv" value={profile?.sv} setShowInfo={e => setShowInfo(e, "Sv")} />
+                  <InvulnerableSave value={profile?.iv} setShowInfo={e => setShowInfo(e, "InSv")} />
+                </li>
+                <li><UnitProfileItem label="W" value={profile?.w} setShowInfo={e => setShowInfo(e, "W")} /></li>
+                <li><UnitProfileItem label="Ld" value={profile?.ld} setShowInfo={e => setShowInfo(e, "Ld")} /></li>
+                <li><UnitProfileItem label="OC" value={profile?.oc} setShowInfo={e => setShowInfo(e, "OC")} /></li>
+              </ul>
+            </div>
           </div>
-        </div>
-    )}
-    </>
+        )}
+      </div>
+    </div>
   )
 }
 

@@ -776,6 +776,9 @@
   -
     name: Gravitic Bolas
     text: "<strong>CRYPTEK</strong> model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding TITANIC units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from <strong>Charge rolls</strong> made for that unit."
+  -
+    name: Atomic Disintegrators
+    text: "<strong>CRYPTEK</strong> model only. In your Shooting phase, each time the bearer's unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: ANTI-MONSTER 5+, ANTI-VEHICLE 5+."
   strategems:
   - 
     name: Molecular Targeting

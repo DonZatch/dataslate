@@ -278,6 +278,7 @@
 # The Vardenghast Swarm
 - # Terror of Vardenghast
   name: Terror of Vardenghast
+  pic: ty_prime.jpg
   profiles:
   - 
     name: Terror of Vardenghast
@@ -330,6 +331,7 @@
     value: "prime talons"
 - # Psychophage (Vardenghast Swarm)
   name: Psychophage (Vardenghast Swarm)
+  pic: ty_phage.jpg
   profiles:
   -
     name: Psychophage
@@ -391,6 +393,7 @@
     value: "pyroclastic torrent, talons and betentacled maw"
 - # Termagants (Vardenghast Swarm)
   name: Termagants (Vardenghast Swarm)
+  pic: ty_gant.jpg
   profiles:
   -
     name: Termagants
@@ -441,6 +444,7 @@
     value: "fleshborer, chitinous claws and teeth"
 - # Barbgaunts (Vardenghast Swarm)
   name: Barbgaunts (Vardenghast Swarm)
+  pic: ty_barb.jpg
   profiles:
   -
     name: Barbgaunts
@@ -494,6 +498,7 @@
     value: "barblauncher, chitinous claws and teeth"
 - # Von Ryan's Leapers (Vardenghast Swarm)
   name: Von Ryan's Leapers (Vardenghast Swarm)
+  pic: ty_leaper.jpg
   profiles:
   -
     name: Von Ryan's Leapers
@@ -533,6 +538,7 @@
 # Amonhotekh's Guard
 - # Overlord Amonhotekh
   name: Overlord Amonhotekh
+  pic: n_lord.jpg
   profiles:
   -
     name: Overlord Amonhotekh
@@ -586,6 +592,7 @@
     value: "tachyon arrow, overlord's blade"
 - # Necron Warriors (Amonhotekh's Guard)
   name: Necron Warriors (Amonhotekh's Guard)
+  pic: n_warrior.jpg
   profiles:
   -
     name: Necron Warriors
@@ -650,6 +657,7 @@
     value: "gauss reaper, combat attachments"
 - # Skorpekh Destroyers (Amonhotekh's Guard)
   name: Skorpekh Destroyers (Amonhotekh's Guard)
+  pic: n_destroy.jpg
   profiles:
   -
     name: Skorpekh Destroyers
@@ -696,6 +704,7 @@
     value: "1 plasmacyte"
 - # Canoptek Scarab Swarms (Amonhotekh's Guard)
   name: Canoptek Scarab Swarms (Amonhotekh's Guard)
+  pic: n_scarab.jpg
   profiles:
   -
     name: Canoptek Scarab Swarms
@@ -736,6 +745,7 @@
     value: "feeder mandibles"
 - # Canoptek Doomstalker (Amonhotekh's Guard)
   name: Canoptek Doomstalker (Amonhotekh's Guard)
+  pic: n_stalker.jpg
   profiles:
   -
     name: Canoptek Doomstalker
@@ -1074,6 +1084,7 @@
 # Sanctuary Guardians
 - # Sanctuary Canoness Adalya
   name: Sanctuary Canoness Adalya
+  pic: as_canoness.jpg
   profiles:
   -
     name: Sanctuary Canoness Adalya
@@ -1138,6 +1149,7 @@
     value: "condemnor boltgun, hallowed chainsword, null rod"
 - # Battle Sisters Squad (Sanctuary Guardians)
   name: Battle Sisters Squad (Sanctuary Guardians)
+  pic: as_sister.jpg
   profiles:
   -
     name: Battle Sisters Squad
@@ -1267,6 +1279,7 @@
     value: "bolt pistol, boltgun, close combat weapon"
 - # Celestian Sacresants (Sanctuary Guardians)
   name: Celestian Sacresants (Sanctuary Guardians)
+  pic: as_celest.jpg
   profiles:
   -
     name: Celestian Sacresants
@@ -1319,6 +1332,7 @@
     value: "bolt pistol, hallowed mace"
 - # Arco-flagellants (Sanctuary Guardians)
   name: Arco-flagellants (Sanctuary Guardians)
+  pic: as_arco.jpg
   profiles:
   -
     name: Arco-flagellants
@@ -1364,6 +1378,7 @@
 # Prism of Zadophon
 - # Zadophon the Soul Eater
   name: Zadophon the Soul Eater
+  pic: ts_demon.jpg
   profiles:
   -
     name: Zadophon the Soul Eater
@@ -1435,6 +1450,7 @@
     value: "infernal cannon, hellforged weapons"
 - # Kaa'skrek
   name: Kaa'skrek
+  pic: ts_shaman.jpg
   profiles:
   -
     name: Kaa'skrek
@@ -1506,6 +1522,7 @@
     value: "Baleful Devolution, force stave"
 - # Rubric Marines (Prism of Zadophon)
   name: Rubric Marines (Prism of Zadophon)
+  pic: ts_rubric.jpg
   profiles:
   -
     name: Aspiring Sorcerer
@@ -1640,6 +1657,7 @@
     value: "Inferno boltgun, close combat weapon"
 - # Tzaangor Enlightened (Prism of Zadophon)
   name: Tzaangor Enlightened (Prism of Zadophon)
+  pic: ts_enlight.jpg
   profiles:
   -
     name: Tzaangor Enlightened
@@ -1925,6 +1943,7 @@
 # Purge Corps Deltic-9
 - # Manipulus Skand
   name: Manipulus Skand
+  pic: am_manip.jpg
   profiles:
   -
     name: Manipulus Skand
@@ -1984,6 +2003,7 @@
     value: "transonic cannon, Omnissian staff"
 - # Skitarii Vanguard (Purge Corps Deltic-9)
   name: Skitarii Vanguard (Purge Corps Deltic-9)
+  pic: am_van.jpg
   profiles:
   -
     name: Skitarii Vanguard
@@ -2101,6 +2121,7 @@
     value: "Radium carbine, gun stocks"
 - # Serberys Sulphurhounds (Purge Corps Deltic-9)
   name: Serberys Sulphurhounds (Purge Corps Deltic-9)
+  pic: am_hound.jpg
   profiles:
   -
     name: Serberys Sulphurhounds
@@ -2213,6 +2234,7 @@
     value: "2 phosphor pistols, sulphur breath, clawed limbs"
 - # Pteraxii Sterylizors (Purge Corps Deltic-9)
   name: Pteraxii Sterylizors (Purge Corps Deltic-9)
+  pic: am_pteri.jpg
   profiles:
   -
     name: Pteraxii Sterylizors
@@ -2296,6 +2318,7 @@
 # Zarkan's Daemonkin
 - # Aranis Zarkan
   name: Aranis Zarkan
+  pic: csm_master.jpg
   profiles:
   -
     name: Aranis Zarkan
@@ -2397,6 +2420,7 @@
     value: "bolt pistol, Rite of Possession, Aranis Zarkan"
 - # Possessed (Zarkan's Daemonkin)
   name: Possessed (Zarkan's Daemonkin)
+  pic: csm_posessed.jpg
   profiles:
   -
     name: Possessed
@@ -2439,6 +2463,7 @@
     value: "Hideous mutations"
 - # Legionaries (Zarkan's Daemonkin)
   name: Legionaries (Zarkan's Daemonkin)
+  pic: csm_legion.jpg
   profiles:
   -
     name: Legionaries
@@ -2574,6 +2599,7 @@
   squadSummary: "Can be split into two units of five."
 - # Cultist Mob (Zarkan's Daemonkin)
   name: Cultist Mob (Zarkan's Daemonkin)
+  pic: csm_cult.jpg
   profiles:
   -
     name: Cultist Mob
@@ -2641,6 +2667,7 @@
 # Sudden Dawn Cadre
 - # Commander Cloudspear
   name: Commander Cloudspear
+  pic: ta_commander.jpg
   profiles:
   -
     name: Commander Cloudspear
@@ -2709,6 +2736,7 @@
     value: "Airbursting fragmentation projector, plasma rifle, battlesuit fists, 2 shield drones, weapon support systems."
 - # Pathfinder Team (Sudden Dawn Cadre)
   name: Pathfinder Team (Sudden Dawn Cadre)
+  pic: ta_path.jpg
   profiles:
   -
     name: Pathfinder Team
@@ -2792,6 +2820,7 @@
     value: "Pulse carbine, pulse pistol, gun stocks."
 - # Breacher Team (Sudden Dawn Cadre)
   name: Breacher Team (Sudden Dawn Cadre)
+  pic: ta_breacher.jpg
   profiles:
   -
     name: Breacher Team
@@ -2853,6 +2882,7 @@
     value: "Pulse blaster, pulse pistol, gun stocks"
 - # Devilfish (Sudden Dawn Cadre)
   name: Devilfish (Sudden Dawn Cadre)
+  pic: ta_devil.jpg
   profiles:
   -
     name: Devilfish
@@ -2915,6 +2945,7 @@
 # Tristraen's Gilded Blades
 - # Tristraen of the Gilded Blades
   name: Tristraen of the Gilded Blades
+  pic: ac_blade.jpg
   profiles:
   -
     name: Tristraen of the Gilded Blades
@@ -2980,6 +3011,7 @@
     value: "Vaultswords."
 - # Custodian Guard (Gilded Blades)
   name: Custodian Guard (Gilded Blades)
+  pic: ac_guard.jpg
   profiles:
   -
     name: Custodian Guard
@@ -3041,6 +3073,7 @@
     value: "Sentinel bade, praesidium shield."
 - # Custodian Wardens (Gilded Blades)
   name: Custodian Wardens (Gilded Blades)
+  pic: ac_warden.jpg
   profiles:
   -
     name: Custodian Wardens
@@ -3115,6 +3148,7 @@
     value: "Castellan spear"
 - # Allarus Custodians (Gilded Blades)
   name: Allarus Custodians (Gilded Blades)
+  pic: ac_allarus.jpg
   profiles:
   -
     name: Allarus Custodians
@@ -3179,6 +3213,7 @@
 # 'Ardmob
 - # Warboss ('Ardmob)
   name: Warboss ('Ardmob)
+  pic: o_boss.jpg
   profiles:
   -
     name: Warboss
@@ -3239,6 +3274,7 @@
     value: "1 Kustom Choppa, 1 Kustom Shoota"
 - # Weirdboy ('Ardmob)
   name: Weirdboy ('Ardmob)
+  pic: o_weird.jpg
   profiles:
   -
     name: Weirdboy
@@ -3322,6 +3358,7 @@
     value: "1 Psychic Powers, 1 Waaagh! Staff"
 - # Wartrakk ('Ardmob)
   name: Wartrakk ('Ardmob)
+  pic: o_trakk.jpeg
   profiles:
   -
     name: Wartrakk
@@ -3384,6 +3421,7 @@
     value: "1 Choppas, 1 Kustom Shoota, 1 Rokkit Launcha"
 - # Boyz ('Ardmob)
   name: Boyz ('Ardmob)
+  pic: o_boy.png
   profiles:
   -
     name: Boss Nob
@@ -3492,6 +3530,7 @@
     value: "1 Choppa, 1 Shoota, 1 Slugga"
 - # Gretchin ('Ardmob)
   name: Gretchin ('Ardmob)
+  pic: o_grot.jpeg
   profiles:
   -
     name: Gretchin
@@ -3555,6 +3594,7 @@
 # Assault Force
 - # Intercessor Squad (Assault Force)
   name: Intercessor Squad (Assault Force)
+  pic: sm_inter.png
   profiles:
   -
     name: Intercessor Squad
@@ -3656,6 +3696,7 @@
     value: "1 Bolt Pistol, 1 Bolt Rifle, 1 Knives and Fists"
 - # Captain (Assault Force)
   name: Captain (Assault Force)
+  pic: sm_captain.jpg
   profiles:
   -
     name: Captain
@@ -3711,6 +3752,7 @@
     value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon, Relic Shield"
 - # Vanguard Veteran Squad with Jump Packs (Assault Force)
   name: Vanguard Veteran Squad with Jump Packs (Assault Force)
+  pic: sm_jump.png
   profiles:
   -
     name: Vanguard Veteran Squad with Jump Packs
@@ -3794,6 +3836,7 @@
     value: "1 Heavy Bolt Pistol, 1 Master-crafter Power Weapon"
 - # Librarian (Assault Force)
   name: Librarian (Assault Force)
+  pic: sm_library.jpg
   profiles:
   -
     name: Librarian
@@ -3881,6 +3924,7 @@
     value: "1 Bolt Pistol, 1 Force Weapon, 1 Fulmination"
 - # Land Speeder (Assault Force)
   name: Land Speeder (Assault Force)
+  pic: sm_speed.jpg
   profiles:
   -
     name: Land Speeder

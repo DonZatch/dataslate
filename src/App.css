@@ -183,6 +183,22 @@ header > h1 {
   padding: 2px 6px;
 }
 
+.unitPic {
+  display: block;
+  height: 60px;
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+}
+
+.unitPic > img {
+  max-width: 100%;
+}
+
+.unitProfiles {
+  flex: 1;
+}
+
 .unitStats > ul {
   list-style: none;
   display: flex;

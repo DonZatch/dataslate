@@ -392,6 +392,51 @@
     unit: Plasmancer
   warlord: Overload with Translocation Shroud
   icon: robots
+- # Cryptek Conclave V2
+  id: I6
+  category: Incursion
+  name: Cryptek Conclave V2
+  faction: Necrons
+  units:
+  - Plasmancer
+  - Immortals
+  - Technomancer
+  - Canoptek Wraiths
+  - Skorpekh Lord
+  - Skorpekh Destroyers
+  - Canoptek Doomstalker
+  - Canoptek Scarab Swarms
+  detachments: 
+  - Cryptek Conclave
+  enhancements:
+  -
+    name: Atomic Disintegrators
+    unit: Technomancer
+  warlord: Skorpekh Lord
+  icon: robots
+- # Bad Moon Incursion
+  id: I7
+  category: Incursion
+  name: Bad Moon Incursion w/ Ghaz
+  faction: Orks
+  units:
+  - Ghazghkull Thraka
+  - Painboy
+  - Boyz
+  - Wazdakka Gutsmek
+  - Big Mek Dakkarig
+  - Flash Gitz
+  - Gretchin
+  - Stormboyz
+  - Wartrakk
+  detachments: 
+  - Freebooter Krew
+  warlord: Ghazghkull Thraka
+  enhancements:
+  -
+    name: Bionik Workshop
+    unit: Painboy
+  icon: orks
 # Strike Force
 - # Cryptek Dynasty
   id: SF1
