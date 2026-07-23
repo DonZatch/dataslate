@@ -75,6 +75,22 @@
     name: "Blade Masters"
     target: Vanguard Veteran Squad with Jump Packs (Assault Force)
     text: "Upgrade: <strong>ASSAULT FORCE VANGUARD VETERAN SQUAD WITH JUMP PACKS</strong> unit only. When an enemy unit ends a <strong>charge move</strong>, if that enemy unit is <strong>engaged</strong> with this unit, that unit's melee attacks have -1 to <strong>wound rolls</strong> until the end of that turn."
+  mission:
+    name: "Honour the Chapter"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of your turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>objectives</strong> and control at least as many <strong>objectives</strong> as your opponent does.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong> (excluding your <strong>home objective</strong>).</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # The Vardenghast Swarm
   name: The Vardenghast Swarm
   disposition: Disruption
@@ -117,6 +133,32 @@
         <li>This mode has 4+ <strong>InSv</strong>.</li>
         <li>This model's melee attacks have +2 <strong>AP</strong></li>
       </ul>"
+  mission:
+    name: "Prepare the Way"
+    text: "<h3>Any Battle Round</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>A friendly unit (excluding <strong>battle-shocked</strong> units) is within your opponent's deployment zone.</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>objectives</strong> (excluding your <strong>home objective</strong>).</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong> (excluding your <strong>home objective</strong>).</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Amonhotekh's Guard
   name: Amonhotekh's Guard
   disposition: Take and Hold
@@ -166,6 +208,33 @@
     name: "Metalline Might"
     target: Overlord Amonhotekh
     text: "<strong>AMONHOTEKH'S GUARD OVERLORD</strong> model only. This model's melee attacks have +2 <strong>S</strong>."
+  mission:
+    name: "Dynastic Reclamation"
+    text: "<p><strong>START OF THE BATTLE:</strong> select one <strong>objective</strong> and your opponents selects one <u>other</u> <strong>objective</strong></p>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more of the selected <strong>objectives</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control both of the selected <strong>objectives</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>An enemy unit was <strong>destroyed</strong> in this or the previous turn that started the phase within range of an <strong>objective</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Morgim's Butchas
   name: Morgim's Butchas
   strategems:
@@ -248,6 +317,32 @@
         <li>3+ <strong>Sv</strong></li>
         <li>4+ <strong>InSv</strong></li>
       </ul>"
+  mission:
+    name: "Duff 'em Up!"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>objectives</strong> (excluding your <strong>home objective</strong>).</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control your opponent's <strong>home objective</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>An enemy unit was <strong>destroyed</strong> in this or the previous turn.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Sanctuary Guardians
   name: Sanctuary Guardians
   disposition: Take and Hold
@@ -296,6 +391,40 @@
     name: "Divine Miracle"
     target: Battle Sisters Squad (Sanctuary Guardians)
     text: "Upgrade: <strong>SANCTUARY GUARDIANS BATTLE SISTERS SQUAD</strong> unit only. (Once per battle, per unit) At the start of any phase, you can use this ability. If you do, this unit <strong>heals</strong> D3+2 wounds."
+  mission:
+    name: "On Holy Ground"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You have a friendly unit (excluding <strong>battle shocked</strong> units) within range of your <strong>home objective</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong> (excluding your <strong>home objective</strong>).</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>objectives</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control three or more <strong>objectives</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Prism of Zadophon
   name: Prism of Zadophon
   disposition: Take and Hold
@@ -344,6 +473,27 @@
     name: "Warp-tainted Shells"
     target: Zadophon the Soul Eater
     text: "<strong>PRISM OF ZADOPHON DAEMON PRINCE</strong> model only. This model's infernal cannon weapon has <strong>[PSYCHIC]</strong>."
+  mission:
+    name: "Cult Ritual"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: (Once per turn, per army) A friendly model within range of an <strong>objective</strong> that you have not <strong>bound</strong> manifests a Ritual with a Warp Charge value of 7 or more.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You do not resolve that Ritual's effects and that <strong>objective</strong> is <strong>bound</strong> by you.</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>End of the Battle</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>For each <strong>objective</strong> you control.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # The Coven Temporus
   name: The Coven Temporus
   strategems:
@@ -428,6 +578,32 @@
         <li>This unit's ranged attacks have <strong>[ANTI-INFANTRY 4+]</strong>.</li>
         <li>This unit can re-roll rolls to determine the <strong>A</strong> of a weapon.</li>
       </ul>"
+  mission:
+    name: "Complete Annihilation"
+    text: "<p><strong>START OF THE BATTLE:</strong> Select one enemy unit and your opponent selects one <u>other</u> enemy unit.</p>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>objectives</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong></td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>End of the Battle</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>For each of the selected enemy units that is <strong>destroyed</strong>.</td>
+            <td><strong>15VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Zarkan's Daemonkin
   name: Zarkan's Daemonkin
   disposition: Disruption
@@ -473,6 +649,32 @@
     name: "Infernal Infusion"
     target: Aranis Zarkan
     text: "<strong>ZARKAN'S DAEMONKIN MASTER OF POSSESSION</strong> model only. This unit's attacks have +1 <strong>S</strong>"
+  mission:
+    name: "Shatter the Veil"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control your <strong>home objective</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>objectives</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>There are no enemy units (excluding <strong>battle-shocked</strong> units) within 6\" of the centre of the battlefield and there is a friendly unit (excluding <strong>battle-shocked</strong> units) within 12\" of the centre of the battlefield.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Sudden Dawn Cadre
   name: Sudden Dawn Cadre
   disposition: Take and Hold
@@ -521,6 +723,36 @@
         </ul></li>
       <li>When this unit makes an <strong>ingress move</strong>, i can be set up more than 6\" horizontally from all enemy units (instead of more than 8\"). If this unit does, it is <u>not</u> <strong>eligible to declare a charge</strong> until the end of the turn</li>
       </ul>"
+  mission:
+    name: "Expansionary Campaign"
+    text: "<h3>First to Second Battle Round</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>expansion objectives</strong>.</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>expansion objectives</strong>.</td>
+            <td><strong>15VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Third Battle Round Onwards</h3>
+      <p>When: End of your turn.</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control one or more <strong>expansion objectives</strong>.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+          <tr>
+            <td>You control two or more <strong>expansion objectives</strong>.</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 - # Tristraen's Gilded Blades
   name: Tristraen's Gilded Blades
   disposition: Take and Hold
@@ -567,6 +799,28 @@
     name: "Shattering Charge"
     target: Tristraen of the Gilded Blades
     text: "<strong>TRISTRAEN'S GILDED BLADES BLADE CHAMPION</strong> model only. When this unit ends a <strong>charge move</strong>, you can select one enemy unit <strong>engaged</strong> with this unit. If you do, that enemy unit makes a <strong>battle-shock roll</strong>, with -1 to that <strong>battle-shock roll</strong>."
+  mission:
+    name: "Defenders of the Golden Throne"
+    text: "<h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>A friendly unit (excluding <strong>battle-shocked</strong> units) is within 3\" of the centre of the battlefield.</td>
+            <td><strong>10VP</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Second Battle Round Onwards</h3>
+      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>You control at least as many <strong>objectives</strong> as your opponent.</td>
+            <td><strong>5VP</strong></td>
+          </tr>
+        </tbody>
+      </table>"
 # 40K
 # Necrons
 - # Canoptek Court
