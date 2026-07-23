@@ -501,15 +501,19 @@ function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSet
         <a href="#" onClick={(e) => handler(e, "scoreboard")} className='scoreboardBtn'>{view === "scoreboard" ? <>&#9873;</> : <>&#9872;</>}</a>
       </header>
       <div className="armyDetails">
-        { view === "rules" ? <Rules detachments={detachments} factionAbilities={factionAbilities} /> : null }
-        { view === "setup" ? 
-          <Setup 
+        { view === "rules" ? 
+          <Rules 
             detachments={detachments} 
+            factionAbilities={factionAbilities} 
             selectedEnhancement={selectedEnhancement}
-            selectedSecondary={selectedSecondary}
             army={army} 
             onEnhChange={onChangeEnhancement} 
-            onSecChange={onChangeSecondary}
+          /> 
+          : null 
+        }
+        { view === "mission" ? 
+          <Mission 
+            detachments={detachments} 
           /> 
           : null 
         }
@@ -519,7 +523,7 @@ function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSet
       </div>
       <menu className="armyViews">
         <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
-        {army?.category === "Combat Patrol" ? <MenuItem view="setup" label="Setup" handler={handler} currentView={view} /> : null }
+        {army?.category === "Combat Patrol" ? <MenuItem view="mission" label="Mission" handler={handler} currentView={view} /> : null }
         <UnitsMenuItem view="units" label="Units" handler={handler} buttonHandler={handleCollapseAll} currentView={view} />
         <MenuItem view="strategems" label="Strats" handler={handler} currentView={view} />
       </menu>
@@ -1269,7 +1273,7 @@ function Wargear({unit})
   )
 }
 
-function Rules({ detachments, factionAbilities })
+function Rules({ detachments, army, factionAbilities, selectedEnhancement, onEnhChange })
 {
   const dispositions = new Set();
   detachments?.forEach(detachment => dispositions.add(detachment.disposition));
@@ -1288,6 +1292,8 @@ function Rules({ detachments, factionAbilities })
           detachment?.abilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)
         )}
       </ol>
+      <h2>Enhancements</h2>
+      <Enhancements detachments={detachments} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
     </>
   );
 }
@@ -1443,6 +1449,20 @@ function Enhancement({ enhancement, selectedEnhancement, army, onChange })
       </h3>
       <div dangerouslySetInnerHTML={{ __html: enhancement.text}} />
     </li>
+  )
+}
+
+function Mission({ detachments })
+{
+  return (
+    <div className='mission'>
+      {detachments?.map(detachment => 
+        <>
+          <h2>{detachment?.mission?.name}</h2>
+          <div dangerouslySetInnerHTML={{ __html: detachment?.mission?.text }} />
+        </>
+      )}
+    </div>
   )
 }
 
