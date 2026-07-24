@@ -181,7 +181,7 @@
   id: CP12
   category: Combat Patrol
   name: "'Ardmob"
-  faction: Orks
+  faction: "Orks ('Ardmob)""
   detachments: 
   - "'Ardmob"
   units:
@@ -198,7 +198,7 @@
   id: CP13
   category: Combat Patrol
   name: Assault Force
-  faction: Space Marines
+  faction: Space Marines (Assault Force)
   detachments: 
   - Assault Force
   units:

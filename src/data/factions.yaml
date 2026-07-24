@@ -93,6 +93,13 @@
         <li>Models from your army with this ability have a 5+ invulnerable save.</li>
       </ul>"
 -
+  faction: "Orks ('Ardmob)"
+  abilities:
+  -
+    name: Waaagh!
+    text: "<p>You can re-roll <strong>advance rolls</strong> made for friendly <strong>ORKS</strong> units.</p>
+      <p>Once per battle, at the start of the Command phase, you can call a Waaagh!. If you do, until the end of the next turn, the Waaagh! is called for friendly <strong>ORKS</strong> units. While a Waaagh! is called for a unit, it can <strong>shoot</strong> and <strong>declare a charge</strong> in a turn in which it made an <strong>advance move</strong>."
+-
   faction: Space Marines
   abilities:
   -
@@ -102,6 +109,16 @@
         <li>You can re-roll the <strong>Hit roll</strong>.</li>
         <li>If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the <strong>BLACK TEMPLARS</strong>, <strong>BLOOD ANGELS</strong>, <strong>DARK ANGELS</strong>, <strong>DEATHWATCH</strong> or <strong>SPACE WOLVES</strong> keywords, add 1 to the <strong>Wound roll</strong> as well.</li>
       </ul>"
+-
+  faction: Space Marines (Assault Force)
+  abilities:
+  -
+    name: Combat Doctrines
+    text: "<p>In your Command phase, you can select one of the Combat Doctrine abilities below. Friendly <strong>ADEPTUS ASTARTES</strong> units have the selected Combat Doctrine ability until the start of your next Command phase.</p>
+      <p><strong>Assault Doctrine:</strong> This unit can <strong>declare a charge</strong> in a turn in which it made an <strong>advance move</strong>.</p>
+      <p><strong>Devastator Doctrine:</strong> This unit can <strong>shoot</strong> in a turn in which it made an <strong>advance move</strong>.</p>
+      <p><strong>Tactical Doctrine:</strong> This unit can <strong>shoot</strong> and <strong>declare a charge</strong> in a turn in which it made a <strong>fall-back move</strong>.</p>
+      <p>Each Combat Doctrine cannot be selected more than once per battle.</p>"
 -
   faction: T'au Empire
   abilities:

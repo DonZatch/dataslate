@@ -1280,20 +1280,24 @@ function Rules({ detachments, army, factionAbilities, selectedEnhancement, onEnh
 
   return (
     <>
-      <div className='dispositions'>
-        <h2>Force Disposition(s):</h2>
-        <ul>
-          {[...dispositions].map(disposition => <li><DispositionIcon disposition={disposition} /> {disposition}</li>)}
-        </ul>
-      </div>
+      {(army?.category != 'Combat Patrol') &&
+        <div className='dispositions'>
+          <h2>Force Disposition(s):</h2>
+          <ul>
+            {[...dispositions].map(disposition => <li><DispositionIcon disposition={disposition} /> {disposition}</li>)}
+          </ul>
+        </div>
+      }
       <ol className="armyRules">
         {factionAbilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)}
         {detachments?.map(detachment => 
           detachment?.abilities?.map(ability => <ArmyRule key={ability.name} ability={ability} />)
         )}
       </ol>
-      <h2>Enhancements</h2>
-      <Enhancements detachments={detachments} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
+      <div className='enhancements'>
+        <h2>Enhancements</h2>
+        <Enhancements detachments={detachments} selectedEnhancement={selectedEnhancement} army={army} onChange={onEnhChange} />
+      </div>
     </>
   );
 }

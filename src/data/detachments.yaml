@@ -433,6 +433,7 @@
     name: Committed to the Ritual
     text: "<ul>
         <li>Friendly <strong>PRISM OF ZADOPHON</strong> units have +1 <strong>Ld</strong> while within range of an <strong>objective</strong>.</li>
+        <li><strong>Binding Ritual (Once per turn, per army):</strong> When playing a Combat Patrol battle, when a friendly model within range of an <strong>objective</strong> manifests a Ritual with a Warp Charge value of 7 or more, you can choose for your army to have <strong>bound</strong> that Ritual and that <strong>objective</strong> (see the Cult Ritual Objective). If yu do, do not resolve that Ritual's effects.</li>
         <li>When playing a Combat Patrol battle, the following friendly units must start the battle in <strong>strategic reserves</strong> and cannot be set up on the battlefield before the battle round stated. When doing so, they must be set up wholly within your deployment zone.
           <ul>
             <li><strong>DAEMON PRINCE</strong>: Battle round 3.</li>
