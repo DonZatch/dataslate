@@ -377,8 +377,32 @@ header > h1 {
   padding: 0 12px;
 }
 
-.setup {
+.setup, .mission {
   padding: 0 16px;
+}
+
+.mission h3 {
+  background-color: #0c3455;
+  color: white;
+  padding: 4px 8px;
+}
+
+.mission table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mission table td {
+  border-bottom: 1px solid lightgray;
+  padding: 8px 4px;
+}
+
+.mission table tr:last-child td {
+  border-bottom: none;
+}
+
+.mission table tr td:last-child {
+  text-align: right;
 }
 
 .enhancements,
