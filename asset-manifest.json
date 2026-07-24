@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dataslate/static/css/main.789640fc.css",
-    "main.js": "/dataslate/static/js/main.6ea6a3e5.js",
+    "main.css": "/dataslate/static/css/main.47a556d9.css",
+    "main.js": "/dataslate/static/js/main.07a2b910.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
-    "static/media/units.yaml": "/dataslate/static/media/units.67ebea8abc0560952ad2.yaml",
-    "static/media/detachments.yaml": "/dataslate/static/media/detachments.3aa28543057c713086aa.yaml",
+    "static/media/units.yaml": "/dataslate/static/media/units.8f9643450b9b5094fd72.yaml",
+    "static/media/detachments.yaml": "/dataslate/static/media/detachments.0b45fd5285062fb12f64.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.e06f017564a56a57c1f6.yaml",
     "static/media/brothers.svg": "/dataslate/static/media/brothers.7413691c5e38c515c00e404db1de15f9.svg",
+    "static/media/factions.yaml": "/dataslate/static/media/factions.87b5e83d05a56e8f2d16.yaml",
     "static/media/bugs.svg": "/dataslate/static/media/bugs.ca3c7e49a12d04ca1c873015f7275b14.svg",
-    "static/media/factions.yaml": "/dataslate/static/media/factions.0834c97018ca41e213dc.yaml",
-    "static/media/armies.yaml": "/dataslate/static/media/armies.f57ffb89e5af93074355.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.251e4079ef68723609f7.yaml",
     "static/media/sorcerors.svg": "/dataslate/static/media/sorcerors.17503cf5fe40b2cf595b45fb4edbca45.svg",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.6b6a1c9469b7db4901f4.yaml",
     "static/media/mechs.svg": "/dataslate/static/media/mechs.435a1b141eb18704a562042a68a38eb2.svg",
@@ -21,12 +21,12 @@
     "static/media/robots.svg": "/dataslate/static/media/robots.225cf74566b023c016bea3681a339f8e.svg",
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.70fdb7f572f141971dfb.yaml",
-    "main.789640fc.css.map": "/dataslate/static/css/main.789640fc.css.map",
-    "main.6ea6a3e5.js.map": "/dataslate/static/js/main.6ea6a3e5.js.map",
+    "main.47a556d9.css.map": "/dataslate/static/css/main.47a556d9.css.map",
+    "main.07a2b910.js.map": "/dataslate/static/js/main.07a2b910.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.789640fc.css",
-    "static/js/main.6ea6a3e5.js"
+    "static/css/main.47a556d9.css",
+    "static/js/main.07a2b910.js"
   ]
 }
