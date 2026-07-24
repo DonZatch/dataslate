@@ -385,6 +385,14 @@ header > h1 {
   background-color: #0c3455;
   color: white;
   padding: 4px 8px;
+  margin-bottom: 6px;
+}
+
+.mission h3 + p {
+  padding: 4px 4px 8px 4px;
+  margin-bottom: 2px;
+  margin-top: 0;
+  border-bottom: 1px solid lightgray;
 }
 
 .mission table {
