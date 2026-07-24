@@ -78,7 +78,7 @@
   mission:
     name: "Honour the Chapter"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of your turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of your turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -136,7 +136,7 @@
   mission:
     name: "Prepare the Way"
     text: "<h3>Any Battle Round</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -146,7 +146,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -212,7 +212,7 @@
     name: "Dynastic Reclamation"
     text: "<p><strong>START OF THE BATTLE:</strong> select one <strong>objective</strong> and your opponents selects one <u>other</u> <strong>objective</strong></p>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -226,7 +226,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -320,7 +320,7 @@
   mission:
     name: "Duff 'em Up!"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -334,7 +334,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -394,7 +394,7 @@
   mission:
     name: "On Holy Ground"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -408,7 +408,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -476,7 +476,7 @@
   mission:
     name: "Cult Ritual"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: (Once per turn, per army) A friendly model within range of an <strong>objective</strong> that you have not <strong>bound</strong> manifests a Ritual with a Warp Charge value of 7 or more.</p>
+      <p><strong>When:</strong> (Once per turn, per army) A friendly model within range of an <strong>objective</strong> that you have not <strong>bound</strong> manifests a Ritual with a Warp Charge value of 7 or more.</p>
       <table>
         <tbody>
           <tr>
@@ -582,7 +582,7 @@
     name: "Complete Annihilation"
     text: "<p><strong>START OF THE BATTLE:</strong> Select one enemy unit and your opponent selects one <u>other</u> enemy unit.</p>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -652,7 +652,7 @@
   mission:
     name: "Shatter the Veil"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -666,7 +666,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -726,7 +726,7 @@
   mission:
     name: "Expansionary Campaign"
     text: "<h3>First to Second Battle Round</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -740,7 +740,7 @@
         </tbody>
       </table>
       <h3>Third Battle Round Onwards</h3>
-      <p>When: End of your turn.</p>
+      <p><strong>When:</strong> End of your turn.</p>
       <table>
         <tbody>
           <tr>
@@ -802,7 +802,7 @@
   mission:
     name: "Defenders of the Golden Throne"
     text: "<h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
@@ -812,7 +812,7 @@
         </tbody>
       </table>
       <h3>Second Battle Round Onwards</h3>
-      <p>When: End of your Command phase (or the end of yur turn in the fifth battle round).</p>
+      <p><strong>When:</strong> End of your Command phase (or the end of yur turn in the fifth battle round).</p>
       <table>
         <tbody>
           <tr>
