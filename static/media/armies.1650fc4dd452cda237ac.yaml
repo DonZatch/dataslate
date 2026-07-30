@@ -479,10 +479,10 @@
   faction: Necrons
   units:
   - C'tan Shard of the Nightbringer
-  - Imotekh The Stormlord
   - Overlord w/ Voidscythe
   - Plasmancer
   - Immortals
+  - Imotekh The Stormlord
   - Necron Warriors
   - Technomancer
   - Canoptek Wraiths
@@ -499,5 +499,21 @@
   -
     name: Hyperphasic Fulcrum
     unit: Plasmancer
+  leaders:
+  -
+    leader: Imotekh The Stormlord
+    unit: Necron Warriors
+  -
+    leader: Plasmancer
+    unit: Necron Warriors
+  -
+    leader: Overlord w/ Voidscythe
+    unit: Immortals
+  -
+    leader: Plasmancer
+    unit: Immortals
+  -
+    leader: Technomancer
+    unit: Canoptek Wraiths
   warlord: Imotekh the Stormlord
   icon: robots
