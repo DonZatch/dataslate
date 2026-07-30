@@ -4362,6 +4362,60 @@
   -
     label: "This model is equipped with:"
     value: "tachyon arrow, overlord's blade"
+- # Overlord w/ Voidscythe
+  name: Overlord w/ Voidscythe
+  profiles:
+  -
+    name: Overlord
+    m: 5
+    t: 5
+    sv: 2+
+    iv: 4+
+    w: 6
+    ld: 6+
+    oc: 1
+  keywords:
+  - Infantry
+  - Character
+  - Noble
+  - Overlord
+  melee:
+  -
+    name: Voidscythe
+    range: Melee
+    a: 3
+    ws: 3+
+    s: 12
+    ap: -3
+    d: 3
+    abilities:
+    - Devastating Wounds
+  abilities:
+    core:
+    - Leader
+    faction:
+    - Reanimation Protocols
+    other:
+    -
+      label: My Will Be Done
+      value: "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+    -
+      label: Implacable Resilience
+      value: Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.
+    wargear:
+    -
+      label: Resurrection Orb
+      value: Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit's Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn.
+    leader:
+    - Immortals
+    - Lychguard
+    - Necron Warriors
+  factions: 
+  - Necrons
+  composition:
+  -
+    label: "This model is equipped with:"
+    value: "voidscythe, resurrection orb"
 - # Overlord with Translocation Shroud
   name: Overlord with Translocation Shroud
   profiles:
