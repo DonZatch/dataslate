@@ -479,8 +479,8 @@
   faction: Necrons
   units:
   - C'tan Shard of the Nightbringer
-  - Illuminor Szeras
   - Imotekh The Stormlord
+  - Overlord w/ Voidscythe
   - Plasmancer
   - Immortals
   - Necron Warriors
@@ -488,13 +488,16 @@
   - Canoptek Wraiths
   - Canoptek Doomstalker
   - Canoptek Reanimator
+  - Canoptek Scarab Swarms
   - Deathmarks
-  - Flayed Ones
   detachments: 
   - Canoptek Court
   enhancements:
   -
     name: Dimensional Sanctum
     unit: Technomancer
-  warlord: Illuminor Szeras
+  -
+    name: Hyperphasic Fulcrum
+    unit: Plasmancer
+  warlord: Imotekh the Stormlord
   icon: robots
