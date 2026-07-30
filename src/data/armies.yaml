@@ -181,7 +181,7 @@
   id: CP12
   category: Combat Patrol
   name: "'Ardmob"
-  faction: "Orks ('Ardmob)""
+  faction: "Orks ('Ardmob)"
   detachments: 
   - "'Ardmob"
   units:
