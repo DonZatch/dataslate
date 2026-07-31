@@ -4599,7 +4599,6 @@
   ranged:
   -
     name: Gauss flayer
-    num: 5
     range: 24"
     a: 1
     bs: 4+
@@ -4609,17 +4608,17 @@
     abilities:
     - Lethal Hits
     - Rapid Fire 1
-  -
-    name: Gauss reaper
-    num: 5
-    range: 12"
-    a: 2
-    bs: 4+
-    s: 4
-    ap: -1
-    d: 1
-    abilities:
-    - Lethal Hits
+  # -
+  #   name: Gauss reaper
+  #   num: 5
+  #   range: 12"
+  #   a: 2
+  #   bs: 4+
+  #   s: 4
+  #   ap: -1
+  #   d: 1
+  #   abilities:
+  #   - Lethal Hits
   melee:
   -
     name: Close combat weapon
@@ -4895,7 +4894,7 @@
     - Reanimation Protocols
     other:
     -
-      label: Nanoscarab Reanimation Bean (Aura)
+      label: Nanoscarab Reanimation Beam (Aura)
       value: "While a friendly NECRONS unit is within 3\" of this model, each time that unit's Reanimation Protocols activate, that unit reanimates an additional D3 wounds."
   factions: 
   - Necrons

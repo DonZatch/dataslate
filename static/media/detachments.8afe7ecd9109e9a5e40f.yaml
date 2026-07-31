@@ -842,6 +842,9 @@
     name: Dimensional Sanctum
     text: "<div>CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability.</div>"
   -
+    name: Hyperphasic Fulcrum
+    text: "<div>CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army's Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1.</div>"
+  -
     name: Metalodermal Tesla Weave
     text: "<div>CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.</div>"
   -
@@ -861,7 +864,7 @@
     turn: either
     when: The start of your Shooting phase or the start of the Fight phase
     target: One CRYPTEK or CANOPTEK unit from your army that is wholly within your army's Power Matrix
-    effect: Until the end of the phase, weapons equipped by CRYPTEK or CANOPTEK in your unit have the DEVASTATING WOUNDS ability.
+    effect: Until the end of the phase, weapons equipped by CRYPTEK or CANOPTEK models in your unit have the DEVASTATING WOUNDS ability.
   - 
     name: Solar Pulse
     cost: 1
