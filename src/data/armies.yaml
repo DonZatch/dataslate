@@ -479,10 +479,11 @@
   faction: Necrons
   units:
   - C'tan Shard of the Nightbringer
-  - Overlord w/ Voidscythe
+  - Illuminor Szeras
   - Plasmancer
   - Immortals
   - Imotekh The Stormlord
+  - Orikan the Diviner
   - Necron Warriors
   - Technomancer
   - Canoptek Wraiths
@@ -497,7 +498,7 @@
     name: Dimensional Sanctum
     unit: Technomancer
   -
-    name: Hyperphasic Fulcrum
+    name: Metalodermal Tesla Weave
     unit: Plasmancer
   leaders:
   -
