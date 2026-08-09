@@ -528,7 +528,11 @@
     other:
     -
       label: "Pouncing Leap:"
-      value: "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase."
+      value: "You can target this unit with the <strong>Heroic Intervention stratagem</strong>, regardless of any other uses of that <strong>stratagem</strong> this phase. If you do:
+        <ul>
+          <li>That use is -1 CP.</li>
+          <li>That use does not prevent any uses of that <strong>stratagem</strong> on other units this phase.</li>
+        </ul>"
   factions: 
   - Tyranids
   composition:
