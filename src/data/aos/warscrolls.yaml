@@ -160,7 +160,7 @@
     a: 3
     hit: 5+
     w: 3+
-    r: -
+    r: "-"
     d: 1
     abilities:
     - Crit (Auto-Wound)

@@ -21,24 +21,28 @@
   -
     name: Cackling Arrival
     phase: movement
+    icon: movement
     when: Once Per Turn (Army), Your Movement Phase
     declare: Pick 1 of your units in reserve
     effect: "Set up that unit anywhere on the battlefield more than 6\" from all enemy units."
   -
     name: Ethereal
-    phase: passive
+    phase: combat
+    icon: defensive
     when: Passive
     effect: Ignore negative modifiers to save rolls for friendly units.
   abilities:
   -
     name: Discorporate
     phase: hero
+    icon: defensive
     when: Once Per Turn (Army), Any Hero Phase
     declare: Pick a friendly unit to be the target.
     effect: Roll a dice. On a 3+, add 1 to save rolls for the target for the rest of the turn.
   -
     name: Mounting Dread
     phase: end
+    icon: control
     when: Once Per Turn (Army), End of Any Turn
     declare: Pick a friendly unit to be the target
     effect: Roll a dice. On a 2+, for the rest of the turn, subtract the current battle round number from the control scores of enemy units while they are in combat with the target.
@@ -46,12 +50,14 @@
   -
     name: Unholy Visage
     phase: hero
+    icon: movement
     when: Your Hero Phase
     declare: "Pick a visible enemy unit within 6\" of your general to be the target."
     effect: Roll a dice. On a 3+, the target must immediately use a <strong>RETREAT</strong> ability as if it were the enemy movement phase. Immediately after that ability has resolved, if the target is in combat, inflict 2D3 mortal damage on it.
   -
     name: Deathly Possessor
     phase: combat
+    icon: offensive
     when: Any Combat Phase
     declare: "Pick an enemy <strong>HERO</strong> within 12\" of your general to be the target, then pick another enemy unit within the target's combat range to be the victim."
     effect: "Roll a D3. On a 2+, pick one:
@@ -62,12 +68,14 @@
   -
     name: Tales of Horror
     phase: combat
+    icon: special
     when: Once Per Battle, Any Combat Phase
     declare: "Pick an enemy <strong>INFANTRY</strong> or <strong>CAVALRY</strong> unit within 6\" of your general to be the target."
     effect: "For the rest of the battle, if the target is replaced using the 'Call for Reinforcements' ability, halve the number of models in the replacement unit, rounding up."
   -
     name: Spectral Howl
     phase: hero
+    icon: movement
     when: Once Per Battle, Any Hero Phase
     declare: "Pick an enemy unit within 12\" of your general to be the target."
     effect: "For the rest of the turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1."

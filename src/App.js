@@ -7,6 +7,8 @@ import unitData from "./data/40k/units.yaml";
 import strategemData from "./data/40k/strategems.yaml";
 import abilityData from "./data/40k/abilities.yaml";
 import factionData from "./data/40k/factions.yaml";
+import aosArmies from './data/aos/armies.yaml';
+import aosWarscrolls from './data/aos/warscrolls.yaml';
 import './App.css';
 import { ReactComponent as BrothersIcon } from "./assets/brothers.svg";
 import { ReactComponent as BugsIcon } from "./assets/bugs.svg";
@@ -27,6 +29,9 @@ function App() {
   const [appSettings, setAppSettings] = useState({});
   const [abilities, setAbilities] = useState([]);
   const [factionAbilities, setFactionAbilities] = useState([]);
+  const [armiesAoS, setArmiesAoS] = useState(null);
+  const [warscrolls, setWarscrolls] = useState(null);
+  
   const [showInfo, setShowInfo] = useState(null);
 
   const showInfoModal = function (e, ability) {
@@ -45,12 +50,24 @@ function App() {
     loadData("strategems", strategemData, setCoreStrategems);
     loadData("abilities", abilityData, setAbilities);
     loadData("factions", factionData, setFactionAbilities);
+    loadData("aosArmies", aosArmies, setArmiesAoS);
+    loadData("aosWarscrolls", aosWarscrolls, setWarscrolls);
   }, []);
 
   return (
     <>
       <SVGPatterns />
-      <MainContent units={units} armies={armies} detachments={detachments} coreStrategems={coreStrategems} appSettings={appSettings} factionAbilities={factionAbilities} setShowInfo={showInfoModal} />
+      <MainContent 
+        units={units} 
+        warscrolls={warscrolls}
+        armies40k={armies} 
+        armiesAoS={armiesAoS} 
+        detachments={detachments} 
+        coreStrategems={coreStrategems} 
+        appSettings={appSettings} 
+        factionAbilities={factionAbilities} 
+        setShowInfo={showInfoModal} 
+      />
       <InfoModal ability={showInfo} abilities={abilities} setShowInfo={showInfoModal} />
     </>
   );
@@ -112,7 +129,7 @@ function SVGPatterns() {
   );
 }
 
-function MainContent({ armies, detachments, units, coreStrategems, appSettings, factionAbilities, setShowInfo }) {
+function MainContent({ armies40k, armiesAoS, detachments, units, warscrolls, coreStrategems, appSettings, factionAbilities, setShowInfo }) {
   var route = parseRoute();
   var [wakeLock, setWakeLock] = useState(null);
 
@@ -140,9 +157,10 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
         <ArmyDetails 
           id={route.army}
           key={route.army} 
-          armies={armies}
+          armies={[...(armies40k ?? []), ...(armiesAoS ?? [])]}
           allDetachments={detachments} 
-          units={units} 
+          units={units}
+          warscrolls={warscrolls} 
           coreStrategems={coreStrategems} 
           appSettings={appSettings} 
           factionData={factionAbilities}
@@ -159,7 +177,7 @@ function MainContent({ armies, detachments, units, coreStrategems, appSettings, 
         />
       )
     default: 
-      return (<Home armies={armies} />);
+      return (<Home armies40k={armies40k} armiesAoS={armiesAoS} />);
   }
 }
 
@@ -181,9 +199,9 @@ function parseRoute()
   return { page: "", id: "" };
 }
 
-function Home({ armies })
+function Home({ armies40k, armiesAoS })
 {
-  var [view, setView] = useState("armies");
+  var [view, setView] = useState("40k");
 
   const handler = useCallback((e, view) => {
     e.preventDefault();
@@ -194,12 +212,12 @@ function Home({ armies })
   return (
     <div>
       <div className='homeView'>
-        { view === "armies" ? <ArmyMenu armies={armies} /> : null}
-        { view === "scoreboard" ? <Scoreboard /> : null}
+        { view === "40k" ? <ArmyMenu armies={armies40k} /> : null}
+        { view === "aos" ? <ArmyMenu armies={armiesAoS} /> : null}
       </div>
       <menu className="homeViews">
-        <MenuItem view="armies" label="Armies" handler={handler} currentView={view} />
-        <MenuItem view="scoreboard" label="Scoreboard" handler={handler} currentView={view} />
+        <MenuItem view="40k" label="40K" handler={handler} currentView={view} />
+        <MenuItem view="aos" label="AOS" handler={handler} currentView={view} />
       </menu>
     </div>
   )
@@ -408,36 +426,34 @@ function PlayerScore({ label, score, setScore }) {
   )
 }
 
-function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSettings, factionData, setShowInfo })
+function ArmyDetails({ id, armies, allDetachments, units, warscrolls, coreStrategems, appSettings, factionData, setShowInfo })
 {
-  const [view, setView] = useState("units");
-  const [unit, setUnit] = useState(null);
-  const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
-  const [selectedSecondary, setSelectedSecondary] = useState(() => localStorage.getItem(`${id}-secondary`));
-  const scrollRef = useRef({});
-  
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
-  const detachments = useMemo(() => getDetachments(allDetachments, army), [allDetachments, army]);
-  const factionAbilities = useMemo(() => getFactionAbilities(factionData, army), [factionData, army]);
-  
-  useEffect(() => {
-    if (!id)
-    {
-      return;
-    }
-    setSelectedEnhancement(localStorage.getItem(`${id}-enhancement`));
-    setSelectedSecondary(localStorage.getItem(`${id}-secondary`));
-  }, [id]);
-  const onChangeEnhancement = useCallback((enhancement) => {
-    localStorage.setItem(`${id}-enhancement`, enhancement);
-    setSelectedEnhancement(enhancement);
-  }, [id]);
-  const onChangeSecondary = useCallback((secondary) => {
-    localStorage.setItem(`${id}-secondary`, secondary);
-    setSelectedSecondary(secondary);
-  }, [id]);
+  const isA0S = army?.category === "Spearhead";
 
-  const handler = useCallback((e, newView) => {
+  return isA0S ? 
+    <ArmyDetailsAoS 
+      id={id}
+      army={army}
+      warscrolls={warscrolls}
+      setShowInfo={setShowInfo}
+    /> 
+    : 
+    <ArmyDetails40K 
+      id={id} 
+      army={army} 
+      allDetachments={allDetachments} 
+      units={units} 
+      coreStrategems={coreStrategems} 
+      appSettings={appSettings}
+      factionData={factionData}
+      setShowInfo={setShowInfo}
+    />
+}
+
+function useSetViewHandler(scrollRef, view, setView)
+{
+  return useCallback((e, newView) => {
     e.preventDefault();
     e.stopPropagation();
     const scrollDict = scrollRef.current;
@@ -455,6 +471,149 @@ function ArmyDetails({ id, armies, allDetachments, units, coreStrategems, appSet
       window.scroll(0, 0);
     }
   }, [view]);
+}
+
+function ArmyDetailsAoS({ id, army, warscrolls, setShowInfo })
+{
+  const [view, setView] = useState("units");
+  const [unit, setUnit] = useState(null);
+  const enhancementKey = `${id}-enhancement`;
+  const battleTraitKey = `${id}-battle-trait`;
+  const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(enhancementKey));
+  const [selectedBattleTrait, setSelectedBattleTrait] = useState(() => localStorage.getItem(battleTraitKey));
+  const scrollRef = useRef({});
+  
+  useEffect(() => {
+    if (!id)
+    {
+      return;
+    }
+    setSelectedEnhancement(localStorage.getItem(enhancementKey));
+    setSelectedBattleTrait(localStorage.getItem(battleTraitKey));
+  }, [id]);
+  const onChangeEnhancement = useCallback((enhancement) => {
+    localStorage.setItem(enhancementKey, enhancement);
+    setSelectedEnhancement(enhancement);
+  }, [id]);
+  const onChangeBattleTrait = useCallback((trait) => {
+    localStorage.setItem(battleTraitKey, trait);
+    setSelectedBattleTrait(trait);
+  }, [id]);
+
+  const handler = useSetViewHandler(scrollRef, view, setView);
+
+  const onOpenUnit = useCallback((unit) => setUnit(unit), []);
+  const onGoBack = useCallback(() => setUnit(null), []);
+
+  const armyUnits = useMemo(() => getWarscrolls(army, warscrolls, selectedEnhancement), [army, warscrolls, selectedEnhancement]);
+  const [collapsedUnits, setCollapsedUnits] = useState([]);
+  const handleToggleCollapseUnit = (name, value) => setCollapsedUnits(oldVals => {
+    if (value)
+    {
+      return [...oldVals, name];
+    }
+    else {
+      const copy = oldVals.slice();
+      const index = copy.indexOf(name);
+      if (index !== -1)
+      {
+        copy.splice(index, 1);
+      }
+      return copy;
+    }
+  });
+  const handleCollapseAll = () => {
+    setCollapsedUnits(armyUnits?.map(unit => unit.name) ?? []);
+  };
+
+  if (army != null && unit !== null)
+  {
+    return (
+      <UnitDetails 
+        id={unit} 
+        army={army}
+        units={warscrolls} 
+        setShowInfo={setShowInfo}
+        onGoBack={onGoBack}
+      />
+    );
+  }
+
+  return (
+    <div className="armyDetailsView">
+      <header>
+        <a href={`?`}>&lsaquo;</a>
+        <h1>{army?.name}</h1>
+        <a href="#" onClick={(e) => handler(e, "scoreboard")} className='scoreboardBtn'>{view === "scoreboard" ? <>&#9873;</> : <>&#9872;</>}</a>
+      </header>
+      <div className="armyDetails">
+        { view === "rules" ? 
+          <RulesAoS 
+            selectedEnhancement={selectedEnhancement}
+            army={army} 
+            onEnhChange={onChangeEnhancement} 
+          /> 
+          : null 
+        }
+        { view === "units" ? <Units army={army} armyUnits={armyUnits} setShowInfo={setShowInfo} onClick={onOpenUnit} onToggleCollapse={handleToggleCollapseUnit} collapsedUnits={collapsedUnits} /> : null }
+        { view === "scoreboard" ? <Scoreboard /> : null}
+      </div>
+      <menu className="armyViews">
+        <MenuItem view="rules" label="Rules" handler={handler} currentView={view} />
+        <UnitsMenuItem view="units" label="Warscrolls" handler={handler} buttonHandler={handleCollapseAll} currentView={view} />
+      </menu>
+    </div>
+  );
+}
+
+function getWarscrolls(army, warscrolls, selectedEnhancement)
+{
+  var result = [];
+  if (!army || !warscrolls)
+  {
+    return result;
+  }
+  var i;
+  for (i = 0; i < warscrolls.length; i++)
+  {
+    var unit = warscrolls[i];
+    if (army.units.indexOf(unit.name) !== -1)
+    {
+      if (army.category === "Spearhead" && army.general === unit.name)
+      {
+        unit.enhancements = selectedEnhancement ? army.enhancements?.filter(e => e.name === selectedEnhancement) : [];
+      }
+      result.push(unit);
+    }
+  }
+  result.sort((a, b) => army.units.indexOf(a.name) - army.units.indexOf(b.name));
+  return result;
+}
+
+function ArmyDetails40K({ id, armies, allDetachments, units, coreStrategems, appSettings, factionData, setShowInfo })
+{
+  const [view, setView] = useState("units");
+  const [unit, setUnit] = useState(null);
+  const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
+  const scrollRef = useRef({});
+  
+  const army = useMemo(() => getArmy(armies, id), [armies, id]);
+  const detachments = useMemo(() => getDetachments(allDetachments, army), [allDetachments, army]);
+  const factionAbilities = useMemo(() => getFactionAbilities(factionData, army), [factionData, army]);
+  
+  useEffect(() => {
+    if (!id)
+    {
+      return;
+    }
+    setSelectedEnhancement(localStorage.getItem(`${id}-enhancement`));
+  }, [id]);
+  const onChangeEnhancement = useCallback((enhancement) => {
+    localStorage.setItem(`${id}-enhancement`, enhancement);
+    setSelectedEnhancement(enhancement);
+  }, [id]);
+
+  const handler = useSetViewHandler(scrollRef, view, setView);
 
   const onOpenUnit = useCallback((unit) => setUnit(unit), []);
   const onGoBack = useCallback(() => setUnit(null), []);
@@ -830,7 +989,7 @@ function getMeleeWeapons(unit, appSettings)
 
 function getKeywordAbilitySummary(unit, appSettings, isCombatPatrol)
 {
-  const includeAbilities = appSettings.summaryKeywords ?? [];
+  const includeAbilities = appSettings?.summaryKeywords ?? [];
   return unit?.keywords?.filter(ability => {
     if (isCombatPatrol && ability.toLowerCase() === "explosives")
     {
@@ -1325,6 +1484,57 @@ function ArmyRule({ ability })
     <h2>{ability.name}:</h2>
     <span dangerouslySetInnerHTML={{ __html: ability.text}} />
   </li>);
+}
+
+function RulesAoS({ army, selectedEnhancement, onEnhChange })
+{
+  return (
+    <>
+      <h2>Battle Traits</h2>
+      {army.static?.map(rule => <div className='staticTraitAoS'>
+          <h3>{rule.name}</h3>
+          <div dangerouslySetInnerHTML={{ __html: rule.value }} />
+        </div>)}
+      <AbilitiesAoS abilities={army.traits} />
+      <h2>Regiment Abilities</h2>
+      <AbilitiesAoS abilities={army.abilities} />
+      <h2>Enhancements</h2>
+      { /* TODO: Selectable Battle Traits & Enhancements */}
+    </>
+  );
+}
+
+function AbilitiesAoS({ abilities })
+{
+  return (
+    <ul className='abilitiesAoS'>
+      {abilities.map(ability => <AbilityAoS ability={ability} />)}
+    </ul>
+  );
+}
+
+function AbilityAoS({ ability })
+{
+  return (
+    <li className={`abilityAoS abilityAoS-${ability.phase}`}>
+        <div className='abilityAoSWhen'>
+          <span className='abilityAoSIcon'>
+            <AbilityIcon phase={ability.icon} />
+          </span>
+          <span className='abilityAoSWhenText'>
+            {ability.when}
+          </span>
+        </div>
+        <h3>{ability.name}</h3>
+        {ability.declare && <p><strong>Declare:</strong> <span dangerouslySetInnerHTML={{ __html: ability.declare}} /></p>}
+        <p><strong>Effect:</strong> <span dangerouslySetInnerHTML={{ __html: ability.effect}} /></p>
+      </li>
+  );
+}
+
+function AbilityIcon({ icon })
+{
+  return null;
 }
 
 function Strategems({ army, detachments, coreStrategems })
