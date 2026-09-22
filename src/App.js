@@ -1275,12 +1275,12 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, h
     <table className={classList.join(" ")}>
       <thead>
         <tr>
-          <th>{icon}</th>
-          <th>{label}</th>
+          <th className='unitWeapon-icon'>{icon}</th>
+          <th className='unitWeapon-label'>{label}</th>
           {hideRange ? null : <th>{summary && !isAoS ? "Rg" : "RANGE" }</th>}
           <th>A</th>
           <th>{skillLabel}</th>
-          {!isAoS && <th>S</th>}
+          <th>{isAoS ? "W" : "S"}</th>
           <th>{isAoS ? "R" : "AP"}</th>
           <th>D</th>
         </tr>
@@ -1310,7 +1310,7 @@ function Weapon({ weapon, setShowInfo, hideRange, isAoS })
         {hideRange ? null : <td>{weapon.range}</td> }
         <td>{weapon.a}</td>
         <td>{weapon.bs ?? weapon.ws ?? weapon.hit}</td>
-        {!isAoS && <td>{weapon.s}</td>}
+        <td>{weapon.s ?? weapon.w}</td>
         <td>{weapon.ap ?? weapon.r}</td>
         <td>{weapon.d}</td>
       </tr>
