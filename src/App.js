@@ -478,9 +478,9 @@ function ArmyDetailsAoS({ id, army, warscrolls, setShowInfo })
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
   const enhancementKey = `${id}-enhancement`;
-  const battleTraitKey = `${id}-battle-trait`;
+  const abilityKey = `${id}-regiment-ability`;
   const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(enhancementKey));
-  const [selectedBattleTrait, setSelectedBattleTrait] = useState(() => localStorage.getItem(battleTraitKey));
+  const [selectedAbility, setSelectedAbility] = useState(() => localStorage.getItem(abilityKey));
   const scrollRef = useRef({});
   
   useEffect(() => {
@@ -489,15 +489,15 @@ function ArmyDetailsAoS({ id, army, warscrolls, setShowInfo })
       return;
     }
     setSelectedEnhancement(localStorage.getItem(enhancementKey));
-    setSelectedBattleTrait(localStorage.getItem(battleTraitKey));
+    setSelectedAbility(localStorage.getItem(abilityKey));
   }, [id]);
   const onChangeEnhancement = useCallback((enhancement) => {
     localStorage.setItem(enhancementKey, enhancement);
     setSelectedEnhancement(enhancement);
   }, [id]);
-  const onChangeBattleTrait = useCallback((trait) => {
-    localStorage.setItem(battleTraitKey, trait);
-    setSelectedBattleTrait(trait);
+  const onChangeAbility = useCallback((trait) => {
+    localStorage.setItem(abilityKey, trait);
+    setSelectedAbility(trait);
   }, [id]);
 
   const handler = useSetViewHandler(scrollRef, view, setView);
@@ -549,8 +549,10 @@ function ArmyDetailsAoS({ id, army, warscrolls, setShowInfo })
       <div className="armyDetails">
         { view === "rules" ? 
           <RulesAoS 
-            selectedEnhancement={selectedEnhancement}
             army={army} 
+            selectedAbility={selectedAbility}
+            onAbilityChange={onChangeAbility}
+            selectedEnhancement={selectedEnhancement}
             onEnhChange={onChangeEnhancement} 
           /> 
           : null 
@@ -590,14 +592,13 @@ function getWarscrolls(army, warscrolls, selectedEnhancement)
   return result;
 }
 
-function ArmyDetails40K({ id, armies, allDetachments, units, coreStrategems, appSettings, factionData, setShowInfo })
+function ArmyDetails40K({ id, army, allDetachments, units, coreStrategems, appSettings, factionData, setShowInfo })
 {
   const [view, setView] = useState("units");
   const [unit, setUnit] = useState(null);
   const [selectedEnhancement, setSelectedEnhancement] = useState(() => localStorage.getItem(`${id}-enhancement`));
   const scrollRef = useRef({});
   
-  const army = useMemo(() => getArmy(armies, id), [armies, id]);
   const detachments = useMemo(() => getDetachments(allDetachments, army), [allDetachments, army]);
   const factionAbilities = useMemo(() => getFactionAbilities(factionData, army), [factionData, army]);
   
@@ -1486,37 +1487,62 @@ function ArmyRule({ ability })
   </li>);
 }
 
-function RulesAoS({ army, selectedEnhancement, onEnhChange })
+function RulesAoS({ army, selectedAbility, onAbilityChange, selectedEnhancement, onEnhChange })
 {
   return (
     <>
-      <h2>Battle Traits</h2>
+      <div className='abilityAoSHeader'>
+        <h2>Battle Traits</h2>
+      </div>
       {army.static?.map(rule => <div className='staticTraitAoS'>
           <h3>{rule.name}</h3>
           <div dangerouslySetInnerHTML={{ __html: rule.value }} />
         </div>)}
       <AbilitiesAoS abilities={army.traits} />
-      <h2>Regiment Abilities</h2>
-      <AbilitiesAoS abilities={army.abilities} />
-      <h2>Enhancements</h2>
-      { /* TODO: Selectable Battle Traits & Enhancements */}
+      <AbilitiesAoS 
+        title="Regiment Abilities" 
+        abilities={army.abilities} 
+        selectable 
+        selected={selectedAbility} 
+        onSelect={onAbilityChange} 
+      />
+      <AbilitiesAoS 
+        title="Enhancements" 
+        abilities={army.enhancements} 
+        selectable 
+        selected={selectedEnhancement} 
+        onSelect={onEnhChange} 
+      />
     </>
   );
 }
 
-function AbilitiesAoS({ abilities })
+function AbilitiesAoS({ title, abilities, selectable, selected, onSelect })
 {
   return (
-    <ul className='abilitiesAoS'>
-      {abilities.map(ability => <AbilityAoS ability={ability} />)}
-    </ul>
+    <>
+      {title && 
+        <div className='abilityAoSHeader'>
+          <h2>{title}</h2>
+          {selectable && selected && <a href='#' onClick={() => onSelect(null)}>Reset</a>}
+          {selectable && !selected && <span>Pick one of the following</span>}
+        </div>}
+      <ul className='abilitiesAoS'>
+        {abilities.map(ability => <AbilityAoS ability={ability} selected={selected} onSelect={onSelect} />)}
+      </ul>
+    </>
   );
 }
 
-function AbilityAoS({ ability })
+function AbilityAoS({ ability, selected, onSelect })
 {
+  const isSelected = selected ? selected === ability.name : false;
+  if (selected && !isSelected)
+  {
+    return null;
+  }
   return (
-    <li className={`abilityAoS abilityAoS-${ability.phase}`}>
+    <li className={`abilityAoS abilityAoS-${ability.phase}`} onClick={() => onSelect(ability.name)}>
         <div className='abilityAoSWhen'>
           <span className='abilityAoSIcon'>
             <AbilityIcon phase={ability.icon} />
