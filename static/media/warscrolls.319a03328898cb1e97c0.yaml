@@ -1,0 +1,175 @@
+# Nighthaunt
+- # Spirit Torment
+  name: Spirit Torment
+  move: 8
+  health: 5
+  control: 2
+  save: 5+
+  ward: 5+
+  keywords:
+  - Hero
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Shacklegheist Chains
+    range: Melee
+    a: 5
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Captured Soul Energy
+    phase: hero
+    when: Your Hero Phase
+    declare: "Pick a friendly unit wholly within 12\" of this unit to be the target."
+    effect: Roll a dice. On a 3+, add 1 to wound rolls for the target's combat attacks for the rest of the turn.
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Bladegheist Revenants
+  name: Bladegheist Revenants
+  move: 8
+  health: 2
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Tomb Greatblade
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Thrashing Desperation
+    phase: passive
+    when: Passive
+    effect: "While this unit contests an objective you control, enemy units cannot end a charge move within 1/2\" of this unit unless the unmodified charge roll was 5 or more."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Chainghasts
+  name: Chainghasts
+  move: 8
+  health: 3
+  control: 2
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  ranged:
+  -
+    name: Ghastflails
+    range: 12"
+    a: 2
+    hit: 4+
+    w: 3+
+    r: 2
+    d: 1
+    abilities:
+    - Crit (Auto-wound)
+  melee:
+  -
+    name: Tomb Greatblade
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Another Link in the Chain
+    phase: combat
+    when: Your Combat Phase
+    effect: "Roll a dice. Add 1 to the roll if this unit is wholly within 12\" of any friendly <strong>Spirit Torments</strong>. On a 3+, for the rest of the turn, add 1 to hit rolls for combat attacks made by friendly units while they are wholly within 12\" of this unit."
+  details:
+    "<ul><li>2 models</li></ul>"
+- # Dreadscythe Harridans
+  name: Dreadscythe Harridans
+  move: 8
+  health: 2
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Scythed Limbs
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Harrowing Shrieks
+    phase: passive
+    when: Passive
+    effect: "Enemy units cannot be healed or have slain models returned to them while they are in combat with this unit."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Dreadblade Harrows
+  name: Dreadblade Harrows
+  move: 12
+  health: 3
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Cavalry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Dreadblade
+    range: Melee
+    a: 4
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Auto-Wound)
+  -
+    name: Ethereal Steed's Ghostly Hooves and Teeth
+    range: Melee
+    a: 3
+    hit: 5+
+    w: 3+
+    r: "-"
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+    - Companion
+  abilities:
+  -
+    name: Phantasmal Discorporation
+    phase: movement
+    when: Once Per Battle, Your Movement Phase
+    effect: "Remove this nuit from the battlefield and set it up again on the battlefield more than 6\" from all enemy units."
+  details:
+    "<ul><li>2 models</li></ul>"
