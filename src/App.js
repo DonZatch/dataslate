@@ -426,12 +426,17 @@ function PlayerScore({ label, score, setScore }) {
   )
 }
 
+function isAoSArmy(army)
+{
+  return army?.category === "Spearhead";
+}
+
 function ArmyDetails({ id, armies, allDetachments, units, warscrolls, coreStrategems, appSettings, factionData, setShowInfo })
 {
   const army = useMemo(() => getArmy(armies, id), [armies, id]);
-  const isA0S = army?.category === "Spearhead";
+  const isAoS = isAoSArmy(army);
 
-  return isA0S ? 
+  return isAoS ? 
     <ArmyDetailsAoS 
       id={id}
       army={army}
@@ -743,13 +748,14 @@ function Units({ army, armyUnits, appSettings, setShowInfo, onClick, onToggleCol
             onToggleCollapsed={(value) => onToggleCollapse(unit.name, value)}
             collapsed={collapsedUnits.indexOf(unit.name) !== -1}
             isCombatPatrol={army.category === "Combat Patrol"}
+            isAoS={isAoSArmy(army)}
           />)}
       </ol>
     </>
   );
 }
 
-function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCollapsed, collapsed, isCombatPatrol })
+function UnitSummary({ unit, appSettings, setShowInfo, onClick, onToggleCollapsed, collapsed, isCombatPatrol, isAoS })
 {
   const handler = useCallback((e) => {
     e.preventDefault();
@@ -764,8 +770,11 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
       </div>
       {!collapsed && (
         <a href="#" onClick={handler}>
-        <UnitProfile unit={unit} setShowInfo={setShowInfo} />
-        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={isCombatPatrol} />
+        {isAoS={isAoS} ? 
+          <UnitProfileAoS unit={unit} setShowInfo={setShowInfo} /> : 
+          <UnitProfile unit={unit} setShowInfo={setShowInfo} />
+        }
+        <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={isCombatPatrol} isAoS={isAoS} />
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />
@@ -777,7 +786,7 @@ function UnitSummary({ army, unit, appSettings, setShowInfo, onClick, onToggleCo
   )
 }
 
-function AbilitySummary({ unit, appSettings, setShowInfo, isCombatPatrol })
+function AbilitySummary({ unit, appSettings, setShowInfo, isCombatPatrol, isAoS })
 {
   const abilities = getSummaryAbilities(unit, appSettings);
   const keywordAbilities = getKeywordAbilitySummary(unit, appSettings, isCombatPatrol);
@@ -785,8 +794,8 @@ function AbilitySummary({ unit, appSettings, setShowInfo, isCombatPatrol })
     <ol className="abilitySummary">
       {abilities.map(ability => <li key={ability} onClick={e => setShowInfo(e, ability)}>{ability}</li>)}
       {keywordAbilities.map(keyword => <li key={keyword} onClick={e => setShowInfo(e, keyword)}>{keyword}</li>)}
-      <RangedWeapons unit={unit} setShowInfo={setShowInfo} summary />
-      <MeleeWeapons unit={unit} setShowInfo={setShowInfo} summary />
+      <RangedWeapons unit={unit} setShowInfo={setShowInfo} summary isAoS={isAoS} />
+      <MeleeWeapons unit={unit} setShowInfo={setShowInfo} summary isAoS={isAoS} />
     </ol>
   );
 }
@@ -1071,6 +1080,7 @@ function UnitDetails({ id, army, units, setShowInfo, onGoBack })
         <h1>{unit?.name}</h1>
       </header>
       <div className="unitDetails">
+        {!isAoSArmy}
         <UnitProfile unit={unit} setShowInfo={setShowInfo} />
         <div>
           <RangedWeapons unit={unit} setShowInfo={setShowInfo} label="Ranged Weapons" />
@@ -1098,7 +1108,7 @@ function UnitProfile({ unit, setShowInfo })
       <div className='unitProfiles'>
         {unit?.profiles?.map(profile => 
           <div key={profile.name}>
-            {unit.profiles.length > 1 ? <div className="unitProfileHeader">{profile.name}</div> : null }
+            {unit.profiles?.length > 1 ? <div className="unitProfileHeader">{profile.name}</div> : null }
             <div className="unitStats">
               <ul>
                 <li>
@@ -1117,6 +1127,32 @@ function UnitProfile({ unit, setShowInfo })
             </div>
           </div>
         )}
+      </div>
+    </div>
+  )
+}
+
+function UnitProfileAoS({ unit })
+{
+  return (
+    <div className='unitProfileWrapper'>
+      {unit?.pic && <div className='unitPic'><img src={`${process.env.PUBLIC_URL}/assets/pics/${unit?.pic}`} /></div>}
+      <div className='unitProfiles'>
+          <div key={unit.name}>
+          <div className="unitStats unitStatsAoS">
+            <ul>
+              <li><UnitProfileItem label="MOVE" value={`${unit?.move}"`} /></li>
+              <li><UnitProfileItem label="HEALTH" value={unit?.health} /></li>
+              <li><UnitProfileItem label="CONTROL" value={unit?.control} /></li>
+              <li>
+                <UnitProfileItem label="SAVE" value={unit?.save} />
+              </li>
+              <li>
+                <WardSave value={unit?.ward} />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -1163,6 +1199,20 @@ function InvulnerableSave({ value, setShowInfo })
   );
 }
 
+function WardSave({ value })
+{
+  if (!value)
+  {
+    return null;
+  }
+  return (
+    <div className="wardSave">
+      <label className="profileItemLabel">WARD</label>
+      <div className="profileItemValue">{value}</div>
+    </div>
+  );
+}
+
 function PivotValue({ value })
 {
   if (!value)
@@ -1179,36 +1229,38 @@ function PivotValue({ value })
   );
 }
 
-function RangedWeapons({ unit, setShowInfo, summary })
+function RangedWeapons({ unit, setShowInfo, summary, isAoS })
 {
   return (
     <WeaponTable 
       weapons={unit?.ranged} 
       label={summary ? "Ranged" : "Ranged Weapons"}
-      skillLabel="BS" 
+      skillLabel={isAoS ? "HIT" : "BS"} 
       icon="&#8982;" 
       setShowInfo={setShowInfo}
       summary={summary}
+      isAoS={isAoS}
     />
   );
 }
 
-function MeleeWeapons({ unit, setShowInfo, summary })
+function MeleeWeapons({ unit, setShowInfo, summary, isAoS })
 {
   return (
     <WeaponTable 
       weapons={unit?.melee}
       label={summary ? "Melee" : "Melee Weapons"}
-      skillLabel="WS"
+      skillLabel={isAoS ? "HIT" : "WS"} 
       icon="&#9876;"
       setShowInfo={setShowInfo}
       summary={summary}
       hideRange={summary}
+      isAoS={isAoS}
     />
   );
 }
 
-function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, hideRange })
+function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, hideRange, isAoS })
 {
   if (!weapons || weapons.length === 0)
   {
@@ -1225,16 +1277,16 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, h
         <tr>
           <th>{icon}</th>
           <th>{label}</th>
-          {hideRange ? null : <th>{summary ? "Rg" : "Range" }</th>}
+          {hideRange ? null : <th>{summary && !isAoS ? "Rg" : "RANGE" }</th>}
           <th>A</th>
           <th>{skillLabel}</th>
-          <th>S</th>
-          <th>AP</th>
+          {!isAoS && <th>S</th>}
+          <th>{isAoS ? "R" : "AP"}</th>
           <th>D</th>
         </tr>
       </thead>
       <tbody>
-        {weapons.map(weapon => <Weapon key={weapon.name} weapon={weapon} setShowInfo={setShowInfo} hideRange={hideRange} />)}
+        {weapons.map(weapon => <Weapon key={weapon.name} weapon={weapon} setShowInfo={setShowInfo} hideRange={hideRange} isAoS={isAoS} />)}
       </tbody>
       {!summary && weapons.find(weapon => weapon.profile) ? 
         <tfoot>
@@ -1246,7 +1298,7 @@ function WeaponTable({ weapons, label, skillLabel, icon, setShowInfo, summary, h
   )
 }
 
-function Weapon({ weapon, setShowInfo, hideRange })
+function Weapon({ weapon, setShowInfo, hideRange, isAoS })
 {
   return (
     <>
@@ -1257,9 +1309,9 @@ function Weapon({ weapon, setShowInfo, hideRange })
         </td>
         {hideRange ? null : <td>{weapon.range}</td> }
         <td>{weapon.a}</td>
-        <td>{weapon.bs ?? weapon.ws}</td>
-        <td>{weapon.s}</td>
-        <td>{weapon.ap}</td>
+        <td>{weapon.bs ?? weapon.ws ?? weapon.hit}</td>
+        {!isAoS && <td>{weapon.s}</td>}
+        <td>{weapon.ap ?? weapon.r}</td>
         <td>{weapon.d}</td>
       </tr>
       {weapon.abilities? <tr>

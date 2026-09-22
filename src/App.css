@@ -234,6 +234,21 @@ header > h1 {
   border-bottom-right-radius: 14px;
 }
 
+.unitStatsAoS .profileItemLabel {
+  font-size: x-small;
+}
+.unitStatsAoS .profileItemValue {
+  width: 48px;
+  height: 48px;
+  border-radius: -16px;
+  vertical-align: middle;
+  line-height: 48px;
+}
+
+.wardSave .profileItemValue {
+  border-radius: 24px;
+}
+
 .pivotValue .profileItemValue {
   border-radius: 16px;
 }
@@ -576,9 +591,7 @@ header > h1 {
 }
 .abilityAoSHeader > h2 {
   flex: 1;
-}
-.abilityAoSHeader > a {
-
+  margin: 0;
 }
 .abilityAoSHeader > span {
   color: darkslategray;
