@@ -775,6 +775,7 @@ function UnitSummary({ unit, appSettings, setShowInfo, onClick, onToggleCollapse
           <UnitProfile unit={unit} setShowInfo={setShowInfo} />
         }
         <AbilitySummary unit={unit} appSettings={appSettings} setShowInfo={setShowInfo} isCombatPatrol={isCombatPatrol} isAoS={isAoS} />
+        {isAoS && <AbilitiesAoS abilities={unit.abilities} />}
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
         <EnhancementAbilitySummary unit={unit} />

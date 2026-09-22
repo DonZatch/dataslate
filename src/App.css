@@ -161,6 +161,10 @@ header > h1 {
   color: black;
 }
 
+.unitSummaries .abilitiesAoS {
+  padding-bottom: 8px;
+}
+
 .unitHeader {
   text-transform: uppercase;
   color: white;
@@ -582,6 +586,12 @@ header > h1 {
   border-style: solid;
   border-width: 2px;
   border-radius: 8px;
+  background-color: white;
+  border-color: black;
+}
+
+.unitSummaries .abilityAoS {
+  border-color: gray;
 }
 
 .abilityAoSHeader {
@@ -616,42 +626,48 @@ header > h1 {
   border-bottom: 1px solid gray;
 }
 
-.abilityAoS-hero {
+.abilityAoS-hero, 
+.unitSummaries .abilityAoS-hero {
   border-color: #76602b;
 }
 .abilityAoS-hero > .abilityAoSWhen {
   background-color: #76602b;
 }
 
-.abilityAoS-movement {
+.abilityAoS-movement,
+.unitSummaries .abilityAoS-movement {
   border-color: #606362;
 }
 .abilityAoS-movement > .abilityAoSWhen {
   background-color: #606362;
 }
 
-.abilityAoS-shooting {
+.abilityAoS-shooting,
+.unitSummaries .abilityAoS-shooting {
   border-color: #28435c;
 }
 .abilityAoS-shooting > .abilityAoSWhen {
   background-color: #28435c;
 }
 
-.abilityAoS-charge {
+.abilityAoS-charge,
+.unitSummaries .abilityAoS-charge {
   border-color: #a34d14;
 }
 .abilityAoS-charge > .abilityAoSWhen {
   background-color: #a34d14;
 }
 
-.abilityAoS-combat {
+.abilityAoS-combat,
+.unitSummaries .abilityAoS-combat {
   border-color: #802022;
 }
 .abilityAoS-combat > .abilityAoSWhen {
   background-color: #802022;
 }
 
-.abilityAoS-end {
+.abilityAoS-end,
+.unitSummaries .abilityAoS-end {
   border-color: #5e4a79;
 }
 .abilityAoS-end > .abilityAoSWhen {
