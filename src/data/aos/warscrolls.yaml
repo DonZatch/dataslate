@@ -723,3 +723,194 @@
     effect: "This unit's melee weapons have <strong>Crit (2 Hits)</strong> if the target unit has 5 or more models."
   details:
     "<ul><li>3 model</li></ul>"
+# Skaven
+- # Clawlord on Gnaw-beast
+  name: Clawlord on Gnaw-beast
+  move: 9
+  health: 7
+  control: 2
+  save: 4+
+  ward: 6+
+  keywords:
+  - Hero
+  - Cavalry
+  ranged:
+  -
+    name: Ratling Pistol
+    range: 10"
+    a: D6
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-wound)
+    - Shoot in Combat
+  melee:
+  -
+    name: Warpforged Halberd
+    range: Melee
+    a: 5
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 2
+  -
+    name: Gnaw-beast's Chisel Fangs
+    range: Melee
+    a: 4
+    hit: 4+
+    w: 3+
+    r: 1
+    d: D3
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Cornered Rat
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "While this unit is damaged, add 3 to the Attacks characteristic of its <strong>Warpforged Halberd</strong>."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Grey Seer
+  name: Grey Seer
+  move: 6
+  health: 5
+  control: 2
+  save: 6+
+  keywords:
+  - Hero
+  - Wizard
+  - Infantry
+  melee:
+  -
+    name: Warpstone Staff
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 4+
+    r: 1
+    d: D3
+  abilities:
+  -
+    name: Will of the Horned Rat
+    phase: hero
+    icon: control
+    when: Your Hero Phase
+    declare: "Pick a friendly unit wholly within 13\" of this unit to be the target, then roll a dice."
+    effect: "On a 3+, add the roll to the target's control score until the start of your next turn."
+  -
+    name: Wither
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick a visible enemy unit within 13\" of this unit to be the target, then make a casting roll of 2D6."
+    effect: "On a 6+, inflict D3 mortal damage on the target."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Warlock Engineer
+  name: Warlock Engineer
+  move: 6
+  health: 5
+  control: 2
+  save: 5+
+  keywords:
+  - Hero
+  - Infantry
+  ranged:
+  -
+    name: Warplock Musket
+    range: 24"
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 2
+    d: D3
+    abilities:
+    - Crit (Auto-wound)
+  melee:
+  -
+    name: Warpforged Dagger
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 4+
+    r: "-"
+    d: 2
+  abilities:
+  -
+    name: More-more Warp Energy!
+    phase: shooting
+    icon: offensive
+    when: "Reaction: You declared a Shoot ability for this unit and it has not used a Move ability this turn"
+    effect: "Roll a dice. On a 2+, set the Damage characteristic of its <strong>Warplock Musket</strong> to 3 this phase. On a 1, inflict D3 mortal damage on this unit."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Clanrats
+  name: Clanrats
+  move: 6
+  health: 1
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  - Reinforcements
+  melee:
+  -
+    name: Rusty Blade
+    range: Melee
+    a: 2
+    hit: 4+
+    w: 5+
+    r: "-"
+    d: 1
+  abilities:
+  -
+    name: Seething Swarm
+    phase: end
+    icon: rallying
+    when: End of Any Turn
+    effect: "You can return D3 slain models to this unit."
+  details:
+    "<ul><li>10 models</li></ul>"
+- # Rat Ogors
+  name: Rat Ogors
+  move: 6
+  health: 4
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  ranged:
+  -
+    name: Warpfire Gun
+    num: 1
+    range: 10"
+    a: 2D6
+    hit: 2+
+    w: 4+
+    r: 2
+    d: 1
+    abilities:
+    - Shoot in Combat
+  melee:
+  -
+    name: Claws, Blades, and Fangs
+    range: Melee
+    a: 5
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Unleashed Warp-fury
+    phase: combat
+    icon: offensive
+    when: Any Combat Phase, Once Per Battle
+    effect: "Inflict D3 mortal damage on this unit. Then, add 1 to the Attacks characteristic of its melee weapons this phase."
+  details:
+    "<ul><li>3 models</li></ul>
+    <p>This unit has 2 Rat Ogors armed with Claws, Blades and Fangs, and 1 Rat Ogor armed with a Warpfire Gun and Claws, Blades and Fangs.</p>"

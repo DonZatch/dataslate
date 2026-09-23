@@ -98,7 +98,7 @@
     icon: defensive
     when: Once Per Turn, Your Hero Phase
     declare: Pick a friendly unit.
-    effect: "Until the start of your next turn, that unit has <strong>WARD (5+)</strong>."
+    effect: "Until the start of your next turn, that unit has <strong>Ward (5+)</strong>."
   -
     name: Storm Charge
     phase: charge
@@ -127,7 +127,7 @@
     phase: passive
     icon: defensive
     when: Passive
-    effect: Your general has <strong>WARD (5+)</strong>.
+    effect: Your general has <strong>Ward (5+)</strong>.
   -
     name: Morrda's Talon
     phase: combat
@@ -366,3 +366,75 @@
     icon: shooting
     when: Passive
     effect: "The Attacks characteristic of your general's <strong>Sunbolt Gauntlet</strong> is 6 instead of D6."
+- # Gnawfeast Clawpack
+  id: SH6
+  category: Spearhead
+  name: Gnawfeast Clawpack
+  faction: Skaven
+  units:
+  - Clawlord on Gnaw-beast
+  - Grey Seer
+  - Warlock Engineer
+  - Clanrats
+  - Rat Ogors
+  general: Clawlord on Gnaw-beast
+  icon: rat
+  traits:
+  -
+    name: The Lurking Vermintide
+    phase: deployment
+    icon: special
+    when: Once Per Battle, Deployment Phase
+    declare: "Pick a friendly unit that has not been deployed to be the target."
+    effect: "The target unit is set up in reserve in the tunnels below. Units <strong>in the tunnels below</strong> that have not used the 'Gnawhole Ambush' ability by the end  of the third battle round are destroyed."
+    keywords:
+    - Deploy
+  -
+    name: Gnawhole Ambush
+    phase: movement
+    icon: movement
+    when: Your Movement Phase
+    declare: "Pick a friendly unit that is <strong>in the tunnels below</strong> to use this ability."
+    effect: "Set up that unit wholly within 6\" of a corner of the battlefield and more than 9\" from all enemy units."
+    keywords:
+    - Core
+  abilities:
+  -
+    name: Warpstone-laced Bullets
+    phase: shooting
+    icon: shooting
+    when: Once Per Battle, Your Shooting Phase
+    declare: Pick a ranged weapon a friendly unit is armed with.
+    effect: That weapon has <strong>Crit (Mortal)</strong> this phase.
+  -
+    name: Too Quick to Hit-hit
+    phase: movement
+    icon: movement
+    when: Passive
+    effect: "No mortal damage is inflicted on friendly units when they use <strong>Retreat</strong> abilities."
+  enhancements:
+  -
+    name: Lead the Seething Horde
+    phase: combat
+    icon: offensive
+    when: "Reaction: You declared the 'Call for Reinforcements' ability"
+    effect: "Instead of using the set-up instructions in the 'Call for Reinforcements' ability, the replacement unit can be set up wholly within 13\" of this unit and not in combat."
+  -
+    name: Skryre Connections
+    phase: shooting
+    icon: shooting
+    when: Passive
+    declare: "Pick a friendly unit wholly within 12\" of your general. You cannot pick your general."
+    effect: "Your general's <strong>Ratling Pistol</strong> has an Attacks characteristic of 2D6 instead of D6."
+  -
+    name: Warpstone Charm
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "Subtract 1 from save rolls for enemy units in combat with your general."
+  -
+    name: Cloak of Stitched Victories
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: "Your general has <strong>Ward (5+)</strong>"
