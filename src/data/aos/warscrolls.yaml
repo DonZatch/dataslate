@@ -351,3 +351,116 @@
   details:
     "<ul><li>5 models</li></ul>
     <p>This unit has 4 Liberators armed with a Warhammer and 1 Liberator armed with a Grandhammer.</p>"
+# Orruk Warclans
+- # Megaboss
+  name: Megaboss
+  move: 4
+  health: 8
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Infantry
+  melee:
+  -
+    name: Boss-choppa
+    range: Melee
+    a: 8
+    hit: 4+
+    w: 2+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Get Stuck In, Ladz
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick this unit or a friendly <strong>BRUTE</strong> unit wholly within 12\" of this unit to be the target."
+    effect: "Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target's melee weapons until the start of your next turn."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Ardboyz
+  name: Ardboyz
+  move: 4
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  melee:
+  -
+    name: Choppa or Stikka
+    range: Melee
+    a: 2
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Anti-charge (+1 Rend)
+  abilities:
+  -
+    name: Shield Bash
+    phase: combat
+    icon: offensive
+    when: Any Combat Phase
+    declare: "Pick an enemy unit within 1\" of this unit to be the target."
+    effect: "Make a shield bash roll of D6 for each model in this unit that is within 3\" of the target. For each 6, inflict 1 mortal damage on the target."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Brute Ragerz
+  name: Brute Ragerz
+  move: 4
+  health: 3
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  - Brute
+  - Reinforcements
+  melee:
+  -
+    name: Rager Weapons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 2+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Unleashed Rage
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "This unit has <strong>STRIKE-FIRST</strong> if it charged in the same turn."
+  details:
+    "<ul><li>3 models</li></ul>"
+- # Brutes
+  name: Brutes
+  move: 4
+  health: 3
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Brute
+  melee:
+  -
+    name: Brute Weapons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: You Messin'?
+    phase: end
+    icon: control
+    when: Passive
+    effect: "Enemy units with a Health characteristic of 1 or 2 cannot contest objectives while they are in combat with this unit."
+  details:
+    "<ul><li>5 models</li></ul>"

@@ -147,3 +147,72 @@
     when: Once Per Battle, End of Any Turn
     declare: Roll a dice for each enemy unit contesting the same objective as your general.
     effect: On a 2+, subtract the roll from the control score of that enemy unit this turn.
+- # Ironjawz Bigmob
+  id: SH3
+  category: Spearhead
+  name: Ironjawz Bigmob
+  faction: Orruk Warclans
+  units:
+  - Megaboss
+  - Brute Ragerz
+  - Ardboyz
+  - Brutes
+  general: Megaboss
+  icon: orks
+  static:
+  -
+    value: "Your Brutes are not set up during the deployment phase. Instead, from the third battle round onwards, they can use the following ability:"
+  traits:
+  -
+    name: "'Ere We Go!"
+    phase: movement
+    icon: movement
+    when: Your Movement Phase
+    effect: "Set up this unit anywhere on the battlefield more than 6\" from all enemy units."
+    keywords:
+    - Core
+  -
+    name: Mighty Destroyers
+    phase: hero
+    icon: movement
+    when: Once Per Turn (Army), Any Hero Phase
+    declare: Pick a friendly unit that was not set up this turn to be the target.
+    effect: "The target can move up to 3\". It can move into combat. If it was in combat at the start of the move, it must end that move in combat."
+  abilities:
+  -
+    name: Natural Disaster
+    phase: charge
+    icon: offensive
+    when: Passive
+    effect: If you make an unmodified charge roll of 8+ for a friendly unit, add 1 to the Attacks characteristic of that unit's melee weapons for the rest of the turn
+  -
+    name: A Proper Ruckus
+    phase: hero
+    icon: movement
+    when: "Once Per Battle, Reaction: You Declared the 'Mighty Destroyers' ability"
+    effect: All friendly units on the battlefield that were not set up this turn are the targets of that ability instead.
+  enhancements:
+  -
+    name: Amberbone Whetstone
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: The Rend characteristic of your general's melee weapons is 2.
+  -
+    name: Trophy Skulls
+    phase: end
+    icon: control
+    when: Passive
+    effect: Your general's Control characteristic is 5.
+  -
+    name: Armour of Gork
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: Your general has <strong>Ward (6+)</strong>.
+  -
+    name: Mega Bossy
+    phase: charge
+    icon: movement
+    when: Passive
+    effect: "If this unit charged this turn, for the rest of the turn, add 1 to charge rolls for friendly units while they are wholly within 12\" of this unit."
