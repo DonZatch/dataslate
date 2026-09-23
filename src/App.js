@@ -766,6 +766,7 @@ function UnitSummary({ unit, appSettings, setShowInfo, onClick, onToggleCollapse
     <li>
       <div className="unitHeader" onClick={() => onToggleCollapsed(!collapsed)}>
         <div className="unitName">{unit?.name}</div>
+        {unit.keywords?.map(k => k.toLowerCase()).indexOf("reinforcements") !== -1 && <div className='reinforcements'>&#x21bb;</div>}
         <div className="collapseBtn">{ collapsed ? <>&or;</> : <>&and;</> }</div>
       </div>
       {!collapsed && (
