@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dataslate/static/css/main.47abc911.css",
-    "main.js": "/dataslate/static/js/main.f1619312.js",
+    "main.js": "/dataslate/static/js/main.68649f9d.js",
     "static/js/453.39be81f1.chunk.js": "/dataslate/static/js/453.39be81f1.chunk.js",
     "static/media/units.yaml": "/dataslate/static/media/units.774c9e6180d49fdeab2b.yaml",
     "static/media/detachments.yaml": "/dataslate/static/media/detachments.8afe7ecd9109e9a5e40f.yaml",
     "static/media/abilities.yaml": "/dataslate/static/media/abilities.e06f017564a56a57c1f6.yaml",
+    "static/media/warscrolls.yaml": "/dataslate/static/media/warscrolls.a2bd9da81a236e6d4a7e.yaml",
+    "static/media/armies.yaml": "/dataslate/static/media/armies.4bce84a1e2f808c1f38e.yaml",
     "static/media/brothers.svg": "/dataslate/static/media/brothers.7413691c5e38c515c00e404db1de15f9.svg",
     "static/media/factions.yaml": "/dataslate/static/media/factions.87b5e83d05a56e8f2d16.yaml",
-    "static/media/warscrolls.yaml": "/dataslate/static/media/warscrolls.dba8055b6ea75a932885.yaml",
     "static/media/bugs.svg": "/dataslate/static/media/bugs.ca3c7e49a12d04ca1c873015f7275b14.svg",
-    "static/media/armies.yaml": "/dataslate/static/media/armies.43fa205013d8ca61a10f.yaml",
     "static/media/sorcerors.svg": "/dataslate/static/media/sorcerors.17503cf5fe40b2cf595b45fb4edbca45.svg",
     "static/media/strategems.yaml": "/dataslate/static/media/strategems.6b6a1c9469b7db4901f4.yaml",
     "static/media/mechs.svg": "/dataslate/static/media/mechs.435a1b141eb18704a562042a68a38eb2.svg",
@@ -23,11 +23,11 @@
     "index.html": "/dataslate/index.html",
     "static/media/settings.yaml": "/dataslate/static/media/settings.bc402a39e953354c09d6.yaml",
     "main.47abc911.css.map": "/dataslate/static/css/main.47abc911.css.map",
-    "main.f1619312.js.map": "/dataslate/static/js/main.f1619312.js.map",
+    "main.68649f9d.js.map": "/dataslate/static/js/main.68649f9d.js.map",
     "453.39be81f1.chunk.js.map": "/dataslate/static/js/453.39be81f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47abc911.css",
-    "static/js/main.f1619312.js"
+    "static/js/main.68649f9d.js"
   ]
 }
