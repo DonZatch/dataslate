@@ -1,0 +1,305 @@
+# Spearhead
+- # Cursed Shacklehorde
+  id: SH1
+  category: Spearhead
+  name: Cursed Shacklehorde
+  faction: Nighthaunt
+  units:
+  - Spirit Torment
+  - Chainghasts
+  - Bladegheist Revenants
+  - Dreadscythe Harridans
+  - Dreadblade Harrows
+  general: Spirit Torment
+  icon: ghosts
+  static:
+  -
+    name: Spectral Procession
+    value: "<p>1 of your <strong>Bladegheist Revenants</strong> units and 1 of your <strong>Dreadscythe Harridans</strong> units start the battle in reserve.</p>
+      <p>From the second battle round onwards, you can use the Cackling Arrival ability.</p>"
+  traits:
+  -
+    name: Cackling Arrival
+    phase: movement
+    icon: movement
+    when: Once Per Turn (Army), Your Movement Phase
+    declare: Pick 1 of your units in reserve
+    effect: "Set up that unit anywhere on the battlefield more than 6\" from all enemy units."
+  -
+    name: Ethereal
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: Ignore negative modifiers to save rolls for friendly units.
+  abilities:
+  -
+    name: Discorporate
+    phase: hero
+    icon: defensive
+    when: Once Per Turn (Army), Any Hero Phase
+    declare: Pick a friendly unit to be the target.
+    effect: Roll a dice. On a 3+, add 1 to save rolls for the target for the rest of the turn.
+  -
+    name: Mounting Dread
+    phase: end
+    icon: control
+    when: Once Per Turn (Army), End of Any Turn
+    declare: Pick a friendly unit to be the target
+    effect: Roll a dice. On a 2+, for the rest of the turn, subtract the current battle round number from the control scores of enemy units while they are in combat with the target.
+  enhancements:
+  -
+    name: Unholy Visage
+    phase: hero
+    icon: movement
+    when: Your Hero Phase
+    declare: "Pick a visible enemy unit within 6\" of your general to be the target."
+    effect: Roll a dice. On a 3+, the target must immediately use a <strong>RETREAT</strong> ability as if it were the enemy movement phase. Immediately after that ability has resolved, if the target is in combat, inflict 2D3 mortal damage on it.
+  -
+    name: Deathly Possessor
+    phase: combat
+    icon: offensive
+    when: Any Combat Phase
+    declare: "Pick an enemy <strong>HERO</strong> within 12\" of your general to be the target, then pick another enemy unit within the target's combat range to be the victim."
+    effect: "Roll a D3. On a 2+, pick one:
+      <ul>
+        <li>Inflict mortal damage on the target equal to the roll.</li>
+        <li>Inflict mortal damage on the victim equal to the roll.</li>
+      </ul>"
+  -
+    name: Tales of Horror
+    phase: combat
+    icon: special
+    when: Once Per Battle, Any Combat Phase
+    declare: "Pick an enemy <strong>INFANTRY</strong> or <strong>CAVALRY</strong> unit within 6\" of your general to be the target."
+    effect: "For the rest of the battle, if the target is replaced using the 'Call for Reinforcements' ability, halve the number of models in the replacement unit, rounding up."
+  -
+    name: Spectral Howl
+    phase: hero
+    icon: movement
+    when: Once Per Battle, Any Hero Phase
+    declare: "Pick an enemy unit within 12\" of your general to be the target."
+    effect: "For the rest of the turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1."
+- # Vigilant Brotherhood
+  id: SH2
+  category: Spearhead
+  name: Vigilant Brotherhood
+  faction: Stormcast Eternals
+  units:
+  - Lort-Vigilant on Gryph-stalker
+  - Lord-Veritant
+  - Prosecutors
+  - Liberators
+  general: Lort-Vigilant on Gryph-stalker
+  icon: lightning
+  traits:
+  -
+    name: Shield of Azyr
+    phase: hero
+    icon: defensive
+    when: Once Per Turn, Your Hero Phase
+    declare: Pick a friendly unit.
+    effect: "Until the start of your next turn, that unit has <strong>WARD (5+)</strong>."
+  -
+    name: Storm Charge
+    phase: charge
+    icon: movement
+    when: Once Per Battle, Your Charge Phase
+    declare: Pick a friendly unit that is not in combat.
+    effect: That unit can use <strong>CHARGE</strong> abilities this turn even if it used a <strong>RUN</strong> ability in the same turn.
+  abilities:
+  -
+    name: Strike Where Needed
+    phase: movement
+    icon: movement
+    when: "Once Per Battle, Reaction: You declared a RETREAT ability"
+    declare: Pick a friendly unit to be the target.
+    effect: Roll a dice. On a 3+, add 1 to save rolls for the target for the rest of the turn.
+  -
+    name: Blaze of Glory
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    declare: Pick a friendly unit that is in combat.
+    effect: Until the end of the phase, each time a model in that unit is slain, make a <strong>vengeance roll</strong> of D6. On a 4+, inflict 1 mortal damage on an enemy unit in combat with that unit.
+  enhancements:
+  -
+    name: Hallowed Scrolls
+    phase: passive
+    icon: defensive
+    when: Passive
+    effect: Your general has <strong>WARD (5+)</strong>.
+  -
+    name: Morrda's Talon
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: Your general's <strong>Hallowed Greataxe</strong> has <strong>Crit (Mortal)</strong>
+  -
+    name: Quicksilver Draught
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    effect: Your general has <strong>STRIKE-FIRST</strong> this phase.
+  -
+    name: Null Pendant
+    phase: end
+    icon: control
+    when: Once Per Battle, End of Any Turn
+    declare: Roll a dice for each enemy unit contesting the same objective as your general.
+    effect: On a 2+, subtract the roll from the control score of that enemy unit this turn.
+- # Ironjawz Bigmob
+  id: SH3
+  category: Spearhead
+  name: Ironjawz Bigmob
+  faction: Orruk Warclans
+  units:
+  - Megaboss
+  - Brute Ragerz
+  - Ardboyz
+  - Brutes
+  general: Megaboss
+  icon: orks
+  static:
+  -
+    value: "Your <strong>Brutes</strong> are not set up during the deployment phase. Instead, from the third battle round onwards, they can use the following ability:"
+  traits:
+  -
+    name: "'Ere We Go!"
+    phase: movement
+    icon: movement
+    when: Your Movement Phase
+    effect: "Set up this unit anywhere on the battlefield more than 6\" from all enemy units."
+    keywords:
+    - Core
+  -
+    name: Mighty Destroyers
+    phase: hero
+    icon: movement
+    when: Once Per Turn (Army), Any Hero Phase
+    declare: Pick a friendly unit that was not set up this turn to be the target.
+    effect: "The target can move up to 3\". It can move into combat. If it was in combat at the start of the move, it must end that move in combat."
+  abilities:
+  -
+    name: Natural Disaster
+    phase: charge
+    icon: offensive
+    when: Passive
+    effect: If you make an unmodified charge roll of 8+ for a friendly unit, add 1 to the Attacks characteristic of that unit's melee weapons for the rest of the turn
+  -
+    name: A Proper Ruckus
+    phase: hero
+    icon: movement
+    when: "Once Per Battle, Reaction: You Declared the 'Mighty Destroyers' ability"
+    effect: All friendly units on the battlefield that were not set up this turn are the targets of that ability instead.
+  enhancements:
+  -
+    name: Amberbone Whetstone
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: The Rend characteristic of your general's melee weapons is 2.
+  -
+    name: Trophy Skulls
+    phase: end
+    icon: control
+    when: Passive
+    effect: Your general's Control characteristic is 5.
+  -
+    name: Armour of Gork
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: Your general has <strong>Ward (6+)</strong>.
+  -
+    name: Mega Bossy
+    phase: charge
+    icon: movement
+    when: Passive
+    effect: "If this unit charged this turn, for the rest of the turn, add 1 to charge rolls for friendly units while they are wholly within 12\" of this unit."
+- # Spitewing Flight
+  id: SH4
+  category: Spearhead
+  name: Spitewing Flight
+  faction: Sylvaneth
+  units:
+  - Arch-Revenant
+  - Gossamid Archers
+  - Spiterider Lancers
+  - Revenant Seekers
+  general: Arch-Revenant
+  icon: tree
+  traits:
+  -
+    name: Target of Vengeance
+    phase: passive
+    icon: special
+    when: Once Per Battle Round (Army), Start of Battle Round
+    declare: "If there is no enemy <strong>quarry</strong> on the battlefield, pick an enemy unit on the battlefield to be the target."
+    effect: "The target is the <strong>quarry</strong> for the rest of the battle."
+  -
+    name: Airborne Cohesion
+    phase: passive
+    icon: special
+    when: Passive
+    effect: "Friendly units have a coherency range of 2\"."
+  -
+    name: Song of the Hunt
+    phase: passive
+    icon: special
+    when: Passive
+    effect: "You gain 1 chord each time an enemy <strong>quarry</strong> is destroyed. The following cumulative effects apply depending on the number of chords you have:
+      <table>
+        <tbody>
+          <tr>
+            <td>1 chord</td>
+            <td><strong>Simple:</strong> Add 1 to run rolls and charge rolls for friendly units while they are within 9\" of the enemy <strong>quarry</strong>.</td>
+          </tr>
+          <tr>
+            <td>2 chords</td>
+            <td><strong>Tuneful:</strong> Add 1 to hit rolls for friendly units' attacks while they are within 9\" of the enemy <strong>quarry</strong>.</td>
+          </tr>
+          <tr>
+            <td>3+ chords</td>
+            <td><strong>Melodic:</strong> Add 1 to wound rolls for friendly units' attacks while they are within 9\" of the enemy <strong>quarry</strong>.</td>
+          </tr>
+        </tbody>
+      </table>"
+  abilities:
+  -
+    name: Leaves on the Wind
+    phase: end
+    icon: movement
+    when: Once Per Battle (Army), End of Any Turn 
+    declare: Pick a friendly unit that is in combat to be the target.
+    effect: "The target can immediately use the 'Retreat' ability as if it were your movement phase and no mortal damage is inflicted on it if it does so."
+  -
+    name: Lifebringers
+    phase: end
+    icon: defensive
+    when: Once Per Turn (Army), End of Any Turn
+    effect: "<strong>Heal (D3)</strong> each friendly unit."
+  enhancements:
+  -
+    name: Head of the Hunt
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "Add 1 to the Rend characteristic of your general's melee weapons while the enemy <strong>quarry</strong> is within 9\" of and visible to them."
+  -
+    name: Zephyrkin
+    phase: combat
+    icon: movement
+    when: "Reaction: You declared a Fight ability for your general"
+    effect: "If your general charged this turn, they can move up to 2D6\" after that <strong>Fight</strong> ability has been resolved. They cannot end that move in combat."
+  -
+    name: Bold Spirit
+    phase: hero
+    icon: offensive
+    when: Once Per Battle (Army), Any Hero Phase
+    effect: "For the rest of the turn, add 1 to wound rolls for friendly units' combat attacks while they are within your general's combat range."
+  -
+    name: Cunning Persuer
+    phase: charge
+    icon: movement
+    when: Passive
+    effect: "While your general is in combat, add 1 to charge rolls for friendly units wholly within 12\" of them. Add 2 instead while your general is in combat with the <strong>quarry</strong>."

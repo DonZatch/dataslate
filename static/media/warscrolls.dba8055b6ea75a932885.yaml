@@ -1,0 +1,616 @@
+# Nighthaunt
+- # Spirit Torment
+  name: Spirit Torment
+  move: 8
+  health: 5
+  control: 2
+  save: 5+
+  ward: 5+
+  keywords:
+  - Hero
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Shacklegheist Chains
+    range: Melee
+    a: 5
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Captured Soul Energy
+    phase: hero
+    when: Your Hero Phase
+    declare: "Pick a friendly unit wholly within 12\" of this unit to be the target."
+    effect: Roll a dice. On a 3+, add 1 to wound rolls for the target's combat attacks for the rest of the turn.
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Bladegheist Revenants
+  name: Bladegheist Revenants
+  move: 8
+  health: 2
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Tomb Greatblade
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Thrashing Desperation
+    phase: passive
+    when: Passive
+    effect: "While this unit contests an objective you control, enemy units cannot end a charge move within 1/2\" of this unit unless the unmodified charge roll was 5 or more."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Chainghasts
+  name: Chainghasts
+  move: 8
+  health: 3
+  control: 2
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  ranged:
+  -
+    name: Ghastflails
+    range: 12"
+    a: 2
+    hit: 4+
+    w: 3+
+    r: 2
+    d: 1
+    abilities:
+    - Crit (Auto-wound)
+  melee:
+  -
+    name: Tomb Greatblade
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Another Link in the Chain
+    phase: combat
+    when: Your Combat Phase
+    effect: "Roll a dice. Add 1 to the roll if this unit is wholly within 12\" of any friendly <strong>Spirit Torments</strong>. On a 3+, for the rest of the turn, add 1 to hit rolls for combat attacks made by friendly units while they are wholly within 12\" of this unit."
+  details:
+    "<ul><li>2 models</li></ul>"
+- # Dreadscythe Harridans
+  name: Dreadscythe Harridans
+  move: 8
+  health: 2
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Infantry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Scythed Limbs
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+  abilities:
+  -
+    name: Harrowing Shrieks
+    phase: passive
+    when: Passive
+    effect: "Enemy units cannot be healed or have slain models returned to them while they are in combat with this unit."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Dreadblade Harrows
+  name: Dreadblade Harrows
+  move: 12
+  health: 3
+  control: 1
+  save: 6+
+  ward: 5+
+  keywords:
+  - Cavalry
+  - Fly
+  - Ward (5+)
+  melee:
+  -
+    name: Dreadblade
+    range: Melee
+    a: 4
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Auto-Wound)
+  -
+    name: Ethereal Steed's Ghostly Hooves and Teeth
+    range: Melee
+    a: 3
+    hit: 5+
+    w: 3+
+    r: "-"
+    d: 1
+    abilities:
+    - Crit (Auto-Wound)
+    - Companion
+  abilities:
+  -
+    name: Phantasmal Discorporation
+    phase: movement
+    when: Once Per Battle, Your Movement Phase
+    effect: "Remove this nuit from the battlefield and set it up again on the battlefield more than 6\" from all enemy units."
+  details:
+    "<ul><li>2 models</li></ul>"
+# Stormcast Eternals
+- # Lord-Vigilant on Gryph-stalker
+  name: Lord-Vigilant on Gryph-stalker
+  move: 12
+  health: 8
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Cavalry
+  melee:
+  -
+    name: Hallowed Greataxe
+    range: Melee
+    a: 5
+    hit: 2+
+    w: 3+
+    r: 2
+    d: 2
+  -
+    name: Gryph-stalker's Beak and Talons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Deliver Judgement
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    declare: "Pick a friendly non-<strong>HERO</strong> unit wholly within 12\" of this unit to be the target."
+    effect: "The target can use 2 <strong>FIGHT</strong> abilities this phase. After the first is used, however, the target has <strong>STRIKE-LAST</strong> for the rest of the phase."
+  -
+    name: Plan the Attack
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick an objective you do not control."
+    effect: "For the rest of the turn, add 1 to hit rolls for combat attacks made by friendly units that target enemy units contesting that objective."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Lord-Veritant
+  name: Lord-Veritant
+  move: 5
+  health: 6
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Priest
+  - Infantry
+  melee:
+  -
+    name: Staff of Abjuration
+    range: Melee
+    a: 1
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 3
+  -
+    name: Judgement Blade
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 3+
+    r: 1
+    d: D3
+    abilities:
+    - Anti-Wizard (+1 Rend)
+    - Anti-Priest (+1 Rend)
+  abilities:
+  -
+    name: Sense Unholy Sorcery
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: "<p>This unit's <strong>Glyph-crow</strong> is a token. This unit has <strong>WARD (5+)</strong> while its <strong>Glyph-crow</strong> is on the battlefield.</p>
+      <p>If you make an unmodifed ward roll of 1 for this unit, remove its <strong>Glyph-crow</strong> from the battlefield.</p>"
+  -
+    name: Cleansing Fires
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick a visible enemy unit within 12\" of this unit to be the target, then make a chanting roll of D6."
+    effect: "On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target unit."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Prosecutors
+  name: Prosecutors
+  move: 12
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Fly
+  - Reinforcements
+  ranged:
+  -
+    name: Stormcall Javelin
+    range: 10"
+    a: 1
+    hit: 3+
+    w: 3+
+    r: 1
+    d: D3
+  melee:
+  -
+    name: Stormcall Javelin
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+  abilities:
+  -
+    name: Skirmishers
+    phase: passive
+    icon: special
+    when: Passive
+    effect: "This unit has a coherency range of 2\"."
+  -
+    name: Heralds of Righteousness
+    phase: charge
+    icon: movement
+    when: Passive
+    effect: "When you make a charge roll for this unit, roll 1 additional dice."
+  details:
+    "<ul><li>3 models</li></ul>"
+- # Liberators
+  name: Liberators
+  move: 5
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Reinforcements
+  melee:
+  -
+    name: Warhammer
+    num: 4
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Mortal)
+  -
+    name: Grandhammer
+    num: 1
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Mortal)
+  abilities:
+  -
+    name: Stalward Defenders
+    phase: end
+    icon: control
+    when: Passive
+    effect: "Add 3 to this unit's control score while it contests an objective wholly within friendly territory."
+  details:
+    "<ul><li>5 models</li></ul>
+    <p>This unit has 4 Liberators armed with a Warhammer and 1 Liberator armed with a Grandhammer.</p>"
+# Orruk Warclans
+- # Megaboss
+  name: Megaboss
+  move: 4
+  health: 8
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Infantry
+  melee:
+  -
+    name: Boss-choppa
+    range: Melee
+    a: 8
+    hit: 4+
+    w: 2+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Get Stuck In, Ladz
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick this unit or a friendly <strong>BRUTE</strong> unit wholly within 12\" of this unit to be the target."
+    effect: "Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target's melee weapons until the start of your next turn."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Ardboyz
+  name: Ardboyz
+  move: 4
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  melee:
+  -
+    name: Choppa or Stikka
+    range: Melee
+    a: 2
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Anti-charge (+1 Rend)
+  abilities:
+  -
+    name: Shield Bash
+    phase: combat
+    icon: offensive
+    when: Any Combat Phase
+    declare: "Pick an enemy unit within 1\" of this unit to be the target."
+    effect: "Make a shield bash roll of D6 for each model in this unit that is within 3\" of the target. For each 6, inflict 1 mortal damage on the target."
+  details:
+    "<ul><li>5 models</li></ul>"
+- # Brute Ragerz
+  name: Brute Ragerz
+  move: 4
+  health: 3
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  - Brute
+  - Reinforcements
+  melee:
+  -
+    name: Rager Weapons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 2+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Unleashed Rage
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "This unit has <strong>STRIKE-FIRST</strong> if it charged in the same turn."
+  details:
+    "<ul><li>3 models</li></ul>"
+- # Brutes
+  name: Brutes
+  move: 4
+  health: 3
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Brute
+  melee:
+  -
+    name: Brute Weapons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: You Messin'?
+    phase: end
+    icon: control
+    when: Passive
+    effect: "Enemy units with a Health characteristic of 1 or 2 cannot contest objectives while they are in combat with this unit."
+  details:
+    "<ul><li>5 models</li></ul>"
+# Sylvaneth
+- # Arch-Revenant
+  name: Arch-Revenant
+  move: 12
+  health: 6
+  control: 2
+  save: 4+
+  keywords:
+  - Hero
+  - Infantry
+  - Fly
+  melee:
+  -
+    name: Arch-Revenant's Glaive
+    range: Melee
+    a: 5
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Heartwood Hunting Horn
+    phase: hero
+    icon: special
+    when: Your Hero Phase
+    declare: "Pick a visible friendly unit wholly within 12\" of this unit to be the target."
+    effect: "Until the start of your next turn, when determining which effects of the 'Song of the Hunt' ability apply to the target, you count as having 1 additional chord."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Gossamid Archers
+  name: Gossamid Archers
+  move: 12
+  health: 2
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  - Fly
+  ranged:
+  -
+    name: Gossamid Bow
+    range: 12"
+    a: 2
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Shoot in Combat
+  melee:
+  -
+    name: Cruel Talons
+    range: Melee
+    a: 1
+    hit: 3+
+    w: 4+
+    r: "-"
+    d: 1
+  abilities:
+  -
+    name: Zephyrsprites
+    phase: movement
+    icon: movement
+    when: "Reaction: You declared a Shoot ability for this unit"
+    effect: "After that Shoot ability has been resolved, this unit can move up to D6\". It cannot move into combat during any part of that move."
+    keywords:
+    - Move
+  details:
+    "<ul><li>5 model</li></ul>"
+- # Spiterider Lancers
+  name: Spiterider Lancers
+  move: 12
+  health: 5
+  control: 2
+  save: 4+
+  keywords:
+  - Cavalry
+  - Fly
+  melee:
+  -
+    name: Spiterider Lance
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Charge (+1 Damage)
+  -
+    name: Dragonspite's Mandibles
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Spiterider Charge
+    phase: charge
+    icon: offensive
+    when: Any Charge Phase
+    declare: "If this unit charged this phase, pick a visible enemy unit within 1\" of it to be the target."
+    effect: "Roll a D3. Add 1 to the roll if the target is the enemy <strong>quarry</strong>. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+  details:
+    "<ul><li>3 model</li></ul>"
+- # Revenant Seekers
+  name: Revenant Seekers
+  move: 12
+  health: 5
+  control: 2
+  save: 4+
+  keywords:
+  - Cavalry
+  - Fly
+  melee:
+  -
+    name: Seeker's Sickle
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Mortal)
+  -
+    name: Dragonspite's Mandibles
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Deafening Drone
+    phase: combat
+    icon: defensive
+    when: Any Combat Phase
+    declare: "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target."
+    effect: "Roll a dice. If the roll exceeds the target's Control characteristic, subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn."
+  details:
+    "<ul><li>3 model</li></ul>"
