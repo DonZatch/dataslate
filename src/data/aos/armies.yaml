@@ -303,3 +303,66 @@
     icon: movement
     when: Passive
     effect: "While your general is in combat, add 1 to charge rolls for friendly units wholly within 12\" of them. Add 2 instead while your general is in combat with the <strong>quarry</strong>."
+- # Starscale Warhost
+  id: SH5
+  category: Spearhead
+  name: Starscale Warhost
+  faction: Seraphon
+  units:
+  - Saurus Oldblood on Carnosaur
+  - Saurus Warriors
+  - Kroxigor
+  general: Saurus Oldblood on Carnosaur
+  icon: lizard
+  traits:
+  -
+    name: Beast of the Dark Jungles
+    phase: combat
+    icon: special
+    when: Any Combat Phase
+    declare: "Pick your general to use this ability if they are in combat."
+    effect: "Pick 1 of the following:
+      <ul>
+        <li><strong><em>Gargantuan Jaws:</em></strong> Pick an enemy unit in combat with your general and roll a dice. If the roll exceeds that unit's Health characteristic, 1 model in that unit is slain.</li>
+        <li><strong><em>Roar:</em></strong> Pick an enemy unit in combat with your general. Subtract D6 from that unit's control score.</li>
+      </ul>"
+  abilities:
+  -
+    name: Predatory Fighters
+    phase: end
+    icon: offensive
+    when: Once Per Phase, End of Any Turn
+    declare: Roll a dice for each enemy unit in combat with any friendly units.
+    effect: On a 3+, inflict 1 mortal damage on the unit being rolled for.
+  -
+    name: Temple-City Guardians
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: "Friendly units have Ward (6+) while they are wholly within friendly territory."
+  enhancements:
+  -
+    name: Sotek's Gaze
+    phase: end
+    icon: control
+    when: End of Any Turn
+    effect: Roll a dice. Add the roll to your general's control score this turn.
+  -
+    name: Ancient Strategist
+    phase: movement
+    icon: movement
+    when: "Once Per Battle, Enemy Movement Phase"
+    declare: "Pick a friendly unit wholly within 12\" of your general. You cannot pick your general."
+    effect: "That unit can use the 'Normal Move' ability as if it were your movement phase."
+  -
+    name: Blade of Realities
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: "Add 1 to the Rend characteristic of your general's <strong>Relic Celestite Weapon</strong>"
+  -
+    name: The Wrath of Chotec
+    phase: shooting
+    icon: shooting
+    when: Passive
+    effect: "The Attacks characteristic of your general's <strong>Sunbolt Gauntlet</strong> is 6 instead of D6."
