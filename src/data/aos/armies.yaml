@@ -79,3 +79,71 @@
     when: Once Per Battle, Any Hero Phase
     declare: "Pick an enemy unit within 12\" of your general to be the target."
     effect: "For the rest of the turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1."
+- # Vigilant Brotherhood
+  id: SH2
+  category: Spearhead
+  name: Vigilant Brotherhood
+  faction: Stormcast Eternals
+  units:
+  - Lort-Vigilant on Gryph-stalker
+  - Lord-Veritant
+  - Prosecutors
+  - Liberators
+  general: Lort-Vigilant on Gryph-stalker
+  icon: lightning
+  traits:
+  -
+    name: Shield of Azyr
+    phase: hero
+    icon: defensive
+    when: Once Per Turn, Your Hero Phase
+    declare: Pick a friendly unit.
+    effect: "Until the start of your next turn, that unit has <strong>WARD (5+)</strong>."
+  -
+    name: Storm Charge
+    phase: charge
+    icon: movement
+    when: Once Per Battle, Your Charge Phase
+    declare: Pick a friendly unit that is not in combat.
+    effect: That unit can use <strong>CHARGE</strong> abilities this turn even if it used a <strong>RUN</strong> ability in the same turn.
+  abilities:
+  -
+    name: Strike Where Needed
+    phase: movement
+    icon: movement
+    when: "Once Per Battle, Reaction: You declared a RETREAT ability"
+    declare: Pick a friendly unit to be the target.
+    effect: Roll a dice. On a 3+, add 1 to save rolls for the target for the rest of the turn.
+  -
+    name: Blaze of Glory
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    declare: Pick a friendly unit that is in combat.
+    effect: Until the end of the phase, each time a model in that unit is slain, make a <strong>vengeance roll</strong> of D6. On a 4+, inflict 1 mortal damage on an enemy unit in combat with that unit.
+  enhancements:
+  -
+    name: Hallowed Scrolls
+    phase: passive
+    icon: defensive
+    when: Passive
+    effect: Your general has <strong>WARD (5+)</strong>.
+  -
+    name: Morrda's Talon
+    phase: combat
+    icon: offensive
+    when: Passive
+    effect: Your general's <strong>Hallowed Greataxe</strong> has <strong>Crit (Mortal)</strong>
+  -
+    name: Quicksilver Draught
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    effect: Your general has <strong>STRIKE-FIRST</strong> this phase.
+  -
+    name: Null Pendant
+    phase: end
+    icon: control
+    when: Once Per Battle, End of Any Turn
+    declare: Roll a dice for each enemy unit contesting the same objective as your general.
+    effect: On a 2+, subtract the roll from the control score of that enemy unit this turn.

@@ -173,3 +173,181 @@
     effect: "Remove this nuit from the battlefield and set it up again on the battlefield more than 6\" from all enemy units."
   details:
     "<ul><li>2 models</li></ul>"
+# Stormcast Eternals
+- # Lord-Vigilant on Gryph-stalker
+  name: Lord-Vigilant on Gryph-stalker
+  move: 12
+  health: 8
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Cavalry
+  melee:
+  -
+    name: Hallowed Greataxe
+    range: Melee
+    a: 5
+    hit: 2+
+    w: 3+
+    r: 2
+    d: 2
+  -
+    name: Gryph-stalker's Beak and Talons
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Deliver Judgement
+    phase: combat
+    icon: offensive
+    when: Once Per Battle, Any Combat Phase
+    declare: "Pick a friendly non-<strong>HERO</strong> unit wholly within 12\" of this unit to be the target."
+    effect: "The target can use 2 <strong>FIGHT</strong> abilities this phase. After the first is used, however, the target has <strong>STRIKE-LAST</strong> for the rest of the phase."
+  -
+    name: Plan the Attack
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick an objective you do not control."
+    effect: "For the rest of the turn, add 1 to hit rolls for combat attacks made by friendly units that target enemy units contesting that objective."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Lord-Veritant
+  name: Lord-Veritant
+  move: 5
+  health: 6
+  control: 2
+  save: 3+
+  keywords:
+  - Hero
+  - Priest
+  - Infantry
+  melee:
+  -
+    name: Staff of Abjuration
+    range: Melee
+    a: 1
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 3
+  -
+    name: Judgement Blade
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 3+
+    r: 1
+    d: D3
+    abilities:
+    - Anti-Wizard (+1 Rend)
+    - Anti-Priest (+1 Rend)
+  abilities:
+  -
+    name: Sense Unholy Sorcery
+    phase: combat
+    icon: defensive
+    when: Passive
+    effect: "<p>This unit's <strong>Glyph-crow</strong> is a token. This unit has <strong>WARD (5+)</strong> while its <strong>Glyph-crow</strong> is on the battlefield.</p>
+      <p>If you make an unmodifed ward roll of 1 for this unit, remove its <strong>Glyph-crow</strong> from the battlefield.</p>"
+  -
+    name: Cleansing Fires
+    phase: hero
+    icon: offensive
+    when: Your Hero Phase
+    declare: "Pick a visible enemy unit within 12\" of this unit to be the target, then make a chanting roll of D6."
+    effect: "On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target unit."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Prosecutors
+  name: Prosecutors
+  move: 12
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Fly
+  - Reinforcements
+  ranged:
+  -
+    name: Stormcall Javelin
+    range: 10"
+    a: 1
+    hit: 3+
+    w: 3+
+    r: 1
+    d: D3
+  melee:
+  -
+    name: Stormcall Javelin
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+  abilities:
+  -
+    name: Skirmishers
+    phase: passive
+    icon: special
+    when: Passive
+    effect: "This unit has a coherency range of 2\"."
+  -
+    name: Heralds of Righteousness
+    phase: charge
+    icon: movement
+    when: Passive
+    effect: "When you make a charge roll for this unit, roll 1 additional dice."
+  details:
+    "<ul><li>3 models</li></ul>"
+- # Liberators
+  name: Liberators
+  move: 5
+  health: 2
+  control: 1
+  save: 3+
+  keywords:
+  - Infantry
+  - Reinforcements
+  melee:
+  -
+    name: Warhammer
+    num: 4
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Mortal)
+  -
+    name: Grandhammer
+    num: 1
+    range: Melee
+    a: 2
+    hit: 3+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Crit (Mortal)
+  abilities:
+  -
+    name: Stalward Defenders
+    phase: end
+    icon: control
+    when: Passive
+    effect: "Add 3 to this unit's control score while it contests an objective wholly within friendly territory."
+  details:
+    "<ul><li>5 models</li></ul>
+    <p>This unit has 4 Liberators armed with a Warhammer and 1 Liberator armed with a Grandhammer.</p>"
