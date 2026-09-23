@@ -161,7 +161,8 @@ header > h1 {
   color: black;
 }
 
-.unitSummaries .abilitiesAoS {
+.unitSummaries > li > a {
+  display: block;
   padding-bottom: 8px;
 }
 
@@ -607,6 +608,13 @@ header > h1 {
   color: darkslategray;
 }
 
+.unitSummaries .abilityAoSHeader > h2 {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+  color: white;
+}
+
 .abilityAoSWhen {
   background-color: black; /* Default, should be replaced */
   color: white;
@@ -690,6 +698,10 @@ header > h1 {
 
 .abilityAoS table tr:nth-child(odd) {
   background-color: #DDD;
+}
+
+.aosKeywords {
+  text-transform: uppercase;
 }
 
 .unitAbilities,

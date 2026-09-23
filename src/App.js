@@ -778,7 +778,7 @@ function UnitSummary({ unit, appSettings, setShowInfo, onClick, onToggleCollapse
         {isAoS && <AbilitiesAoS abilities={unit.abilities} />}
         <OtherAbilitySummary unit={unit} />
         <WargearAbilitySummary unit={unit} />
-        <EnhancementAbilitySummary unit={unit} />
+        <EnhancementAbilitySummary unit={unit} isAoS={isAoS} />
         <DamagedSummary unit={unit} />
         <PatrolSquadSummary unit={unit} />
         </a>
@@ -870,12 +870,16 @@ function WargearAbilitySummary({ unit })
   );
 }
 
-function EnhancementAbilitySummary({ unit })
+function EnhancementAbilitySummary({ unit, isAoS })
 {
   const enhancements = unit?.enhancements;
   if (!enhancements)
   {
     return null;
+  }
+  if (isAoS)
+  {
+    return <AbilitiesAoS title="Enhancement:" abilities={unit.enhancements} />
   }
   return (
     <ol className="otherAbilitySummary">
@@ -1607,6 +1611,7 @@ function AbilityAoS({ ability, selected, onSelect })
         <h3>{ability.name}</h3>
         {ability.declare && <p><strong>Declare:</strong> <span dangerouslySetInnerHTML={{ __html: ability.declare}} /></p>}
         <p><strong>Effect:</strong> <span dangerouslySetInnerHTML={{ __html: ability.effect}} /></p>
+        {ability.keywords && <p><strong>Keywords:</strong> <strong className='aosKeywords'>{ability.keywords.join(", ")}</strong></p>}
       </li>
   );
 }
