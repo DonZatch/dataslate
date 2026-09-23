@@ -464,3 +464,153 @@
     effect: "Enemy units with a Health characteristic of 1 or 2 cannot contest objectives while they are in combat with this unit."
   details:
     "<ul><li>5 models</li></ul>"
+# Sylvaneth
+- # Arch-Revenant
+  name: Arch-Revenant
+  move: 12
+  health: 6
+  control: 2
+  save: 4+
+  keywords:
+  - Hero
+  - Infantry
+  - Fly
+  melee:
+  -
+    name: Arch-Revenant's Glaive
+    range: Melee
+    a: 5
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 2
+  abilities:
+  -
+    name: Heartwood Hunting Horn
+    phase: hero
+    icon: special
+    when: Your Hero Phase
+    declare: "Pick a visible friendly unit wholly within 12\" of this unit to be the target."
+    effect: "Until the start of your next turn, when determining which effects of the 'Song of the Hunt' ability apply to the target, you count as having 1 additional chord."
+  details:
+    "<ul><li>1 model</li></ul>"
+- # Gossamid Archers
+  name: Gossamid Archers
+  move: 12
+  health: 2
+  control: 1
+  save: 5+
+  keywords:
+  - Infantry
+  - Fly
+  ranged:
+  -
+    name: Gossamid Bow
+    range: 12"
+    a: 2
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Shoot in Combat
+  melee:
+  -
+    name: Cruel Talons
+    range: Melee
+    a: 1
+    hit: 3+
+    w: 4+
+    r: "-"
+    d: 1
+  abilities:
+  -
+    name: Zephyrsprites
+    phase: movement
+    icon: movement
+    when: "Reaction: You declared a Shoot ability for this unit"
+    effect: "After that Shoot ability has been resolved, this unit can move up to D6\". It cannot move into combat during any part of that move."
+    keywords:
+    - Move
+  details:
+    "<ul><li>5 model</li></ul>"
+- # Spiterider Lancers
+  name: Spiterider Lancers
+  move: 12
+  health: 5
+  control: 2
+  save: 4+
+  keywords:
+  - Cavalry
+  - Fly
+  melee:
+  -
+    name: Spiterider Lance
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Charge (+1 Damage)
+  -
+    name: Dragonspite's Mandibles
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Spiterider Charge
+    phase: charge
+    icon: offensive
+    when: Any Charge Phase
+    declare: "If this unit charged this phase, pick a visible enemy unit within 1\" of it to be the target."
+    effect: "Roll a D3. Add 1 to the roll if the target is the enemy <strong>quarry</strong>. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+  details:
+    "<ul><li>3 model</li></ul>"
+- # Revenant Seekers
+  name: Revenant Seekers
+  move: 12
+  health: 5
+  control: 2
+  save: 4+
+  keywords:
+  - Cavalry
+  - Fly
+  melee:
+  -
+    name: Seeker's Sickle
+    range: Melee
+    a: 3
+    hit: 3+
+    w: 4+
+    r: 1
+    d: 1
+    abilities:
+    - Crit (Mortal)
+  -
+    name: Dragonspite's Mandibles
+    range: Melee
+    a: 3
+    hit: 4+
+    w: 3+
+    r: 1
+    d: 2
+    abilities:
+    - Companion
+  abilities:
+  -
+    name: Deafening Drone
+    phase: combat
+    icon: defensive
+    when: Any Combat Phase
+    declare: "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target."
+    effect: "Roll a dice. If the roll exceeds the target's Control characteristic, subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn."
+  details:
+    "<ul><li>3 model</li></ul>"

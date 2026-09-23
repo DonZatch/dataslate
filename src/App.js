@@ -1548,7 +1548,7 @@ function RulesAoS({ army, selectedAbility, onAbilityChange, selectedEnhancement,
         <h2>Battle Traits</h2>
       </div>
       {army.static?.map(rule => <div className='staticTraitAoS'>
-          <h3>{rule.name}</h3>
+          {rule.name && <h3>{rule.name}</h3>}
           <div dangerouslySetInnerHTML={{ __html: rule.value }} />
         </div>)}
       <AbilitiesAoS abilities={army.traits} />
